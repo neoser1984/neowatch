@@ -14,19 +14,757 @@ For more details see https://docs.gradle.org/8.12/release-notes.html
 
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.12/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
 
-FAILURE: Build failed with an exception.
+> Task :compileKotlin
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziKorea.kt:201:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
 
-* What went wrong:
-Problem configuring task :run from command line.
-> An empty argument was provided for command-line option '--args'.
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziKorea.kt:202:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
 
-* Try:
-> Run gradlew help --task :run to get task usage details.
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziKorea.kt:206:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
 
-BUILD FAILED in 31s
-GRADLE HATASI: 1
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziKorea.kt:207:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziKorea.kt:208:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziKorea.kt:209:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziKorea.kt:210:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziKorea.kt:211:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziMom.kt:47:67 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziMom.kt:55:77 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziMom.kt:72:90 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:64:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:74:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:238:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:239:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:240:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:244:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:245:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:246:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:250:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:251:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:252:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:253:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:202:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:203:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:207:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:208:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:209:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:210:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:211:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:212:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:196:29 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:198:27 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:201:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:202:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:203:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:204:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:205:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:208:25 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:209:26 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:210:26 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:212:27 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:213:30 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:216:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:217:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:218:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:221:26 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:224:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:225:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:226:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:227:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:228:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:229:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:230:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:231:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:235:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:236:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:237:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:238:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:239:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:242:26 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:244:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:245:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:246:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:249:30 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:250:25 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:252:27 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:254:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:255:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:258:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:259:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:260:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:261:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:262:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:263:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:264:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:265:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:268:28 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:270:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:271:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/Dizilla.kt:272:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:114:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:115:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:116:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:117:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:118:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:119:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:126:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:127:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/FirePlayerExtractor.kt:128:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SetFilmIzle.kt:60:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/VideoPlaysExtractor.kt:53:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/VideoPlaysExtractor.kt:54:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/VideoPlaysExtractor.kt:58:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/VideoPlaysExtractor.kt:59:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/VideoPlaysExtractor.kt:63:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/VideoPlaysExtractor.kt:64:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+
+==================== DiziPal (https://dizipal2135.com) ====================
+HAM GET https://dizipal2135.com -> 200 | başlık=Dizipal | yabancı dizi izle, film izle | uzunluk=112811 
+ANA SAYFA [Son Bölümler] -> 24 öğe 
+   - Physical 100: Italy 1x8 | https://dizipal2135.com/dizi/physical-italia-da-100-a-1 | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
+   - Physical 100: Italy 1x7 | https://dizipal2135.com/dizi/physical-italia-da-100-a-1 | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
+   - Physical 100: Italy 1x6 | https://dizipal2135.com/dizi/physical-italia-da-100-a-1 | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
+ARAMA 'game' -> 17 
+   - Pyramid Game | https://dizipal2135.com/dizi/pyramid-game
+   - Squid Game | https://dizipal2135.com/dizi/squid-game
+   - Beast Games | https://dizipal2135.com/dizi/beast-games
+LOAD https://dizipal2135.com/dizi/physical-italia-da-100-a-1 -> null 
+-- LOADLINKS https://dizipal2135.com/bolum/game-of-thrones-1-sezon-1-bolum
+    [D/DZP] data » https://dizipal2135.com/bolum/game-of-thrones-1-sezon-1-bolum
+   dönüş=false link=0 
+
+==================== DiziPalOrjinal (https://dizipalorjinal12.com) ====================
+HAM GET https://dizipalorjinal12.com -> 200 | başlık=Dizipal - Yabancı Dizi İzle | Film İzle | uzunluk=450921 
+ANA SAYFA [Son Bölümler] -> 24 öğe 
+   - Alıkara 1x8 | https://dizipalorjinal12.com/bolumler/s1b8-8-bolum-1 | https://dizipalorjinal12.com/storage/posters/185x278/b9f687d5-16fb-45fe-9e04-3a7b1fc15a64.webp
+   - Spartacus 4x10 | https://dizipalorjinal12.com/bolumler/s4b10-10-bolum-1 | https://dizipalorjinal12.com/storage/posters/185x278/eb8448f9-7bc9-484d-b383-87109cbb5127.webp
+   - Spartacus 4x9 | https://dizipalorjinal12.com/bolumler/s4b9-9-bolum | https://dizipalorjinal12.com/storage/posters/185x278/eb8448f9-7bc9-484d-b383-87109cbb5127.webp
+ARAMA 'spartacus' -> 1 
+   - Spartacus | https://dizipalorjinal12.com/diziler/spartacus
+LOAD DİZİ 'Alıkara' bölüm=8 yıl=2026 poster=https://dizipalorjinal12.com/storage/posters/300x450/b9f687d5-16fb-45fe-9e04-3a7b1fc15a64.webp konu=Alıkara, izleyiciyi daha ilk dakikadan saran bir gerilimin k
+   ep S1E1 1. Bölüm | https://dizipalorjinal12.com/bolumler/alikara-s1b1
+   ep S1E2 2. Bölüm | https://dizipalorjinal12.com/bolumler/alikara-s1b2
+-- LOADLINKS https://dizipalorjinal12.com/bolumler/alikara-s1b1
+    [D/DZPO] data » https://dizipalorjinal12.com/bolumler/alikara-s1b1
+    [D/DZPO] iframe » https://streamcorecdn.com/dizi/256440/1/1
+   dönüş=true link=0 
+-- LOADLINKS https://dizipalorjinal12.com/bolumler/spartacus-s1b1
+    [D/DZPO] data » https://dizipalorjinal12.com/bolumler/spartacus-s1b1
+    [D/DZPO] iframe » https://videoplays.cfd/player.html?video=3043
+   ALTYAZI Turkish - Turkish (Forced) | https://storagedomain.cfd/3043/subtitles/embedded_tur_3.vtt
+   ALTYAZI Turkish - Turkish | https://storagedomain.cfd/3043/subtitles/embedded_tur_4.vtt
+   ALTYAZI English - English (SDH) | https://storagedomain.cfd/3043/subtitles/embedded_eng_8.vtt
+    [D/NeO_VideoPlays] playlist » https://storagedomain.cfd/3043/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzA0MywidG9rZW4iOiIzMDQzX1pZZ3hBWFJDbHlmTl9XZFFEUmlyV3JTUzdSRGhTWFpWaUU5OXBuZGlJTW8iLCJleHAiOjE3OTEwNjQyMzcsImlhdCI6MTc5MTA2MDYzNywianRpIjoiNGU0NGI0NDItOTk4YS00MWUxLWI1ZDctM2NkYTk2Mjc4NzQ3IiwiZW1iZWRfaG9zdCI6ImRpemlwYWxvcmppbmFsMTIuY29tIn0.hxDfew1EVEPD72ag2XifGq2VT3ngmZRGhWH-oaNLZBo
+   dönüş=true link=1 
+   LINK VideoPlays | VideoPlays | M3U8 | https://storagedomain.cfd/3043/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzA0MywidG9rZW4iOiIzMDQzX1pZZ3hBWFJDbHlmTl9XZFFEUmlyV3JTUz | ref=https://videoplays.cfd/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎  ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Turkish",LANGUAGE="tur",DEFAULT=YES,AUTOSELECT=YES,URI="audio_0/stream.m3u8" ⏎  
+-- LOADLINKS https://dizipalorjinal12.com/filmler/saklambac
+    [D/DZPO] data » https://dizipalorjinal12.com/filmler/saklambac
+    [D/DZPO] iframe » https://videoplays.cfd/player.html?video=3005
+    [D/NeO_VideoPlays] playlist » https://storagedomain.cfd/3005/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzAwNSwidG9rZW4iOiIzMDA1X0U5bV8zUzl1S3ZtUE9IdG5hUFZsYkdTV3pMbjAza182V1UwRTRTRHNFUEUiLCJleHAiOjE3OTEwNjQyMzksImlhdCI6MTc5MTA2MDYzOSwianRpIjoiMTMwNTJmNWEtNjhkNC00MDRiLWFjYjUtNDg5MWZmMjMyNTRlIiwiZW1iZWRfaG9zdCI6ImRpemlwYWxvcmppbmFsMTIuY29tIn0.aZHxF3o_onjqVKvxfzz56GUPJkNitYJrZUR9h5xW4xM
+   dönüş=true link=1 
+   LINK VideoPlays | VideoPlays | M3U8 | https://storagedomain.cfd/3005/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzAwNSwidG9rZW4iOiIzMDA1X0U5bV8zUzl1S3ZtUE9IdG5hUFZsYkdTV3 | ref=https://videoplays.cfd/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎  ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Turkish",LANGUAGE="tur",DEFAULT=YES,AUTOSELECT=YES,URI="audio_0/stream.m3u8" ⏎  
+
+==================== DiziMom (https://www.dizimom.wiki) ====================
+HAM GET https://www.dizimom.wiki -> 200 | başlık=Dizi izle - Dizimom | Yabancı dizi izle | uzunluk=337461 
+ANA SAYFA [Son Bölümler] -> 25 öğe 
+   - Güller ve Günahlar 36 | https://www.dizimom.wiki/diziler/guller-ve-gunahlar-izle-hd/ | https://www.dizimom.wiki/wp-content/uploads/2025/10/sins-and-roses-izle.jpg
+   - Mercan Köşk 5 | https://www.dizimom.wiki/diziler/mercan-kosk-izle/ | https://www.dizimom.wiki/wp-content/uploads/2026/09/villa-coral-izle-231x130.jpg
+   - Başkalarının Hayatı 2 | https://www.dizimom.wiki/diziler/baskalarinin-hayati-izle/ | https://www.dizimom.wiki/wp-content/uploads/2026/09/peoples-lives-izle-231x130.jpg
+ARAMA 'guller' -> 2 
+   - Güller ve Günahlar | https://www.dizimom.wiki/diziler/guller-ve-gunahlar-izle-hd/
+   - Güllerin Savaşı | https://www.dizimom.wiki/diziler/gullerin-savasi-izle/
+LOAD DİZİ 'Güller ve Günahlar' bölüm=36 yıl=2025 poster=https://www.dizimom.wiki/wp-content/uploads/2025/10/sins-and-roses.jpg konu=Güller ve Günahlar izle, 2025 KanalD Yapımı Güller ve Günahl
+   ep S1E36 36.Bölüm | https://www.dizimom.wiki/guller-ve-gunahlar-36-bolum-izle/
+   ep S1E35 35.Bölüm | https://www.dizimom.wiki/guller-ve-gunahlar-35-bolum-izle/
+-- LOADLINKS https://www.dizimom.wiki/guller-ve-gunahlar-36-bolum-izle/
+    [D/DZM] data » https://www.dizimom.wiki/guller-ve-gunahlar-36-bolum-izle/
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/ca6127525a83011e6a686a3e49cad955
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106453290917470208/pl/RrZtVTjy8UtJ-9Xx.m3u8?tag=29
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/3ce434b95c3392cc0562fb8ac2e6a2ee
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106456401014837248/pl/dQnKKczXUxSxXx-F.m3u8?tag=29
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/8e507f1b8fd82c2bfae43b8f3cb66ba0
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106460527287250944/pl/zQhQn22p2Hkw0CTW.m3u8?tag=29
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/de615d957b9c5f4b8fd48893f7267a15
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106464394456485888/pl/K_fvmwXWlOB07ALq.m3u8?tag=29
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/60466bdf7f23352d678d2c69674917d1
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106468201219469312/pl/yGsy4IMXP0-nXdl7.m3u8?tag=29
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/d52cb244fe49f0d4928d571932510772
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106476438933106688/pl/ur-Zhhw_nAktAZG5.m3u8?tag=29
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/fe92afbc36214a2bef9873b3d90069d3
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106479564780134400/pl/xVsIiO_0g2b-wTEe.m3u8?tag=29
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/94df92c67698963892f60d2555502330
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106483739064668160/pl/ZVmD8ytSk6JwUPyN.m3u8?tag=29
+   dönüş=true link=8 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106453290917470208/pl/RrZtVTjy8UtJ-9Xx.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106456401014837248/pl/dQnKKczXUxSxXx-F.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106460527287250944/pl/zQhQn22p2Hkw0CTW.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106464394456485888/pl/K_fvmwXWlOB07ALq.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106468201219469312/pl/yGsy4IMXP0-nXdl7.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106476438933106688/pl/ur-Zhhw_nAktAZG5.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106479564780134400/pl/xVsIiO_0g2b-wTEe.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106483739064668160/pl/ZVmD8ytSk6JwUPyN.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+
+==================== DiziBox (https://www.dizibox.live) ====================
+HAM GET https://www.dizibox.live -> 403 | başlık=DiziBOX - Yabancı Dizi izle, Yabancı Diziler | uzunluk=6982 
+ANA SAYFA [Yerli] -> 0 öğe 
+-- LOADLINKS https://www.dizibox.live/ripley-1-sezon-1-bolum-izle/
+    [D/DZBX] data » https://www.dizibox.live/ripley-1-sezon-1-bolum-izle/
+    [D/DZBX] iframe » null
+   dönüş=true link=0 
+
+==================== KoreanTurk (https://www.koreanturk.com) ====================
+HAM GET https://www.koreanturk.com -> 403 | başlık=Just a moment... | uzunluk=5558 
+ANA SAYFA [Son Eklenenler] -> 0 öğe 
+
+==================== SetFilmIzle (https://www.setfilmizle.ltd) ====================
+HAM GET https://www.setfilmizle.ltd -> 200 | başlık=Set Film izle | HD Film | Yabancı Dizi | uzunluk=108520 
+ANA SAYFA [Filmler] -> 24 öğe 
+   - Vahşi Gece 2 | https://www.setfilmizle.ltd/film/vahsi-gece-2-2026-izle/ | https://www.setfilmizle.ltd/wp-content/uploads/2026/10/vahsi-gece-2-2026-izle.webp
+   - Çizmeli Kedi | https://www.setfilmizle.ltd/film/cizmeli-kedi-2011-izle/ | https://www.setfilmizle.ltd/wp-content/uploads/2026/10/cizmeli-kedi-2011-izle.webp
+   - Kadın Aklı Erkek Aklı | https://www.setfilmizle.ltd/film/kadin-akli-erkek-akli/ | https://www.setfilmizle.ltd/wp-content/uploads/2026/10/kadin-akli-erkek-akli-2009-izle.webp
+ARAMA 'aşk' -> 8 
+   - Aşk Seni Orada Bulacak | https://www.setfilmizle.ltd/film/ask-seni-orada-bulacak/
+   - Baskın: Kefaret | https://www.setfilmizle.ltd/film/baskin-kefaret/
+   - Şeytanın Aşkı | https://www.setfilmizle.ltd/film/seytanin-aski/
+LOAD FİLM 'Vahşi Gece 2' yıl=2026 poster=https://www.setfilmizle.ltd/wp-content/uploads/2026/10/vahsi-gece-2-2026-izle.webp konu=New Jersey'deki terk edilmiş bir alışveriş merkezine yolu dü
+-- LOADLINKS https://www.setfilmizle.ltd/film/vahsi-gece-2-2026-izle/
+    [D/STF] data » https://www.setfilmizle.ltd/film/vahsi-gece-2-2026-izle/
+   dönüş=false link=0 
+-- LOADLINKS https://www.setfilmizle.ltd/film/ask-ve-yasam-1995-izle/
+    [D/STF] data » https://www.setfilmizle.ltd/film/ask-ve-yasam-1995-izle/
+    [D/STF] SetPlay » {"success":true,"data":{"stream":{"type":"bridge","url":"https:\/\/setplay.shop\/player\/stfplay.php?t=cnxNfF-H4Ai6usGaqcWgH_gvHvzg-ozy8EPTFkkvwOud_-3dKL3T_UbiVeeXgUALZhGKI9rCxBrFb_Li5rGSSd6-TI42ZtMvnVCmeLRJ4eY.RGX5b1AGk3TqYyzrtbdQmdGUo5QCutG1iXp02pCeDis&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubH
+    [D/NeO_StfKopru] manifest » https://setplay.shop/player/manifest.php?t=aaLu7N-6jsC_kZE0PPa9iYsBNRTZ2xpro3g2y4z77NPR-zc38dsR5fDIxozJNYz7fChEefVjiBwAmrJwj_-pBFGB50dr8qDgrhvMgCxXcZaSVrpiucTtJlPW0L2ELhh6WnM5jePzI_4gPKPKblgXJw.cVDkaAAlPOXhhDJl9h9UQXXSZDdwXyKfPeJa4Q7xiAc
+   ALTYAZI Türkçe | https://s4.istakoz.shop/cdn/down/Sense.and.Sensibility.1995.1080p/subtitle/tur.vtt
+   ALTYAZI İngilizce | https://s4.istakoz.shop/cdn/down/Sense.and.Sensibility.1995.1080p/subtitle/eng.vtt
+   dönüş=true link=1 
+   LINK SetPlay | SetPlay - 404 | M3U8 | https://setplay.shop/player/manifest.php?t=aaLu7N-6jsC_kZE0PPa9iYsBNRTZ2xpro3g2y4z77NPR-zc38dsR5fDIxozJNYz7fChEefVjiBwAmrJwj_-pBFGB50dr8qDgrhvMgCxXcZaSVrpiucTtJ | ref=https://setplay.shop/player/stfplay.php?t=cnxNfF-H4Ai6usGaqcWgH_gvHvzg-ozy8EPTFkkvwOud_-3dKL3T_UbiVeeXgUALZhGKI9rCxBrFb_Li5rGSSd6-TI42ZtMvnVCmeLRJ4eY.RGX5b1AGk3TqYyzrtbdQmdGUo5QCutG1iXp02pCeDis&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubHRkL3dwLWNvbnRlbnQvdGhlbWVzL3NldGZpbG0vYXNzZXRzLw&av=d2fe4173&nb2=1 | h={Origin=https://setplay.shop, X-Sp=1791060668.mcf7ja.ae2a321e}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:4 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="aud",NAME="İngilizce (Orijinal)",LANGUAGE="eng",DEFAULT=NO,AUTO 
+
+==================== DiziKorea (https://dizikorea3.com) ====================
+HAM GET https://dizikorea3.com -> 200 | başlık=DiziKorea - En Güncel Asya ve Kore Dizileri izleme Sitesi | uzunluk=340329 
+ANA SAYFA [Kore Dizileri] -> 29 öğe 
+   - Love on the Menu | https://dizikorea3.com/dizi/love-on-the-menu-izle | https://dizikorea3.com/assets/uploads/series/.thumbs/love-on-the-menu-180w-q70.webp?v=1786118465
+   - Dive into You | https://dizikorea3.com/dizi/dive-into-you-izle | https://dizikorea3.com/assets/uploads/series/.thumbs/dive-into-you-180w-q70.webp?v=1787913024
+   - A Love Other Than Yours | https://dizikorea3.com/dizi/a-love-other-than-yours-izle-dq | https://dizikorea3.com/assets/uploads/series/.thumbs/a-love-other-than-yours-180w-q70.webp?v=1786530570
+LOAD DİZİ 'Love on the Menu' bölüm=50 yıl=2026 poster=https://dizikorea3.com/assets/uploads/series/love-on-the-menu.jpg?v=1782856533 konu=Love on the Menu (2026), aile, romantik komedi ve drama türl
+   ep S1E1 1. Bölüm | https://dizikorea3.com/dizi/love-on-the-menu-izle/sezon-1/bolum-1
+   ep S1E2 2. Bölüm | https://dizikorea3.com/dizi/love-on-the-menu-izle/sezon-1/bolum-2
+-- LOADLINKS https://dizikorea3.com/dizi/love-on-the-menu-izle/sezon-1/bolum-1
+    [D/DZK] data » https://dizikorea3.com/dizi/love-on-the-menu-izle/sezon-1/bolum-1
+    [D/DZK] iframe » https://playerdkorea.xyz/video/24a2dbfe8f3ac27bfdf453dde5d26c3f
+    [D/NeO_FirePlayer] playerdkorea.xyz » https://playerdkorea.xyz/cdn/hls/70cf649667133852146ede6f1a9fe10e/master.m3u8?md5=vRCH-lBPgsqtzWJQAmmBjA&expires=1791067870
+    [D/DZK] iframe » https://vidmoly.biz/embed-61qhercjy6ei.html
+DEBUG ApiError: -------------------------------------------------------------------
+DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://box-1583-q.vmeas.cloud/hls2/03/02695/61qhercjy6ei_,n,l,.urlset/master.m3u8?t=2_3cBjChAudnamnb0q5jj--17PNjd8LjMvCe44EU-jc=&s=1791060670&e=43200&v=&i=0.4&sp=0&asn=8075' }]
+kotlinx.serialization.json.JsonDecodingException: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://box-1583-q.vmeas.cloud/hls2/03/02695/61qhercjy6ei_,n,l,.urlset/master.m3u8?t=2_3cBjChAudnamnb0q5jj--17PNjd8LjMvCe44EU-jc=&s=1791060670&e=43200&v=&i=0.4&sp=0&asn=8075' }]
+	at kotlinx.serialization.json.internal.JsonExceptionsKt.decodingExceptionOf(JsonExceptions.kt:48)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail(AbstractJsonLexer.kt:583)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail$default(AbstractJsonLexer.kt:582)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.unexpectedToken(AbstractJsonLexer.kt:785)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeNextToken(StringJsonLexer.kt:81)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeKeyString(StringJsonLexer.kt:93)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.consumeString(AbstractJsonLexer.kt:372)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeString(StreamingJsonDecoder.kt:340)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeStringElement(AbstractDecoder.kt:58)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$lambda$0(JWPlayerHelper.kt:201)
+	at kotlin.sequences.FlatteningSequence$iterator$1.ensureItemIterator(Sequences.kt:363)
+	at kotlin.sequences.FlatteningSequence$iterator$1.hasNext(Sequences.kt:351)
+DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+	at kotlin.sequences.SequencesKt___SequencesKt.toList(_Sequences.kt:828)
+JSON input: [{ "file": 'https://box-1583-q.vmeas.cloud/hls2/03/02695/61qhercjy6ei_,n,l,.urlset/master.m3u8?t=2_3cBjChAudnamnb0q5jj--17PNjd8LjMvCe44EU-jc=&s=1791060670&e=43200&v=&i=0.4&sp=0&asn=8075' }]
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks(JWPlayerHelper.kt:53)
+DEBUG ApiError: -------------------------------------------------------------------
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$default(JWPlayerHelper.kt:42)
+	at com.lagradost.cloudstream3.extractors.Vidmoly.getUrl$suspendImpl(Vidmoly.kt:48)
+	at com.lagradost.cloudstream3.extractors.Vidmoly$getUrl$1.invokeSuspend(Vidmoly.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:54)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlockingImpl(Builders.kt:30)
+	at kotlinx.coroutines.BuildersKt.runBlockingImpl(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__Builders_concurrentKt.runBlockingK(Builders.concurrent.kt:172)
+	at kotlinx.coroutines.BuildersKt.runBlockingK(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:22)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:20)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at TestKt.main(Test.kt:9)
+    [D/DZK] iframe » https://bysedikamoum.com/e/py9ht3ig5fl9
+   dönüş=true link=1 
+   LINK playerdkorea.xyz | playerdkorea.xyz | M3U8 | https://playerdkorea.xyz/cdn/hls/70cf649667133852146ede6f1a9fe10e/master.m3u8?md5=vRCH-lBPgsqtzWJQAmmBjA&expires=1791067870 | ref=https://playerdkorea.xyz/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎ ## [ FirePlayer ] by Neron (c) 2018~ | firevideoplayer.com | Skype : neronsilence ☪ ## ⏎ #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWID 
+
+==================== WebDramaTurkey (https://webdramaturkey2.com) ====================
+HAM GET https://webdramaturkey2.com -> 200 | başlık=Web Drama Turkey - Kore, Çin, Japon Dizileri İzle | uzunluk=207933 
+ANA SAYFA [Diziler] -> 20 öğe 
+   - Shadow Punisher | https://webdramaturkey2.com/dizi/shadow-punisher | https://cdn.webdrama.io/cover/shadow-punisher-vtm8dy02106.jpeg
+   - The Flaming Heart | https://webdramaturkey2.com/dizi/the-flaming-heart | https://cdn.webdrama.io/cover/the-flaming-heart-vtm70jie990.jpeg
+   - Dear Sister | https://webdramaturkey2.com/dizi/dear-sister | https://cdn.webdrama.io/cover/dear-sister-vtm6nwc9af9.jpeg
+LOAD DİZİ 'Shadow Punisher' bölüm=8 yıl=2026 poster=https://cdn.webdrama.io/cover/shadow-punisher-vtm8dy02106.jpeg konu=Hikâye, Dördüncü Prens'in gizemli ölümünün ardındaki gerçeği
+   ep S1E1 1. Bölüm | https://webdramaturkey2.com/dizi/shadow-punisher/1-sezon/1-bolum
+   ep S1E2 2. Bölüm | https://webdramaturkey2.com/dizi/shadow-punisher/1-sezon/2-bolum
+-- LOADLINKS https://webdramaturkey2.com/dizi/shadow-punisher/1-sezon/1-bolum
+    [D/WDT] data » https://webdramaturkey2.com/dizi/shadow-punisher/1-sezon/1-bolum
+    [D/WDT] WDT » https://dtpasn.asia/video/30f52c42d71419a92405dd78a3ab4a9c
+    [D/NeO_FirePlayer] dtpasn.asia » https://dtpasn.asia/cdn/hls/5d4cd4bae9f1297721572a93f7c67f40/master.m3u8?md5=hO3Ehq-IC1ySM3_7bBOEUw&expires=1791067874
+    [D/WDT] Odnoklassniki » https://bulgu.net/ok/e/36570a94984aea584851556c2959775976033a020d0d0940101351ededa43bf0
+    [D/WDT] VK » https://vk.com/video_ext.php?oid=-241454844&id=456239066&hash=9b0c91c862a6236b&hd=3
+    [D/WDT] UPN (Reklamlı) » https://bldrama.upns.online/#3yvxru
+    [D/WDT] VK » https://vk.com/video_ext.php?oid=-241454844&id=456239103&hash=1929c4dd68a466b9&hd=3
+    [D/WDT] Moly (Reklamlı) » https://vidmoly.biz/embed-hcdgq2qxzwc8.html
+DEBUG ApiError: -------------------------------------------------------------------
+DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://prx-vi-a-1.vmpx.onlin.....
+DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://prx-vi-a-1.vmpx.onlin.....
+kotlinx.serialization.json.JsonDecodingException: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://prx-vi-a-1.vmpx.onlin.....
+	at kotlinx.serialization.json.internal.JsonExceptionsKt.decodingExceptionOf(JsonExceptions.kt:48)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail(AbstractJsonLexer.kt:583)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail$default(AbstractJsonLexer.kt:582)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.unexpectedToken(AbstractJsonLexer.kt:785)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeNextToken(StringJsonLexer.kt:81)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeKeyString(StringJsonLexer.kt:93)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.consumeString(AbstractJsonLexer.kt:372)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeString(StreamingJsonDecoder.kt:340)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeStringElement(AbstractDecoder.kt:58)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
+DEBUG ApiError: -------------------------------------------------------------------
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$lambda$0(JWPlayerHelper.kt:201)
+	at kotlin.sequences.FlatteningSequence$iterator$1.ensureItemIterator(Sequences.kt:363)
+	at kotlin.sequences.FlatteningSequence$iterator$1.hasNext(Sequences.kt:351)
+	at kotlin.sequences.SequencesKt___SequencesKt.toList(_Sequences.kt:828)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks(JWPlayerHelper.kt:53)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$default(JWPlayerHelper.kt:42)
+	at com.lagradost.cloudstream3.extractors.Vidmoly.getUrl$suspendImpl(Vidmoly.kt:48)
+	at com.lagradost.cloudstream3.extractors.Vidmoly$getUrl$1.invokeSuspend(Vidmoly.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:54)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlockingImpl(Builders.kt:30)
+	at kotlinx.coroutines.BuildersKt.runBlockingImpl(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__Builders_concurrentKt.runBlockingK(Builders.concurrent.kt:172)
+	at kotlinx.coroutines.BuildersKt.runBlockingK(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:22)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:20)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at TestKt.main(Test.kt:9)
+   dönüş=true link=1 
+   LINK dtpasn.asia | dtpasn.asia | M3U8 | https://dtpasn.asia/cdn/hls/5d4cd4bae9f1297721572a93f7c67f40/master.m3u8?md5=hO3Ehq-IC1ySM3_7bBOEUw&expires=1791067874 | ref=https://dtpasn.asia/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎ ## [ FirePlayer ] by Neron (c) 2018~ | firevideoplayer.com | Skype : neronsilence ☪ ## ⏎ #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWID 
+
+==================== Dizilla (https://dizilla.now) ====================
+HAM GET https://dizilla.now -> 403 | başlık=null | uzunluk=17 
+ANA SAYFA [Son Bölümler] -> 0 öğe 
+
+=== BİTTİ ===
+
+BUILD SUCCESSFUL in 2m 56s
+2 actionable tasks: 2 executed
