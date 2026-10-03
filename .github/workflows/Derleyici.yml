@@ -42,9 +42,7 @@ jobs:
           distribution: adopt
           java-version: 17
 
-      - name: Android SDK Ayarla
-        uses: android-actions/setup-android@v3.2.2
-
+      # ubuntu-latest imajında Android SDK zaten kurulu (ANDROID_HOME); ayrıca kurulum gerekmiyor
       - name: Eklentileri Derle
         run: |
           cd $GITHUB_WORKSPACE/src
