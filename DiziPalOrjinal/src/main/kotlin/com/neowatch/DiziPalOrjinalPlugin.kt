@@ -9,5 +9,6 @@ class DiziPalOrjinalPlugin: Plugin() {
     override fun load(context: Context) {
         registerMainAPI(DiziPalOrjinal())
         registerExtractorAPI(VideoPlays())
+        registerExtractorAPI(StreamCore())
     }
 }

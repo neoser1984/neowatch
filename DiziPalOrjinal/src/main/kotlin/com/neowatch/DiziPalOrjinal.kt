@@ -184,18 +184,21 @@ class DiziPalOrjinal : MainAPI() {
             .map { if (it.startsWith("//")) "https:$it" else it }
             .distinct()
 
+        var bulundu = false
+        val sayac: (ExtractorLink) -> Unit = { bulundu = true; callback.invoke(it) }
+
         iframes.forEach { iframe ->
             Log.d("DZPO", "iframe » $iframe")
             runCatching {
-                if (VideoPlays.uygunMu(iframe)) {
-                    VideoPlays().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
-                } else {
-                    loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
+                when {
+                    VideoPlays.uygunMu(iframe) -> VideoPlays().getUrl(iframe, "${mainUrl}/", subtitleCallback, sayac)
+                    StreamCore.uygunMu(iframe) -> StreamCore().getUrl(iframe, "${mainUrl}/", subtitleCallback, sayac)
+                    else                       -> loadExtractor(iframe, "${mainUrl}/", subtitleCallback, sayac)
                 }
-            }
+            }.onFailure { Log.d("DZPO", "hata » ${it.message}") }
         }
 
-        return iframes.isNotEmpty()
+        return bulundu
     }
 
     data class AramaYanit(

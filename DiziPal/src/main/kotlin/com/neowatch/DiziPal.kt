@@ -60,10 +60,10 @@ class DiziPal : MainAPI() {
         val name      = this.selectFirst("span.ep-title")?.text()?.trim() ?: return null
         val episode   = this.selectFirst("span.ep-info")?.text()?.trim()?.replace(". Sezon ", "x")?.replace(". Bölüm", "")
         val href      = fixUrlNull(this.attr("href")) ?: return null
-        val seriesUrl = href.replace("/bolum/", "/dizi/").replace(Regex("""-\d+-sezon-\d+-bolum.*$"""), "")
         val posterUrl = fixUrlNull(this.selectFirst("img")?.let { it.attr("data-src").ifBlank { it.attr("src") } })
 
-        return newTvSeriesSearchResponse(if (episode != null) "$name $episode" else name, seriesUrl, TvType.TvSeries) {
+        // Bölüm adresi dizi adresinden türetilemiyor (slug farklı olabiliyor); load() içinde dizi sayfasına geçilir
+        return newTvSeriesSearchResponse(if (episode != null) "$name $episode" else name, href, TvType.TvSeries) {
             this.posterUrl = posterUrl
         }
     }
@@ -99,9 +99,18 @@ class DiziPal : MainAPI() {
     override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)
 
     override suspend fun load(url: String): LoadResponse? {
-        val document = app.get(url, referer = "${mainUrl}/").document
+        var adres    = url
+        var document = app.get(url, referer = "${mainUrl}/").document
 
-        return if (url.contains("/film/")) loadMovie(url, document) else loadSeries(url, document)
+        if (url.contains("/bolum/")) {
+            val dizi = fixUrlNull(
+                document.selectFirst("a.ep-nav-all[href*='/dizi/'], a.btn-watch-first[href*='/dizi/'], a[href*='/dizi/']:containsOwn(Tüm Bölümler)")?.attr("href")
+            ) ?: return null
+            adres    = dizi
+            document = app.get(dizi, referer = url).document
+        }
+
+        return if (adres.contains("/film/")) loadMovie(adres, document) else loadSeries(adres, document)
     }
 
     private fun Document.bilgi(label: String): Element? {
@@ -175,15 +184,19 @@ class DiziPal : MainAPI() {
 
     override suspend fun loadLinks(data: String, isCasting: Boolean, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         Log.d("DZP", "data » $data")
-        val document = app.get(data, referer = "${mainUrl}/").document
+        val sayfa    = app.get(data, referer = "${mainUrl}/")
+        val document = sayfa.document
         val cfg      = document.selectFirst("#videoContainer")?.attr("data-cfg")?.takeIf { it.isNotBlank() } ?: return false
 
+        // data-cfg anahtarı oturuma bağlı: sayfanın verdiği çerezler (PHPSESSID) olmadan "Invalid token" döner
         val config = app.post(
             "${mainUrl}/ajax-player-config",
             data    = mapOf("cfg" to cfg),
             referer = data,
-            headers = mapOf("X-Requested-With" to "XMLHttpRequest")
+            cookies = sayfa.cookies,
+            headers = mapOf("X-Requested-With" to "XMLHttpRequest", "Origin" to mainUrl)
         ).parsedSafe<PlayerConfig>() ?: return false
+        if (config.success == false) Log.d("DZP", "ajax-player-config başarısız » cfg=$cfg")
 
         val video = config.enc?.let { coz(it) } ?: config.config?.v
         if (video.isNullOrBlank()) return false
@@ -204,8 +217,14 @@ class DiziPal : MainAPI() {
                     }
                 )
             }
-            iframe.contains("vidmoly") || Regex("""/embed-[a-z0-9]{12}\.html""").containsMatchIn(iframe) -> {
+            iframe.contains("vidmoly") -> {
                 Vidmoly().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
+            }
+            Regex("""/embed-[a-z0-9]{12}\.html""").containsMatchIn(iframe) -> {
+                // formationfeed.net vb. XFileSharing oynatıcıları
+                var bulundu = false
+                JwKaynak().getUrl(iframe, "${mainUrl}/", subtitleCallback) { bulundu = true; callback.invoke(it) }
+                if (!bulundu) loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
             }
             else -> loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
         }

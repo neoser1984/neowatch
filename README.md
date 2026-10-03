@@ -47,7 +47,7 @@ https://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json
 | KultFilmler | kultfilmler.net | Film, Dizi |
 | RareFilmm | rarefilmm.com | Film |
 | SelcukFlix | selcukflix.com | Dizi, Film |
-| SetFilmIzle | setfilmizle.nl | Film, Dizi |
+| SetFilmIzle | setfilmizle.ltd | Film, Dizi |
 | SezonlukDizi | sezonlukdizi.cc | Dizi |
 | SinemaCX | sinema.cx | Film |
 | SuperFilmGeldi | superfilmgeldi.me | Film |

@@ -269,10 +269,10 @@ class DiziBox : MainAPI() {
             ),
             interceptor = interceptor
         ).document
-        var iframe = document.selectFirst("div#video-area iframe")?.attr("src")?: return false
+        val iframe = document.selectFirst("div#video-area iframe")?.attr("src")
         Log.d("DZBX", "iframe » $iframe")
 
-        iframeDecode(data, iframe, subtitleCallback, callback)
+        if (iframe != null) runCatching { iframeDecode(data, iframe, subtitleCallback, callback) }
 
         document.select("div.video-toolbar option[value]").forEach {
             val altLink = it.attr("value")
@@ -285,10 +285,10 @@ class DiziBox : MainAPI() {
                 ),
                 interceptor = interceptor
             ).document
-            iframe = subDoc.selectFirst("div#video-area iframe")?.attr("src")?: return false
-            Log.d("DZBX", "iframe » $iframe")
+            val altIframe = subDoc.selectFirst("div#video-area iframe")?.attr("src") ?: return@forEach
+            Log.d("DZBX", "iframe » $altIframe")
 
-            iframeDecode(data, iframe, subtitleCallback, callback)
+            runCatching { iframeDecode(data, altIframe, subtitleCallback, callback) }
         }
 
         return true
