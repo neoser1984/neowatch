@@ -1,0 +1,51 @@
+name: Eklenti Testi
+
+on:
+  push:
+    branches:
+      - test
+    paths:
+      - "neo_test.tgz"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Depo Kontrolü
+        uses: actions/checkout@v4
+
+      - name: JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Test Projesini Hazırla
+        run: |
+          rm -rf h && mkdir h
+          tar xzf neo_test.tgz -C h
+          ls -R h | head -50
+
+      - name: Testi Çalıştır
+        continue-on-error: true
+        run: |
+          chmod +x gradlew
+          ARGS="$(cat h/args.txt 2>/dev/null || true)"
+          CS="$(cat h/cs.txt 2>/dev/null || echo 4.8.0)"
+          ./gradlew -p h/harness run --no-daemon --console=plain -PcsSurum="$CS" --args="$ARGS" > sonuc.txt 2>&1 || echo "GRADLE HATASI: $?" >> sonuc.txt
+          tail -c 200000 sonuc.txt > sonuc_kisa.txt
+
+      - name: Sonucu Kaydet
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p sonuclar
+          cp sonuc_kisa.txt sonuclar/sonuc.txt
+          git add sonuclar/sonuc.txt
+          git commit -q -m "Test sonucu $(date -u +%H:%M)" || exit 0
+          git push origin HEAD:test
