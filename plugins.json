@@ -1,0 +1,765 @@
+[
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=animecix.net&sz=%size%",
+        "fileHash": "sha256-4abf765d15caecf18cdc097208fb8d9c9c664bc4a45d96eb0fb2ff7c6dba836b",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 22520,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO",
+            "inatchii",
+            "JustRelaxable"
+        ],
+        "tvTypes": [
+            "Anime"
+        ],
+        "version": 9,
+        "internalName": "AnimeciX",
+        "description": "AnimeciX, animeleri ke\u015ffedebilece\u011finiz ve animeler hakk\u0131nda her \u015feyi \u00f6\u011frenebilece\u011finiz bir payla\u015f\u0131m platformudur.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/AnimeciX.cs3",
+        "name": "AnimeciX"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=belgeselx.com&sz=%size%",
+        "fileHash": "sha256-6ae003eb9c80bb0367f10ed4c6065db20b302dd6fa8d57f6168151ef7a8cfca7",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 31084,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO",
+            "JustRelaxable"
+        ],
+        "tvTypes": [
+            "Documentary"
+        ],
+        "version": 6,
+        "internalName": "BelgeselX",
+        "description": "En yeni belgeseller, t\u00fcrk\u00e7e altyaz\u0131l\u0131 yada dublaj olarak 1080p kalitesinde HD belgesel izle.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/BelgeselX.cs3",
+        "name": "BelgeselX"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tr.canlitv.team&sz=%size%",
+        "fileHash": "sha256-0651d969553b67b42b7ef3db3268f61babbecd34b3ff37c99f5869b8c34afa1f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 20616,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "Adippe",
+            "NeO"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 6,
+        "internalName": "CanliTV",
+        "description": "Canl\u0131 TV",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/CanliTV.cs3",
+        "name": "CanliTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=cizgimax.online&sz=%size%",
+        "fileHash": "sha256-384a5cf3ff2ce47141241e37130f6b3447f69ece0e00ac6d8910c816100ff7ec",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 27901,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Cartoon",
+            "Anime"
+        ],
+        "version": 7,
+        "internalName": "CizgiMax",
+        "description": "\u00c7izgiMax ile \u00e7izgi film ve anime izlemek art\u0131k daha kolay; donmadan, full HD ve T\u00fcrk\u00e7e.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/CizgiMax.cs3",
+        "name": "CizgiMax"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizibal.org&sz=%size%",
+        "fileHash": "sha256-04c7327e75bd4e61e71e900ddfec06e5ae8039fc596a508ea338ec0802817c4a",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 26620,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "DiziBal",
+        "description": "dizibaL \u2014 online dizi ar\u015fivi, altyaz\u0131l\u0131 yabanc\u0131 diziler",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziBal.cs3",
+        "name": "DiziBal"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.dizibox.de&sz=%size%",
+        "fileHash": "sha256-4d07f2cfd82c97a89bbab015f36ddc8d44d193613e9f710946b39e8f3c7ed58f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 23407,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 5,
+        "internalName": "DiziBox",
+        "description": "Yabanc\u0131 Dizi izle, T\u00fcm yabanc\u0131 dizilerin yeni ve eski sezonlar\u0131n\u0131 full hd izleyebilece\u011finiz elit site.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziBox.cs3",
+        "name": "DiziBox"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizikorea3.com&sz=%size%",
+        "fileHash": "sha256-d36b71496c92b5b3c4163a5e8ff27560806bee769cb6a98a7126aa364a766fdf",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 32513,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "Movie"
+        ],
+        "version": 7,
+        "internalName": "DiziKorea",
+        "description": "En G\u00fcncel Asya ve Kore Dizileri izleme Sitesi",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziKorea.cs3",
+        "name": "DiziKorea"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizilla.now&sz=%size%",
+        "fileHash": "sha256-479f44fb27f8fe9bf814d4a89f5cc83f8a510a20fcb42f7905293f2668d7f9d1",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 43070,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Anime",
+            "AsianDrama"
+        ],
+        "version": 16,
+        "internalName": "Dizilla",
+        "description": "Dizilla t\u00fcm yabanc\u0131 dizileri \u00fccretsiz olarak T\u00fcrk\u00e7e Dublaj ve altyaz\u0131l\u0131 se\u00e7enekleri ile 1080P kalite izleyebilece\u011finiz yeni nesil yabanc\u0131 dizi izleme siteniz.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/Dizilla.cs3",
+        "name": "Dizilla"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=ddizimom.net&sz=%size%",
+        "fileHash": "sha256-bade1afb9d6d7bf3fb781b0ead5852a02be528784f0f0341cc6aa4294d065639",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 40903,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 15,
+        "internalName": "DiziMom",
+        "description": "Binlerce yerli yabanc\u0131 dizi, film ve anime ar\u015fivi, t\u00fcm sezonlar, kesintisiz b\u00f6l\u00fcmler. DiziMom heryerde seninle!",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziMom.cs3",
+        "name": "DiziMom"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizipal2145.com&sz=%size%",
+        "fileHash": "sha256-c0640747a32d619b29c5194ba17e51c1af069a49202146ff99fc819660c70cb7",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 35292,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO",
+            "muratcesmecioglu"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 36,
+        "internalName": "DiziPal",
+        "description": "en yeni dizileri g\u00fcvenli ve h\u0131zl\u0131 \u015fekilde sunar.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziPal.cs3",
+        "name": "DiziPal"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizipal1593.com&sz=%size%",
+        "fileHash": "sha256-d02eb875176c4e81f948e21af57089881267bdac1d68c13caac9a445fe58790c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 45039,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 5,
+        "internalName": "DiziPalGuncel",
+        "description": "Dizipal Orijinal / G\u00fcncel \u2014 yabanc\u0131 dizi ve film izle",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziPalGuncel.cs3",
+        "name": "DiziPalGuncel"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dizipalorjinal18.com&sz=%size%",
+        "fileHash": "sha256-f9e385a1e2b8b151cede6782d0b686e374bccdfed485608d46d1c61d97c41a41",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 31923,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 5,
+        "internalName": "DiziPalOrjinal",
+        "description": "Dizipal Orijinal \u2014 T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 dizi, film izle",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziPalOrjinal.cs3",
+        "name": "DiziPalOrjinal"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.diziyou.one&sz=%size%",
+        "fileHash": "sha256-4d7374a3ef246fbb63f2f3900e8bd36fef927d765d6355d49f054f0cb54aae0d",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 15143,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 9,
+        "internalName": "DiziYou",
+        "description": "Diziyou en kaliteli T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 yabanc\u0131 dizi izleme sitesidir. G\u00fcncel ve efsanevi dizileri 1080p Full HD kalitede izlemek i\u00e7in hemen t\u0131kla!",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/DiziYou.cs3",
+        "name": "DiziYou"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://filmmakinesi.to&sz=%size%",
+        "fileHash": "sha256-417398fe172de9b0fde7d1ed43e780e7828d5668df63cf40b9d2bbe5807c8836",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 26392,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO",
+            "usdogu"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 8,
+        "internalName": "FilmMakinesi",
+        "description": "Film Makinesi, en yeni ve en g\u00fcncel filmleri sitemizde full HD kalite fark\u0131 ile izleyebilirsiniz. HD film izle denildi\u011finde akla gelen en kaliteli film izleme sitesi.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/FilmMakinesi.cs3",
+        "name": "FilmMakinesi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://filmmodu.news&sz=%size%",
+        "fileHash": "sha256-8b79104c2f503e2790d28f6cb73bdf296e685ddae6bd16a8e9354e032eea3132",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 26826,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 10,
+        "internalName": "FilmModu",
+        "description": "Film modun geldiyse y\u00fcksek kalitede en yeni filmleri izle, 1080p izleyebilece\u011finiz reklamsiz film sitesi.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/FilmModu.cs3",
+        "name": "FilmModu"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=hdfilm.us&sz=%size%",
+        "fileHash": "sha256-93c0e065383348f961d64a63f0a45a9dbb596c9eb3f2da84c4e8274a6cb41766",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 31297,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 14,
+        "internalName": "FullHDFilm",
+        "description": "Fullhdfilm (hdfilm.us) ile en yeni vizyon filmler Full HD ve kesintisiz; T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 film izle.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/FullHDFilm.cs3",
+        "name": "FullHDFilm"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.fullhdfilmizlesene.now&sz=%size%",
+        "fileHash": "sha256-5102228ae8b21d2afad0cb190c51de0c59a90eb361a501f0802e1e18099aba18",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 22896,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 5,
+        "internalName": "FullHDFilmizlesene",
+        "description": "Sinema zevkini evinize kadar getirdik. T\u00fcrkiye'nin lider Film sitesinde, en yeni filmleri Full HD izleyin.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/FullHDFilmizlesene.cs3",
+        "name": "FullHDFilmizlesene"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.hdfilmcehennemi.nl&sz=%size%",
+        "fileHash": "sha256-c9275c816ac56f51010245bee7b16dd81639c95575544c795f945f7a5c831223",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 28336,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "hexated",
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 19,
+        "internalName": "HDFilmCehennemi",
+        "description": "T\u00fcrkiye'nin en h\u0131zl\u0131 hd film izleme sitesi",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/HDFilmCehennemi.cs3",
+        "name": "HDFilmCehennemi"
+    },
+    {
+        "iconUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3vCp6N1K4bECoYRQD-cisJF2_6V_Hk01ZhDmoPR2JuM8O5qr4MqrPO1munM9cRlleBBSK6odYhLtDBWv4E3vhPhynlmS5hVVtJZShHoGA5REQ8_3v8SIlccTEqzVQu2UJyNYQdJNrKIfWy66RQeT0D-CcmFCbHPz5023H6p2v5fv4NVloZ5Rqo_yGrIY/s320/iNat-Box-App.png",
+        "fileHash": "sha256-c44049c7e5c1e4294daa25219c7bb5d62e6a856c4ec3a085cebbba9663612d6a",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 50452,
+        "status": 3,
+        "language": "tr",
+        "authors": [
+            "JustRelaxable",
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Live"
+        ],
+        "version": 18,
+        "internalName": "InatBox",
+        "description": "\u0130natBox cloudstream eklentisidir. Sevdi\u011finiz yay\u0131n platformlar\u0131n\u0131 ve canl\u0131 ma\u00e7lar\u0131 burada bulabilirsiniz.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/InatBox.cs3",
+        "name": "InatBox"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=jetfilmizle.app&sz=%size%",
+        "fileHash": "sha256-86e28991334200d2d8125b20c1ee326a3e9cb30f1132da0e37ce7a183fdfa662",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 43860,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 22,
+        "internalName": "JetFilmizle",
+        "description": "Binlerce film ve dizi; T\u00fcrk\u00e7e dublaj, altyaz\u0131l\u0131 ve yerli se\u00e7enekleriyle JetFilmizle.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/JetFilmizle.cs3",
+        "name": "JetFilmizle"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=koreanturk.tv&sz=%size%",
+        "fileHash": "sha256-6123c0e6b9cb700ac41cb9ff6b261291458752527c435bca2636a9ed93a96796",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 24615,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "Movie"
+        ],
+        "version": 7,
+        "internalName": "KoreanTurk",
+        "description": "G\u00fcney Kore sevdal\u0131lar\u0131n\u0131n vazge\u00e7emedi\u011fi ve T\u00fcrkiye'nin en \u00e7ok ziyaret edilen G\u00fcney Kore Portal\u0131; Koreant\u00fcrk'e ho\u015fgeldiniz!",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/KoreanTurk.cs3",
+        "name": "KoreanTurk"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=kultfilmler.net&sz=%size%",
+        "fileHash": "sha256-69328d7d850d35939e0ac4701718911c578861d0973a4e10aa1903111af944ae",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 35768,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 10,
+        "internalName": "KultFilmler",
+        "description": "K\u00fclt Filmler \u00f6zenle en iyi filmleri derler ve iyi bir altyaz\u0131l\u0131 film izleme deneyimi sunmay\u0131 ama\u00e7lar",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/KultFilmler.cs3",
+        "name": "KultFilmler"
+    },
+    {
+        "iconUrl": "https://iosmirror.cc/img/nf2/icon_x192.png",
+        "fileHash": "sha256-8eab3834372d62c439bf74292b8f146de2fd1eb32ae6b85aa747b84723204611",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 42026,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "Horis, megix",
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 9,
+        "internalName": "NetflixMirror",
+        "description": "Netflix, PrimeVideo Content in Multiple Languages",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/NetflixMirror.cs3",
+        "name": "NetflixMirror"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=rarefilmm.com&sz=%size%",
+        "fileHash": "sha256-09289b210bf16f11ae9b4e5c51e47cfcf96e25c6038ed6fcc96a84e8109474d0",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 15984,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 2,
+        "internalName": "RareFilmm",
+        "description": "The Cave of Forgotten Films",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/RareFilmm.cs3",
+        "name": "RareFilmm"
+    },
+    {
+        "iconUrl": "https://rectvapk.cc/wp-content/uploads/2023/02/Rec-TV.webp",
+        "fileHash": "sha256-6f844184dd274c8ed7c3a1fb05fc9f29b283e7f36a8c49c2372b27ee9c71b936",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 29410,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO",
+            "yusiqo",
+            "inatchii",
+            "JustRelaxable"
+        ],
+        "tvTypes": [
+            "Movie",
+            "Live",
+            "TvSeries"
+        ],
+        "version": 67,
+        "internalName": "RecTV",
+        "description": "RecTv APK, T\u00fcrkiye\u2019deki en pop\u00fcler \u00c7evrimi\u00e7i Medya Ak\u0131\u015f platformlar\u0131ndan biridir. Filmlerin, Canl\u0131 Sporlar\u0131n, Web Dizilerinin ve \u00e7ok daha fazlas\u0131n\u0131n keyfini \u00fccretsiz \u00e7\u0131kar\u0131n.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/RecTV.cs3",
+        "name": "RecTV"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://selcukflix.app&sz=%size%",
+        "fileHash": "sha256-e0d8e34627cf3d6b657d3b2e569e6ec8af30c670c4af1d0b04f65ab19299dcf0",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 46690,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 3,
+        "internalName": "SelcukFlix",
+        "description": "Selcukflix \u2014 yabanc\u0131 dizi ve film izle (T\u00fcrk\u00e7e dublaj & altyaz\u0131)",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/SelcukFlix.cs3",
+        "name": "SelcukFlix"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=www.setfilmizle.ltd&sz=%size%",
+        "fileHash": "sha256-acc7c920b46adace1dd468b60216d5c13f7e35eda52198f1aad16f4515251a17",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 31244,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 11,
+        "internalName": "SetFilmIzle",
+        "description": "Setfilmizle sitemizde, donma ya\u015famadan T\u00fcrk\u00e7e dublaj ve altyaz\u0131l\u0131 filmleri ile dizileri muhte\u015fem 1080p full HD kalitesinde izleyebilirsiniz.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/SetFilmIzle.cs3",
+        "name": "SetFilmIzle"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://sezonlukdizi.cc&sz=%size%",
+        "fileHash": "sha256-60a1d308ab1cdf4bd61ce3a4d09129cd1437a99a27b2c78c270a77afcc8700da",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 23517,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO",
+            "JustRelaxable"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 3,
+        "internalName": "SezonlukDizi",
+        "description": "G\u00fcncel ve eski dizileri en iyi g\u00f6r\u00fcnt\u00fc kalitesiyle bulabilece\u011finiz yabanc\u0131 dizi izleme siteniz.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/SezonlukDizi.cs3",
+        "name": "SezonlukDizi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=sinemacc.com&sz=%size%",
+        "fileHash": "sha256-8ff887cfec6d30fae6a06f7e8fe51531cd8f2499ffa706635f5281ccceb103ec",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 28750,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 4,
+        "internalName": "SinemaCX",
+        "description": "G\u00fcncel ve en iyi yabanc\u0131 filmleri y\u00fcksek g\u00f6r\u00fcnt\u00fc kalitesinde, T\u00fcrk\u00e7e dublaj ve altyaz\u0131 se\u00e7enekleriyle filmleri full izleyin.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/SinemaCX.cs3",
+        "name": "SinemaCX"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=superfilmizle.icu&sz=%size%",
+        "fileHash": "sha256-ced47f59121dab09d35cecedbe2c0d8b5509c8b0c142a1691ca2d4c571eb2881",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 30968,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime"
+        ],
+        "version": 7,
+        "internalName": "SuperFilmGeldi",
+        "description": "SuperFilmGeldi (art\u0131k superfilmizle.icu) \u2014 film, dizi ve anime izle. T\u00fcrk\u00e7e dublaj ve altyaz\u0131 se\u00e7enekleriyle.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/SuperFilmGeldi.cs3",
+        "name": "SuperFilmGeldi"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=turkanime.live&sz=%size%",
+        "fileHash": "sha256-03923b5273837bdccd23f06e3079f570ec66255692e42aababe9bd2a6141aa81",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 25314,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Anime",
+            "AnimeMovie"
+        ],
+        "version": 3,
+        "internalName": "TurkAnime",
+        "description": "T\u00fcrk Anime TV (turkanime.live) - T\u00fcrk\u00e7e altyaz\u0131l\u0131 anime izle.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/TurkAnime.cs3",
+        "name": "TurkAnime"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=ugurfilm7.com&sz=%size%",
+        "fileHash": "sha256-1858dc777046bdde66d5bc6c29398208602cd8895ffab5960b382ce8c180e694",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 23979,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 4,
+        "internalName": "UgurFilm",
+        "description": "Yabanc\u0131 film izle, T\u00fcrk\u00e7e dublaj ve T\u00fcrk\u00e7e altyaz\u0131l\u0131 film se\u00e7enekleriyle 720p ve 1080p HD kalitesinde film izle - U\u011fur Film full hd film izle.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/UgurFilm.cs3",
+        "name": "UgurFilm"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=watch2movies.net&sz=%size%",
+        "fileHash": "sha256-1fd910ed0f63f0794ac4fd229e6490705e201a26d62216f546136b062fc48ff4",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 20462,
+        "status": 3,
+        "language": "en",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Watch2Movies",
+        "description": "!!! YAPIM A\u015eAMASINDA !!! Watch2Movies is a Free Movies streaming site with zero ads. We let you watch movies online without having to register or paying, with over 10000 movies and TV-Series. You can also Download full movies from Watch2Movies and watch it later if you want.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/Watch2Movies.cs3",
+        "name": "Watch2Movies"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://webdramaturkey2.com&sz=%size%",
+        "fileHash": "sha256-23c2d4d3af5a441b8a2521964ea7417164a660db1864bef636b2687ba6d8b208",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 30955,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "Movie"
+        ],
+        "version": 4,
+        "internalName": "WebDramaTurkey",
+        "description": "Web Drama Turkey \u2014 Kore, \u00c7in, Japon dizileri T\u00fcrk\u00e7e altyaz\u0131l\u0131 izle",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/WebDramaTurkey.cs3",
+        "name": "WebDramaTurkey"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=webteizle.info&sz=%size%",
+        "fileHash": "sha256-5785aae428a40cd9ee96fa1847484950897d1f4a0380b4f1fadc8e955aeb9f61",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 30842,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "NeO"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 18,
+        "internalName": "WebteIzle",
+        "description": "Her t\u00fcrl\u00fc filmi ister dublaj ister altyaz\u0131l\u0131, en kaliteli bir \u015fekilde izleyebilece\u011finiz ar\u015fivi en geni\u015f ger\u00e7ek film izleme siteniz.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/WebteIzle.cs3",
+        "name": "WebteIzle"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=youtube.com&sz=%size%",
+        "fileHash": "sha256-7a997258d18a165fae5c891050670ac30ae8dbb5691e10908bf9b68c771d81e9",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/neoser1984/neowatch",
+        "fileSize": 14889,
+        "status": 1,
+        "language": "tr",
+        "authors": [
+            "Cloudburst",
+            "NeO"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 6,
+        "internalName": "YouTube",
+        "description": "YouTube, izledi\u011finiz videolarla \u00f6nerilerini iyile\u015ftirir. \u0130lginizi \u00e7ekebilecek i\u00e7eriklerle dolu bir ak\u0131\u015f olu\u015fturmak i\u00e7in video izlemeye ba\u015flay\u0131n.",
+        "url": "https://raw.githubusercontent.com/neoser1984/neowatch/builds/YouTube.cs3",
+        "name": "YouTube"
+    }
+]
