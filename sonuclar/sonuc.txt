@@ -61,43 +61,8 @@ See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
 w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziMom.kt:47:67 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
 w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziMom.kt:55:77 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
 w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziMom.kt:72:90 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:64:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:63:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
 w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:74:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:238:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:239:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:240:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:244:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:245:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:246:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:250:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
 w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:251:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
@@ -113,27 +78,47 @@ w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neow
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:202:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:257:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:203:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:258:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:207:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:259:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:208:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:263:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:209:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:264:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:265:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:266:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:205:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:206:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
@@ -149,6 +134,21 @@ w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neow
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
 w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:212:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:213:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:214:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalOrjinal.kt:215:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
@@ -486,19 +486,35 @@ See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
 > Task :run
 
 ==================== DiziPal (https://dizipal2135.com) ====================
-HAM GET https://dizipal2135.com -> 200 | başlık=Dizipal | yabancı dizi izle, film izle | uzunluk=112811 
+HAM GET https://dizipal2135.com -> 200 | başlık=Dizipal | yabancı dizi izle, film izle | uzunluk=112808 
 ANA SAYFA [Son Bölümler] -> 24 öğe 
-   - Physical 100: Italy 1x8 | https://dizipal2135.com/dizi/physical-italia-da-100-a-1 | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
-   - Physical 100: Italy 1x7 | https://dizipal2135.com/dizi/physical-italia-da-100-a-1 | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
-   - Physical 100: Italy 1x6 | https://dizipal2135.com/dizi/physical-italia-da-100-a-1 | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
+   - Physical 100: Italy 1x8 | https://dizipal2135.com/bolum/physical-italia-da-100-a-1-1-sezon-8-bolum | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
+   - Physical 100: Italy 1x7 | https://dizipal2135.com/bolum/physical-italia-da-100-a-1-1-sezon-7-bolum | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
+   - Physical 100: Italy 1x6 | https://dizipal2135.com/bolum/physical-italia-da-100-a-1-1-sezon-6-bolum | https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg
 ARAMA 'game' -> 17 
    - Pyramid Game | https://dizipal2135.com/dizi/pyramid-game
    - Squid Game | https://dizipal2135.com/dizi/squid-game
    - Beast Games | https://dizipal2135.com/dizi/beast-games
-LOAD https://dizipal2135.com/dizi/physical-italia-da-100-a-1 -> null 
+LOAD DİZİ 'Physical 100: Italy' bölüm=8 yıl=2026 poster=https://cdn.imags.me/uploads/posters/tmdb_6ac15d576c6fd_6g40xT8B2Tv2tGrq7QolksoZnIa.jpg konu=null
+   ep S1E1 1. Bölüm | https://dizipal2135.com/bolum/physical-italia-da-100-a-1-1-sezon-1-bolum
+   ep S1E2 2. Bölüm | https://dizipal2135.com/bolum/physical-italia-da-100-a-1-1-sezon-2-bolum
+-- LOADLINKS https://dizipal2135.com/bolum/physical-italia-da-100-a-1-1-sezon-1-bolum
+    [D/DZP] data » https://dizipal2135.com/bolum/physical-italia-da-100-a-1-1-sezon-1-bolum
+    [D/DZP] video » https://formationfeed.net/embed-xd255xe5t3iz.html
+    [D/NeO_JwKaynak] https://formationfeed.net » https://s8.superadjacentsoddenly.xyz/hls2/01/00016/xd255xe5t3iz_,n,h,.urlset/master.m3u8
+   ALTYAZI Türkçe | https://s8.superadjacentsoddenly.xyz/vtt/01/00016/xd255xe5t3iz_tur.vtt
+   ALTYAZI English | https://s8.superadjacentsoddenly.xyz/vtt/01/00016/xd255xe5t3iz_eng.vtt
+   dönüş=true link=1 
+   LINK PalPlayer | PalPlayer | M3U8 | https://s8.superadjacentsoddenly.xyz/hls2/01/00016/xd255xe5t3iz_,n,h,.urlset/master.m3u8 | ref=https://formationfeed.net/ | h={Origin=https://formationfeed.net}
+      erişim -> 200 #EXTM3U ⏎  ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio0",NAME="Türkçe",LANGUAGE="tr",AUTOSELECT=YES,DEFAULT=YES,CHANNELS="2",URI="https://s8.superadjacentso 
 -- LOADLINKS https://dizipal2135.com/bolum/game-of-thrones-1-sezon-1-bolum
     [D/DZP] data » https://dizipal2135.com/bolum/game-of-thrones-1-sezon-1-bolum
-   dönüş=false link=0 
+    [D/DZP] video » https://formationfeed.net/embed-7yno2djovj7e.html
+    [D/NeO_JwKaynak] https://formationfeed.net » https://s8.superadjacentsoddenly.xyz/hls2/01/00009/7yno2djovj7e_,n,h,.urlset/master.m3u8
+   ALTYAZI Türkçe | https://s8.superadjacentsoddenly.xyz/vtt/01/00009/7yno2djovj7e_tur.vtt
+   dönüş=true link=1 
+   LINK PalPlayer | PalPlayer | M3U8 | https://s8.superadjacentsoddenly.xyz/hls2/01/00009/7yno2djovj7e_,n,h,.urlset/master.m3u8 | ref=https://formationfeed.net/ | h={Origin=https://formationfeed.net}
+      erişim -> 200 #EXTM3U ⏎  ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio0",NAME="Türkçe",LANGUAGE="tr",AUTOSELECT=YES,DEFAULT=YES,CHANNELS="2",URI="https://s8.superadjacentso 
 
 ==================== DiziPalOrjinal (https://dizipalorjinal12.com) ====================
 HAM GET https://dizipalorjinal12.com -> 200 | başlık=Dizipal - Yabancı Dizi İzle | Film İzle | uzunluk=450921 
@@ -514,21 +530,26 @@ LOAD DİZİ 'Alıkara' bölüm=8 yıl=2026 poster=https://dizipalorjinal12.com/s
 -- LOADLINKS https://dizipalorjinal12.com/bolumler/alikara-s1b1
     [D/DZPO] data » https://dizipalorjinal12.com/bolumler/alikara-s1b1
     [D/DZPO] iframe » https://streamcorecdn.com/dizi/256440/1/1
-   dönüş=true link=0 
+    [D/NeO_StreamCore] m3u8 » https://streamcorecdn.com/play.m3u8?id=3166&m=master&token=6YcY7Md-cmxYcMN4bGs6Dw&expires=1791086400
+   ALTYAZI Türkçe | https://streamcorecdn.com/play.m3u8?id=3166&p=tracks%2Fsub_1%2Fsubtitles.vtt&token=6YcY7Md-cmxYcMN4bGs6Dw&expires=1791086400
+   ALTYAZI İngilizce | https://streamcorecdn.com/play.m3u8?id=3166&p=tracks%2Fsub_2%2Fsubtitles.vtt&token=6YcY7Md-cmxYcMN4bGs6Dw&expires=1791086400
+   dönüş=true link=1 
+   LINK StreamCore | StreamCore | M3U8 | https://streamcorecdn.com/play.m3u8?id=3166&m=master&token=6YcY7Md-cmxYcMN4bGs6Dw&expires=1791086400 | ref=https://streamcorecdn.com/dizi/256440/1/1 | h={Origin=https://streamcorecdn.com}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Turkish",LANGUAGE="tur",DEFAULT=YES,AUTOSELECT=YES,URI="/play.m3u8?id=3166&p=t 
 -- LOADLINKS https://dizipalorjinal12.com/bolumler/spartacus-s1b1
     [D/DZPO] data » https://dizipalorjinal12.com/bolumler/spartacus-s1b1
     [D/DZPO] iframe » https://videoplays.cfd/player.html?video=3043
    ALTYAZI Turkish - Turkish (Forced) | https://storagedomain.cfd/3043/subtitles/embedded_tur_3.vtt
    ALTYAZI Turkish - Turkish | https://storagedomain.cfd/3043/subtitles/embedded_tur_4.vtt
    ALTYAZI English - English (SDH) | https://storagedomain.cfd/3043/subtitles/embedded_eng_8.vtt
-    [D/NeO_VideoPlays] playlist » https://storagedomain.cfd/3043/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzA0MywidG9rZW4iOiIzMDQzX1pZZ3hBWFJDbHlmTl9XZFFEUmlyV3JTUzdSRGhTWFpWaUU5OXBuZGlJTW8iLCJleHAiOjE3OTEwNjQyMzcsImlhdCI6MTc5MTA2MDYzNywianRpIjoiNGU0NGI0NDItOTk4YS00MWUxLWI1ZDctM2NkYTk2Mjc4NzQ3IiwiZW1iZWRfaG9zdCI6ImRpemlwYWxvcmppbmFsMTIuY29tIn0.hxDfew1EVEPD72ag2XifGq2VT3ngmZRGhWH-oaNLZBo
+    [D/NeO_VideoPlays] playlist » https://storagedomain.cfd/3043/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzA0MywidG9rZW4iOiIzMDQzX1pZZ3hBWFJDbHlmTl9XZFFEUmlyV3JTUzdSRGhTWFpWaUU5OXBuZGlJTW8iLCJleHAiOjE3OTEwNjQ5MzksImlhdCI6MTc5MTA2MTMzOSwianRpIjoiODE3MjEwYWMtNTQ0OC00MDhlLTgxZjItNzc2MDE3NjVmY2UzIiwiZW1iZWRfaG9zdCI6ImRpemlwYWxvcmppbmFsMTIuY29tIn0.MbNReq9mzoAa8pos00_nXwooo_Au0Qa0n6XsCiCV_q8
    dönüş=true link=1 
    LINK VideoPlays | VideoPlays | M3U8 | https://storagedomain.cfd/3043/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzA0MywidG9rZW4iOiIzMDQzX1pZZ3hBWFJDbHlmTl9XZFFEUmlyV3JTUz | ref=https://videoplays.cfd/ | h={}
       erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎  ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Turkish",LANGUAGE="tur",DEFAULT=YES,AUTOSELECT=YES,URI="audio_0/stream.m3u8" ⏎  
 -- LOADLINKS https://dizipalorjinal12.com/filmler/saklambac
     [D/DZPO] data » https://dizipalorjinal12.com/filmler/saklambac
     [D/DZPO] iframe » https://videoplays.cfd/player.html?video=3005
-    [D/NeO_VideoPlays] playlist » https://storagedomain.cfd/3005/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzAwNSwidG9rZW4iOiIzMDA1X0U5bV8zUzl1S3ZtUE9IdG5hUFZsYkdTV3pMbjAza182V1UwRTRTRHNFUEUiLCJleHAiOjE3OTEwNjQyMzksImlhdCI6MTc5MTA2MDYzOSwianRpIjoiMTMwNTJmNWEtNjhkNC00MDRiLWFjYjUtNDg5MWZmMjMyNTRlIiwiZW1iZWRfaG9zdCI6ImRpemlwYWxvcmppbmFsMTIuY29tIn0.aZHxF3o_onjqVKvxfzz56GUPJkNitYJrZUR9h5xW4xM
+    [D/NeO_VideoPlays] playlist » https://storagedomain.cfd/3005/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzAwNSwidG9rZW4iOiIzMDA1X0U5bV8zUzl1S3ZtUE9IdG5hUFZsYkdTV3pMbjAza182V1UwRTRTRHNFUEUiLCJleHAiOjE3OTEwNjQ5NDAsImlhdCI6MTc5MTA2MTM0MCwianRpIjoiNGEzNjdkOWItNDZhMy00MzgzLWEyNWQtMDliZDIwYTFiY2I2IiwiZW1iZWRfaG9zdCI6ImRpemlwYWxvcmppbmFsMTIuY29tIn0.gBQXAgGADGhCmmavEL5rOkkxAR1uLtWAr1NiSuLOORc
    dönüş=true link=1 
    LINK VideoPlays | VideoPlays | M3U8 | https://storagedomain.cfd/3005/master.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWRlb19pZCI6MzAwNSwidG9rZW4iOiIzMDA1X0U5bV8zUzl1S3ZtUE9IdG5hUFZsYkdTV3 | ref=https://videoplays.cfd/ | h={}
       erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎  ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Turkish",LANGUAGE="tur",DEFAULT=YES,AUTOSELECT=YES,URI="audio_0/stream.m3u8" ⏎  
@@ -563,7 +584,9 @@ LOAD DİZİ 'Güller ve Günahlar' bölüm=36 yıl=2025 poster=https://www.dizim
     [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106479564780134400/pl/xVsIiO_0g2b-wTEe.m3u8?tag=29
     [D/DZM] iframe » https://peacemakerst.com/tv/video/94df92c67698963892f60d2555502330
     [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106483739064668160/pl/ZVmD8ytSk6JwUPyN.m3u8?tag=29
-   dönüş=true link=8 
+    [D/DZM] iframe » https://peacemakerst.com/tv/video/ddb15d13f8dbd975d89c8ba51cfca72c
+    [D/NeO_FirePlayer] peacemakerst.com » https://video.twimg.com/amplify_video/2106487017450168320/pl/q4wtbKPH0wErLH1n.m3u8?tag=29
+   dönüş=true link=9 
    LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106453290917470208/pl/RrZtVTjy8UtJ-9Xx.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
       erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
    LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106456401014837248/pl/dQnKKczXUxSxXx-F.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
@@ -580,9 +603,13 @@ LOAD DİZİ 'Güller ve Günahlar' bölüm=36 yıl=2025 poster=https://www.dizim
       erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
    LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106483739064668160/pl/ZVmD8ytSk6JwUPyN.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
       erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
+   LINK peacemakerst.com | peacemakerst.com - HD | M3U8 | https://video.twimg.com/amplify_video/2106487017450168320/pl/q4wtbKPH0wErLH1n.m3u8?tag=29 | ref=https://peacemakerst.com/ | h={}
+      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:6 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:NAME="Audio",TYPE=AUDIO,GROUP-ID="audio-32000",AUTOSELECT=YES,URI="/amplify_video/21 
 
 ==================== DiziBox (https://www.dizibox.live) ====================
 HAM GET https://www.dizibox.live -> 403 | başlık=DiziBOX - Yabancı Dizi izle, Yabancı Diziler | uzunluk=6982 
+   gövde:  DiziBOX - Yabancı Dizi izle, Yabancı Diziler DiziBOX - 500 ERROR Ooppss, bir hata ile karşılaşıldı. VPN veya Server ip adresi ile giriş yapmayınız Yanlışlıkla engellenmiş olabilirsiniz. Aşağıda iletmiş olduğumuz web sitesindeki bize mail g&ouml;ndererek inceleme başlatabilirsiniz. İletmenizi istediğimiz bilgiler: https://ipflu.com/ip/asn/ Mail adresimiz: [email&#160;protected] Not: Siteye erişmek için, lütfen VPN kullanmayınız. ::CLOUDFLARE_ERROR_1000S_BOX:: 
+   başlıklar: server=cloudflare cf-mitigated=null set-cookie=[]
 ANA SAYFA [Yerli] -> 0 öğe 
 -- LOADLINKS https://www.dizibox.live/ripley-1-sezon-1-bolum-izle/
     [D/DZBX] data » https://www.dizibox.live/ripley-1-sezon-1-bolum-izle/
@@ -591,6 +618,8 @@ ANA SAYFA [Yerli] -> 0 öğe
 
 ==================== KoreanTurk (https://www.koreanturk.com) ====================
 HAM GET https://www.koreanturk.com -> 403 | başlık=Just a moment... | uzunluk=5558 
+   gövde:  Just a moment... Enable JavaScript and cookies to continue 
+   başlıklar: server=cloudflare cf-mitigated=challenge set-cookie=[]
 ANA SAYFA [Son Eklenenler] -> 0 öğe 
 
 ==================== SetFilmIzle (https://www.setfilmizle.ltd) ====================
@@ -609,86 +638,35 @@ LOAD FİLM 'Vahşi Gece 2' yıl=2026 poster=https://www.setfilmizle.ltd/wp-conte
    dönüş=false link=0 
 -- LOADLINKS https://www.setfilmizle.ltd/film/ask-ve-yasam-1995-izle/
     [D/STF] data » https://www.setfilmizle.ltd/film/ask-ve-yasam-1995-izle/
-    [D/STF] SetPlay » {"success":true,"data":{"stream":{"type":"bridge","url":"https:\/\/setplay.shop\/player\/stfplay.php?t=cnxNfF-H4Ai6usGaqcWgH_gvHvzg-ozy8EPTFkkvwOud_-3dKL3T_UbiVeeXgUALZhGKI9rCxBrFb_Li5rGSSd6-TI42ZtMvnVCmeLRJ4eY.RGX5b1AGk3TqYyzrtbdQmdGUo5QCutG1iXp02pCeDis&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubH
-    [D/NeO_StfKopru] manifest » https://setplay.shop/player/manifest.php?t=aaLu7N-6jsC_kZE0PPa9iYsBNRTZ2xpro3g2y4z77NPR-zc38dsR5fDIxozJNYz7fChEefVjiBwAmrJwj_-pBFGB50dr8qDgrhvMgCxXcZaSVrpiucTtJlPW0L2ELhh6WnM5jePzI_4gPKPKblgXJw.cVDkaAAlPOXhhDJl9h9UQXXSZDdwXyKfPeJa4Q7xiAc
+    [D/STF] SetPlay » {"success":true,"data":{"stream":{"type":"bridge","url":"https:\/\/setplay.shop\/player\/stfplay.php?t=xOsTKhBpXQtuQq2l_85-ZMCly7mKO2bsgFxlzhR3BBtiWtDQcWfdgbfqpUsZAagG3I4b31El14Fozxi4EL4kOMy6ENZJCUUuIVz5nHpzEPs.ADgwE3HAOsMHSZ6gmsOuG5hnymw0-c664trmmcKd8_o&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubH
+    [D/NeO_StfKopru] manifest » https://setplay.shop/player/manifest.php?t=tQkkNvpwQgatS9kuFVtZiXwkRSeyIlEu5SVl_M96tN204PfyrPCkxwZNp5-QY1AVxAP4IWynDtk1razSt2MF5OFntIvXCB150VR4nEDYZX3uj3ar4EIaUrAomKvafhLlVpSyA3wKCVjin5J31sPVNA.j_DAD0y6masdF2e3kqs6gxS0iXHg-TXN1-f3y-dwOKc
    ALTYAZI Türkçe | https://s4.istakoz.shop/cdn/down/Sense.and.Sensibility.1995.1080p/subtitle/tur.vtt
    ALTYAZI İngilizce | https://s4.istakoz.shop/cdn/down/Sense.and.Sensibility.1995.1080p/subtitle/eng.vtt
    dönüş=true link=1 
-   LINK SetPlay | SetPlay - 404 | M3U8 | https://setplay.shop/player/manifest.php?t=aaLu7N-6jsC_kZE0PPa9iYsBNRTZ2xpro3g2y4z77NPR-zc38dsR5fDIxozJNYz7fChEefVjiBwAmrJwj_-pBFGB50dr8qDgrhvMgCxXcZaSVrpiucTtJ | ref=https://setplay.shop/player/stfplay.php?t=cnxNfF-H4Ai6usGaqcWgH_gvHvzg-ozy8EPTFkkvwOud_-3dKL3T_UbiVeeXgUALZhGKI9rCxBrFb_Li5rGSSd6-TI42ZtMvnVCmeLRJ4eY.RGX5b1AGk3TqYyzrtbdQmdGUo5QCutG1iXp02pCeDis&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubHRkL3dwLWNvbnRlbnQvdGhlbWVzL3NldGZpbG0vYXNzZXRzLw&av=d2fe4173&nb2=1 | h={Origin=https://setplay.shop, X-Sp=1791060668.mcf7ja.ae2a321e}
+   LINK SetPlay | SetPlay | M3U8 | https://setplay.shop/player/manifest.php?t=tQkkNvpwQgatS9kuFVtZiXwkRSeyIlEu5SVl_M96tN204PfyrPCkxwZNp5-QY1AVxAP4IWynDtk1razSt2MF5OFntIvXCB150VR4nEDYZX3uj3ar4EIaU | ref=https://setplay.shop/player/stfplay.php?t=xOsTKhBpXQtuQq2l_85-ZMCly7mKO2bsgFxlzhR3BBtiWtDQcWfdgbfqpUsZAagG3I4b31El14Fozxi4EL4kOMy6ENZJCUUuIVz5nHpzEPs.ADgwE3HAOsMHSZ6gmsOuG5hnymw0-c664trmmcKd8_o&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubHRkL3dwLWNvbnRlbnQvdGhlbWVzL3NldGZpbG0vYXNzZXRzLw&av=d2fe4173&nb2=1 | h={Origin=https://setplay.shop, X-Sp=1791061357.5gs8jn.7b048b53}
       erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:4 ⏎ #EXT-X-INDEPENDENT-SEGMENTS ⏎ #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="aud",NAME="İngilizce (Orijinal)",LANGUAGE="eng",DEFAULT=NO,AUTO 
 
 ==================== DiziKorea (https://dizikorea3.com) ====================
-HAM GET https://dizikorea3.com -> 200 | başlık=DiziKorea - En Güncel Asya ve Kore Dizileri izleme Sitesi | uzunluk=340329 
+HAM GET https://dizikorea3.com -> 200 | başlık=DiziKorea - En Güncel Asya ve Kore Dizileri izleme Sitesi | uzunluk=340301 
 ANA SAYFA [Kore Dizileri] -> 29 öğe 
-   - Love on the Menu | https://dizikorea3.com/dizi/love-on-the-menu-izle | https://dizikorea3.com/assets/uploads/series/.thumbs/love-on-the-menu-180w-q70.webp?v=1786118465
-   - Dive into You | https://dizikorea3.com/dizi/dive-into-you-izle | https://dizikorea3.com/assets/uploads/series/.thumbs/dive-into-you-180w-q70.webp?v=1787913024
    - A Love Other Than Yours | https://dizikorea3.com/dizi/a-love-other-than-yours-izle-dq | https://dizikorea3.com/assets/uploads/series/.thumbs/a-love-other-than-yours-180w-q70.webp?v=1786530570
-LOAD DİZİ 'Love on the Menu' bölüm=50 yıl=2026 poster=https://dizikorea3.com/assets/uploads/series/love-on-the-menu.jpg?v=1782856533 konu=Love on the Menu (2026), aile, romantik komedi ve drama türl
-   ep S1E1 1. Bölüm | https://dizikorea3.com/dizi/love-on-the-menu-izle/sezon-1/bolum-1
-   ep S1E2 2. Bölüm | https://dizikorea3.com/dizi/love-on-the-menu-izle/sezon-1/bolum-2
--- LOADLINKS https://dizikorea3.com/dizi/love-on-the-menu-izle/sezon-1/bolum-1
-    [D/DZK] data » https://dizikorea3.com/dizi/love-on-the-menu-izle/sezon-1/bolum-1
-    [D/DZK] iframe » https://playerdkorea.xyz/video/24a2dbfe8f3ac27bfdf453dde5d26c3f
-    [D/NeO_FirePlayer] playerdkorea.xyz » https://playerdkorea.xyz/cdn/hls/70cf649667133852146ede6f1a9fe10e/master.m3u8?md5=vRCH-lBPgsqtzWJQAmmBjA&expires=1791067870
-    [D/DZK] iframe » https://vidmoly.biz/embed-61qhercjy6ei.html
-DEBUG ApiError: -------------------------------------------------------------------
-DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
-JSON input: [{ "file": 'https://box-1583-q.vmeas.cloud/hls2/03/02695/61qhercjy6ei_,n,l,.urlset/master.m3u8?t=2_3cBjChAudnamnb0q5jj--17PNjd8LjMvCe44EU-jc=&s=1791060670&e=43200&v=&i=0.4&sp=0&asn=8075' }]
-kotlinx.serialization.json.JsonDecodingException: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
-JSON input: [{ "file": 'https://box-1583-q.vmeas.cloud/hls2/03/02695/61qhercjy6ei_,n,l,.urlset/master.m3u8?t=2_3cBjChAudnamnb0q5jj--17PNjd8LjMvCe44EU-jc=&s=1791060670&e=43200&v=&i=0.4&sp=0&asn=8075' }]
-	at kotlinx.serialization.json.internal.JsonExceptionsKt.decodingExceptionOf(JsonExceptions.kt:48)
-	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail(AbstractJsonLexer.kt:583)
-	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail$default(AbstractJsonLexer.kt:582)
-	at kotlinx.serialization.json.internal.AbstractJsonLexer.unexpectedToken(AbstractJsonLexer.kt:785)
-	at kotlinx.serialization.json.internal.StringJsonLexer.consumeNextToken(StringJsonLexer.kt:81)
-	at kotlinx.serialization.json.internal.StringJsonLexer.consumeKeyString(StringJsonLexer.kt:93)
-	at kotlinx.serialization.json.internal.AbstractJsonLexer.consumeString(AbstractJsonLexer.kt:372)
-	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeString(StreamingJsonDecoder.kt:340)
-	at kotlinx.serialization.encoding.AbstractDecoder.decodeStringElement(AbstractDecoder.kt:58)
-	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
-	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
-	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
-	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
-	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
-	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
-	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
-	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
-	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
-	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
-	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
-	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
-	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
-	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$lambda$0(JWPlayerHelper.kt:201)
-	at kotlin.sequences.FlatteningSequence$iterator$1.ensureItemIterator(Sequences.kt:363)
-	at kotlin.sequences.FlatteningSequence$iterator$1.hasNext(Sequences.kt:351)
-DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
-	at kotlin.sequences.SequencesKt___SequencesKt.toList(_Sequences.kt:828)
-JSON input: [{ "file": 'https://box-1583-q.vmeas.cloud/hls2/03/02695/61qhercjy6ei_,n,l,.urlset/master.m3u8?t=2_3cBjChAudnamnb0q5jj--17PNjd8LjMvCe44EU-jc=&s=1791060670&e=43200&v=&i=0.4&sp=0&asn=8075' }]
-	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks(JWPlayerHelper.kt:53)
-DEBUG ApiError: -------------------------------------------------------------------
-	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$default(JWPlayerHelper.kt:42)
-	at com.lagradost.cloudstream3.extractors.Vidmoly.getUrl$suspendImpl(Vidmoly.kt:48)
-	at com.lagradost.cloudstream3.extractors.Vidmoly$getUrl$1.invokeSuspend(Vidmoly.kt)
-	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
-	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
-	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
-	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:54)
-	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlockingImpl(Builders.kt:30)
-	at kotlinx.coroutines.BuildersKt.runBlockingImpl(Unknown Source)
-	at kotlinx.coroutines.BuildersKt__Builders_concurrentKt.runBlockingK(Builders.concurrent.kt:172)
-	at kotlinx.coroutines.BuildersKt.runBlockingK(Unknown Source)
-	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:22)
-	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
-	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:20)
-	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
-	at TestKt.main(Test.kt:9)
-    [D/DZK] iframe » https://bysedikamoum.com/e/py9ht3ig5fl9
+   - Dive into You | https://dizikorea3.com/dizi/dive-into-you-izle | https://dizikorea3.com/assets/uploads/series/.thumbs/dive-into-you-180w-q70.webp?v=1787913024
+   - Love on the Menu | https://dizikorea3.com/dizi/love-on-the-menu-izle | https://dizikorea3.com/assets/uploads/series/.thumbs/love-on-the-menu-180w-q70.webp?v=1786118465
+LOAD DİZİ 'A Love Other Than Yours' bölüm=14 yıl=2026 poster=https://dizikorea3.com/assets/uploads/series/a-love-other-than-yours.jpg?v=1786530555 konu=A Love Other Than Yours (2026), romantik, dram ve melodram t
+   ep S1E1 1. Bölüm | https://dizikorea3.com/dizi/a-love-other-than-yours-izle-dq/sezon-1/bolum-1
+   ep S1E2 2. Bölüm | https://dizikorea3.com/dizi/a-love-other-than-yours-izle-dq/sezon-1/bolum-2
+-- LOADLINKS https://dizikorea3.com/dizi/a-love-other-than-yours-izle-dq/sezon-1/bolum-1
+    [D/DZK] data » https://dizikorea3.com/dizi/a-love-other-than-yours-izle-dq/sezon-1/bolum-1
+    [D/DZK] iframe » https://playerdkorea.xyz/video/ad720f99a3b6ea189d9c352217bd3028
+    [D/NeO_FirePlayer] playerdkorea.xyz » https://playerdkorea.xyz/cdn/hls/e84bd8d6b3ab97fc56da26815a041306/master.m3u8?md5=uFqzLowLf8y7lxd7NoA0KQ&expires=1791068559
+    [D/DZK] iframe » https://vidmoly.org/embed-0e0ure53ar7o.html
+    [D/DZK] iframe » https://bysedikamoum.com/e/eihgkkr59lb8
    dönüş=true link=1 
-   LINK playerdkorea.xyz | playerdkorea.xyz | M3U8 | https://playerdkorea.xyz/cdn/hls/70cf649667133852146ede6f1a9fe10e/master.m3u8?md5=vRCH-lBPgsqtzWJQAmmBjA&expires=1791067870 | ref=https://playerdkorea.xyz/ | h={}
+   LINK playerdkorea.xyz | playerdkorea.xyz | M3U8 | https://playerdkorea.xyz/cdn/hls/e84bd8d6b3ab97fc56da26815a041306/master.m3u8?md5=uFqzLowLf8y7lxd7NoA0KQ&expires=1791068559 | ref=https://playerdkorea.xyz/ | h={}
       erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎ ## [ FirePlayer ] by Neron (c) 2018~ | firevideoplayer.com | Skype : neronsilence ☪ ## ⏎ #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWID 
 
 ==================== WebDramaTurkey (https://webdramaturkey2.com) ====================
-HAM GET https://webdramaturkey2.com -> 200 | başlık=Web Drama Turkey - Kore, Çin, Japon Dizileri İzle | uzunluk=207933 
+HAM GET https://webdramaturkey2.com -> 200 | başlık=Web Drama Turkey - Kore, Çin, Japon Dizileri İzle | uzunluk=207763 
 ANA SAYFA [Diziler] -> 20 öğe 
    - Shadow Punisher | https://webdramaturkey2.com/dizi/shadow-punisher | https://cdn.webdrama.io/cover/shadow-punisher-vtm8dy02106.jpeg
    - The Flaming Heart | https://webdramaturkey2.com/dizi/the-flaming-heart | https://cdn.webdrama.io/cover/the-flaming-heart-vtm70jie990.jpeg
@@ -699,7 +677,7 @@ LOAD DİZİ 'Shadow Punisher' bölüm=8 yıl=2026 poster=https://cdn.webdrama.io
 -- LOADLINKS https://webdramaturkey2.com/dizi/shadow-punisher/1-sezon/1-bolum
     [D/WDT] data » https://webdramaturkey2.com/dizi/shadow-punisher/1-sezon/1-bolum
     [D/WDT] WDT » https://dtpasn.asia/video/30f52c42d71419a92405dd78a3ab4a9c
-    [D/NeO_FirePlayer] dtpasn.asia » https://dtpasn.asia/cdn/hls/5d4cd4bae9f1297721572a93f7c67f40/master.m3u8?md5=hO3Ehq-IC1ySM3_7bBOEUw&expires=1791067874
+    [D/NeO_FirePlayer] dtpasn.asia » https://dtpasn.asia/cdn/hls/5d4cd4bae9f1297721572a93f7c67f40/master.m3u8?md5=mnfXU9OB1S7vytyhlW1MwQ&expires=1791068562
     [D/WDT] Odnoklassniki » https://bulgu.net/ok/e/36570a94984aea584851556c2959775976033a020d0d0940101351ededa43bf0
     [D/WDT] VK » https://vk.com/video_ext.php?oid=-241454844&id=456239066&hash=9b0c91c862a6236b&hd=3
     [D/WDT] UPN (Reklamlı) » https://bldrama.upns.online/#3yvxru
@@ -728,13 +706,13 @@ JSON input: [{ "file": 'https://prx-vi-a-1.vmpx.onlin.....
 	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
 	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
 	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+DEBUG ApiError: -------------------------------------------------------------------
 	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
 	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
 	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
 	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
 	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
 	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
-DEBUG ApiError: -------------------------------------------------------------------
 	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$lambda$0(JWPlayerHelper.kt:201)
 	at kotlin.sequences.FlatteningSequence$iterator$1.ensureItemIterator(Sequences.kt:363)
 	at kotlin.sequences.FlatteningSequence$iterator$1.hasNext(Sequences.kt:351)
@@ -757,14 +735,16 @@ DEBUG ApiError: ----------------------------------------------------------------
 	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
 	at TestKt.main(Test.kt:9)
    dönüş=true link=1 
-   LINK dtpasn.asia | dtpasn.asia | M3U8 | https://dtpasn.asia/cdn/hls/5d4cd4bae9f1297721572a93f7c67f40/master.m3u8?md5=hO3Ehq-IC1ySM3_7bBOEUw&expires=1791067874 | ref=https://dtpasn.asia/ | h={}
+   LINK dtpasn.asia | dtpasn.asia | M3U8 | https://dtpasn.asia/cdn/hls/5d4cd4bae9f1297721572a93f7c67f40/master.m3u8?md5=mnfXU9OB1S7vytyhlW1MwQ&expires=1791068562 | ref=https://dtpasn.asia/ | h={}
       erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎ ## [ FirePlayer ] by Neron (c) 2018~ | firevideoplayer.com | Skype : neronsilence ☪ ## ⏎ #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWID 
 
 ==================== Dizilla (https://dizilla.now) ====================
 HAM GET https://dizilla.now -> 403 | başlık=null | uzunluk=17 
+   gövde: error code: 1005 
+   başlıklar: server=cloudflare cf-mitigated=null set-cookie=[]
 ANA SAYFA [Son Bölümler] -> 0 öğe 
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 56s
+BUILD SUCCESSFUL in 2m 38s
 2 actionable tasks: 2 executed
