@@ -1,0 +1,8 @@
+{
+    "name": "NeO | Türkçe Eklentiler",
+    "description": "Türkçe içerikli eklenti havuzu",
+    "manifestVersion": 1,
+    "pluginLists": [
+      "https://raw.githubusercontent.com/neoser1984/neowatch/builds/plugins.json"
+    ]
+}
