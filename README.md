@@ -20,6 +20,15 @@ https://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json
 
 ### 📺 » [Google TV Temel Kurulum Adımları](MiBox.md)
 
+### 🌐 Site açılmıyorsa: DNS over HTTPS
+
+Bazı siteler (ör. **DiziPal**) Türkiye'deki internet sağlayıcılarında DNS düzeyinde engellidir. Eklenti "bağlantı bulunamadı" diyorsa ya da içerik gelmiyorsa:
+
+1. CloudStream'de **Ayarlar → Genel → DNS over HTTPS** bölümünü açın.
+2. **Cloudflare** (veya Google / AdGuard) seçin ve uygulamayı yeniden başlatın.
+
+Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun diğer uygulamalarına dokunmaz.
+
 ---
 
 ## 📱 Repo İçeriği
@@ -31,14 +40,14 @@ https://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json
 | DiziBal | dizibal.org | Dizi, Film, Anime |
 | DiziBox | dizibox.live | Dizi |
 | DiziKorea | dizikorea3.com | Asya Dizisi, Film |
-| DiziMom | dizimom.wiki | Dizi |
-| DiziPal | dizipal2136.com | Dizi, Film |
+| DiziMom | dizimom.cafe | Dizi |
+| DiziPal | dizipal2138.com | Dizi, Film _(DNS over HTTPS gerekebilir)_ |
 | DiziPalGuncel | dizipal1588.com | Dizi, Film, Anime |
 | DiziPalOrjinal | dizipalorjinal14.com | Dizi, Film |
 | Dizilla | dizilla.now | Dizi, Anime, Asya Dizisi |
 | DiziYou | diziyou3.com | Dizi |
 | FilmMakinesi | filmmakinesi.to | Film, Dizi |
-| FilmModu | filmmodu.live | Film, Dizi |
+| FilmModu | filmmodu.news | Film, Dizi |
 | FullHDFilm | fullhdfilm.site | Film, Dizi |
 | FullHDFilmizlesene | fullhdfilmizlesene.now | Film |
 | HDFilmCehennemi | hdfilmcehennemi.nl | Film, Dizi |
@@ -71,12 +80,12 @@ https://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json
 |---|---|
 | CanliTV | Canlı TV ([iptv-org](https://github.com/iptv-org/iptv) Türkiye listesi) |
 | GolgeTV | Canlı TV _(beta)_ |
-| InatBox | Film, Dizi, Canlı TV _(beta)_ |
-| RecTV | Film, Dizi, Canlı TV |
+| InatBox | Film, Dizi, Canlı TV _(beta; sunucu adresleri uygulamanın kendi ayarından otomatik alınır)_ |
+| RecTV | Film, Dizi, Canlı TV _(API adresi otomatik alınır)_ |
 | BelgeselX | Belgesel |
 | YouTube | Video |
 
-> Sitelerin alan adları sık değiştiği için bir eklenti çalışmazsa ilgili eklentinin `mainUrl` değerini güncelleyip yeniden derlemeniz yeterlidir.
+> Sitelerin alan adları sık değiştiği için bir eklenti çalışmazsa ilgili eklentinin `mainUrl` değerini güncelleyip yeniden derlemeniz yeterlidir. Depodaki **Domain Değişiklik Kontrolü** iş akışı adres değişikliklerini 9 saatte bir otomatik kontrol eder.
 
 ---
 

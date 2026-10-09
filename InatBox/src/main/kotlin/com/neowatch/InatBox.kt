@@ -3,21 +3,11 @@ package com.neowatch
 import android.util.Log
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
-import okhttp3.Interceptor
 import org.json.JSONArray
-import java.net.URI
-import javax.crypto.Cipher
-import javax.crypto.spec.SecretKeySpec
-import javax.crypto.spec.IvParameterSpec
-import android.util.Base64
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONException
 import org.json.JSONObject
 
 class InatBox : MainAPI() {
-    private val contentUrl  = "https://dizibox.rest"
-
     override var name                 = "InatBox"
     override val hasMainPage          = true
     override var lang                 = "tr"
@@ -26,37 +16,39 @@ class InatBox : MainAPI() {
     override var sequentialMainPage   = false
 
     private val urlToSearchResponse = mutableMapOf<String, SearchResponse>()
-    private val aesKey = "ywevqtjrurkwtqgz" //Master secret and iv key
 
+    // ! Adlar uygulamanın kategori dizinindeki adlarla aynıdır; güncel adresler çalışma anında
+    // ! InatIstek.kategoriAdresi() ile dizinden alınır, buradaki adresler yalnızca yedektir.
     override val mainPage = mainPageOf(
-        "https://boxbc.sbs/CDN/001_STR/boxbc.sbs/spor_v2.php" to "Spor Kanalları",
-        "${contentUrl}/tv/cable.php"                          to "Kanallar Liste 1",
-        "${contentUrl}/tv/list2.php"                          to "Kanallar Liste 2",
-        "${contentUrl}/tv/sinema.php"                         to "Sinema Kanalları",
-        "${contentUrl}/tv/belgesel.php"                       to "Belgesel Kanalları",
-        "${contentUrl}/tv/ulusal.php"                         to "Ulusal Kanallar",
-        "${contentUrl}/tv/haber.php"                          to "Haber Kanalları",
-        "${contentUrl}/tv/cocuk.php"                          to "Çocuk Kanalları",
-        "${contentUrl}/tv/dini.php"                           to "Dini Kanallar",
-        "${contentUrl}/ex/index.php"                          to "EXXEN",
-        "${contentUrl}/ga/index.php"                          to "Gain",
-        "${contentUrl}/blu/index.php"                         to "BluTV",
-        "${contentUrl}/nf/index.php"                          to "Netflix",
-        "${contentUrl}/dsny/index.php"                        to "Disney+",
-        "${contentUrl}/amz/index.php"                         to "Amazon Prime",
-        "${contentUrl}/hb/index.php"                          to "HBO Max",
-        "${contentUrl}/tbi/index.php"                         to "Tabii",
-        "${contentUrl}/film/mubi.php"                         to "Mubi",
-        "${contentUrl}/ccc/index.php"                         to "TOD",
-        "${contentUrl}/yabanci-dizi/index.php"                to "Yabancı Diziler",
-        "${contentUrl}/yerli-dizi/index.php"                  to "Yerli Diziler",
-        "${contentUrl}/film/yerli-filmler.php"                to "Yerli Filmler",
-        "${contentUrl}/film/4k-film-exo.php"                  to "4K Film İzle | Exo"
+        "https://sprboxs.bar/CDN/001/SPR/v2/spor_v3.php"                          to "Spor",
+        "https://sprboxs.bar/CDN/001/SPR/v2/derbiler.php"                         to "Derbiler",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/list1.php"              to "Liste 1 - TR",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/list2.php"              to "Liste 2 - GLB",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/list3.php"              to "Liste 3 - TR",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/sinema.php"             to "Sinema",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/belgesel.php"           to "Belgesel",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/ulusal.php"             to "Ulusal",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/haber.php"              to "Haber",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/cocuk.php"              to "Çocuk",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tv/dini.php"               to "Dini",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/ex/index.php"              to "EXXEN",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/ga/index.php"              to "Gain",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/nf/index.php"              to "Netflix",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/hb/index.php"              to "HBO Max - (BLUTV)",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/dsny/index.php"            to "Disney+",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/amz/index.php"             to "Amazon Prime",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/tbi/index.php"             to "Tabii",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/film/mubi.php"             to "Mubi",
+        "https://sprboxs.bar/CDN/001/SPR/v2/ccc/a/index.php"                      to "TOD",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/yabanci-dizi/index.php"    to "Yabancı Diziler",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/yerli-dizi/index.php"      to "Yerli Diziler",
+        "https://diziboxen.help/CDN/001/002/dizibox/v2/film/yerli-filmler.php"    to "Yerli Filmler"
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
+        val adres = InatIstek.kategoriAdresi(request.name, request.data)
         val jsonResponse =
-            makeInatRequest(request.data) ?: return newHomePageResponse(request.name, emptyList())
+            makeInatRequest(adres) ?: return newHomePageResponse(request.name, emptyList(), hasNext = false)
 
         val searchResults = getSearchResponseList(jsonResponse)
 
@@ -68,13 +60,13 @@ class InatBox : MainAPI() {
         }
 
         // Return a HomePageResponse with the parsed results
-        return newHomePageResponse(request.name, searchResults)
+        return newHomePageResponse(request.name, searchResults, hasNext = false)
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
         if (urlToSearchResponse.isEmpty()) {
             for (pageData in mainPage) {
-                val url = pageData.data
+                val url = InatIstek.kategoriAdresi(pageData.name, pageData.data)
                 val jsonResponse = makeInatRequest(url) ?: continue
 
                 val searchResults = getSearchResponseList(jsonResponse)
@@ -127,11 +119,10 @@ class InatBox : MainAPI() {
             }
 
         } else if (item.has("chName") && item.has("chUrl") && item.has("chImg")) {
-            item.getString("chName")
-            val chType = item.getString("chType")
+            val chType = item.optString("chType")
 
             val loadResponse = when (chType) {
-                "live_url", "cable_sh" -> parseLiveStreamLoadResponse(item)
+                "live_url", "live_url_mode", "cable_sh" -> parseLiveStreamLoadResponse(item)
                 "tekli_regex_lb_sh_3" -> parseLiveSportsStreamLoadResponse(item)
                 else -> parseMovieResponse(item)
             }
@@ -299,7 +290,7 @@ class InatBox : MainAPI() {
         val type: String = if (item.has("diziType")) {
             item.getString("diziType")
         } else {
-            item.getString("chType")
+            item.optString("chType")
         }
 
         return when (type) {
@@ -317,12 +308,12 @@ class InatBox : MainAPI() {
 
     private fun parseToChContent(item: JSONObject): ChContent {
         return ChContent(
-            chName = item.getString("chName"),
-            chUrl = item.getString("chUrl").vkSourceFix(),
-            chImg = item.getString("chImg"),
-            chHeaders = item.getString("chHeaders"),
-            chReg = item.getString("chReg"),
-            chType = item.getString("chType")
+            chName = item.optString("chName"),
+            chUrl = item.optString("chUrl").vkSourceFix(),
+            chImg = item.optString("chImg"),
+            chHeaders = item.optString("chHeaders", "null"),
+            chReg = item.optString("chReg", "null"),
+            chType = item.optString("chType")
         )
     }
 
@@ -338,8 +329,12 @@ class InatBox : MainAPI() {
             val reg = chContent.chReg
             val type = chContent.chType
 
-            val jsonResponse = runCatching { makeInatRequest(url) }.getOrNull() ?: getJsonFromEncryptedInatResponse(app.get(url).text) ?: return
-            val firstItem = JSONObject(jsonResponse)
+            val satirAnahtari = runCatching { JSONArray(reg).getJSONObject(0).optString("Regex1") }.getOrNull()
+                ?.takeIf { it.isNotBlank() && it != "null" }
+            val jsonResponse = runCatching { InatIstek.istek(url, satirAnahtari) }.getOrNull()
+                ?: InatIstek.coz(runCatching { app.get(url).text }.getOrNull(), listOfNotNull(satirAnahtari, InatIstek.VARSAYILAN_ANAHTAR))
+                ?: return
+            val firstItem = jsonResponse.trim().let { if (it.startsWith("[")) JSONArray(it).getJSONObject(0) else JSONObject(it) }
             firstItem.put("chHeaders", headers)
             firstItem.put("chReg", reg)
             firstItem.put("chName",name)
@@ -407,78 +402,7 @@ class InatBox : MainAPI() {
         }
     }
 
-    private suspend fun makeInatRequest(url: String): String? {
-        // Extract hostname using URI
-        val hostName = try {
-            URI(url).host ?: throw IllegalArgumentException("Invalid URL: $url")
-        } catch (e: Exception) {
-            Log.e("InatBox", "Failed to extract hostname from URL: $url", e)
-            return null
-        }
-
-        val headers = mapOf(
-            "Cache-Control" to "no-cache",
-            "Content-Length" to "37",
-            "Content-Type" to "application/x-www-form-urlencoded; charset=UTF-8",
-            "Host" to hostName,
-            "Referer" to "https://speedrestapi.com/",
-            "X-Requested-With" to "com.bp.box"
-        )
-
-        val requestBody = "1=${aesKey}&0=${aesKey}"
-
-        val interceptor = Interceptor { chain ->
-            val request = chain.request()
-            val newRequest = request.newBuilder().header("User-Agent", "speedrestapi").build()
-            chain.proceed(newRequest)
-        }
-
-        val response = app.post(
-            url = url,
-            headers = headers,
-            requestBody = requestBody.toRequestBody(contentType = "application/x-www-form-urlencoded; charset=UTF-8".toMediaType()),
-            interceptor = interceptor
-        )
-
-        if (response.isSuccessful) {
-            val encryptedResponse = response.text
-            // Log.d("InatBox", "Encrypted response: ${encryptedResponse}")
-            return getJsonFromEncryptedInatResponse(encryptedResponse)
-        } else {
-            Log.e("InatBox", "Request failed")
-            return null
-        }
-    }
-
-    private fun getJsonFromEncryptedInatResponse(response: String): String? {
-        try {
-            val algorithm = "AES/CBC/PKCS5Padding"
-            val keySpec = SecretKeySpec(aesKey.toByteArray(), "AES")
-
-            // First decryption iteration
-            val cipher1 = Cipher.getInstance(algorithm)
-            cipher1.init(Cipher.DECRYPT_MODE, keySpec, IvParameterSpec(aesKey.toByteArray()))
-            val firstIterationData =
-                cipher1.doFinal(Base64.decode(response.split(":")[0], Base64.DEFAULT))
-
-            // Second decryption iteration
-            val cipher2 = Cipher.getInstance(algorithm)
-            cipher2.init(Cipher.DECRYPT_MODE, keySpec, IvParameterSpec(aesKey.toByteArray()))
-            val secondIterationData = cipher2.doFinal(
-                Base64.decode(
-                    String(firstIterationData).split(":")[0],
-                    Base64.DEFAULT
-                )
-            )
-
-            // Parse JSON
-            val jsonString = String(secondIterationData)
-            return jsonString
-        } catch (e: Exception) {
-            Log.e("InatBox", "Decryption failed: ${e.message}")
-            return null
-        }
-    }
+    private suspend fun makeInatRequest(url: String): String? = InatIstek.istek(url)
 
     private fun getSearchResponseList(jsonResponse: String): List<SearchResponse> {
         val searchResults = mutableListOf<SearchResponse>()
@@ -514,10 +438,10 @@ class InatBox : MainAPI() {
                     // Handle the case where diziType is missing but chName, chUrl, and chImg are present
                     val name = item.getString("chName")
                     val posterUrl = item.getString("chImg")
-                    val chType = item.getString("chType")
+                    val chType = item.optString("chType")
 
                     val searchResponse = when (chType) {
-                        "live_url", "tekli_regex_lb_sh_3" -> newLiveSearchResponse(name, item.toString(), TvType.Live) {
+                        "live_url", "live_url_mode", "cable_sh", "tekli_regex_lb_sh_3" -> newLiveSearchResponse(name, item.toString(), TvType.Live) {
                             this.posterUrl = posterUrl
                         }
 

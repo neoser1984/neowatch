@@ -8,7 +8,7 @@ import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 
 class FilmModu : MainAPI() {
-    override var mainUrl              = "https://filmmodu.live"
+    override var mainUrl              = "https://filmmodu.news"
     override var name                 = "FilmModu"
     override val hasMainPage          = true
     override var lang                 = "tr"
