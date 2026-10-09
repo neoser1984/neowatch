@@ -23,14 +23,49 @@ class SelcukFlix : MainAPI() {
     // ! CloudFlare bypass
     override var sequentialMainPage = true
 
+    // ! "api|<uç>|<parametre>=<değer>" biçimindeki kategoriler sitenin Keşfet sayfasının kullandığı
+    // ! /api/bg/findSeries ve /api/bg/findMovies uçlarından sayfalı olarak çekilir.
     override val mainPage = mainPageOf(
-        "${mainUrl}/tum-bolumler" to "Son Bölümler",
-        "${mainUrl}/film-izle"    to "Yeni Filmler",
-        "${mainUrl}/kesfet"       to "Yeni Diziler",
-        "${mainUrl}/trend"        to "Trend Diziler",
+        "${mainUrl}/tum-bolumler"                to "Son Bölümler",
+        "${mainUrl}/film-izle"                   to "Yeni Filmler",
+        "${mainUrl}/kesfet"                      to "Yeni Diziler",
+        "${mainUrl}/trend"                       to "Trend Diziler",
+        "api|findSeries|countryIdsComma=21,26"   to "Kore Dizileri",
+        "api|findSeries|categoryIdsComma=9"      to "Aksiyon Dizileri",
+        "api|findSeries|categoryIdsComma=5"      to "Bilim Kurgu Dizileri",
+        "api|findSeries|categoryIdsComma=4"      to "Komedi Dizileri",
+        "api|findSeries|categoryIdsComma=2"      to "Dram Dizileri",
+        "api|findSeries|categoryIdsComma=12"     to "Fantastik Diziler",
+        "api|findSeries|categoryIdsComma=18"     to "Gerilim Dizileri",
+        "api|findSeries|categoryIdsComma=8"      to "Korku Dizileri",
+        "api|findSeries|categoryIdsComma=3"      to "Gizem Dizileri",
+        "api|findSeries|categoryIdsComma=24"     to "Macera Dizileri",
+        "api|findSeries|categoryIdsComma=7"      to "Romantik Diziler",
+        "api|findSeries|categoryIdsComma=1"      to "Suç Dizileri",
+        "api|findSeries|categoryIdsComma=15"     to "Aile Dizileri",
+        "api|findSeries|categoryIdsComma=17"     to "Animasyon Dizileri",
+        "api|findSeries|categoryIdsComma=26"     to "Savaş Dizileri",
+        "api|findSeries|categoryIdsComma=11"     to "Western Diziler",
+        "api|findMovies|categoryIdsComma=59"     to "Aksiyon Filmleri",
+        "api|findMovies|categoryIdsComma=66"     to "Bilim Kurgu Filmleri",
+        "api|findMovies|categoryIdsComma=45"     to "Komedi Filmleri",
+        "api|findMovies|categoryIdsComma=48"     to "Dram Filmleri",
+        "api|findMovies|categoryIdsComma=61"     to "Fantastik Filmler",
+        "api|findMovies|categoryIdsComma=68"     to "Gerilim Filmleri",
+        "api|findMovies|categoryIdsComma=63"     to "Korku Filmleri",
+        "api|findMovies|categoryIdsComma=51"     to "Gizem Filmleri",
+        "api|findMovies|categoryIdsComma=60"     to "Macera Filmleri",
+        "api|findMovies|categoryIdsComma=65"     to "Romantik Filmler",
+        "api|findMovies|categoryIdsComma=46"     to "Suç Filmleri",
+        "api|findMovies|categoryIdsComma=49"     to "Aile Filmleri",
+        "api|findMovies|categoryIdsComma=44"     to "Animasyon Filmleri",
+        "api|findMovies|categoryIdsComma=69"     to "Savaş Filmleri",
+        "api|findMovies|categoryIdsComma=78"     to "Western Filmler",
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
+        if (request.data.startsWith("api|")) return apiKategori(page, request)
+
         // Site listeleri JavaScript ile sayfaladığı için yalnızca ilk sayfa alınır
         if (page > 1) return newHomePageResponse(request.name, emptyList(), hasNext = false)
 
@@ -44,6 +79,61 @@ class SelcukFlix : MainAPI() {
         }.distinctBy { it.url }
 
         return newHomePageResponse(request.name, home, hasNext = false)
+    }
+
+    // ? Keşfet API'si: tür / ülke filtresiyle sayfalı liste
+    private suspend fun apiKategori(page: Int, request: MainPageRequest): HomePageResponse {
+        val parcalar  = request.data.split("|")
+        val uc        = parcalar.getOrNull(1) ?: return newHomePageResponse(request.name, emptyList(), hasNext = false)
+        val filtreler = parcalar.drop(2).mapNotNull { p -> p.split("=", limit = 2).takeIf { it.size == 2 }?.let { it[0] to it[1] } }.toMap()
+
+        val parametreler = mapOf(
+            "releaseYearStart"   to "1900",
+            "releaseYearEnd"     to "2100",
+            "imdbPointMin"       to "0",
+            "imdbPointMax"       to "10",
+            "categoryIdsComma"   to "",
+            "countryIdsComma"    to "",
+            "orderType"          to "1",
+            "languageId"         to "-1",
+            "currentPage"        to "$page",
+            "currentPageCount"   to "24",
+            "queryStr"           to "",
+            "categorySlugsComma" to "",
+            "countryCodesComma"  to ""
+        ) + filtreler
+
+        val yanit = runCatching {
+            app.post(
+                "${mainUrl}/api/bg/$uc",
+                params  = parametreler,
+                referer = "${mainUrl}/kesfet",
+                headers = mapOf("Accept" to "application/json, text/plain, */*")
+            ).parsedSafe<SifreliYanit>()
+        }.getOrNull()
+
+        val liste = yanit?.response?.let { coz(it) }?.let { jsonOku<ApiListe>(it) }
+        val icerik = liste?.result.orEmpty().mapNotNull { item ->
+            val slug  = item.slug?.trimStart('/') ?: return@mapNotNull null
+            val title = item.title?.takeIf { it.isNotBlank() } ?: return@mapNotNull null
+            val href  = fixUrl("/$slug")
+
+            if (slug.startsWith("film/")) {
+                newMovieSearchResponse(title, href, TvType.Movie) {
+                    this.posterUrl = resim(item.poster)
+                    this.year      = item.year
+                    this.score     = Score.from10(item.imdb)
+                }
+            } else {
+                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
+                    this.posterUrl = resim(item.poster)
+                    this.year      = item.year
+                    this.score     = Score.from10(item.imdb)
+                }
+            }
+        }.distinctBy { it.url }
+
+        return newHomePageResponse(request.name, icerik, hasNext = liste?.pagination?.hasMore == true && icerik.isNotEmpty())
     }
 
     private fun Element.toSearchResult(): SearchResponse? {
@@ -216,6 +306,21 @@ class SelcukFlix : MainAPI() {
     }
 
     // ? JSON modelleri
+    data class ApiListe(
+        @JsonProperty("result")     val result: List<ApiItem>?  = null,
+        @JsonProperty("pagination") val pagination: ApiSayfa? = null
+    )
+
+    data class ApiSayfa(@JsonProperty("hasMore") val hasMore: Boolean? = null)
+
+    data class ApiItem(
+        @JsonProperty("used_slug")      val slug: String?   = null,
+        @JsonProperty("original_title") val title: String?  = null,
+        @JsonProperty("poster_url")     val poster: String? = null,
+        @JsonProperty("release_year")   val year: Int?      = null,
+        @JsonProperty("imdb_point")     val imdb: Double?   = null
+    )
+
     data class SifreliYanit(@JsonProperty("response") val response: String? = null)
 
     data class AramaSonuc(@JsonProperty("result") val result: List<AramaItem>? = null)
