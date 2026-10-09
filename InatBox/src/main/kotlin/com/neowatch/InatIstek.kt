@@ -61,12 +61,12 @@ object InatIstek {
      * İstekler sırayla ve aralıklı gönderilir; farklı biçimlerde tekrar denenmez
      * (sunucu, uygulamaya benzemeyen istekleri IP yasağıyla cezalandırabiliyor).
      */
-    suspend fun istek(url: String, ekAnahtar: String? = null): String? =
-        runCatching { imzali(url, ekAnahtar) }
+    suspend fun istek(url: String, ekAnahtarlar: List<String> = emptyList()): String? =
+        runCatching { imzali(url, ekAnahtarlar) }
             .onFailure { Log.w("InatBox", "istek hatası » $url » ${it.message}") }
             .getOrNull()
 
-    private suspend fun imzali(url: String, ekAnahtar: String?): String? {
+    private suspend fun imzali(url: String, ekAnahtarlar: List<String>): String? {
         val anahtar = rastgeleMetin(16)
         val govde   = "1=$anahtar&0=$anahtar"
         val yol     = runCatching { URI(url).rawPath }.getOrNull()?.ifEmpty { "/" } ?: "/"
@@ -110,10 +110,45 @@ object InatIstek {
             return null
         }
 
-        val cozulmus = coz(yanit.text, listOfNotNull(anahtar, ekAnahtar, VARSAYILAN_ANAHTAR))
+        val cozulmus = coz(yanit.text, listOf(anahtar) + ekAnahtarlar + VARSAYILAN_ANAHTAR)
         if (cozulmus == null) Log.w("InatBox", "yanıt çözülemedi (${yanit.text.take(60)}) » $url")
         return cozulmus
     }
+
+
+    /**
+     * Kayıt başlıklarıyla (chHeaders) imzalı GET atar ve ham cevabı döndürür.
+     * tekli_regex_lb_sh_3 kayıtları böyle istenir; cevap Regex1 / Regex2 anahtarlarıyla çözülür.
+     */
+    suspend fun imzaliGet(url: String, basliklar: Map<String, String>): String? = runCatching {
+        val yol = runCatching { URI(url).rawPath }.getOrNull()?.ifEmpty { "/" } ?: "/"
+
+        suspend fun gonder() = istekKilidi.withLock {
+            val bekle = ISTEK_ARALIGI_MS - (System.currentTimeMillis() - sonIstekZamani)
+            if (bekle > 0) delay(bekle)
+            sonIstekZamani = System.currentTimeMillis()
+
+            val zaman = (System.currentTimeMillis() / 1000L + zamanFarki).toString()
+            val nonce = hex(ByteArray(16).also { rastgele.nextBytes(it) })
+            val imza  = hmacHex("GET\n$yol\n$zaman\n$nonce\n${sha256Hex("")}")
+
+            app.get(url, headers = basliklar + mapOf("Cache-Control" to "no-cache", "X-Ts" to zaman, "X-Nc" to nonce, "X-Sg" to imza))
+        }
+
+        var yanit = gonder()
+        val sunucuZamani = yanit.headers["x-st"]?.toLongOrNull()
+        if (yanit.code == 403 && sunucuZamani != null && sunucuZamani > 0) {
+            zamanFarki = sunucuZamani - System.currentTimeMillis() / 1000L
+            yanit      = gonder()
+        }
+
+        if (!yanit.isSuccessful) {
+            Log.w("InatBox", "imzalı GET ${yanit.code} » $url")
+            null
+        } else {
+            yanit.text
+        }
+    }.onFailure { Log.w("InatBox", "imzalı GET hatası » $url » ${it.message}") }.getOrNull()
 
     // ---------------------------------------------------------------- çözme
 
