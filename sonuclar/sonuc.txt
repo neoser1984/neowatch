@@ -16,77 +16,24 @@ To honour the JVM settings for this build a single-use Daemon process will be fo
 Daemon will be stopped at the end of the build 
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources NO-SOURCE
-> Task :compileKotlin
-> Task :compileJava NO-SOURCE
-> Task :classes UP-TO-DATE
 
-> Task :run
-=== InatBox v18 çevrimdışı testler ===
-LB ÇÖZÜM -> {   "chUrl": "https://cdnten.cfd/static/trt1/index.m3u8?md5=Tl7pEU8YeMbs3ukgJI6-HA&expires=1791591660",   "playHost": "cdnten.cfd",   "playSH1": "sha256/RJp8H+E
+> Task :compileKotlin FAILED
+e: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/Test.kt:160:49 Unresolved reference 'InatIstek'.
+e: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/Test.kt:160:82 Unresolved reference 'InatIstek'.
 
---- Trt 1 | A | live_url_mode
-   load -> LiveStreamLoadResponse
-    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36","Referer":"https://www.trtizle.com/"}],"chUrl":"https://trt.daioncdn.net/trt-1/master.m3u8?app=web","chReg":"null","chImg":"https://img.dsmartgo.com.tr/content/Q/ou/11887/Thumbnail.png","chName":"Trt 1 | A","chTy
-    [D/InatBox] yayın » Trt 1 | A » https://trt.daioncdn.net/trt-1/master.m3u8?app=web
-   loadLinks -> true  link=1
-   LINK M3U8 | https://trt.daioncdn.net/trt-1/master.m3u8 | ref=https://www.trtizle.com/ | başlıklar=[X-Requested-With, User-Agent, Referer]
-      erişim -> 200 #EXTM3U #EXT-X-VERSION:3 #EXT-X-STREAM-I 
+FAILURE: Build failed with an exception.
 
---- Atv | A | tekli_regex_mode
-   load -> MovieLoadResponse
-    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 8.0.0;) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.93 Mobile Safari/537.36","Referer":"http://www.atv.com.tr/"}],"chUrl":"https://securevideotoken.tmgrup.com.tr/webtv/secure?url=https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8","chReg":[{"sha256":"sha256/OokvAfrsRS9uiQTKB6G4ht9kJNULzpITGPV0McR
-    [D/InatBox] yayın » Atv | A » https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=IZnZDFpjFVSlqVWE4Avv7w&e=1791626461
-   loadLinks -> true  link=1
-   LINK M3U8 | https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8 | ref=http://www.atv.com.tr/ | başlıklar=[X-Requested-With, User-Agent, Referer]
-      erişim -> 200 #EXTM3U #EXT-X-VERSION:3 #EXT-X-STREAM-I 
+* What went wrong:
+Execution failed for task ':compileKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
 
---- Show TV | A | tekli_regex_replace_mode
-   load -> MovieLoadResponse
-    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0","Referer":"https://www.showtv.com.tr/canli-yayin/"}],"chUrl":"https://www.showtv.com.tr/canli-yayin/","chReg":[{"sha256":"sha256/iFsgqfD3LQmW51z40egQqnKpyhTPedZ+zgW+LQ8vA2M=","Regex1":"var videoUrl = \"(.*?)\"","Host":"www.showtv.com.tr"}],"chImg":"htt
-    [D/InatBox] yayın » Show TV | A » https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&st=RBzhSuGauna0OGld-DJUVA&e=1664766175&tv=1
-   loadLinks -> true  link=1
-   LINK M3U8 | https://ciner.daioncdn.net/showtv/showtv.m3u8 | ref=https://www.showtv.com.tr/canli-yayin/ | başlıklar=[X-Requested-With, User-Agent, Referer]
-      erişim -> 200 #EXTM3U #EXT-X-VERSION:3 #EXT-X-STREAM-I 
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
 
---- Now TV | A | tekli_regex_mode
-   load -> MovieLoadResponse
-    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36","Referer":"https://www.nowtv.com.tr/"}],"chUrl":"https://req.filmizleeeee.cfd/now.php","chReg":[{"sha256":"sha256/NVrd940rwzL1bav4hRkzjaIDJTqVyo4TixmgNqG7NYY=","Regex1":"\"chUrl\":\"(.*?)\"","Host":"req.filmizlee
-    [W/InatBox] regex eşleşmedi » https://req.filmizleeeee.cfd/now.php
-    [W/InatBox] yayın adresi çözülemedi » Now TV | A (tekli_regex_mode)
-   loadLinks -> true  link=0
-
---- Trt 1 | C | tekli_regex_lb_sh_3_mode
-   load -> MovieLoadResponse
-    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36","Referer":"https://google.com/"}],"chUrl":"https://str.filmizleeeee.cfd/GLB2/?static=trt1","chReg":[{"sha256":"sha256/NVrd940rwzL1bav4hRkzjaIDJTqVyo4TixmgNqG7NYY=","Regex2":"41442c5c61351521","Regex2p":"f6aed4384
-    [W/InatBox] imzalı GET 403 » https://str.filmizleeeee.cfd/GLB2/?static=trt1
-    [W/InatBox] istek 403 » https://str.filmizleeeee.cfd/GLB2/?static=trt1
-    [W/InatBox] yayın adresi çözülemedi » Trt 1 | C (tekli_regex_lb_sh_3_mode)
-   loadLinks -> true  link=0
-
---- Kardeş Takımı 3 | tekli_regex_mode
-   load -> MovieLoadResponse
-    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.38 Mobile Safari/537.36","Referer":"https://dzen.ru/"}],"chUrl":"https://dzen.ru/embed/oEUapd1wPAAA","chReg":[{"sha256":"sha256/TzhLFgikrufRJ4ZpifiF3iyNZoqf+26A9aLvCywOMdM=","Regex1":"streams\":\\[\\{\"url\":\"(.*?)\"","Host":"dzen.ru"}],"chIm
-    [D/InatBox] yayın » Kardeş Takımı 3 » https://vd405.okcdn.ru/video.m3u8?cmd=videoPlayerCdn&expires=1791840466526&srcIp=172.184.214.230&pr=70&srcAg=CHROME_ANDROID&ch=-536166974&ms=176.112.172.119&type=2&sig=LkO7vPpRtNY&ct=8&urls=185.226.55.12&clientType=33&zs=43&id=18150304647697&dzen_dash=hls
-   loadLinks -> true  link=1
-   LINK M3U8 | https://vd405.okcdn.ru/video.m3u8 | ref=https://dzen.ru/ | başlıklar=[X-Requested-With, User-Agent, Referer]
-      erişim -> 200 #EXTM3U #EXT-X-STREAM-INF:PROGRAM-ID=1,B 
-
---- İllegal Hayatlar: Meclis | B | nok5_mode
-   load -> MovieLoadResponse
-    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","Referer":"https://vk.com/"}],"chUrl":"act=show&al=1&claim=&dmcah=&hd=&list=&module=direct&video=-220031389_456239223","chReg":[{"Regex1":"\"hls.*?\"\\s*:\\s*\"\\s*(.*?)\\s*\""}],"chImg":"https://image.tmdb.org/t/p/w600
-    [D/InatBox] yayın » İllegal Hayatlar: Meclis | B » https://vk6-2.vkuser.net/video.m3u8?cmd=videoPlayerCdn&expires=1791840469617&srcIp=172.184.214.230&pr=40&srcAg=CHROME&ch=-536166974&ms=95.142.206.161&mid=10601913067662&type=2&sig=IR70LA43IlY&ct=8&urls=176.112.172.182%3B185.180.203.148&clientType=13&zs=43&id=8359387597407
-   loadLinks -> true  link=1
-   LINK M3U8 | https://vk6-2.vkuser.net/video.m3u8 | ref=https://vk.com/ | başlıklar=[X-Requested-With, User-Agent, Referer]
-      erişim -> 200 #EXTM3U #EXT-X-STREAM-INF:PROGRAM-ID=1,B 
-
---- Aşıklar Bayramı | inat_disk_sh_mode
-   load -> MovieLoadResponse
-    [D/InatBox] data: {"chHeaders":"null","chUrl":"https://disk.yandex.com.tr/d/gHth_gjV8mHhSQ","chReg":"null","chImg":"https://image.tmdb.org/t/p/w300_and_h450_bestv2/hcIhpCOj4JdvWMyaXUDXOqf7Opj.jpg","chName":"Aşıklar Bayramı","chType":"inat_disk_sh_mode"}
-    [D/InatBox] yayın » Aşıklar Bayramı » https://disk.yandex.com.tr/d/gHth_gjV8mHhSQ
-   loadLinks -> true  link=1
-   LINK VIDEO | https://disk.yandex.com.tr/d/gHth_gjV8mHhSQ | ref= | başlıklar=[]
-
-=== BİTTİ ===
-
-BUILD SUCCESSFUL in 2m 11s
-2 actionable tasks: 2 executed
+BUILD FAILED in 55s
+1 actionable task: 1 executed
+GRADLE HATASI: 1
