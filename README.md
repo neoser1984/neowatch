@@ -32,9 +32,9 @@ https://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json
 | DiziBox | dizibox.live | Dizi |
 | DiziKorea | dizikorea3.com | Asya Dizisi, Film |
 | DiziMom | dizimom.wiki | Dizi |
-| DiziPal | dizipal2135.com | Dizi, Film |
-| DiziPalGuncel | dizipal1586.com | Dizi, Film, Anime |
-| DiziPalOrjinal | dizipalorjinal12.com | Dizi, Film |
+| DiziPal | dizipal2136.com | Dizi, Film |
+| DiziPalGuncel | dizipal1588.com | Dizi, Film, Anime |
+| DiziPalOrjinal | dizipalorjinal14.com | Dizi, Film |
 | Dizilla | dizilla.now | Dizi, Anime, Asya Dizisi |
 | DiziYou | diziyou3.com | Dizi |
 | FilmMakinesi | filmmakinesi.to | Film, Dizi |
@@ -46,7 +46,7 @@ https://raw.githubusercontent.com/neoser1984/neowatch/main/repo.json
 | KoreanTurk | koreanturk.com | Asya Dizisi |
 | KultFilmler | kultfilmler.net | Film, Dizi |
 | RareFilmm | rarefilmm.com | Film |
-| SelcukFlix | selcukflix.com | Dizi, Film |
+| SelcukFlix | selcukflix.app | Dizi, Film |
 | SetFilmIzle | setfilmizle.ltd | Film, Dizi |
 | SezonlukDizi | sezonlukdizi.cc | Dizi |
 | SinemaCX | sinema.cx | Film |

@@ -13,7 +13,7 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
 class SelcukFlix : MainAPI() {
-    override var mainUrl              = "https://selcukflix.com"
+    override var mainUrl              = "https://selcukflix.app"
     override var name                 = "SelcukFlix"
     override val hasMainPage          = true
     override var lang                 = "tr"

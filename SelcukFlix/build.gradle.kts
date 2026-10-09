@@ -1,4 +1,4 @@
-version = 1
+version = 2
 
 cloudstream {
     authors     = listOf("NeO")
@@ -14,5 +14,5 @@ cloudstream {
     **/
     status  = 1 // will be 3 if unspecified
     tvTypes = listOf("TvSeries", "Movie")
-    iconUrl = "https://www.google.com/s2/favicons?domain=https://selcukflix.com&sz=%size%"
+    iconUrl = "https://www.google.com/s2/favicons?domain=https://selcukflix.app&sz=%size%"
 }
