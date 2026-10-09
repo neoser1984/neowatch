@@ -331,9 +331,7 @@ class InatBox : MainAPI() {
 
             val satirAnahtari = runCatching { JSONArray(reg).getJSONObject(0).optString("Regex1") }.getOrNull()
                 ?.takeIf { it.isNotBlank() && it != "null" }
-            val jsonResponse = runCatching { InatIstek.istek(url, satirAnahtari) }.getOrNull()
-                ?: InatIstek.coz(runCatching { app.get(url).text }.getOrNull(), listOfNotNull(satirAnahtari, InatIstek.VARSAYILAN_ANAHTAR))
-                ?: return
+            val jsonResponse = InatIstek.istek(url, satirAnahtari) ?: return
             val firstItem = jsonResponse.trim().let { if (it.startsWith("[")) JSONArray(it).getJSONObject(0) else JSONObject(it) }
             firstItem.put("chHeaders", headers)
             firstItem.put("chReg", reg)
