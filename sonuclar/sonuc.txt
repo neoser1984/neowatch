@@ -16,227 +16,77 @@ To honour the JVM settings for this build a single-use Daemon process will be fo
 Daemon will be stopped at the end of the build 
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources NO-SOURCE
-
 > Task :compileKotlin
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:8:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:9:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:10:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:11:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:12:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:13:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:14:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:15:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:16:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:17:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:18:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:19:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:20:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:21:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:26:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:27:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:32:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:33:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:34:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:39:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:40:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:41:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:42:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:43:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:48:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:49:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:54:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:55:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:56:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:61:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:62:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RecTVModels.kt:63:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== RecTV ek testler ===
-    [D/RCTV] API adresi » https://a.psrectv80.xyz
-KATEGORİ [Canlı] -> 30 öğe 
-   - Bein Sports Haber | LiveSearchResponse | {"id":171,"type":null,"title":"Bein Sports Haber","label":"CANLI","sublabel":"HD","description":"Yayın kesilirse yedek k
-   - S SPORT 1 | LiveSearchResponse | {"id":141,"type":null,"title":"S SPORT 1","label":"CANLI","sublabel":"HD","description":null,"year":null,"imdb":null,"ra
-   LOAD CANLI 'Bein Sports Haber'
-   -- LOADLINKS {"id":171,"type":null,"title":"Bein Sports Haber","label":"CANLI","sublabel":"HD","description":"Yayın kesilirse yedek kaynağı deneyiniz veya 2 dk son
-    [D/RCTV] source » m3u8 » https://one.mariuannastluisborg.autos/hls/bshaber/index.m3u8?token=eh9VNEYDkP6f0auGFHDGnA&tms=1791596010
-   dönüş=true link=1 
-   LINK RecTV | RecTV - m3u8 | M3U8 | https://one.mariuannastluisborg.autos/hls/bshaber/index.m3u8 | ref=https://twitter.com/ | h=[User-Agent, Referer]
-      erişim -> 200 #EXTM3U ⏎ #EXT-X-VERSION:3 ⏎ #EXT-X-MEDIA-SEQUENCE:1476 ⏎ #EXT-X-TARGETDURATION:4 ⏎ #EXT 
-KATEGORİ [Son Filmler] -> 30 öğe 
-   - Matchbox the Movie | MovieSearchResponse | {"id":11460,"type":"movie","title":"Matchbox the Movie","label":"Dublaj & Altyazı","sublabel":"2026","description":"Bir 
-   - Animals | MovieSearchResponse | {"id":11459,"type":"movie","title":"Animals","label":"Dublaj & Altyazı","sublabel":"2026","description":"Los Angeles bel
-   LOAD FİLM 'Matchbox the Movie'
-   -- LOADLINKS {"id":11460,"type":"movie","title":"Matchbox the Movie","label":"Dublaj & Altyazı","sublabel":"2026","description":"Bir grup eski çocukluk arkadaşı te
-    [D/RCTV] source » m3u8 » https://load.harborstatic.lol/hls/9/cdn920/QcEVGs9oflxyeBE5znaumIjxIph6CPDh1NuJ4wmd.mp4/index.m3u8?token=-3vPKAMUP9Rb3EcDOzT_VA&tms=1791596131
-    [D/RCTV] source » m3u8 » https://load.harborstatic.lol/hls/9/cdn920/6gnFZmRNecHmycD4FWyejvUYaH9x5VIhnuBedUVr.mp4/index.m3u8?token=-3vPKAMUP9Rb3EcDOzT_VA&tms=1791596131
-   dönüş=true link=2 
-   LINK RecTV | RecTV - Türkçe Dublaj | M3U8 | https://load.harborstatic.lol/hls/9/cdn920/QcEVGs9oflxyeBE5znaumIjxIph6CPDh1NuJ4wmd.mp4/index.m3u8 | ref=https://twitter.com/ | h=[User-Agent, Referer]
-      erişim -> 200 #EXTM3U ⏎ #EXT-X-TARGETDURATION:6 ⏎ #EXT-X-ALLOW-CACHE:YES ⏎ #EXT-X-PLAYLIST-TYPE:VOD ⏎  
-   LINK RecTV | RecTV - Türkçe Altyazı | M3U8 | https://load.harborstatic.lol/hls/9/cdn920/6gnFZmRNecHmycD4FWyejvUYaH9x5VIhnuBedUVr.mp4/index.m3u8 | ref=https://twitter.com/ | h=[User-Agent, Referer]
-      erişim -> 200 #EXTM3U ⏎ #EXT-X-TARGETDURATION:6 ⏎ #EXT-X-ALLOW-CACHE:YES ⏎ #EXT-X-PLAYLIST-TYPE:VOD ⏎  
-KATEGORİ [Son Diziler] -> 30 öğe 
-   - Take Charge of My Heart | TvSeriesSearchResponse | {"id":11461,"type":"serie","title":"Take Charge of My Heart","label":"1 Sezon","sublabel":"2026","description":"Yapay ka
-   - Zmora | TvSeriesSearchResponse | {"id":11458,"type":"serie","title":"Zmora","label":"1 Sezon","sublabel":"2026","description":"Kama returns to her hometo
-   LOAD ANİME/DİZİ 'Take Charge of My Heart' bölüm=12 sezonlar=[Dubbed, Subbed]
-   -- LOADLINKS https://load.harborstatic.lol/hls/9/cdn920/b2YjDWlZh7Mime5lV9bUqjdB67U4SI0BayAOV8Pv.mp4/index.m3u8?token=BR5wXD3K4G1smRNVzYjK4Q&tms=1791596129
-    [D/RCTV] data » https://load.harborstatic.lol/hls/9/cdn920/b2YjDWlZh7Mime5lV9bUqjdB67U4SI0BayAOV8Pv.mp4/index.m3u8?token=BR5wXD3K4G1smRNVzYjK4Q&tms=1791596129
-   dönüş=true link=1 
-   LINK RecTV | RecTV | M3U8 | https://load.harborstatic.lol/hls/9/cdn920/b2YjDWlZh7Mime5lV9bUqjdB67U4SI0BayAOV8Pv.mp4/index.m3u8 | ref=https://twitter.com/ | h=[User-Agent, Referer]
-      erişim -> 200 #EXTM3U ⏎ #EXT-X-TARGETDURATION:6 ⏎ #EXT-X-ALLOW-CACHE:YES ⏎ #EXT-X-PLAYLIST-TYPE:VOD ⏎  
-=== InatBox ===
-    [W/InatBox] istek 403 » https://dizilabmedia.click/CDN/001/002/dizilab/v2/ct.php
-    [D/InatBox] kategori dizini » https://static.staticsave.com/fast/ctls.js (38)
-KATEGORİ DİZİNİ -> 38
-ÖNBELLEK -> 38
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/tv/ulusal.php
-KATEGORİ [Ulusal] -> 0 öğe 
+=== InatBox v18 çevrimdışı testler ===
+LB ÇÖZÜM -> {   "chUrl": "https://cdnten.cfd/static/trt1/index.m3u8?md5=Tl7pEU8YeMbs3ukgJI6-HA&expires=1791591660",   "playHost": "cdnten.cfd",   "playSH1": "sha256/RJp8H+E
 
-==================== RecTV (https://a.psrectv80.xyz) ====================
-HAM GET https://a.psrectv80.xyz -> 200 son=https://floral-star-55c8.cloudflareaccess.com/cdn-cgi/access/login/a.psrectv80.xyz?kid=e9ae628f39be6b4bb69fa80bafb29f0f0d384dcc5f629dfe683447dcc24e6661&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEwZjljZTQwOTFiNzQ1ZGU0OWFhZDUyOGY0YjU5YjIxMDQyNDg2ODY1MjdhOGM0Y2FlMDhhNjViNmZmYTU5OWMifQ.eyJ0eXBlIjoibWV0YSIsImF1ZCI6ImU5YWU2MjhmMzliZTZiNGJiNjlmYTgwYmFmYjI5ZjBmMGQzODRkY2M1ZjYyOWRmZTY4MzQ0N2RjYzI0ZTY2NjEiLCJob3N0bmFtZSI6ImEucHNyZWN0djgwLnh5eiIsInJlZGlyZWN0X3VybCI6Ii9hZG1pbi8iLCJzZXJ2aWNlX3Rva2VuX3N0YXR1cyI6ZmFsc2UsImlzX3dhcnAiOmZhbHNlLCJpc19nYXRld2F5IjpmYWxzZSwiZXhwIjoxNzkxNTc0ODQzLCJuYmYiOjE3OTE1NzQ1NDMsImlhdCI6MTc5MTU3NDU0MywiYXV0aF9zdGF0dXMiOiJOT05FIiwibXRsc19hdXRoIjp7ImNlcnRfaXNzdWVyX2RuIjoiIiwiY2VydF9zZXJpYWwiOiIiLCJjZXJ0X2lzc3Vlcl9za2kiOiIiLCJjZXJ0X3ByZXNlbnRlZCI6ZmFsc2UsImNvbW1vbl9uYW1lIjoiIiwiYXV0aF9zdGF0dXMiOiJOT05FIn0sInJlYWxfY291bnRyeSI6IlVTIiwiYXBwX3Nlc3Npb25faGFzaCI6IjhlMmMyYWI2NTQ1MmJmZjJlZWNjMGM3NDE2N2QyNDY3NjE3ZTIxYjE3NzFmMDM0ODg3OWU3YWY1NWIyNGU4ODMifQ.Vta0tp4joaY7-lXCEeLeGUXavVCdSW_XzpAxKd_KuQZdYEVzX_B1GUwiCf0Ik2LkUWZt9W9F9wPosLCKHk0-nfyfQiapXHJ8u_2Sq2vwV7rwsZ4DGaNHqtDrAz2AznU6Wn4Xm1rI5t_7cDKPSK-MNwktZS69Dtep0Md3FzXzPkP8F61oGrp-ZotzGs36L4CSr8JtkxB-dj1ydJzJ4ex0Ytpynp7OutfVDmyE7JWA8ALDp7UPqeVbcQlDE9GXXXAOwQzvB3C5br01Ir9sPL_vvqd3ZC_9aD4KXVJwDIuk8xAhvUu8OT5QqpqeZL08BPYhfJTksIsxmKXTn7id7E520g&redirect_url=%2Fadmin%2F | başlık=Sign in ・ Cloudflare Access | uzunluk=46372 
-    [D/RCTV] API adresi » https://a.psrectv80.xyz
-ANA SAYFA [Canlı] -> 30 öğe 
-   - Bein Sports Haber | {"id":171,"type":null,"title":"Bein Sports Haber","label":"CANLI","sublabel":"HD","description":"Yayın kesilirse yedek kaynağı deneyiniz veya 2 dk sonra tekrar yayını açınız. Yayınların içinde bulunan hiçbir reklam bize ait değildir.","year":null,"imdb":null,"rating":3.0,"duration":null,"image":"https://a.psrectv80.xyz/uploads/cache/channel_thumb/uploads/jpg/5d797ae27f6978d25757aa54790f235c.jpg","genres":null,"trailer":null,"sources":[{"id":339616,"title":"m3u8","type":"m3u8","url":"https://one.mariuannastluisborg.autos/hls/bshaber/index.m3u8?token=eh9VNEYDkP6f0auGFHDGnA&tms=1791596010","enc_url":"7OeIJZ2hlT1/mfyZB3p/voeSupkKTuJoEAArm8TcHjOT2CP1SVJk3lCI1GJ5lwwUWBZ2XovBYKNdfThiHDpcc0A2wmXAZw/dhwk394jSugLPUcjwCYlSGsPyZxCeGSLLQnZUT9eH9yOQEdE9I/Z5j8V7RQRFmd2GqArSat/8d3tOPW8n"}]} | https://a.psrectv80.xyz/uploads/cache/channel_thumb/uploads/jpg/5d797ae27f6978d25757aa54790f235c.jpg
-   - S SPORT 1 | {"id":141,"type":null,"title":"S SPORT 1","label":"CANLI","sublabel":"HD","description":null,"year":null,"imdb":null,"rating":3.7,"duration":null,"image":"https://a.psrectv80.xyz/uploads/cache/channel_thumb/uploads/jpg/29b3ca0f04190b3727b3d8255cbb5d2a.jpg","genres":null,"trailer":null,"sources":[{"id":35592,"title":"Kaynak 1","type":"m3u8","url":"https://one.mariuannastluisborg.autos/hls/ss11/index.m3u8?token=eh9VNEYDkP6f0auGFHDGnA&tms=1791596010","enc_url":"GaXHJo+DnZLV2aq3eWHWEv2L5RznM99ErQ/yKm/kg3vA6wnt8PiqGK7i8TVbRcVMjjm4Cpg8PFambRtFc1vFuG9oOkCW7qVohllmoZxn2PQRvLkGWYBtrQn+NaLzGCCN9mvBZlwaRWoRr1E7spA5aNakBHlPtfYg4Dmv5ahOMgva"}]} | https://a.psrectv80.xyz/uploads/cache/channel_thumb/uploads/jpg/29b3ca0f04190b3727b3d8255cbb5d2a.jpg
-   - S SPORT 2 | {"id":140,"type":null,"title":"S SPORT 2","label":"CANLI","sublabel":"HD","description":null,"year":null,"imdb":null,"rating":3.6,"duration":null,"image":"https://a.psrectv80.xyz/uploads/cache/channel_thumb/uploads/jpg/46e2f65ec582fdbc8edfd01899eca2a1.jpg","genres":null,"trailer":null,"sources":[{"id":18401,"title":"Kaynak 1","type":"m3u8","url":"https://one.mariuannastluisborg.autos/hls/ss2/index.m3u8?token=eh9VNEYDkP6f0auGFHDGnA&tms=1791596010","enc_url":"8KnfdkHw3DOdj+8zsbIF8fvZ5fW9YEGqTmzI9HbPIsk/IQ5qX80iHcMbqgvGN4VoQ9fS0BzN8RPFCnzBTxFjBEwrn7SOXf+red3vv4xWkItGPp11odur3yNvjAGTZwdEBNpCxJNosPAaErwOfOp8g39dt3yVKq0NcGmEO18EI4U="}]} | https://a.psrectv80.xyz/uploads/cache/channel_thumb/uploads/jpg/46e2f65ec582fdbc8edfd01899eca2a1.jpg
-ARAMA 'matrix' -> 5 
-   - The Matrix | {"id":607,"type":"movie","title":"The Matrix","label":"Dublaj & Altyazı","sublabel":"1999","description":"İki türlü gerçeklik vardır: biri yaşanan, öteki yaşamın ötesinde olan. Bunlardan biri rüya, öteki de Matrix'dir. Neo, umutsuz bir çaba ile Matrix hakkındaki gerçeği araştırıyor. Tam olarak kavrayamadığı şeylerin yaşamını kontrol ettiğini biliyor.Matrix Nedir? Neo, efsaneler aracılığı ile tanıdığı ve son derece tehlikeli bir adam olan Morpheus'un gerçeği bildiğine inanmaktadır.Bir gece Neo, kendisini başka bir dünyaya götürebilecek güzel yabancı Trinity ile tanışır. Bu kızın götüreceği dünyada, Morpheus'u bulacak ve Matrix hakkında bir şeyler öğrenecektir.","year":1999,"imdb":8.3,"rating":4.6,"duration":"136","image":"https://a.psrectv80.xyz/uploads/cache/poster_thumb/uploads/jpg/06eb36053c5db52d6e6248467baf8086.jpg","genres":[{"id":1,"title":"Aksiyon"},{"id":4,"title":"Bilim Kurgu"},{"id":26,"title":"Türkçe Dublaj"},{"id":27,"title":"Türkçe Altyazı"},{"id":62,"title":"HBO"}],"trailer":{"id":6441,"type":"youtube","url":"https://www.youtube.com/watch?v=m8e-FF8MsqU"},"sources":[{"id":324291,"title":"Türkçe Dublaj","type":"m3u8","url":"https://load.harborstatic.lol/hls/12/oldmovierepair/99247e9ad59c6f624a1198270998335a2170690a.mp4/index.m3u8?token=_dxkW4LDcprNLe5PlDBmsA&tms=1791596144","enc_url":"knapHAD55maHXwY7qxYUk0SIHWMkdhoaKPTKIpVRPCqssiVraukyQpO3pWsZ4gFA2fueiEbW2q5NJsVmxkZ1+I3IyWV5Pt9fDzIzODQRDuSLYBm8h5DYAz024Ef74pkAksheLGDuj4xk7tcEHoWsrfC0RvBMm/J3+vp0qiOZ2FUJTOJ0HO3HLjwb/OgY75N0s5t0VT53+gsqAz7DToglj0N55xhVzWak/IrRseXEH6NX2RM="},{"id":324292,"title":"Türkçe Altyazı","type":"m3u8","url":"https://load.harborstatic.lol/hls/12/oldmovierepair/cec642a1c26000b121a16e8bee1f826449d1264c.mp4/index.m3u8?token=_dxkW4LDcprNLe5PlDBmsA&tms=1791596144","enc_url":"9OEqDHAQAQJHR3Z3clTJpXyhv50Y/FE+vjt4U9oFAZKAIgBE4IxFkUyqw2dqaFntx3lGA1mLZpNASQeWNHlj1pO3NS7Av+mtLsyyptNbv4SgrzfIg99lvWwE7U8Vwh2jA5zPZ9fMOa5W7vUSsnzASMLxm5pMHJA/O1K1k6xOvrjopWnQ9s8jMF1JdPx/reGL8ZbUE2oEIIj225N0HGBFktoj1cPbGXzeJb1Q+k0ER5EaSmM="}]}
-   - The Matrix 2 - The Matrix Reloaded | {"id":608,"type":"movie","title":"The Matrix 2 - The Matrix Reloaded","label":"Dublaj & Altyazı","sublabel":"2003","description":"Matrix'te gösterilen olaylardan altı ay sonra, Neo, insanlar için iyi bir aldatmaca olduğunu kanıtladı, çünkü gittikçe daha fazla insan, matrixten kurtarıldı ve Direnişin tek ve tek kalesi olan Zion'a getirildi. Neo'nun kendisi süper hız, matrix içindeki şeylerin kodlarını görme yeteneği ve belli bir ön-biliş derecesini içeren süper güçlerini keşfetti. Ancak kötü bir haber insan direncine isabet ediyor: 250.000 makine Zion'a kazıyor ve 72 saat içinde onlara ulaşacak. Zion nihai savaşa hazırlanırken, Neo, Morpheus ve Trinity'e Oracle tarafından Kaynağa ulaşmalarına yardımcı olacak Çilingir'i bulmaları tavsiye edilir. Bu arada Neo'nun Trinity'nin ölümünü betimleyen rüyaları onu endişelendirdi, Ajan Smith bir şekilde silinmekten kurtuldu, öncekinden daha güçlü hale geldi ve Neo'yu bir sonraki hedefi olarak sabitledi.","year":2003,"imdb":7.1,"rating":4.7,"duration":"138","image":"https://a.psrectv80.xyz/uploads/cache/poster_thumb/uploads/jpg/0c816cb6d843124def174ed9d2f7c20d.jpg","genres":[{"id":1,"title":"Aksiyon"},{"id":4,"title":"Bilim Kurgu"},{"id":9,"title":"Gerilim"},{"id":17,"title":"Macera"},{"id":26,"title":"Türkçe Dublaj"},{"id":27,"title":"Türkçe Altyazı"},{"id":62,"title":"HBO"}],"trailer":{"id":6443,"type":"youtube","url":"https://www.youtube.com/watch?v=zsgrsiZoymA"},"sources":[{"id":324294,"title":"Türkçe Dublaj","type":"m3u8","url":"https://load.harborstatic.lol/hls/12/oldmovierepair/3329eff16a153904fea2c45c9f91dc37dea11c13.mp4/index.m3u8?token=_dxkW4LDcprNLe5PlDBmsA&tms=1791596144","enc_url":"wyb5/7AzlSzn5Gy8lBYM3Lne+FvTs3ImPIQruD9ZnIxKRbP3CS5lPKTfIbqCHOaKDt0WdDNsFVIFk1G+fpDPR5YQ9xxH2UGpwwCsTVkyzKjF0A4IRlBOaoNskFEi+aWlj6wjdeTYhmAW7BZCFs0RVUqnlrz2zyHl2vlAZH2h9xKqzYDgTqTP93+bxSWyxv63qKiJTc61rd59+EVEchTtMc2r7fFEHwETogVwD6+RzQ1ayfE="},{"id":324295,"title":"Türkçe Altyazı","type":"m3u8","url":"https://load.harborstatic.lol/hls/12/oldmovierepair/279034d0341380695ed188e3b089bb16c3b1cd4b.mp4/index.m3u8?token=_dxkW4LDcprNLe5PlDBmsA&tms=1791596144","enc_url":"rdPChYHZdB8X1JLpnZiaxGHceP4tNSq0qZ4mDS6F6pUJcDF5zIv6Kfx0wbckRCI1fLUuETQznkMH1VKa1eFFQiJJnoX/9RPAOpi7B2AKTcAOEuCJKxdh7YHmleydUpVyBJmS+1nhHMJMB5lKfYH7KMZHyy4Oi8+80mDqtOE/yeGq5rhexE9L07zND/4l8JayXkTqI2ONbnROP/x/NpeaJ2Pfr5JjrGjvOMscNUGFpbfYXCQ="}]}
-   - The Matrix 3 - The Matrix Revolutions | {"id":609,"type":"movie","title":"The Matrix 3 - The Matrix Revolutions","label":"Dublaj & Altyazı","sublabel":"2003","description":"Zion kenti, Neo'nun savaşı başka bir cephede bitirmek için savaşırken aynı zamanda haydut Ajan Smith'e de karşı savaşırken, makinelerin kitlesel işgaline karşı kendini savunuyor.","year":2003,"imdb":6.7,"rating":4.6,"duration":"129","image":"https://a.psrectv80.xyz/uploads/cache/poster_thumb/uploads/jpg/c832e92193a95d37c3b904f070c00a16.jpg","genres":[{"id":1,"title":"Aksiyon"},{"id":4,"title":"Bilim Kurgu"},{"id":9,"title":"Gerilim"},{"id":17,"title":"Macera"},{"id":26,"title":"Türkçe Dublaj"},{"id":27,"title":"Türkçe Altyazı"},{"id":62,"title":"HBO"}],"trailer":{"id":6445,"type":"youtube","url":"https://www.youtube.com/watch?v=hMbexEPAOQI"},"sources":[{"id":324297,"title":"Türkçe Dublaj","type":"m3u8","url":"https://load.harborstatic.lol/hls/12/oldmovierepair/d35bce5fe91d3d4abf99ebedec9950eb7802f946.mp4/index.m3u8?token=_dxkW4LDcprNLe5PlDBmsA&tms=1791596144","enc_url":"HjEBjKpZDLjZf3Rei2LxG1cBk8MwXZL9TBAX0nQGPIePrGyNorLSoQVX9RNpucdc45hYcbLSzJhAW6KClTpZj+WNonZQizS+Yx3kHg9uHfBbN6aW1+frjXQ4mWiWHlR342N2eOQC85dB+HHUyJHU+v4Ekgl12soA944ZEQIgsAYD0xX3wJXpbAab99MgyigOotlvT+Ih+azsFqyB8OzoGdxrlxUwbj0X7hmBEnqUDrdDTf0="},{"id":324300,"title":"Türkçe Altyazı","type":"m3u8","url":"https://load.harborstatic.lol/hls/12/oldmovierepair/cb26b8814bc315c64f31f7f9f9a4f48d6aaccd44.mp4/index.m3u8?token=_dxkW4LDcprNLe5PlDBmsA&tms=1791596144","enc_url":"rO455PP8SdfzfQKWfd/YkXVvxUC2QPB+fQczEEWE0thhW4dXCZLhbnP4JkT1qf3u+TAqCVX4MvKGHQHnnVhHMTmbNe0P7/pXaDG6s6tm0dF0nIVzZnfFy2lxshjzRyjzSDYPCDtLJtJPuymaE8+NzrZZOeSor/XI8LdNJ7wWPddWgP4p9MtxqwFU1xlJcM9aueWJDORn31jByKX3iJzUmXcAkPhUrKiGUbW8wEUclPQCbqg="}]}
-LOAD LiveStreamLoadResponse 'Bein Sports Haber'
+--- Trt 1 | A | live_url_mode
+   load -> LiveStreamLoadResponse
+    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36","Referer":"https://www.trtizle.com/"}],"chUrl":"https://trt.daioncdn.net/trt-1/master.m3u8?app=web","chReg":"null","chImg":"https://img.dsmartgo.com.tr/content/Q/ou/11887/Thumbnail.png","chName":"Trt 1 | A","chTy
+    [D/InatBox] yayın » Trt 1 | A » https://trt.daioncdn.net/trt-1/master.m3u8?app=web
+   loadLinks -> true  link=1
+   LINK M3U8 | https://trt.daioncdn.net/trt-1/master.m3u8 | ref=https://www.trtizle.com/ | başlıklar=[X-Requested-With, User-Agent, Referer]
+      erişim -> 200 #EXTM3U #EXT-X-VERSION:3 #EXT-X-STREAM-I 
+
+--- Atv | A | tekli_regex_mode
+   load -> MovieLoadResponse
+    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 8.0.0;) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.93 Mobile Safari/537.36","Referer":"http://www.atv.com.tr/"}],"chUrl":"https://securevideotoken.tmgrup.com.tr/webtv/secure?url=https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8","chReg":[{"sha256":"sha256/OokvAfrsRS9uiQTKB6G4ht9kJNULzpITGPV0McR
+    [D/InatBox] yayın » Atv | A » https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8?st=IZnZDFpjFVSlqVWE4Avv7w&e=1791626461
+   loadLinks -> true  link=1
+   LINK M3U8 | https://trkvz-live.ercdn.net/atvhd/atvhd.m3u8 | ref=http://www.atv.com.tr/ | başlıklar=[X-Requested-With, User-Agent, Referer]
+      erişim -> 200 #EXTM3U #EXT-X-VERSION:3 #EXT-X-STREAM-I 
+
+--- Show TV | A | tekli_regex_replace_mode
+   load -> MovieLoadResponse
+    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0","Referer":"https://www.showtv.com.tr/canli-yayin/"}],"chUrl":"https://www.showtv.com.tr/canli-yayin/","chReg":[{"sha256":"sha256/iFsgqfD3LQmW51z40egQqnKpyhTPedZ+zgW+LQ8vA2M=","Regex1":"var videoUrl = \"(.*?)\"","Host":"www.showtv.com.tr"}],"chImg":"htt
+    [D/InatBox] yayın » Show TV | A » https://ciner.daioncdn.net/showtv/showtv.m3u8?ce=3&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&st=RBzhSuGauna0OGld-DJUVA&e=1664766175&tv=1
+   loadLinks -> true  link=1
+   LINK M3U8 | https://ciner.daioncdn.net/showtv/showtv.m3u8 | ref=https://www.showtv.com.tr/canli-yayin/ | başlıklar=[X-Requested-With, User-Agent, Referer]
+      erişim -> 200 #EXTM3U #EXT-X-VERSION:3 #EXT-X-STREAM-I 
+
+--- Now TV | A | tekli_regex_mode
+   load -> MovieLoadResponse
+    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36","Referer":"https://www.nowtv.com.tr/"}],"chUrl":"https://req.filmizleeeee.cfd/now.php","chReg":[{"sha256":"sha256/NVrd940rwzL1bav4hRkzjaIDJTqVyo4TixmgNqG7NYY=","Regex1":"\"chUrl\":\"(.*?)\"","Host":"req.filmizlee
+    [W/InatBox] regex eşleşmedi » https://req.filmizleeeee.cfd/now.php
+    [W/InatBox] yayın adresi çözülemedi » Now TV | A (tekli_regex_mode)
+   loadLinks -> true  link=0
+
+--- Trt 1 | C | tekli_regex_lb_sh_3_mode
+   load -> MovieLoadResponse
+    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36","Referer":"https://google.com/"}],"chUrl":"https://str.filmizleeeee.cfd/GLB2/?static=trt1","chReg":[{"sha256":"sha256/NVrd940rwzL1bav4hRkzjaIDJTqVyo4TixmgNqG7NYY=","Regex2":"41442c5c61351521","Regex2p":"f6aed4384
+    [W/InatBox] imzalı GET 403 » https://str.filmizleeeee.cfd/GLB2/?static=trt1
+    [W/InatBox] istek 403 » https://str.filmizleeeee.cfd/GLB2/?static=trt1
+    [W/InatBox] yayın adresi çözülemedi » Trt 1 | C (tekli_regex_lb_sh_3_mode)
+   loadLinks -> true  link=0
+
+--- Kardeş Takımı 3 | tekli_regex_mode
+   load -> MovieLoadResponse
+    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Linux; Android 15) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.7049.38 Mobile Safari/537.36","Referer":"https://dzen.ru/"}],"chUrl":"https://dzen.ru/embed/oEUapd1wPAAA","chReg":[{"sha256":"sha256/TzhLFgikrufRJ4ZpifiF3iyNZoqf+26A9aLvCywOMdM=","Regex1":"streams\":\\[\\{\"url\":\"(.*?)\"","Host":"dzen.ru"}],"chIm
+    [D/InatBox] yayın » Kardeş Takımı 3 » https://vd405.okcdn.ru/video.m3u8?cmd=videoPlayerCdn&expires=1791840466526&srcIp=172.184.214.230&pr=70&srcAg=CHROME_ANDROID&ch=-536166974&ms=176.112.172.119&type=2&sig=LkO7vPpRtNY&ct=8&urls=185.226.55.12&clientType=33&zs=43&id=18150304647697&dzen_dash=hls
+   loadLinks -> true  link=1
+   LINK M3U8 | https://vd405.okcdn.ru/video.m3u8 | ref=https://dzen.ru/ | başlıklar=[X-Requested-With, User-Agent, Referer]
+      erişim -> 200 #EXTM3U #EXT-X-STREAM-INF:PROGRAM-ID=1,B 
+
+--- İllegal Hayatlar: Meclis | B | nok5_mode
+   load -> MovieLoadResponse
+    [D/InatBox] data: {"chHeaders":[{"XRequestedWith":"XMLHttpRequest","UserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36","Referer":"https://vk.com/"}],"chUrl":"act=show&al=1&claim=&dmcah=&hd=&list=&module=direct&video=-220031389_456239223","chReg":[{"Regex1":"\"hls.*?\"\\s*:\\s*\"\\s*(.*?)\\s*\""}],"chImg":"https://image.tmdb.org/t/p/w600
+    [D/InatBox] yayın » İllegal Hayatlar: Meclis | B » https://vk6-2.vkuser.net/video.m3u8?cmd=videoPlayerCdn&expires=1791840469617&srcIp=172.184.214.230&pr=40&srcAg=CHROME&ch=-536166974&ms=95.142.206.161&mid=10601913067662&type=2&sig=IR70LA43IlY&ct=8&urls=176.112.172.182%3B185.180.203.148&clientType=13&zs=43&id=8359387597407
+   loadLinks -> true  link=1
+   LINK M3U8 | https://vk6-2.vkuser.net/video.m3u8 | ref=https://vk.com/ | başlıklar=[X-Requested-With, User-Agent, Referer]
+      erişim -> 200 #EXTM3U #EXT-X-STREAM-INF:PROGRAM-ID=1,B 
+
+--- Aşıklar Bayramı | inat_disk_sh_mode
+   load -> MovieLoadResponse
+    [D/InatBox] data: {"chHeaders":"null","chUrl":"https://disk.yandex.com.tr/d/gHth_gjV8mHhSQ","chReg":"null","chImg":"https://image.tmdb.org/t/p/w300_and_h450_bestv2/hcIhpCOj4JdvWMyaXUDXOqf7Opj.jpg","chName":"Aşıklar Bayramı","chType":"inat_disk_sh_mode"}
+    [D/InatBox] yayın » Aşıklar Bayramı » https://disk.yandex.com.tr/d/gHth_gjV8mHhSQ
+   loadLinks -> true  link=1
+   LINK VIDEO | https://disk.yandex.com.tr/d/gHth_gjV8mHhSQ | ref= | başlıklar=[]
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 1s
+BUILD SUCCESSFUL in 2m 11s
 2 actionable tasks: 2 executed
