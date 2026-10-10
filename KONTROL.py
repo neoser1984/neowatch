@@ -3,6 +3,7 @@ from datetime   import datetime
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 import os, re, base64, json
+from urllib.parse import urlparse
 
 
 class _Konsol:
@@ -94,6 +95,45 @@ class MainUrlUpdater:
         decrypted_data = unpad(cipher.decrypt(encrypted_data), AES.block_size).decode("utf-8")
         return json.loads(decrypted_data, strict=False)["apiUrl"]
 
+    PARK_IZLERI = (
+        "domain is for sale", "buy this domain", "this domain may be for sale", "parked free",
+        "domain parking", "sedoparking", "parkingcrew", "bodis.com", "researches :", "related searches",
+        "is ready. the content is to be added", "<title>index of /",
+    )
+
+    @staticmethod
+    def _taban_ad(url):
+        host = (urlparse(url).hostname or "").lower()
+        host = re.sub(r"^www\d*\.", "", host)
+        ilk  = host.split(".")[0]
+        return host, re.sub(r"\d+", "", ilk)
+
+    def _gecerli_mi(self, eklenti_adi, eski_url, yeni_url, istek=None):
+        """Yönlendirmenin gerçek bir alan adı değişikliği olup olmadığını denetler (park/reklam sayfalarını eler)."""
+        eski, yeni = urlparse(eski_url), urlparse(yeni_url)
+        if not yeni.scheme.startswith("http") or not yeni.hostname:
+            return False, "geçersiz adres"
+        if yeni.query or yeni.fragment:
+            return False, "sorgu dizgisi içeren yönlendirme"
+        if (yeni.path or "/").rstrip("/") != (eski.path or "/").rstrip("/"):
+            return False, "yol değişmiş"
+        if re.match(r"^ww\d+\.", yeni.hostname.lower()):
+            return False, "park alt alan adı"
+        if istek is not None:
+            if istek.status_code != 200:
+                return False, f"HTTP {istek.status_code}"
+            govde = (istek.text or "")[:200000].lower()
+            if len(govde) < 2000:
+                return False, "içerik çok kısa"
+            if any(iz in govde for iz in self.PARK_IZLERI):
+                return False, "park/bekleme sayfası"
+        eski_host, eski_taban = self._taban_ad(eski_url)
+        yeni_host, yeni_taban = self._taban_ad(yeni_url)
+        ad = eklenti_adi.lower()
+        if ad in yeni_host.replace("-", "") or (eski_taban and yeni_taban and (eski_taban in yeni_taban or yeni_taban in eski_taban)):
+            return True, ""
+        return False, f"alan adı ilgisiz görünüyor ({eski_host} -> {yeni_host})"
+
     @property
     def mainurl_listesi(self):
         return {
@@ -135,6 +175,11 @@ class MainUrlUpdater:
                 final_url = istek.url[:-1] if istek.url.endswith("/") else istek.url
 
             if mainurl == final_url:
+                continue
+
+            gecerli, neden = self._gecerli_mi(eklenti_adi, mainurl, final_url, None if eklenti_adi in {"RecTV", "GolgeTV"} else istek)
+            if not gecerli:
+                konsol.log(f"[!] Atlandı ({neden}) : {mainurl} -> {final_url}")
                 continue
 
             self._mainurl_guncelle(dosya, mainurl, final_url)

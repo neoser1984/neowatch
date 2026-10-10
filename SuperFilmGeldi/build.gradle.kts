@@ -1,9 +1,9 @@
-version = 5
+version = 6
 
 cloudstream {
     authors     = listOf("NeO")
     language    = "tr"
-    description = "Hd film izliyerek arkadaşlarınızla ve sevdiklerinizle iyi bir vakit geçirmek istiyorsanız açın bir film eğlenmeye bakın. Bilim kurgu filmleri, aşk drama vahşet aşk romantik sıradışı korku filmlerini izle."
+    description = "SuperFilmGeldi (artık superfilmizle.org) — film, dizi ve anime izle. Türkçe dublaj ve altyazı seçenekleriyle."
 
     /**
      * Status int as the following:
@@ -13,6 +13,6 @@ cloudstream {
      * 3: Beta only
     **/
     status  = 1 // will be 3 if unspecified
-    tvTypes = listOf("Movie")
-    iconUrl = "https://www.google.com/s2/favicons?domain=www.superfilmgeldi.biz&sz=%size%"
+    tvTypes = listOf("Movie", "TvSeries", "Anime")
+    iconUrl = "https://www.google.com/s2/favicons?domain=superfilmizle.org&sz=%size%"
 }
