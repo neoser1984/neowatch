@@ -16,94 +16,96 @@ To honour the JVM settings for this build a single-use Daemon process will be fo
 Daemon will be stopped at the end of the build 
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources NO-SOURCE
-
 > Task :compileKotlin
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/Test.kt:32:39 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/Test.kt:57:39 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== pilavyer akış testi ===
+=== SuperFilmGeldi (superfilmizle.org) eklenti testi — kategori: 43 ===
+KAT Filmler -> 24 hasNext=true  | Resident Evil [Movie] https://superfilmizle.org/resident-evil/, The Odyssey [Movie] https://superfilmizle.org/the-odyssey/ | s2=24 ilk=Deadpool ve Wolverine ayni=false
+KAT Diziler -> 24 hasNext=true  | Reacher [TvSeries] https://superfilmizle.org/dizi/reacher/, The Mentalist [TvSeries] https://superfilmizle.org/dizi/the-mentalist/ | s2=24 ilk=Gölge Akademisi ayni=false
+KAT Animeler -> 24 hasNext=true  | Ölüm Defteri [Anime] https://superfilmizle.org/anime/olum-defteri/, Cyberpunk: Edgerunners [Anime] https://superfilmizle.org/anime/cyberpunk-edgerunners/ | s2=24 ilk=Ölüm Defteri ayni=true
+KAT Editörün Seçimi -> 24 hasNext=true  | Uğultulu Tepeler [Movie] https://superfilmizle.org/ugultulu-tepeler/, Korkunç Bir Film 6 [Movie] https://superfilmizle.org/korkunc-bir-film-6/ | s2=10 ilk=Jurassic World Rebirth ayni=false
+KAT Aksiyon Filmleri -> 24 hasNext=true  | Wonder Woman [Movie] https://superfilmizle.org/wonder-woman/, Vixen [Movie] https://superfilmizle.org/vixen/
+KAT Komedi Filmleri -> 24 hasNext=true  | Büyü de Gel [Movie] https://superfilmizle.org/buyu-de-gel/, Küçük Köyün Büyük Gücü [Movie] https://superfilmizle.org/kucuk-koyun-buyuk-gucu/
+KAT Korku Filmleri -> 24 hasNext=true  | Işıklar Sönünce [Movie] https://superfilmizle.org/isiklar-sonunce/, Night Patrol [Movie] https://superfilmizle.org/night-patrol/
+KAT Bilim Kurgu Filmleri -> 24 hasNext=true  | Wonder Woman [Movie] https://superfilmizle.org/wonder-woman/, Kıyametten Sonra [Movie] https://superfilmizle.org/kiyametten-sonra/
+KAT Gerilim Filmleri -> 24 hasNext=true  | Aşkın Gücü [Movie] https://superfilmizle.org/askin-gucu/, Animals [Movie] https://superfilmizle.org/animals/
+KAT Dram Filmleri -> 24 hasNext=true  | Kurtuluş [Movie] https://superfilmizle.org/kurtulus/, Aşkın Gücü [Movie] https://superfilmizle.org/askin-gucu/ | s2=24 ilk=Tilki ayni=false
+KAT Macera Filmleri -> 24 hasNext=true  | Altın Pusula [Movie] https://superfilmizle.org/altin-pusula/, Wonder Woman [Movie] https://superfilmizle.org/wonder-woman/
+KAT Fantastik Filmler -> 24 hasNext=true  | Altın Pusula [Movie] https://superfilmizle.org/altin-pusula/, Wonder Woman [Movie] https://superfilmizle.org/wonder-woman/
+KAT Romantik Filmler -> 24 hasNext=true  | Büyü de Gel [Movie] https://superfilmizle.org/buyu-de-gel/, Aşkın Gücü [Movie] https://superfilmizle.org/askin-gucu/
+KAT Suç Filmleri -> 24 hasNext=true  | Animals [Movie] https://superfilmizle.org/animals/, Çatlı [Movie] https://superfilmizle.org/catli/
+KAT Gizem Filmleri -> 24 hasNext=true  | Kurtuluş [Movie] https://superfilmizle.org/kurtulus/, Işıklar Sönünce [Movie] https://superfilmizle.org/isiklar-sonunce/
+KAT Animasyon Filmleri -> 24 hasNext=true  | Wonder Woman [Movie] https://superfilmizle.org/wonder-woman/, Vixen [Movie] https://superfilmizle.org/vixen/
+KAT Aile Filmleri -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries] https://superfilmizle.org/dizi/unicorn-akademisi-sirlar-cozuluyor/, BAT-FAM [TvSeries] https://superfilmizle.org/dizi/bat-fam/
+KAT Belgesel Filmleri -> 24 hasNext=true  | Vaad: Siyonizmin Anatomisi [TvSeries] https://superfilmizle.org/dizi/vaad-siyonizmin-anatomisi/, 7/24: Amsterdam Tren İstasyonu [TvSeries] https://superfilmizle.org/dizi/724-amsterdam-tren-istasyonu/
+KAT Savaş Filmleri -> 24 hasNext=true  | Savaşın Kalbinde [Movie] https://superfilmizle.org/savasin-kalbinde/, Tilki [Movie] https://superfilmizle.org/tilki/ | s2=18 ilk=Full Metal Jacket ayni=false
+KAT Tarih Filmleri -> 24 hasNext=true  | Hamilton [Movie] https://superfilmizle.org/hamilton/, Tilki [Movie] https://superfilmizle.org/tilki/
+KAT Biyografi Filmleri -> 7 hasNext=false  | Springsteen: Deliver Me from Nowhere [Movie] https://superfilmizle.org/springsteen-deliver-me-from-nowhere/, Genç Victoria [Movie] https://superfilmizle.org/genc-victoria/
+KAT Western Filmleri -> 24 hasNext=true  | İyi, Kötü ve Çirkin [Movie] https://superfilmizle.org/iyi-kotu-ve-cirkin/, Batıda Kan Var [Movie] https://superfilmizle.org/batida-kan-var/
+KAT Müzikal Filmler -> 24 hasNext=true  | Christopher - Hayat Gerçekten Güzel [Movie] https://superfilmizle.org/christopher-hayat-gercekten-guzel/, K-Pop: İblis Avcıları [Movie] https://superfilmizle.org/k-pop-iblis-avcilari/
+KAT Spor Filmleri -> 3 hasNext=false  | Christy [Movie] https://superfilmizle.org/christy/, Ferrari [Movie] https://superfilmizle.org/ferrari/
+KAT Yerli Filmler -> 4 hasNext=false  | Dehşet Bey [Movie] https://superfilmizle.org/dehset-bey/, Efes'in Sırrı [Movie] https://superfilmizle.org/efesin-sirri/
+KAT Kore Filmleri -> 2 hasNext=false  | The Great Flood [Movie] https://superfilmizle.org/the-great-flood/, The Roundup [Movie] https://superfilmizle.org/the-roundup/
+KAT Hint Filmleri -> 11 hasNext=false  | De De Pyaar De 2 [Movie] https://superfilmizle.org/de-de-pyaar-de-2/, Mana ShankaraVaraprasad Garu [Movie] https://superfilmizle.org/mana-shankaravaraprasad-garu/
+KAT Aksiyon Dizileri -> 24 hasNext=true  | Yeraltı [TvSeries] https://superfilmizle.org/dizi/yeralti/, BAKI-DOU: The Invincible Samurai [Anime] https://superfilmizle.org/anime/baki-dou-the-invincible-samurai/ | s2=24 ilk=Archer ayni=false
+KAT Komedi Dizileri -> 24 hasNext=true  | Take Charge of My Heart [TvSeries] https://superfilmizle.org/dizi/take-charge-of-my-heart/, Konuşanlar - Disney+ [TvSeries] https://superfilmizle.org/dizi/konusanlar-disney/
+KAT Dram Dizileri -> 24 hasNext=true  | Unforgettable [TvSeries] https://superfilmizle.org/dizi/unforgettable/, M.I.A. [TvSeries] https://superfilmizle.org/dizi/mia/
+KAT Suç Dizileri -> 24 hasNext=true  | Unforgettable [TvSeries] https://superfilmizle.org/dizi/unforgettable/, M.I.A. [TvSeries] https://superfilmizle.org/dizi/mia/
+KAT Bilim Kurgu Dizileri -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries] https://superfilmizle.org/dizi/unicorn-akademisi-sirlar-cozuluyor/, Take Charge of My Heart [TvSeries] https://superfilmizle.org/dizi/take-charge-of-my-heart/
+KAT Fantastik Diziler -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries] https://superfilmizle.org/dizi/unicorn-akademisi-sirlar-cozuluyor/, Take Charge of My Heart [TvSeries] https://superfilmizle.org/dizi/take-charge-of-my-heart/
+KAT Gizem Dizileri -> 6 hasNext=false  | Resident Evil [Movie] https://superfilmizle.org/resident-evil/, The Odyssey [Movie] https://superfilmizle.org/the-odyssey/
+KAT Macera Dizileri -> 24 hasNext=true  | Yeraltı [TvSeries] https://superfilmizle.org/dizi/yeralti/, BAKI-DOU: The Invincible Samurai [Anime] https://superfilmizle.org/anime/baki-dou-the-invincible-samurai/
+KAT Animasyon Dizileri -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries] https://superfilmizle.org/dizi/unicorn-akademisi-sirlar-cozuluyor/, BAKI-DOU: The Invincible Samurai [Anime] https://superfilmizle.org/anime/baki-dou-the-invincible-samurai/
+KAT Netflix -> 48 hasNext=true  | UNABOMBER [Movie] https://superfilmizle.org/unabomber/, Hayata Mahkûm [Movie] https://superfilmizle.org/hayata-mahkum/ | s2=48 ilk=UNABOMBER ayni=true
+KAT Amazon Prime -> 48 hasNext=true  | Aşk Hipotezi [Movie] https://superfilmizle.org/ask-hipotezi/, Dünyalar Savaşı [Movie] https://superfilmizle.org/dunyalar-savasi/
+KAT Disney+ -> 48 hasNext=true  | Oyuncak Hikayesi 5 [Movie] https://superfilmizle.org/oyuncak-hikayesi-5/, Avengers: Endgame [Movie] https://superfilmizle.org/avengers-endgame/
+KAT HBO Max -> 48 hasNext=true  | Backrooms [Movie] https://superfilmizle.org/backrooms/, Yıldızlararası [Movie] https://superfilmizle.org/yildizlararasi/
+KAT Apple TV+ -> 0 hasNext=false  | 
+KAT Exxen -> 24 hasNext=true  | Gibi [TvSeries] https://superfilmizle.org/dizi/gibi/, Konuşanlar [TvSeries] https://superfilmizle.org/dizi/konusanlar/
+KAT Tabii -> 7 hasNext=false  | Hayat [Movie] https://superfilmizle.org/hayat/, Gassal [TvSeries] https://superfilmizle.org/dizi/gassal/
+ÖRNEK KART: Resident Evil | https://superfilmizle.org/resident-evil/ | poster=https://superfilmizle.org/storage/tmdb/posters/w780/yXs3qdcTxteZnZZH78xvm7Q6iK2.webp?v=1791084418 | yıl=2026 | puan=7.3
+ARAMA matrix -> 1  | Matrix [Movie] https://superfilmizle.org/matrix/
+ARAMA reacher -> 2  | Reacher [TvSeries] https://superfilmizle.org/dizi/reacher/, Neagley [TvSeries] https://superfilmizle.org/dizi/neagley/
+ARAMA naruto -> 0  | 
 
-##### AKIŞ https://superfilmizle.org/wonder-woman/
-   stream=https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb
-   [referer=embed+origin] -> 200 ctype=application/vnd.apple.mpegurl uzunluk=1199 son=https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb
-   İÇERİK: #EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="group_aud",NAME="audio_1",DEFAULT=YES,LANGUAGE="tr",CHANNELS="2",URI="stream.php?v=5624ab5865eaf875ae059670fcc137ac&p=stream_a0%2Findex.m3u8&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb"
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="group_aud",NAME="audio_2",DEFAULT=NO,LANGUAGE="en",CHANNELS="2",URI="stream.php?v=5624ab5865eaf875ae059670fcc137ac&p=stream_a1%2Findex.m3u8&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb"
-#EXT-X-STREAM-INF:BANDWIDTH=3367347,AVERAGE-BANDWIDTH=2640000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2",AUDIO="group_aud"
-stream.php?v=5624ab5865eaf875ae059670fcc137ac&p=stream_v720%2Findex.m3u8&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb
+LOAD https://superfilmizle.org/wonder-woman/ -> Wonder Woman tür=Movie yıl=2009 puan=7.2 süre=74 etiket=[Aksiyon Filmleri, Animasyon Filmleri, Bilim Kurgu, Fantastik Filmler, Macera Filmleri] poster=https://superfilmizle.org/storage/tmdb/posters/w780/u6sI0yLJXkmrbSJzVRCmmfa4nhx.webp?v=1791436179 fragman=[] öneri=12 oyuncu=5 
+   konu: Themyscira adasında yüzyıllardır dış dünyadan uzak, barış içinde yaşayan Amazon kraliçesi Hippolyta ile kızı Prenses Diana, efsanevi savaşçıların mira
+    [D/SFG] data » https://superfilmizle.org/wonder-woman/
+    [D/SFG] embed » https://play2.pilavyerplay.top/assets/js/s.php?s=1qv4NFlA1ZG4ADLLsz8bTA
+   LINKS ok=true  altyazı=[Türkçe Altyazı, English]
+   - Pilavyer (Dublaj + Orijinal) M3U8 -> 200 application/vnd.apple.mpegurl | https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&token=eyJ2IjoiNTYyNGFiNTg2NWV
+     alt liste -> 200 application/vnd.apple.mpegurl | ilk satır: https://pilavyer4.top/cdn/5624ab5865eaf875ae059670fcc137ac/stream_v720/00000.txt?t=eyJ2Ijo
+   - Pilavyer Yedek (Dublaj + Orijinal) M3U8 -> 200 application/vnd.apple.mpegurl | https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&token=eyJ2IjoiNTYyNGFiNTg2NWV
+     alt liste -> 200 application/vnd.apple.mpegurl | ilk satır: segment.php?v=5624ab5865eaf875ae059670fcc137ac&s=00000&p=stream_v720&token=eyJ2IjoiNTYyNGF
 
+LOAD https://superfilmizle.org/dizi/reacher/ -> Reacher tür=TvSeries yıl=2022 puan=8.1 süre=null etiket=[Aksiyon Dizileri, Macera Dizileri, Suç Dizileri] poster=https://superfilmizle.org/storage/tmdb/posters/w780/f1VCQIG2iCyOookdgOzwtUpwWC0.webp?v=1791090798 fragman=[https://www.youtube.com/embed/472tIOluV8w] öneri=17 oyuncu=5 
+   konu: Bıçak kadar keskin zekâsı ve etkileyici fiziksel gücüyle tanınan eski askerî polis subayı Jack Reacher, derbeder bir hayat sürmeyi tercih eder; hiçbir
+   bölüm sayısı=32 sezonlar=[1, 2, 3, 4] ilk=[S1E1 Margrave'e Hoş geldin https://superfilmizle.org/bolum/reacher-1-sezon-1-bolum/, S1E2 İlk Dans https://superfilmizle.org/bolum/reacher-1-sezon-2-bolum/] son=S4E8 https://superfilmizle.org/bolum/reacher-4-sezon-8-bolum/
+    [D/SFG] data » https://superfilmizle.org/bolum/reacher-1-sezon-1-bolum/
+    [D/SFG] embed » https://pilavyerplay.top/assets/js/s.php?s=uI7cAYWUB5RZIW40dN9sBw
+   LINKS ok=true  altyazı=[Türkçe Altyazı, İngilizce Altyazı]
+   - Pilavyer (Türkçe Dublaj) M3U8 -> 200 application/vnd.apple.mpegurl | https://pilavyerplay.top/api/stream.php?v=99c83aa51c03639f736dcb7f52feed38&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5Z
+     alt liste -> 200 video/mp2t | ilk satır: ��.%ъ9V�ȧ(�~HH����be���&:��݅�	/%�29U�k����v����е�H9��#���L�n��?�;,w@�V��
+   - Pilavyer Yedek (Türkçe Dublaj) M3U8 -> 200 application/vnd.apple.mpegurl | https://pilavyerplay.top/api/stream.php?v=99c83aa51c03639f736dcb7f52feed38&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5Z
+     alt liste -> 200 video/mp2t | ilk satır: ��.%ъ9V�ȧ(�~HH����be���&:��݅�	/%�29U�k����v����е�H9��#���L�n��?�;,w@�V��
 
-   ALT [embed+origin] https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&p=stream_v720%2Findex.m3u8&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb -> 200 ctype=application/vnd.apple.mpegurl uzunluk=222269
-   ALT İÇERİK: #EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-TARGETDURATION:6
-#EXT-X-MEDIA-SEQUENCE:0
-#EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-KEY:METHOD=AES-128,URI="key.php?v=5624ab5865eaf875ae059670fcc137ac&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb",IV=0x0f9653a38c6781f356ef6eb5656ea1ad
-#EXTINF:6.006000,
-https://pilavyer4.top/cdn/5624ab5865eaf875ae059670fcc137ac/stream_v720/00000.txt?t=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb
-#EXTINF:6.006000,
-https://pilavyer2.top/cdn/5624ab5865eaf875ae059670fcc137ac/strea
-   SEGMENT [embed+origin] https://pilavyer4.top/cdn/5624ab5865eaf875ae059670fcc137ac/stream_v720/00000.txt?t=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb -> 200 ctype=video/mp2t boyut=918384
-   SEGMENT [başlıksız] https://pilavyer4.top/cdn/5624ab5865eaf875ae059670fcc137ac/stream_v720/00000.txt?t=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb -> 200 ctype=video/mp2t boyut=918384
-   ALT [başlıksız] https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&p=stream_v720%2Findex.m3u8&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb -> 200 ctype=application/vnd.apple.mpegurl uzunluk=222269
-   [referer=embed] -> 200 ctype=application/vnd.apple.mpegurl uzunluk=1199 son=https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb
-   [referer=base/] -> 200 ctype=application/vnd.apple.mpegurl uzunluk=1199 son=https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb
-   [başlıksız] -> 200 ctype=application/vnd.apple.mpegurl uzunluk=1199 son=https://play2.pilavyerplay.top/api/stream.php?v=5624ab5865eaf875ae059670fcc137ac&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb
-   ALTYAZI https://play2.pilavyerplay.top/api/sub.php?v=5624ab5865eaf875ae059670fcc137ac&sid=2b182ac74ad7e635f52e28cdc3565d11&token=eyJ2IjoiNTYyNGFiNTg2NWVhZjg3NWFlMDU5NjcwZmNjMTM3YWMiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MDUsIm4iOiI0MWE5ZjFiMDdmYjgifQ.20d10c9c94aa38d7595517ef5a70613ee2a2c1256291e49826eeb2850ae8a9cb -> 200 ctype=text/vtt; charset=utf-8 | WEBVTT  00:01.000 --> 01:06.000 TV-Rip: Burak ŞAHİN  02:29.225 --> 02:32.225 Eskiden benimle yatak odasında karşılaşmak için heveslendiğin kadar...  02:32.312 --> 02:34.457 ...savaş meydanında karşıla
-   ALTYAZI başlıksız -> 200
+LOAD https://superfilmizle.org/anime/cyberpunk-edgerunners/ -> Cyberpunk: Edgerunners tür=Anime yıl=2022 puan=8.5 süre=null etiket=[Aksiyon Dizileri, Animasyon Dizileri, Bilim Kurgu Dizileri, Fantastik Diziler, Macera Dizileri, Suç Dizileri] poster=https://superfilmizle.org/storage/tmdb/posters/w500/rNkilVmALgaIb4SenfbaecRStDD.webp?v=1791151151 fragman=[https://www.youtube.com/embed/W1zluRFSQew] öneri=12 oyuncu=4 
+   konu: Geleceğin Night City metropolünde teknoloji ile yoksulluk iç içe geçmiştir; insan bedenleri sibernetik implantlarla donatılmış, şirketler ise her şeyi
+   bölüm sayısı=20 sezonlar=[1, 2] ilk=[S1E1 Seni Hüsrana Uğratmayacağım https://superfilmizle.org/anime/cyberpunk-edgerunners/sezon-1/bolum-1/, S1E2 Erkek Gibi https://superfilmizle.org/anime/cyberpunk-edgerunners/sezon-1/bolum-2/] son=S2E10 https://superfilmizle.org/anime/cyberpunk-edgerunners/sezon-2/bolum-10/
+    [D/SFG] data » https://superfilmizle.org/anime/cyberpunk-edgerunners/sezon-1/bolum-1/
+    [D/SFG] embed » https://pilavyerplay.top/assets/js/s.php?s=asB8cl2qkZuLbu-s70zZnA
+   LINKS ok=true  altyazı=[Türkçe Altyazı, İngilizce Altyazı]
+   - Pilavyer (Japonca Dublaj) M3U8 -> 200 application/vnd.apple.mpegurl | https://pilavyerplay.top/api/stream.php?v=d08a3573b1bb12c8764fc4f187864af3&token=eyJ2IjoiZDA4YTM1NzNiMWJiMTJjO
+     alt liste -> 200 video/mp2t | ilk satır: Z�{J�@�i�).
+   - Pilavyer Yedek (Japonca Dublaj) M3U8 -> 200 application/vnd.apple.mpegurl | https://pilavyerplay.top/api/stream.php?v=d08a3573b1bb12c8764fc4f187864af3&token=eyJ2IjoiZDA4YTM1NzNiMWJiMTJjO
+     alt liste -> 200 video/mp2t | ilk satır: Z�{J�@�i�).
 
-##### AKIŞ https://superfilmizle.org/bolum/reacher-1-sezon-1-bolum/
-   stream=https://pilavyerplay.top/api/stream.php?v=99c83aa51c03639f736dcb7f52feed38&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655
-   [referer=embed+origin] -> 200 ctype=application/vnd.apple.mpegurl uzunluk=161694 son=https://pilavyerplay.top/api/stream.php?v=99c83aa51c03639f736dcb7f52feed38&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655
-   İÇERİK: #EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-TARGETDURATION:8
-#EXT-X-MEDIA-SEQUENCE:0
-#EXT-X-PLAYLIST-TYPE:VOD
-#EXT-X-KEY:METHOD=AES-128,URI="key.php?v=99c83aa51c03639f736dcb7f52feed38&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655",IV=0xf2c79a612306b632ff2f8936dbecb211
-#EXTINF:7.508000,
-https://pilavyer1.top/cdn/99c83aa51c03639f736dcb7f52feed38/00000.txt?t=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655
-#EXTINF:5.005000,
-https://pilavyer1.top/cdn/99c83aa51c03639f736dcb7f52feed38/00001.txt?t=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655
-#EXTINF:7.507000,
-https://pilavyer5.top/cdn/99c83aa51c03639f736dcb7f52feed38/00002.txt?t=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655
-#EXTINF:5.005000,
-https://pilavyer1.top/cdn/99c83aa51c03639f736dcb7f52feed38/00003.txt?t=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQ
-   ALT [embed+origin] https://pilavyer1.top/cdn/99c83aa51c03639f736dcb7f52feed38/00000.txt?t=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655 -> 200 ctype=video/mp2t uzunluk=997009
-   ALT [başlıksız] https://pilavyer1.top/cdn/99c83aa51c03639f736dcb7f52feed38/00000.txt?t=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655 -> 200 ctype=video/mp2t uzunluk=997009
-   [referer=embed] -> 200 ctype=application/vnd.apple.mpegurl uzunluk=161694 son=https://pilavyerplay.top/api/stream.php?v=99c83aa51c03639f736dcb7f52feed38&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655
-   [referer=base/] -> 200 ctype=application/vnd.apple.mpegurl uzunluk=161694 son=https://pilavyerplay.top/api/stream.php?v=99c83aa51c03639f736dcb7f52feed38&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655
-   [başlıksız] -> 200 ctype=application/vnd.apple.mpegurl uzunluk=161694 son=https://pilavyerplay.top/api/stream.php?v=99c83aa51c03639f736dcb7f52feed38&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655
-   ALTYAZI https://pilavyerplay.top/api/sub.php?v=99c83aa51c03639f736dcb7f52feed38&sid=7b01a716e6cc887d3fcf390b85b810bc&token=eyJ2IjoiOTljODNhYTUxYzAzNjM5ZjczNmRjYjdmNTJmZWVkMzgiLCJvIjoic3VwZXJmaWxtaXpsZS5vcmciLCJleHAiOjE3OTIyNjI0MTMsIm4iOiI5OTU0ZjZhZDQzZDQifQ.cac2d55abcbdbf24d8277bfc5c02f6489a54018d2c44365a7b4874ef89540655 -> 200 ctype=text/vtt; charset=utf-8 | WEBVTT  01:29.423 --> 01:31.842 GEORGIA'NIN MARGRAVE KASABASINA HOŞ GELDİNİZ  01:31.926 --> 01:34.345 KURULUŞ: 1794 KLINER VAKFI'NIN KATKILARIYLA  01:42.061 --> 01:44.814 -Matematiğim iyi değil. -%40 
-   ALTYAZI başlıksız -> 200
-
-##### player.js uzunluk=55293
-   «cdnProbe» … case window.Hls.ErrorTypes.MEDIA_ERROR: hls.recoverMediaError(); break; default: showError('Video yüklenemedi.'); break; } } /* CDN erişilebilirlik ÖN-TESTİ (s.php config: cdnProbe). Bazı ISS'ler CDN alan adlarını engelliyor; engelli izleyici hls.js'in fragment deneme/zaman-aşımı döngüsü (uzun spinner) bitmeden origin'e düşemiyordu. Sayfa açılırken /cdn/ping paralel yoklanır; 3 sn içinde yanıt yoksa ve henüz hiç segment yüklenmediyse (state.started=false) beklemeden cdn=0 fallback'i
-   «cdnProbe» … de yanıt yoksa ve henüz hiç segment yüklenmediyse (state.started=false) beklemeden cdn=0 fallback'ine geçilir. Oynatma başladıysa dokunulmaz. */ function probeCdn() { if (!C.cdnProbe || state.cdnOff || C.stream.indexOf('cdn=0') !== -1) { return; } var done = false; var ctl = (typeof AbortController !== 'undefined') ? new AbortController() : null; function ok() { if (!done) { done = true; clearTimeout(timer); } } function fail() { if (done) { return; } done = true;
-   «cdnProbe» … ngPosition(); } var timer = setTimeout(function () { if (ctl) { try { ctl.abort(); } catch (e) {} } fail(); }, 3000); try { fetch(C.cdnProbe, { cache: 'no-store', credentials: 'omit', signal: ctl ? ctl.signal : undefined }) .then(ok) .catch(fail); } catch (e) { fail(); } } function refreshToken() { if (window.__PL_KILLED__) { return; } // guard sonlandırdıysa token yenileme state.refreshing = true; var t
-   «tokenUrl» … üre dolmuş // olabilir; başarılı yenileme lastRefresh'i işaretler, sonraki hata // yukarıdaki (b) yoluyla CDN'i devre dışı bırakabilir). if (!state.refreshing && C.tokenUrl) { refreshToken(); return; } hls.startLoad(); return; } switch (data.type) { case window.Hls.ErrorTypes.MEDIA_ERROR: hls.recoverMediaError(); break; default: showError('Video yüklenemedi.'); break; } } /* CDN erişilebilirlik ÖN-TESTİ (s.php config: cdnProbe). 
-   «tokenUrl» …  quality: curQ ? { height: curQ.height, bitrate: curQ.bitrate } : null }; // Erişim kodu açıksa yenilemede tekrar gönderilmeli (api/token.php doğrular). var url = C.tokenUrl + (C.accessCode ? '&code=' + encodeURIComponent(C.accessCode) : ''); fetch(url, { credentials: 'omit' }).then(function (r) { return r.json(); }).then(function (j) { state.refreshing = false; if (j && j.ok && j.token) { state.lastRefresh = Date.now(); // CDN fallback penceresi için 
-   «tokenUrl» … ); hls = null; } } catch (e) {} try { video.pause(); } catch (e) {} try { video.removeAttribute('src'); video.load(); } catch (e) {} C.stream = ''; C.token = ''; C.tokenUrl = ''; C.beatUrl = ''; }); } updateVolume(); setupSource(); probeCdn(); })(); 
-   «.stream» …  // HLS gömülü altyazıları bizim <track>'lerle karışmasın renderTextTracksNatively: false, enableCEA708Captions: false }); hls.loadSource(C.stream); hls.attachMedia(video); hls.on(window.Hls.Events.MANIFEST_PARSED, onManifest); hls.on(window.Hls.Events.AUDIO_TRACKS_UPDATED, onAudioTracksChanged); hls.on(window.Hls.Events.AUDIO_TRACK_SWITCHED, onAudioSwitched); hls.on(window.Hls.Events.LEVEL_SWITCHED, onLevelSwitched); 
-   «.stream» … .mpegurl')) { // Native HLS (Safari/iOS): kalite ABR ile içsel yönetilir (seviye API'si yok); // ses parçaları video.audioTracks üzerinden köprülenir. video.src = C.stream; video.addEventListener('loadedmetadata', onManifest, { once: true }); if (video.audioTracks && video.audioTracks.addEventListener) { video.audioTracks.addEventListener('change', function () { syncSubtitleForAudio(audioActiveId()); updateAudioLabel(); 
-   «.stream» … ; } function onHlsError(event, data) { if (!data || !data.fatal) return; if (data.type === window.Hls.ErrorTypes.NETWORK_ERROR) { var cdnActive = !state.cdnOff && C.stream.indexOf('cdn=0') === -1; // (a) İLK YÜKLEME: henüz hiç segment yüklenmedi ve CDN/edge erişilemiyor. // Token taze olduğundan sorun CDN'dir → token turunu atla, doğrudan // sunucuya düş (cam ekranı/uzun beklemeyi önler). // (b) OYNARKEN: az önce token yenilendi (lastRefresh penceresi) a
-   «stream» … ======================== */ (function () { 'use strict'; var C = window.__PLAYER__ || {}; // Config yerel kapanışa alındı → global referansı kaldır ki konsoldan // (window.__PLAYER__) stream/token kolayca okunamasın. Sızıntıyı tümden // önlemez (kaynak görüntülemede yine görünür) ama gündelik incelemeyi zorlaştırır. try { window.__PLAYER__ = null; delete window.__PLAYER__; } catch (e) {} var $ = function (id) { return document.getElementById(id); }; var root = $('sv'), video = $('sv-video'); if (!root || !vi
-   «stream» …  // HLS gömülü altyazıları bizim <track>'lerle karışmasın renderTextTracksNatively: false, enableCEA708Captions: false }); hls.loadSource(C.stream); hls.attachMedia(video); hls.on(window.Hls.Events.MANIFEST_PARSED, onManifest); hls.on(window.Hls.Events.AUDIO_TRACKS_UPDATED, onAudioTracksChanged); hls.on(window.Hls.Events.AUDIO_TRACK_SWITCHED, onAudioSwitched); hls.on(window.Hls.Events.LEVEL_SWITCHED, onLevelSwitched); 
-   «stream» … mpegurl')) { // Native HLS (Safari/iOS): kalite ABR ile içsel yönetilir (seviye API'si yok); // ses parçaları video.audioTracks üzerinden köprülenir. video.src = C.stream; video.addEventListener('loadedmetadata', onManifest, { once: true }); if (video.audioTracks && video.audioTracks.addEventListener) { video.audioTracks.addEventListener('change', function () { syncSubtitleForAudio(audioActiveId()); updateAudioLabel(); 
-   «loadSource» … false, // HLS gömülü altyazıları bizim <track>'lerle karışmasın renderTextTracksNatively: false, enableCEA708Captions: false }); hls.loadSource(C.stream); hls.attachMedia(video); hls.on(window.Hls.Events.MANIFEST_PARSED, onManifest); hls.on(window.Hls.Events.AUDIO_TRACKS_UPDATED, onAudioTracksChanged); hls.on(window.Hls.Events.AUDIO_TRACK_SWITCHED, onAudioSwitched); hls.on(window.Hls.Events.LEVEL_SWITCHED, onLevelSwitch
-   «beatUrl» …  } function hideResume() { if (els.resume) { els.resume.classList.remove('show'); els.resume.setAttribute('hidden', ''); } } function sendBeat() { if (!C.analytics || !C.beatUrl) return; var d = video.duration || C.dur || 0, t = video.currentTime || 0; if (!d || t < 1) return; try { var fd = new FormData(); fd.append('v', C.v); fd.append('token', C.token || ''); fd.append('sid', C.sid || ''); fd.append('t', t.toFixed(1)); fd.append('d', d.toFixed(1)); 
-   «beatUrl» … d.append('token', C.token || ''); fd.append('sid', C.sid || ''); fd.append('t', t.toFixed(1)); fd.append('d', d.toFixed(1)); if (navigator.sendBeacon) { navigator.sendBeacon(C.beatUrl, fd); } else { fetch(C.beatUrl, { method: 'POST', body: fd, credentials: 'omit', keepalive: true }); } } catch (e) {} } // Konum kaydı (localStorage) + periyodik heartbeat — tek timeupdate'te. video.addEventListener('timeupdate', function () { var now = Date.now(), t = video.currentTime || 0, d = vid
-   «beatUrl» …  fd.append('sid', C.sid || ''); fd.append('t', t.toFixed(1)); fd.append('d', d.toFixed(1)); if (navigator.sendBeacon) { navigator.sendBeacon(C.beatUrl, fd); } else { fetch(C.beatUrl, { method: 'POST', body: fd, credentials: 'omit', keepalive: true }); } } catch (e) {} } // Konum kaydı (localStorage) + periyodik heartbeat — tek timeupdate'te. video.addEventListener('timeupdate', function () { var now = Date.now(), t = video.currentTime || 0, d = video.duration || 0; if (now - lastSav
-   «accessCode» … ality: curQ ? { height: curQ.height, bitrate: curQ.bitrate } : null }; // Erişim kodu açıksa yenilemede tekrar gönderilmeli (api/token.php doğrular). var url = C.tokenUrl + (C.accessCode ? '&code=' + encodeURIComponent(C.accessCode) : ''); fetch(url, { credentials: 'omit' }).then(function (r) { return r.json(); }).then(function (j) { state.refreshing = false; if (j && j.ok && j.token) { state.lastRefresh = Date.now(); // CDN fallback penceresi için C.token =
-   «accessCode» …  curQ.bitrate } : null }; // Erişim kodu açıksa yenilemede tekrar gönderilmeli (api/token.php doğrular). var url = C.tokenUrl + (C.accessCode ? '&code=' + encodeURIComponent(C.accessCode) : ''); fetch(url, { credentials: 'omit' }).then(function (r) { return r.json(); }).then(function (j) { state.refreshing = false; if (j && j.ok && j.token) { state.lastRefresh = Date.now(); // CDN fallback penceresi için C.token = j.token; // heartbeat (beat.php) için güncel
+DİZİ KATEGORİLERİ: [aksiyon-dizileri=Aksiyon Dizileri, animasyon-dizileri=Animasyon Dizileri, bilim-kurgu-dizileri=Bilim Kurgu Dizileri, cizgi-ve-dizi=Çizgi ve Dizi, dram-dizileri=Dram Dizileri, fantastik-diziler=Fantastik Diziler, gelecek-diziler=Gelecek Diziler, gerilim-dizileri=Gerilim Dizileri, hint-dizileri=Hint Dizileri, komedi-dizileri=Komedi Dizileri, kore-dizileri=Kore Dizileri, korku-dizileri=Korku Dizileri, macera-dizileri=Macera Dizileri, pakistan-dizileri=Pakistan Dizileri, romantik-dizileri=Romantik Dizileri, savas-dizileri=Savaş Dizileri, suc-dizileri=Suç Dizileri, yerli-dizileri=Yerli Dizileri]
+PLATFORMLAR: [amazon-prime, apple-tv, atv, blutv, crunchyroll, disney, exxen, gain, hbo-max, hulu, kanal-d, lionsgate-plus, mgm-plus, mubi, netflix, now, paramount-plus, peacock, puhutv, show-tv, star-tv, tabii, tod, trt-1, tv-plus, tv8]
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 17s
+BUILD SUCCESSFUL in 2m 58s
 2 actionable tasks: 2 executed
