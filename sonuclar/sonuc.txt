@@ -21,64 +21,31 @@ Daemon will be stopped at the end of the build
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== SuperFilmGeldi son test — kategori: 45 ===
-KAT Yeni Eklenen Filmler -> 24 hasNext=true  | Büyü de Gel [Movie], Altın Pusula [Movie] | s2=24 hasNext=true farklı=true
-KAT Yeni Eklenen Diziler -> 24 hasNext=true  | Unforgettable [TvSeries], M.I.A. [TvSeries] | s2=24 hasNext=true farklı=true
-KAT Filmler -> 24 hasNext=true  | Resident Evil [Movie], The Odyssey [Movie]
-KAT Diziler -> 24 hasNext=true  | Reacher [TvSeries], The Mentalist [TvSeries]
-KAT Animeler -> 24 hasNext=false  | Ölüm Defteri [Anime], Cyberpunk: Edgerunners [Anime]
-KAT Editörün Seçimi -> 24 hasNext=true  | Uğultulu Tepeler [Movie], Korkunç Bir Film 6 [Movie]
-KAT Aksiyon Filmleri -> 24 hasNext=true  | Wonder Woman [Movie], Vixen [Movie] | s2=24 hasNext=true farklı=true
-KAT Komedi Filmleri -> 24 hasNext=true  | Büyü de Gel [Movie], Küçük Köyün Büyük Gücü [Movie]
-KAT Korku Filmleri -> 24 hasNext=true  | Işıklar Sönünce [Movie], Night Patrol [Movie]
-KAT Bilim Kurgu Filmleri -> 24 hasNext=true  | Wonder Woman [Movie], Kıyametten Sonra [Movie]
-KAT Gerilim Filmleri -> 24 hasNext=true  | Aşkın Gücü [Movie], Animals [Movie]
-KAT Dram Filmleri -> 24 hasNext=true  | Kurtuluş [Movie], Aşkın Gücü [Movie]
-KAT Macera Filmleri -> 24 hasNext=true  | Altın Pusula [Movie], Wonder Woman [Movie] | s2=24 hasNext=true farklı=true
-KAT Fantastik Filmler -> 24 hasNext=true  | Altın Pusula [Movie], Wonder Woman [Movie]
-KAT Romantik Filmler -> 24 hasNext=true  | Büyü de Gel [Movie], Aşkın Gücü [Movie]
-KAT Suç Filmleri -> 24 hasNext=true  | Animals [Movie], Çatlı [Movie]
-KAT Gizem Filmleri -> 24 hasNext=true  | Kurtuluş [Movie], Işıklar Sönünce [Movie]
-KAT Animasyon Filmleri -> 24 hasNext=true  | Wonder Woman [Movie], Vixen [Movie]
-KAT Aile -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries], BAT-FAM [TvSeries] | s2=24 hasNext=true farklı=true
-KAT Belgesel -> 24 hasNext=true  | Vaad: Siyonizmin Anatomisi [TvSeries], 7/24: Amsterdam Tren İstasyonu [TvSeries]
-KAT Savaş Filmleri -> 24 hasNext=true  | Savaşın Kalbinde [Movie], Tilki [Movie]
-KAT Tarih Filmleri -> 24 hasNext=true  | Hamilton [Movie], Tilki [Movie]
-KAT Biyografi Filmleri -> 7 hasNext=false  | Springsteen: Deliver Me from Nowhere [Movie], Genç Victoria [Movie]
-KAT Western Filmleri -> 24 hasNext=true  | İyi, Kötü ve Çirkin [Movie], Batıda Kan Var [Movie]
-KAT Müzikal Filmler -> 24 hasNext=true  | Christopher - Hayat Gerçekten Güzel [Movie], K-Pop: İblis Avcıları [Movie] | s2=11 hasNext=false farklı=true
-KAT Hint Filmleri -> 11 hasNext=false  | De De Pyaar De 2 [Movie], Mana ShankaraVaraprasad Garu [Movie]
-KAT Aksiyon Dizileri -> 24 hasNext=true  | Yeraltı [TvSeries], BAKI-DOU: The Invincible Samurai [Anime]
-KAT Komedi Dizileri -> 24 hasNext=true  | Take Charge of My Heart [TvSeries], Konuşanlar - Disney+ [TvSeries]
-KAT Dram Dizileri -> 24 hasNext=true  | Unforgettable [TvSeries], M.I.A. [TvSeries]
-KAT Suç Dizileri -> 24 hasNext=true  | Unforgettable [TvSeries], M.I.A. [TvSeries]
-KAT Bilim Kurgu Dizileri -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries], Take Charge of My Heart [TvSeries] | s2=24 hasNext=true farklı=true
-KAT Fantastik Diziler -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries], Take Charge of My Heart [TvSeries]
-KAT Macera Dizileri -> 24 hasNext=true  | Yeraltı [TvSeries], BAKI-DOU: The Invincible Samurai [Anime]
-KAT Savaş Dizileri -> 24 hasNext=true  | Vaad: Siyonizmin Anatomisi [TvSeries], Mahsusa [TvSeries]
-KAT Animasyon Dizileri -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries], BAKI-DOU: The Invincible Samurai [Anime]
-KAT Netflix Filmleri -> 24 hasNext=true  | UNABOMBER [Movie], Hayata Mahkûm [Movie] | s2=24 hasNext=true farklı=true
-KAT Netflix Dizileri -> 24 hasNext=true  | The Mentalist [TvSeries], The Scandal [TvSeries] | s2=24 hasNext=true farklı=true
-KAT Amazon Prime Filmleri -> 24 hasNext=true  | Aşk Hipotezi [Movie], Dünyalar Savaşı [Movie] | s2=24 hasNext=true farklı=true
-KAT Amazon Prime Dizileri -> 24 hasNext=true  | Reacher [TvSeries], The Mentalist [TvSeries] | s2=24 hasNext=true farklı=true
-KAT Disney+ Filmleri -> 24 hasNext=true  | Oyuncak Hikayesi 5 [Movie], Avengers: Endgame [Movie] | s2=24 hasNext=true farklı=true
-KAT Disney+ Dizileri -> 24 hasNext=true  | Criminal Minds [TvSeries], The Walking Dead [TvSeries] | s2=24 hasNext=true farklı=true
-KAT HBO Max Filmleri -> 24 hasNext=true  | Backrooms [Movie], Yıldızlararası [Movie] | s2=24 hasNext=true farklı=true
-KAT HBO Max Dizileri -> 24 hasNext=true  | Lanterns [TvSeries], Game of Thrones [TvSeries] | s2=24 hasNext=true farklı=true
-KAT Exxen Dizileri -> 24 hasNext=true  | Gibi [TvSeries], Konuşanlar [TvSeries] | s2=24 hasNext=true farklı=true
-KAT BluTV Dizileri -> 24 hasNext=true  | Sıfır Bir [TvSeries], Alef [TvSeries] | s2=10 hasNext=false farklı=true
-LOAD https://superfilmizle.org/matrix/ -> Matrix Movie veri=https://superfilmizle.org/matrix/
-    [D/SFG] data » https://superfilmizle.org/matrix/
-   altyazı=[]
-   The Mentalist: 151 bölüm, sezonlar [1, 2, 3, 4, 5, 6, 7]
-LOAD https://superfilmizle.org/dizi/the-mentalist/ -> The Mentalist TvSeries veri=https://superfilmizle.org/bolum/the-mentalist-7-sezon-13-bolum/
-    [D/SFG] data » https://superfilmizle.org/bolum/the-mentalist-7-sezon-13-bolum/
-    [D/SFG] embed » https://pilavyerplay.top/assets/js/s.php?s=QVd2jnB7zrcwl6ruXUROWg
-   altyazı=[Türkçe Altyazı]
-   - Pilavyer (Dublaj + Orijinal) -> 200 application/vnd.apple.mpegurl
-   - Pilavyer Yedek (Dublaj + Orijinal) -> 200 application/vnd.apple.mpegurl
+=== oynatıcı türleri ===
+https://superfilmizle.org/matrix/ -> tür=none pv=null iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label]
+   KUTU: <div class="tb-shell" data-player-shell> <div class="tb-slot relative aspect-video w-full" data-player-slot> <div class="tb-box overflow-hidden rounded-card-lg border border-line bg-black" data-player data-player-type="none" data-duration="8160"> <button type="button" data-player-mini-close style="display:none" class="absolute right-2 top-2 z-40 h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black" aria-label="Mini oynatıcıyı kapat"> <svg/> </button> <div class="flex h-full w-full overflow-y-auto p-4 text-center text-content-muted sm:p-6"> <div class="m-auto flex flex-col items-center gap-2 sm:gap-4"> <svg/> <p class="text-sm">Bu içerik için izleme kaynağı hazırlanıyor.</p> <a href="https://superfilmizle.org/uye-girisi/" class="btn-outline btn-sm"> <svg/> Çıkınca haber ver </a> </div> </div> </div> </div> </div>
+   #player: <div id="player" class="container-site mt-10 scroll-mt-24"> <div class="mx-auto max-w-5xl"></div> <div class="mx-auto max-w-5xl"> <div class="tb-shell" data-player-shell> <div class="tb-slot relative aspect-video w-full" data-player-slot> <div class="tb-box overflow-hidden rounded-card-lg border border-line bg-black" data-player data-player-type="none" data-duration="8160"> <button type="button" data-player-mini-close style="display:none" class="absolute right-2 top-2 z-40 h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black" aria-label="Mini oynatıcıyı kapat"> <svg/> </button> <div class="flex h-full w-full overflow-y-auto p-4 text-center text-content-muted sm:p-6"> <div class="m-auto flex flex-col items-center gap-2 sm:gap-4"> <svg/> <p class="text-sm">Bu içerik için izleme kaynağı hazırlanıyor.</p> <a href="https://superfilmizle.org/uye-girisi/" class="btn-outline btn-sm"> <svg/> Çıkınca haber ver </a> </div> </div> </div> </div> </div> <div class="mt-4"> <div x-data="{ type: 'movie', id: 425, likes: 0, dislikes: 0, reaction: null, report: false, reportSent: false, reason: 'broken', note: '', err: false, errMsg: '', capA: 0, capB: 0, capToken: '', capAnswer: '', token() { return document.querySelector('meta[name=csrf-token]')?.content || ''; }, flashError(msg) { this.errMsg = msg || ''; this.err = true; setTimeout(() =&gt; this.err = false, 4000); }, openReport() { this.report = true; this.reportSent = false; this.loadCaptcha(); }, loadC
+https://superfilmizle.org/buyu-de-gel/ -> tür=embed pv=ybvPDdnjb_djJuNAKDlXSg iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/altin-pusula/ -> tür=embed pv=W6byzI4Rg_4-0nO_Hoa-YQ iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/kurtulus/ -> tür=embed pv=0siu8Mseikda6XiKjmCV9A iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/askin-gucu/ -> tür=embed pv=BoIpRSbRVXMrYwWWqY6OWA iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/isiklar-sonunce/ -> tür=embed pv=5f71vK8h2AXfJowjuJuwbw iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/heldin/ -> tür=embed pv=rd0OTf1jt3qgeA8CY7AkdA iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/animals/ -> tür=embed pv=pVus8bgLW-0yEhnyzam-zQ iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/catli/ -> tür=none pv=null iframe=[https://www.youtube.com/embed/AOy_ym_qXVM] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label]
+   KUTU: <div class="tb-shell" data-player-shell> <div class="tb-slot relative aspect-video w-full" data-player-slot> <div class="tb-box overflow-hidden rounded-card-lg border border-line bg-black" data-player data-player-type="none" data-duration="6540"> <button type="button" data-player-mini-close style="display:none" class="absolute right-2 top-2 z-40 h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black" aria-label="Mini oynatıcıyı kapat"> <svg/> </button> <iframe src="https://www.youtube.com/embed/AOy_ym_qXVM" class="absolute inset-0 h-full w-full" referrerpolicy="origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe> <span class="absolute left-2 top-2 z-10 rounded-pill bg-black/70 px-2.5 py-1 text-xs font-semibold text-white">Fragman</span> </div> </div> </div>
+   #player: <div id="player" class="container-site mt-10 scroll-mt-24"> <div class="mx-auto max-w-5xl"></div> <div class="mx-auto max-w-5xl"> <div class="tb-shell" data-player-shell> <div class="tb-slot relative aspect-video w-full" data-player-slot> <div class="tb-box overflow-hidden rounded-card-lg border border-line bg-black" data-player data-player-type="none" data-duration="6540"> <button type="button" data-player-mini-close style="display:none" class="absolute right-2 top-2 z-40 h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black" aria-label="Mini oynatıcıyı kapat"> <svg/> </button> <iframe src="https://www.youtube.com/embed/AOy_ym_qXVM" class="absolute inset-0 h-full w-full" referrerpolicy="origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe> <span class="absolute left-2 top-2 z-10 rounded-pill bg-black/70 px-2.5 py-1 text-xs font-semibold text-white">Fragman</span> </div> </div> </div> <div class="mt-4"> <div x-data="{ type: 'movie', id: 1149, likes: 0, dislikes: 0, reaction: null, report: false, reportSent: false, reason: 'broken', note: '', err: false, errMsg: '', capA: 0, capB: 0, capToken: '', capAnswer: '', token() { return document.querySelector('meta[name=csrf-token]')?.content || ''; }, flashError(msg) { this.errMsg = msg || ''; this.err = true; setTimeout(() =&gt; this.err = false, 4000); }, openReport() { this.report = true; this.reportSent = false; this.loadCaptcha(); }, loadCaptcha() { this.capA
+https://superfilmizle.org/wonder-woman/ -> tür=embed pv=1qv4NFlA1ZG4ADLLsz8bTA iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/vixen/ -> tür=none pv=null iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label]
+   KUTU: <div class="tb-shell" data-player-shell> <div class="tb-slot relative aspect-video w-full" data-player-slot> <div class="tb-box overflow-hidden rounded-card-lg border border-line bg-black" data-player data-player-type="none" data-duration="4500"> <button type="button" data-player-mini-close style="display:none" class="absolute right-2 top-2 z-40 h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black" aria-label="Mini oynatıcıyı kapat"> <svg/> </button> <div class="flex h-full w-full overflow-y-auto p-4 text-center text-content-muted sm:p-6"> <div class="m-auto flex flex-col items-center gap-2 sm:gap-4"> <svg/> <p class="text-sm">Bu içerik için izleme kaynağı hazırlanıyor.</p> <a href="https://superfilmizle.org/uye-girisi/" class="btn-outline btn-sm"> <svg/> Çıkınca haber ver </a> </div> </div> </div> </div> </div>
+   #player: <div id="player" class="container-site mt-10 scroll-mt-24"> <div class="mx-auto max-w-5xl"></div> <div class="mx-auto max-w-5xl"> <div class="tb-shell" data-player-shell> <div class="tb-slot relative aspect-video w-full" data-player-slot> <div class="tb-box overflow-hidden rounded-card-lg border border-line bg-black" data-player data-player-type="none" data-duration="4500"> <button type="button" data-player-mini-close style="display:none" class="absolute right-2 top-2 z-40 h-10 w-10 items-center justify-center rounded-full bg-black/70 text-white hover:bg-black" aria-label="Mini oynatıcıyı kapat"> <svg/> </button> <div class="flex h-full w-full overflow-y-auto p-4 text-center text-content-muted sm:p-6"> <div class="m-auto flex flex-col items-center gap-2 sm:gap-4"> <svg/> <p class="text-sm">Bu içerik için izleme kaynağı hazırlanıyor.</p> <a href="https://superfilmizle.org/uye-girisi/" class="btn-outline btn-sm"> <svg/> Çıkınca haber ver </a> </div> </div> </div> </div> </div> <div class="mt-4"> <div x-data="{ type: 'movie', id: 1147, likes: 0, dislikes: 0, reaction: null, report: false, reportSent: false, reason: 'broken', note: '', err: false, errMsg: '', capA: 0, capB: 0, capToken: '', capAnswer: '', token() { return document.querySelector('meta[name=csrf-token]')?.content || ''; }, flashError(msg) { this.errMsg = msg || ''; this.err = true; setTimeout(() =&gt; this.err = false, 4000); }, openReport() { this.report = true; this.reportSent = false; this.loadCaptcha(); }, load
+https://superfilmizle.org/my-dearest-senorita/ -> tür=embed pv=1IJJLk0syzNMq6yaNWNvFw iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/adamin-iyiligi-icin/ -> tür=embed pv=Vnswh_DoJxqIcLVAOW9YFg iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/elize-bir-kadinin-golgeleri/ -> tür=embed pv=yOb8FEhYCSewl10KC2qsMA iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/drugelio-sirdis/ -> tür=embed pv=em_OJwJ3ZA14GqrRyNyzLw iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
+https://superfilmizle.org/night-patrol/ -> tür=embed pv=dGGgbM-UixxTftrwbsJGqQ iframe=[] kaynak sekmeleri=[|type,data-player-mini-close,style,class,aria-label, Tiyatro|type,data-player-theater,class,title, Açılmıyor mu?|type,@click,class, Gönder|type,x-on:click,:disabled,class]
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 29s
+BUILD SUCCESSFUL in 2m
 2 actionable tasks: 2 executed
