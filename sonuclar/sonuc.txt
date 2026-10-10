@@ -17,22 +17,132 @@ Daemon will be stopped at the end of the build
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources NO-SOURCE
 
-> Task :compileKotlin FAILED
-e: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/MixPlayHDExtractor.kt:21:38 This API is only available on prerelease builds. Using it will cause CloudStream stable to crash.
+> Task :compileKotlin
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/Test.kt:26:27 Unnecessary safe call on a non-null receiver of type 'Element'.
 
-FAILURE: Build failed with an exception.
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
 
-* What went wrong:
-Execution failed for task ':compileKotlin'.
-> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
-   > Compilation error. See log for more details
+> Task :run
+=== SuperFilmGeldi alan adı araştırması ===
+GET https://www.superfilmgeldi.me/ -> 200 son=http://ww547.superfilmgeldi.me/?tkn=19vnMT3S | başlık=superfilmgeldi.me | uzunluk=43233 | server=null
+   [div.movie-preview-content] = 0
+   [span.movie-title a] = 0
+   [div.movie-preview] = 0
+   [article] = 0
+   [div.poster img] = 0
+   [div#vast iframe] = 0
+   [iframe] = 0
+   [div.title h1] = 0
+   [h1] = 0
+   kategori bağlantıları (0): 
+   metin: superfilmgeldi.me Researches : stream movies subscription best movie streaming deals premium sound bar offers home theater system deals film projector for sale Privacy policyTerms of Service
 
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
+GET https://superfilmgeldi.me/ -> 200 son=http://ww547.superfilmgeldi.me/?tkn=19vnMT3S | başlık=superfilmgeldi.me | uzunluk=43233 | server=null
+   [div.movie-preview-content] = 0
+   [span.movie-title a] = 0
+   [div.movie-preview] = 0
+   [article] = 0
+   [div.poster img] = 0
+   [div#vast iframe] = 0
+   [iframe] = 0
+   [div.title h1] = 0
+   [h1] = 0
+   kategori bağlantıları (0): 
+   metin: superfilmgeldi.me Researches : stream movies subscription best movie streaming deals premium sound bar offers home theater system deals film projector for sale Privacy policyTerms of Service
 
-BUILD FAILED in 44s
-1 actionable task: 1 executed
-GRADLE HATASI: 1
+GET https://superfilmizle.org/ -> 200 son=https://superfilmizle.org/ | başlık=Superfilmizle - HD Kalite Film izle | uzunluk=450936 | server=cloudflare
+   [div.movie-preview-content] = 0
+   [span.movie-title a] = 0
+   [div.movie-preview] = 0
+   [article] = 0
+   [div.poster img] = 0
+   [div#vast iframe] = 0
+   [iframe] = 0
+   [div.title h1] = 0
+   [h1] = 1
+   kategori bağlantıları (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/ https://superfilmizle.org/category/bilim-kurgu/ https://superfilmizle.org/category/biyografi-filmleri/ https://superfilmizle.org/category/cocuklar/ https://superfilmizle.org/category/dram-filmleri/ https://superfilmizle.org/category/editor-secim/ https://superfilmizle.org/category/erotik-film/ https://superfilmizle.org/category/fantastik-filmler/ https://superfilmizle.org/category/gelecek-filmler/ https://superfilmizle.org/category/gerceklik/ https://superfilmizle.org/category/gerilim-filmleri/ https://superfilmizle.org/category/gizem-filmleri/ https://superfilmizle.org/category/hint-filmleri/ https://superfilmizle.org/category/komedi-filmleri/ https://superfilmizle.org/category/kore-filmleri/ https://superfilmizle.org/category/korku-filmleri/ https://superfilmizle.org/category/macera-filmleri/ https://superfilmizle.org/category/muzikal-filmler/ https://superfilmizle.org/category/pembe-dizi/ https://superfilmizle.org/category/romantik-filmler/ https://superfilmizle.org/category/savas-filmleri/ https://superfilmizle.org/category/spor-filmleri/ https://superfilmizle.org/category/suc-filmleri/ https://superfilmizle.org/category/talk/ https://superfilmizle.org/category/tarih-filmleri/ https://superfilmizle.org/category/tv-filmleri/ https://superfilmizle.org/category/western-filmleri/ https://superfilmizle.org/category/yerli-filmler/ https://superfilmizle.org/category/yetiskin-filmleri/
+   metin: TR Dilini seç 🇹🇷 Türkçe 🇬🇧 English 🇩🇪 Deutsch 🇫🇷 Français 🇮🇹 Italiano 🇪🇸 Español 🇸🇦 العربية 🇷🇺 Русский 🇨🇳 中文 SUPERFİLMİZLE Filmler Diziler Animeler Keşfet Takvim Platformlar Platformlar 26 Amazon Prime A Apple TV+ ATV BluTV Crunchyroll Disney+ Exxen G Gain HBO Max Hulu Kanal D Lionsgate+ MGM+ MUBI Netflix Now Paramount+ Peacock puhutv Show TV Star TV tabii TOD TRT 1 TV+ TV8 Türler Kategoriye göz at Aile Filmleri Aksiyon Dizileri Aksiyon Filmleri Animasyon Dizileri Animasyon Filmleri Belgesel Filmleri Bilim Kurgu Bilim Kurgu Dizileri Biyografi Filmleri Çizgi ve Dizi Çocuklar Dram Dizileri Dram Filmleri Editör Seçim Erotik Film Fantastik Diziler Fantastik Filmler Gelecek Dizi
+
+GET https://superfilmgeldi.info/ -> 200 son=https://superfilmgeldi.info/ | başlık=Malina Casino Jeux – Slots, Roulette, Blackjack et Poker | uzunluk=19977 | server=cloudflare
+   [div.movie-preview-content] = 0
+   [span.movie-title a] = 0
+   [div.movie-preview] = 0
+   [article] = 0
+   [div.poster img] = 0
+   [div#vast iframe] = 0
+   [iframe] = 0
+   [div.title h1] = 0
+   [h1] = 1
+   kategori bağlantıları (0): 
+   metin: MalinaCasino Malina Casino Connexion Bonus Inscription CONNEXION INSCRIPTION Malina Casino Connexion Bonus Inscription CONNEXION INSCRIPTION Bonus de bienvenue 120% jusqu'à 1200€ sur ton premier dépôt INSCRIPTION Phoenix Fortune Sweet Bonanza Starburst Razor Shark Wolf Gold 4pack Dead or Alive II Big Bass Splash Majestic Odin Don Premiote Gates of Olympus Legacy Of Dead High Flyer Lucky Scarab Claw Piggy Prizes Malina Casino Jeux – Slots, Roulette, Blackjack et Poker Malina propose une expérience de casino en ligne fluide et immersive, avec un large choix de jeux incluant les slots, la roulette, le blackjack et le poker. L’interface est pensée pour être claire, intuitive et agréable à utilis
+
+GET https://superfilmgeldi.net/ -> 200 son=https://superfilmgeldi.net/ | başlık=Website superfilmgeldi.net is ready. The content is to be added | uzunluk=12325 | server=cloudflare
+   [div.movie-preview-content] = 0
+   [span.movie-title a] = 0
+   [div.movie-preview] = 0
+   [article] = 0
+   [div.poster img] = 0
+   [div#vast iframe] = 0
+   [iframe] = 0
+   [div.title h1] = 0
+   [h1] = 0
+   kategori bağlantıları (0): 
+   metin: Greetings! Приветствуем! Website superfilmgeldi.net is ready. The content is to be added. Сайт superfilmgeldi.net только что создан. Содержимое появится позже. ISPsystem © 1997 - 2021
+
+GET https://superfilmgeldi.com/ -> 200 son=http://ww547.superfilmgeldi.com/?tkn=19vnMT3S | başlık=superfilmgeldi.com | uzunluk=43245 | server=null
+   [div.movie-preview-content] = 0
+   [span.movie-title a] = 0
+   [div.movie-preview] = 0
+   [article] = 0
+   [div.poster img] = 0
+   [div#vast iframe] = 0
+   [iframe] = 0
+   [div.title h1] = 0
+   [h1] = 0
+   kategori bağlantıları (0): 
+   metin: superfilmgeldi.com Researches : buy camera equipment best video editing software camera lens deals audio recording gear lighting equipment for video Privacy policyTerms of Service
+
+Exception in NiceHttp: java.io.InterruptedIOException timeout
+GET https://superfilmgeldi.pro/ -> HATA java.io.InterruptedIOException: timeout
+
+GET https://www.superfilmgeldi.biz/ -> 200 son=http://ww19.superfilmgeldi.biz/ | başlık= | uzunluk=27344 | server=nginx/1.28.0
+   [div.movie-preview-content] = 0
+   [span.movie-title a] = 0
+   [div.movie-preview] = 0
+   [article] = 0
+   [div.poster img] = 0
+   [div#vast iframe] = 0
+   [iframe] = 0
+   [div.title h1] = 0
+   [h1] = 0
+   kategori bağlantıları (0): 
+   metin: Do Not Sell or Share My Personal Information
+
+
+######## AYRINTI: https://superfilmizle.org/
+İLK KART HTML: yok
+film bağlantıları: https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr https://superfilmizle.org/locale/it https://superfilmizle.org/locale/es https://superfilmizle.org/locale/ar https://superfilmizle.org/locale/ru https://superfilmizle.org/locale/zh https://superfilmizle.org
+GET https://superfilmizle.org/locale/tr -> 200 son=https://superfilmizle.org/ | başlık=Superfilmizle - HD Kalite Film izle | uzunluk=450936 | server=cloudflare
+   [div.title h1] 0 -> 
+   [div.poster img] 0 -> 
+   [div.release a] 0 -> 
+   [div.excerpt p] 0 -> 
+   [div.categories a] 0 -> 
+   [span.imdb-rating] 0 -> 
+   [div.actor a] 0 -> 
+   [div#vast iframe] 0 -> 
+   [iframe] 0 -> 
+   [div.film-content div.existing_item] 0 -> 
+   iframe adresleri: []
+   oynatıcı HTML: yok
+   alternatif kaynak bağlantıları: []
+GET https://superfilmizle.org/?s=matrix -> 200 son=https://superfilmizle.org/ara?q=matrix | başlık="matrix" arama sonuçları - Superfilmizle | uzunluk=199462 | server=cloudflare
+   arama [div.movie-preview-content]=0 [article]=0
+GET https://superfilmizle.org/page/2/ -> 200 son=https://superfilmizle.org/film-izle/page/2/ | başlık=Film izle | Superfilmizle - HD Kalite Film izle | uzunluk=279063 | server=cloudflare
+   sayfa2 [div.movie-preview-content]=0
+
+=== BİTTİ ===
+
+BUILD SUCCESSFUL in 2m 20s
+2 actionable tasks: 2 executed
