@@ -21,33 +21,64 @@ Daemon will be stopped at the end of the build
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== sayfalama ===
-https://superfilmizle.org/animes/ -> 200 son=https://superfilmizle.org/animes/ kart=24 ilk=[https://superfilmizle.org/anime/olum-defteri/, https://superfilmizle.org/anime/cyberpunk-edgerunners/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/animes/page/2/ -> 200 son=https://superfilmizle.org/animes/ kart=24 ilk=[https://superfilmizle.org/anime/olum-defteri/, https://superfilmizle.org/anime/cyberpunk-edgerunners/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/animes/?page=2 -> 200 son=https://superfilmizle.org/animes/ kart=24 ilk=[https://superfilmizle.org/anime/olum-defteri/, https://superfilmizle.org/anime/cyberpunk-edgerunners/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/animes/?sayfa=2 -> 200 son=https://superfilmizle.org/animes/?sayfa=2 kart=24 ilk=[https://superfilmizle.org/anime/olum-defteri/, https://superfilmizle.org/anime/cyberpunk-edgerunners/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/platform/netflix/ -> 200 son=https://superfilmizle.org/platform/netflix/ kart=48 ilk=[https://superfilmizle.org/unabomber/, https://superfilmizle.org/hayata-mahkum/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/platform/netflix/page/2/ -> 200 son=https://superfilmizle.org/platform/netflix/page/2/ kart=48 ilk=[https://superfilmizle.org/unabomber/, https://superfilmizle.org/hayata-mahkum/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/platform/netflix/?page=2 -> 200 son=https://superfilmizle.org/platform/netflix/page/2/ kart=48 ilk=[https://superfilmizle.org/unabomber/, https://superfilmizle.org/hayata-mahkum/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/film-izle/?platform=netflix -> 200 son=https://superfilmizle.org/film-izle/?platform=netflix kart=24 ilk=[https://superfilmizle.org/unabomber/, https://superfilmizle.org/hayata-mahkum/] | sayfa bağlantıları=[https://superfilmizle.org/film-izle/page/2/?platform=netflix, https://superfilmizle.org/film-izle/page/3/?platform=netflix, https://superfilmizle.org/film-izle/page/16/?platform=netflix] | rel=next [https://superfilmizle.org/film-izle/page/2/?platform=netflix, https://superfilmizle.org/film-izle/page/2/?platform=netflix]
-https://superfilmizle.org/film-izle/page/2/?platform=netflix -> 200 son=https://superfilmizle.org/film-izle/page/2/?platform=netflix kart=24 ilk=[https://superfilmizle.org/sampiyon-keci-tum-zamanlarin-en-iyisi/, https://superfilmizle.org/forrest-gump/] | sayfa bağlantıları=[https://superfilmizle.org/film-izle/page/3/?platform=netflix, https://superfilmizle.org/film-izle/page/4/?platform=netflix, https://superfilmizle.org/film-izle/page/16/?platform=netflix] | rel=next [https://superfilmizle.org/film-izle/page/3/?platform=netflix, https://superfilmizle.org/film-izle/page/3/?platform=netflix]
-https://superfilmizle.org/film-izle/?platform=netflix&page=2 -> 200 son=https://superfilmizle.org/film-izle/page/2/?platform=netflix kart=24 ilk=[https://superfilmizle.org/sampiyon-keci-tum-zamanlarin-en-iyisi/, https://superfilmizle.org/forrest-gump/] | sayfa bağlantıları=[https://superfilmizle.org/film-izle/page/3/?platform=netflix, https://superfilmizle.org/film-izle/page/4/?platform=netflix, https://superfilmizle.org/film-izle/page/16/?platform=netflix] | rel=next [https://superfilmizle.org/film-izle/page/3/?platform=netflix, https://superfilmizle.org/film-izle/page/3/?platform=netflix]
-https://superfilmizle.org/dizi-izle/?platform=netflix -> 200 son=https://superfilmizle.org/dizi-izle/?platform=netflix kart=24 ilk=[https://superfilmizle.org/dizi/the-mentalist/, https://superfilmizle.org/dizi/the-scandal/] | sayfa bağlantıları=[https://superfilmizle.org/dizi-izle/page/2/?platform=netflix, https://superfilmizle.org/dizi-izle/page/3/?platform=netflix, https://superfilmizle.org/dizi-izle/page/28/?platform=netflix] | rel=next [https://superfilmizle.org/dizi-izle/page/2/?platform=netflix, https://superfilmizle.org/dizi-izle/page/2/?platform=netflix]
-https://superfilmizle.org/dizi-izle/page/2/?platform=netflix -> 200 son=https://superfilmizle.org/dizi-izle/page/2/?platform=netflix kart=24 ilk=[https://superfilmizle.org/dizi/person-of-interest/, https://superfilmizle.org/dizi/canavar-lizzie-bordenin-hikayesi/] | sayfa bağlantıları=[https://superfilmizle.org/dizi-izle/page/3/?platform=netflix, https://superfilmizle.org/dizi-izle/page/4/?platform=netflix, https://superfilmizle.org/dizi-izle/page/28/?platform=netflix] | rel=next [https://superfilmizle.org/dizi-izle/page/3/?platform=netflix, https://superfilmizle.org/dizi-izle/page/3/?platform=netflix]
-https://superfilmizle.org/film-izle/?sirala=yeni -> 200 son=https://superfilmizle.org/film-izle/?sirala=yeni kart=24 ilk=[https://superfilmizle.org/buyu-de-gel/, https://superfilmizle.org/altin-pusula/] | sayfa bağlantıları=[https://superfilmizle.org/film-izle/page/2/?sirala=yeni, https://superfilmizle.org/film-izle/page/3/?sirala=yeni, https://superfilmizle.org/film-izle/page/49/?sirala=yeni] | rel=next [https://superfilmizle.org/film-izle/page/2/?sirala=yeni, https://superfilmizle.org/film-izle/page/2/?sirala=yeni]
-https://superfilmizle.org/film-izle/page/2/?sirala=yeni -> 200 son=https://superfilmizle.org/film-izle/page/2/?sirala=yeni kart=24 ilk=[https://superfilmizle.org/irmandade-kardeslik-isyani/, https://superfilmizle.org/the-friend/] | sayfa bağlantıları=[https://superfilmizle.org/film-izle/page/3/?sirala=yeni, https://superfilmizle.org/film-izle/page/4/?sirala=yeni, https://superfilmizle.org/film-izle/page/49/?sirala=yeni] | rel=next [https://superfilmizle.org/film-izle/page/3/?sirala=yeni, https://superfilmizle.org/film-izle/page/3/?sirala=yeni]
-https://superfilmizle.org/category/aksiyon-filmleri/page/2/ -> 200 son=https://superfilmizle.org/category/aksiyon-filmleri/page/2/ kart=24 ilk=[https://superfilmizle.org/derin-kargasa/, https://superfilmizle.org/ustunluk/] | sayfa bağlantıları=[https://superfilmizle.org/category/aksiyon-filmleri/page/3/, https://superfilmizle.org/category/aksiyon-filmleri/page/4/, https://superfilmizle.org/category/aksiyon-filmleri/page/11/] | rel=next [https://superfilmizle.org/category/aksiyon-filmleri/page/3/, https://superfilmizle.org/category/aksiyon-filmleri/page/3/]
-https://superfilmizle.org/dizi-kategori/kore-dizileri/ -> 200 son=https://superfilmizle.org/dizi-kategori/kore-dizileri/ kart=0 ilk=[] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/dizi-kategori/gerilim-dizileri/ -> 200 son=https://superfilmizle.org/dizi-kategori/gerilim-dizileri/ kart=0 ilk=[] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/dizi-kategori/korku-dizileri/ -> 200 son=https://superfilmizle.org/dizi-kategori/korku-dizileri/ kart=0 ilk=[] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/dizi-kategori/romantik-dizileri/ -> 200 son=https://superfilmizle.org/dizi-kategori/romantik-dizileri/ kart=2 ilk=[https://superfilmizle.org/dizi/the-tudors/, https://superfilmizle.org/dizi/enfes-bir-aksam/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/dizi-kategori/yerli-dizileri/ -> 200 son=https://superfilmizle.org/dizi-kategori/yerli-dizileri/ kart=3 ilk=[https://superfilmizle.org/dizi/jasmine/, https://superfilmizle.org/dizi/sekizinci-aile/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/dizi-kategori/savas-dizileri/ -> 200 son=https://superfilmizle.org/dizi-kategori/savas-dizileri/ kart=24 ilk=[https://superfilmizle.org/dizi/vaad-siyonizmin-anatomisi/, https://superfilmizle.org/dizi/mahsusa/] | sayfa bağlantıları=[https://superfilmizle.org/dizi-kategori/savas-dizileri/page/2/] | rel=next [https://superfilmizle.org/dizi-kategori/savas-dizileri/page/2/, https://superfilmizle.org/dizi-kategori/savas-dizileri/page/2/]
-https://superfilmizle.org/platform/blutv/ -> 200 son=https://superfilmizle.org/platform/blutv/ kart=24 ilk=[https://superfilmizle.org/dizi/sifir-bir/, https://superfilmizle.org/dizi/alef/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/platform/tod/ -> 200 son=https://superfilmizle.org/platform/tod/ kart=1 ilk=[https://superfilmizle.org/dizi/alikara/] | sayfa bağlantıları=[] | rel=next []
-https://superfilmizle.org/platform/puhutv/ -> 200 son=https://superfilmizle.org/platform/puhutv/ kart=6 ilk=[https://superfilmizle.org/dizi/behzat-c-bir-ankara-polisiyesi/, https://superfilmizle.org/dizi/sahsiyet/] | sayfa bağlantıları=[] | rel=next []
+=== SuperFilmGeldi son test — kategori: 45 ===
+KAT Yeni Eklenen Filmler -> 24 hasNext=true  | Büyü de Gel [Movie], Altın Pusula [Movie] | s2=24 hasNext=true farklı=true
+KAT Yeni Eklenen Diziler -> 24 hasNext=true  | Unforgettable [TvSeries], M.I.A. [TvSeries] | s2=24 hasNext=true farklı=true
+KAT Filmler -> 24 hasNext=true  | Resident Evil [Movie], The Odyssey [Movie]
+KAT Diziler -> 24 hasNext=true  | Reacher [TvSeries], The Mentalist [TvSeries]
+KAT Animeler -> 24 hasNext=false  | Ölüm Defteri [Anime], Cyberpunk: Edgerunners [Anime]
+KAT Editörün Seçimi -> 24 hasNext=true  | Uğultulu Tepeler [Movie], Korkunç Bir Film 6 [Movie]
+KAT Aksiyon Filmleri -> 24 hasNext=true  | Wonder Woman [Movie], Vixen [Movie] | s2=24 hasNext=true farklı=true
+KAT Komedi Filmleri -> 24 hasNext=true  | Büyü de Gel [Movie], Küçük Köyün Büyük Gücü [Movie]
+KAT Korku Filmleri -> 24 hasNext=true  | Işıklar Sönünce [Movie], Night Patrol [Movie]
+KAT Bilim Kurgu Filmleri -> 24 hasNext=true  | Wonder Woman [Movie], Kıyametten Sonra [Movie]
+KAT Gerilim Filmleri -> 24 hasNext=true  | Aşkın Gücü [Movie], Animals [Movie]
+KAT Dram Filmleri -> 24 hasNext=true  | Kurtuluş [Movie], Aşkın Gücü [Movie]
+KAT Macera Filmleri -> 24 hasNext=true  | Altın Pusula [Movie], Wonder Woman [Movie] | s2=24 hasNext=true farklı=true
+KAT Fantastik Filmler -> 24 hasNext=true  | Altın Pusula [Movie], Wonder Woman [Movie]
+KAT Romantik Filmler -> 24 hasNext=true  | Büyü de Gel [Movie], Aşkın Gücü [Movie]
+KAT Suç Filmleri -> 24 hasNext=true  | Animals [Movie], Çatlı [Movie]
+KAT Gizem Filmleri -> 24 hasNext=true  | Kurtuluş [Movie], Işıklar Sönünce [Movie]
+KAT Animasyon Filmleri -> 24 hasNext=true  | Wonder Woman [Movie], Vixen [Movie]
+KAT Aile -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries], BAT-FAM [TvSeries] | s2=24 hasNext=true farklı=true
+KAT Belgesel -> 24 hasNext=true  | Vaad: Siyonizmin Anatomisi [TvSeries], 7/24: Amsterdam Tren İstasyonu [TvSeries]
+KAT Savaş Filmleri -> 24 hasNext=true  | Savaşın Kalbinde [Movie], Tilki [Movie]
+KAT Tarih Filmleri -> 24 hasNext=true  | Hamilton [Movie], Tilki [Movie]
+KAT Biyografi Filmleri -> 7 hasNext=false  | Springsteen: Deliver Me from Nowhere [Movie], Genç Victoria [Movie]
+KAT Western Filmleri -> 24 hasNext=true  | İyi, Kötü ve Çirkin [Movie], Batıda Kan Var [Movie]
+KAT Müzikal Filmler -> 24 hasNext=true  | Christopher - Hayat Gerçekten Güzel [Movie], K-Pop: İblis Avcıları [Movie] | s2=11 hasNext=false farklı=true
+KAT Hint Filmleri -> 11 hasNext=false  | De De Pyaar De 2 [Movie], Mana ShankaraVaraprasad Garu [Movie]
+KAT Aksiyon Dizileri -> 24 hasNext=true  | Yeraltı [TvSeries], BAKI-DOU: The Invincible Samurai [Anime]
+KAT Komedi Dizileri -> 24 hasNext=true  | Take Charge of My Heart [TvSeries], Konuşanlar - Disney+ [TvSeries]
+KAT Dram Dizileri -> 24 hasNext=true  | Unforgettable [TvSeries], M.I.A. [TvSeries]
+KAT Suç Dizileri -> 24 hasNext=true  | Unforgettable [TvSeries], M.I.A. [TvSeries]
+KAT Bilim Kurgu Dizileri -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries], Take Charge of My Heart [TvSeries] | s2=24 hasNext=true farklı=true
+KAT Fantastik Diziler -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries], Take Charge of My Heart [TvSeries]
+KAT Macera Dizileri -> 24 hasNext=true  | Yeraltı [TvSeries], BAKI-DOU: The Invincible Samurai [Anime]
+KAT Savaş Dizileri -> 24 hasNext=true  | Vaad: Siyonizmin Anatomisi [TvSeries], Mahsusa [TvSeries]
+KAT Animasyon Dizileri -> 24 hasNext=true  | Unicorn Akademisi: Sırlar Çözülüyor [TvSeries], BAKI-DOU: The Invincible Samurai [Anime]
+KAT Netflix Filmleri -> 24 hasNext=true  | UNABOMBER [Movie], Hayata Mahkûm [Movie] | s2=24 hasNext=true farklı=true
+KAT Netflix Dizileri -> 24 hasNext=true  | The Mentalist [TvSeries], The Scandal [TvSeries] | s2=24 hasNext=true farklı=true
+KAT Amazon Prime Filmleri -> 24 hasNext=true  | Aşk Hipotezi [Movie], Dünyalar Savaşı [Movie] | s2=24 hasNext=true farklı=true
+KAT Amazon Prime Dizileri -> 24 hasNext=true  | Reacher [TvSeries], The Mentalist [TvSeries] | s2=24 hasNext=true farklı=true
+KAT Disney+ Filmleri -> 24 hasNext=true  | Oyuncak Hikayesi 5 [Movie], Avengers: Endgame [Movie] | s2=24 hasNext=true farklı=true
+KAT Disney+ Dizileri -> 24 hasNext=true  | Criminal Minds [TvSeries], The Walking Dead [TvSeries] | s2=24 hasNext=true farklı=true
+KAT HBO Max Filmleri -> 24 hasNext=true  | Backrooms [Movie], Yıldızlararası [Movie] | s2=24 hasNext=true farklı=true
+KAT HBO Max Dizileri -> 24 hasNext=true  | Lanterns [TvSeries], Game of Thrones [TvSeries] | s2=24 hasNext=true farklı=true
+KAT Exxen Dizileri -> 24 hasNext=true  | Gibi [TvSeries], Konuşanlar [TvSeries] | s2=24 hasNext=true farklı=true
+KAT BluTV Dizileri -> 24 hasNext=true  | Sıfır Bir [TvSeries], Alef [TvSeries] | s2=10 hasNext=false farklı=true
+LOAD https://superfilmizle.org/matrix/ -> Matrix Movie veri=https://superfilmizle.org/matrix/
+    [D/SFG] data » https://superfilmizle.org/matrix/
+   altyazı=[]
+   The Mentalist: 151 bölüm, sezonlar [1, 2, 3, 4, 5, 6, 7]
+LOAD https://superfilmizle.org/dizi/the-mentalist/ -> The Mentalist TvSeries veri=https://superfilmizle.org/bolum/the-mentalist-7-sezon-13-bolum/
+    [D/SFG] data » https://superfilmizle.org/bolum/the-mentalist-7-sezon-13-bolum/
+    [D/SFG] embed » https://pilavyerplay.top/assets/js/s.php?s=QVd2jnB7zrcwl6ruXUROWg
+   altyazı=[Türkçe Altyazı]
+   - Pilavyer (Dublaj + Orijinal) -> 200 application/vnd.apple.mpegurl
+   - Pilavyer Yedek (Dublaj + Orijinal) -> 200 application/vnd.apple.mpegurl
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 10s
+BUILD SUCCESSFUL in 2m 29s
 2 actionable tasks: 2 executed
