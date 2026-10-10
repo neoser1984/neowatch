@@ -18,131 +18,177 @@ Daemon will be stopped at the end of the build
 > Task :processResources NO-SOURCE
 
 > Task :compileKotlin
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/Test.kt:26:27 Unnecessary safe call on a non-null receiver of type 'Element'.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/Test.kt:32:39 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
 
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== SuperFilmGeldi alan adı araştırması ===
-GET https://www.superfilmgeldi.me/ -> 200 son=http://ww547.superfilmgeldi.me/?tkn=19vnMT3S | başlık=superfilmgeldi.me | uzunluk=43233 | server=null
-   [div.movie-preview-content] = 0
-   [span.movie-title a] = 0
-   [div.movie-preview] = 0
-   [article] = 0
-   [div.poster img] = 0
-   [div#vast iframe] = 0
-   [iframe] = 0
-   [div.title h1] = 0
-   [h1] = 0
-   kategori bağlantıları (0): 
-   metin: superfilmgeldi.me Researches : stream movies subscription best movie streaming deals premium sound bar offers home theater system deals film projector for sale Privacy policyTerms of Service
+=== superfilmizle.org yapı araştırması ===
+GET https://superfilmizle.org/ -> 200 son=https://superfilmizle.org/ | başlık=Superfilmizle - HD Kalite Film izle | uzunluk=450936
+   /category (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/
+   /platform (26): https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/apple-tv/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/
+   /anime (25): https://superfilmizle.org/anime/cyberpunk-edgerunners/ https://superfilmizle.org/anime/olum-defteri/ https://superfilmizle.org/anime/blue-box/ https://superfilmizle.org/anime/beastars/
+   /dizi (22): https://superfilmizle.org/dizi/criminal-minds/ https://superfilmizle.org/dizi/jasmine/ https://superfilmizle.org/dizi/frasier/ https://superfilmizle.org/dizi/enfes-bir-aksam/
+   /dizi-kategori (18): https://superfilmizle.org/dizi-kategori/aksiyon-dizileri/ https://superfilmizle.org/dizi-kategori/animasyon-dizileri/ https://superfilmizle.org/dizi-kategori/bilim-kurgu-dizileri/ https://superfilmizle.org/dizi-kategori/cizgi-ve-dizi/
+   /locale (9): https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr
+   /bolum (8): https://superfilmizle.org/bolum/mobland-2-sezon-4-bolum/ https://superfilmizle.org/bolum/paolo-1-sezon-3-bolum/ https://superfilmizle.org/bolum/4-blocks-zero-1-sezon-3-bolum/ https://superfilmizle.org/bolum/unforgettable-4-sezon-13-bolum/
+   /film-izle (2): https://superfilmizle.org/film-izle/ https://superfilmizle.org/film-izle/?sirala=yeni
+   /dizi-izle (2): https://superfilmizle.org/dizi-izle/ https://superfilmizle.org/dizi-izle/?sirala=yeni
+   / (1): https://superfilmizle.org
+   /animes (1): https://superfilmizle.org/animes/
+   /kesfet (1): https://superfilmizle.org/kesfet/
+   /takvim (1): https://superfilmizle.org/takvim/
+   /forum (1): https://superfilmizle.org/forum
+   /uye-girisi (1): https://superfilmizle.org/uye-girisi/
+   [section] 9: Superfilmizle Binlerce film ve dizi, tek bir yerde Favori di | Trend Filmler Tümünü Gör 1 Film HD 6.9 The Obscure Spring 20 | Son Eklenen Filmler Tümünü Gör Film HD 6.7 Büyü de Gel 2023  | Trend Diziler Tümünü Gör 1 Dizi HD 8.3 Criminal Minds 2005 2 | Son Eklenen Diziler Tümünü Gör Dizi HD 7.2 Unforgettable 201 | Son Eklenen Bölümler Tümünü Gör 2. Sezon MobLand 4. Bölüm ·  | Trend Animeler Tümünü Gör 1 Anime HD 8.5 Cyberpunk: Edgerunn | Son Eklenen Animeler Tümünü Gör Anime HD 9.1 BAKI-DOU: The I | Son Eklenen Anime Bölümleri Tümünü Gör 1. Sezon Blue Box 1. 
+   [div.swiper] 0: 
+   [h2] 8: Trend Filmler | Son Eklenen Filmler | Trend Diziler | Son Eklenen Diziler | Son Eklenen Bölümler | Trend Animeler | Son Eklenen Animeler | Son Eklenen Anime Bölümleri
+   [h3] 85: The Obscure Spring | The Woman | Mezarına Tüküreceğim | Elles | The Housemaid | Schnick Schnack Schnuck | The Last House on the Left | 99 Moons | Bedways | Ilsa She Wolf of the SS | Büyü de Gel | Altın Pusula
 
-GET https://superfilmgeldi.me/ -> 200 son=http://ww547.superfilmgeldi.me/?tkn=19vnMT3S | başlık=superfilmgeldi.me | uzunluk=43233 | server=null
-   [div.movie-preview-content] = 0
-   [span.movie-title a] = 0
-   [div.movie-preview] = 0
-   [article] = 0
-   [div.poster img] = 0
-   [div#vast iframe] = 0
-   [iframe] = 0
-   [div.title h1] = 0
-   [h1] = 0
-   kategori bağlantıları (0): 
-   metin: superfilmgeldi.me Researches : stream movies subscription best movie streaming deals premium sound bar offers home theater system deals film projector for sale Privacy policyTerms of Service
+--- film listesi sayfası
+GET https://superfilmizle.org/film-izle/ -> 200 son=https://superfilmizle.org/film-izle/ | başlık=Film izle | Superfilmizle - HD Kalite Film izle | uzunluk=277313
+   /category (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/
+   /platform (26): https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/apple-tv/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/
+   /dizi-kategori (18): https://superfilmizle.org/dizi-kategori/aksiyon-dizileri/ https://superfilmizle.org/dizi-kategori/animasyon-dizileri/ https://superfilmizle.org/dizi-kategori/bilim-kurgu-dizileri/ https://superfilmizle.org/dizi-kategori/cizgi-ve-dizi/
+   /locale (9): https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr
+   /film-izle (4): https://superfilmizle.org/film-izle/ https://superfilmizle.org/film-izle/page/2/ https://superfilmizle.org/film-izle/page/3/ https://superfilmizle.org/film-izle/page/49/
+   / (1): https://superfilmizle.org
+   /dizi-izle (1): https://superfilmizle.org/dizi-izle/
+   /animes (1): https://superfilmizle.org/animes/
+   /kesfet (1): https://superfilmizle.org/kesfet/
+   /takvim (1): https://superfilmizle.org/takvim/
+   /forum (1): https://superfilmizle.org/forum
+   /uye-girisi (1): https://superfilmizle.org/uye-girisi/
+   /resident-evil (1): https://superfilmizle.org/resident-evil/
+   /the-odyssey (1): https://superfilmizle.org/the-odyssey/
+   /oak-caddesinin-sonu (1): https://superfilmizle.org/oak-caddesinin-sonu/
+   '/film/' içeren görselli bağlantı sayısı: 0
+   '-izle' içeren görselli bağlantı sayısı: 2
+   İLK KART (üst öğe a.group relative px-3.5 py-2 text-sm font-medium transition-colors duration-200 text-white): <a href="https://superfilmizle.org/film-izle/" class="group relative px-3.5 py-2 text-sm font-medium transition-colors duration-200 text-white"> Filmler <span class="pointer-events-none absolute inset-x-2.5 bottom-1 h-px bg-gradient-to-r from-transparent via-accent to-transparent transition-transform duration-300 scale-x-100"></span> </a>
+GET https://superfilmizle.org/film-izle/page/2/ -> 200 son=https://superfilmizle.org/film-izle/page/2/ | başlık=Film izle | Superfilmizle - HD Kalite Film izle | uzunluk=279063
+   sayfa2 görselli film: 48
 
-GET https://superfilmizle.org/ -> 200 son=https://superfilmizle.org/ | başlık=Superfilmizle - HD Kalite Film izle | uzunluk=450936 | server=cloudflare
-   [div.movie-preview-content] = 0
-   [span.movie-title a] = 0
-   [div.movie-preview] = 0
-   [article] = 0
-   [div.poster img] = 0
-   [div#vast iframe] = 0
-   [iframe] = 0
-   [div.title h1] = 0
-   [h1] = 1
-   kategori bağlantıları (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/ https://superfilmizle.org/category/bilim-kurgu/ https://superfilmizle.org/category/biyografi-filmleri/ https://superfilmizle.org/category/cocuklar/ https://superfilmizle.org/category/dram-filmleri/ https://superfilmizle.org/category/editor-secim/ https://superfilmizle.org/category/erotik-film/ https://superfilmizle.org/category/fantastik-filmler/ https://superfilmizle.org/category/gelecek-filmler/ https://superfilmizle.org/category/gerceklik/ https://superfilmizle.org/category/gerilim-filmleri/ https://superfilmizle.org/category/gizem-filmleri/ https://superfilmizle.org/category/hint-filmleri/ https://superfilmizle.org/category/komedi-filmleri/ https://superfilmizle.org/category/kore-filmleri/ https://superfilmizle.org/category/korku-filmleri/ https://superfilmizle.org/category/macera-filmleri/ https://superfilmizle.org/category/muzikal-filmler/ https://superfilmizle.org/category/pembe-dizi/ https://superfilmizle.org/category/romantik-filmler/ https://superfilmizle.org/category/savas-filmleri/ https://superfilmizle.org/category/spor-filmleri/ https://superfilmizle.org/category/suc-filmleri/ https://superfilmizle.org/category/talk/ https://superfilmizle.org/category/tarih-filmleri/ https://superfilmizle.org/category/tv-filmleri/ https://superfilmizle.org/category/western-filmleri/ https://superfilmizle.org/category/yerli-filmler/ https://superfilmizle.org/category/yetiskin-filmleri/
-   metin: TR Dilini seç 🇹🇷 Türkçe 🇬🇧 English 🇩🇪 Deutsch 🇫🇷 Français 🇮🇹 Italiano 🇪🇸 Español 🇸🇦 العربية 🇷🇺 Русский 🇨🇳 中文 SUPERFİLMİZLE Filmler Diziler Animeler Keşfet Takvim Platformlar Platformlar 26 Amazon Prime A Apple TV+ ATV BluTV Crunchyroll Disney+ Exxen G Gain HBO Max Hulu Kanal D Lionsgate+ MGM+ MUBI Netflix Now Paramount+ Peacock puhutv Show TV Star TV tabii TOD TRT 1 TV+ TV8 Türler Kategoriye göz at Aile Filmleri Aksiyon Dizileri Aksiyon Filmleri Animasyon Dizileri Animasyon Filmleri Belgesel Filmleri Bilim Kurgu Bilim Kurgu Dizileri Biyografi Filmleri Çizgi ve Dizi Çocuklar Dram Dizileri Dram Filmleri Editör Seçim Erotik Film Fantastik Diziler Fantastik Filmler Gelecek Dizi
+--- kategori sayfası
+GET https://superfilmizle.org/category/aksiyon-filmleri/ -> 200 son=https://superfilmizle.org/category/aksiyon-filmleri/ | başlık=Aksiyon Filmleri izle Full HD izle | Superfilmizle - HD Kalite Film izle | uzunluk=272322
+   /category (35): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/
+   /platform (26): https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/apple-tv/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/
+   /dizi-kategori (18): https://superfilmizle.org/dizi-kategori/aksiyon-dizileri/ https://superfilmizle.org/dizi-kategori/animasyon-dizileri/ https://superfilmizle.org/dizi-kategori/bilim-kurgu-dizileri/ https://superfilmizle.org/dizi-kategori/cizgi-ve-dizi/
+   /locale (9): https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr
+   / (1): https://superfilmizle.org
+   /film-izle (1): https://superfilmizle.org/film-izle/
+   /dizi-izle (1): https://superfilmizle.org/dizi-izle/
+   /animes (1): https://superfilmizle.org/animes/
+   /kesfet (1): https://superfilmizle.org/kesfet/
+   /takvim (1): https://superfilmizle.org/takvim/
+   /forum (1): https://superfilmizle.org/forum
+   /uye-girisi (1): https://superfilmizle.org/uye-girisi/
+   /wonder-woman (1): https://superfilmizle.org/wonder-woman/
+   /vixen (1): https://superfilmizle.org/vixen/
+   /alacakli (1): https://superfilmizle.org/alacakli/
+   görselli bağlantı: 48
+GET https://superfilmizle.org/category/aksiyon-filmleri/page/2/ -> 200 son=https://superfilmizle.org/category/aksiyon-filmleri/page/2/ | başlık=Aksiyon Filmleri izle Full HD izle | Superfilmizle - HD Kalite Film izle | uzunluk=273060
+   s2 görselli bağlantı: 48
 
-GET https://superfilmgeldi.info/ -> 200 son=https://superfilmgeldi.info/ | başlık=Malina Casino Jeux – Slots, Roulette, Blackjack et Poker | uzunluk=19977 | server=cloudflare
-   [div.movie-preview-content] = 0
-   [span.movie-title a] = 0
-   [div.movie-preview] = 0
-   [article] = 0
-   [div.poster img] = 0
-   [div#vast iframe] = 0
-   [iframe] = 0
-   [div.title h1] = 0
-   [h1] = 1
-   kategori bağlantıları (0): 
-   metin: MalinaCasino Malina Casino Connexion Bonus Inscription CONNEXION INSCRIPTION Malina Casino Connexion Bonus Inscription CONNEXION INSCRIPTION Bonus de bienvenue 120% jusqu'à 1200€ sur ton premier dépôt INSCRIPTION Phoenix Fortune Sweet Bonanza Starburst Razor Shark Wolf Gold 4pack Dead or Alive II Big Bass Splash Majestic Odin Don Premiote Gates of Olympus Legacy Of Dead High Flyer Lucky Scarab Claw Piggy Prizes Malina Casino Jeux – Slots, Roulette, Blackjack et Poker Malina propose une expérience de casino en ligne fluide et immersive, avec un large choix de jeux incluant les slots, la roulette, le blackjack et le poker. L’interface est pensée pour être claire, intuitive et agréable à utilis
+--- diziler / animeler
+GET https://superfilmizle.org/dizi-izle/ -> 200 son=https://superfilmizle.org/dizi-izle/ | başlık=Dizi izle | Superfilmizle - HD Kalite Film izle | uzunluk=278232
+   /category (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/
+   /platform (26): https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/apple-tv/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/
+   /dizi (24): https://superfilmizle.org/dizi/reacher/ https://superfilmizle.org/dizi/the-mentalist/ https://superfilmizle.org/dizi/the-scandal/ https://superfilmizle.org/dizi/lioness/
+   /dizi-kategori (18): https://superfilmizle.org/dizi-kategori/aksiyon-dizileri/ https://superfilmizle.org/dizi-kategori/animasyon-dizileri/ https://superfilmizle.org/dizi-kategori/bilim-kurgu-dizileri/ https://superfilmizle.org/dizi-kategori/cizgi-ve-dizi/
+   /locale (9): https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr
+   /dizi-izle (4): https://superfilmizle.org/dizi-izle/ https://superfilmizle.org/dizi-izle/page/2/ https://superfilmizle.org/dizi-izle/page/3/ https://superfilmizle.org/dizi-izle/page/51/
+   / (1): https://superfilmizle.org
+   /film-izle (1): https://superfilmizle.org/film-izle/
+   /animes (1): https://superfilmizle.org/animes/
+   /kesfet (1): https://superfilmizle.org/kesfet/
+   /takvim (1): https://superfilmizle.org/takvim/
+   /forum (1): https://superfilmizle.org/forum
+   /uye-girisi (1): https://superfilmizle.org/uye-girisi/
+   /trend (1): https://superfilmizle.org/trend/
+   /koleksiyonlar (1): https://superfilmizle.org/koleksiyonlar/
+GET https://superfilmizle.org/diziler/ -> 200 son=https://superfilmizle.org/dizi-izle/ | başlık=Dizi izle | Superfilmizle - HD Kalite Film izle | uzunluk=278232
+   /category (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/
+   /platform (26): https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/apple-tv/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/
+   /dizi (24): https://superfilmizle.org/dizi/reacher/ https://superfilmizle.org/dizi/the-mentalist/ https://superfilmizle.org/dizi/the-scandal/ https://superfilmizle.org/dizi/lioness/
+   /dizi-kategori (18): https://superfilmizle.org/dizi-kategori/aksiyon-dizileri/ https://superfilmizle.org/dizi-kategori/animasyon-dizileri/ https://superfilmizle.org/dizi-kategori/bilim-kurgu-dizileri/ https://superfilmizle.org/dizi-kategori/cizgi-ve-dizi/
+   /locale (9): https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr
+   /dizi-izle (4): https://superfilmizle.org/dizi-izle/ https://superfilmizle.org/dizi-izle/page/2/ https://superfilmizle.org/dizi-izle/page/3/ https://superfilmizle.org/dizi-izle/page/51/
+   / (1): https://superfilmizle.org
+   /film-izle (1): https://superfilmizle.org/film-izle/
+   /animes (1): https://superfilmizle.org/animes/
+   /kesfet (1): https://superfilmizle.org/kesfet/
+   /takvim (1): https://superfilmizle.org/takvim/
+   /forum (1): https://superfilmizle.org/forum
+   /uye-girisi (1): https://superfilmizle.org/uye-girisi/
+   /trend (1): https://superfilmizle.org/trend/
+   /koleksiyonlar (1): https://superfilmizle.org/koleksiyonlar/
+GET https://superfilmizle.org/anime-izle/ -> 404 son=https://superfilmizle.org/anime-izle/ | başlık=Superfilmizle | uzunluk=212587
+   /category (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/
+   /platform (26): https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/apple-tv/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/
+   /dizi-kategori (18): https://superfilmizle.org/dizi-kategori/aksiyon-dizileri/ https://superfilmizle.org/dizi-kategori/animasyon-dizileri/ https://superfilmizle.org/dizi-kategori/bilim-kurgu-dizileri/ https://superfilmizle.org/dizi-kategori/cizgi-ve-dizi/
+   /locale (9): https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr
+   / (1): https://superfilmizle.org
+   /film-izle (1): https://superfilmizle.org/film-izle/
+   /dizi-izle (1): https://superfilmizle.org/dizi-izle/
+   /animes (1): https://superfilmizle.org/animes/
+   /kesfet (1): https://superfilmizle.org/kesfet/
+   /takvim (1): https://superfilmizle.org/takvim/
+   /forum (1): https://superfilmizle.org/forum
+   /uye-girisi (1): https://superfilmizle.org/uye-girisi/
+   /resident-evil (1): https://superfilmizle.org/resident-evil/
+   /the-odyssey (1): https://superfilmizle.org/the-odyssey/
+   /oak-caddesinin-sonu (1): https://superfilmizle.org/oak-caddesinin-sonu/
+GET https://superfilmizle.org/animeler/ -> 404 son=https://superfilmizle.org/animeler/ | başlık=Superfilmizle | uzunluk=212579
+   /category (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/
+   /platform (26): https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/apple-tv/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/
+   /dizi-kategori (18): https://superfilmizle.org/dizi-kategori/aksiyon-dizileri/ https://superfilmizle.org/dizi-kategori/animasyon-dizileri/ https://superfilmizle.org/dizi-kategori/bilim-kurgu-dizileri/ https://superfilmizle.org/dizi-kategori/cizgi-ve-dizi/
+   /locale (9): https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr
+   / (1): https://superfilmizle.org
+   /film-izle (1): https://superfilmizle.org/film-izle/
+   /dizi-izle (1): https://superfilmizle.org/dizi-izle/
+   /animes (1): https://superfilmizle.org/animes/
+   /kesfet (1): https://superfilmizle.org/kesfet/
+   /takvim (1): https://superfilmizle.org/takvim/
+   /forum (1): https://superfilmizle.org/forum
+   /uye-girisi (1): https://superfilmizle.org/uye-girisi/
+   /resident-evil (1): https://superfilmizle.org/resident-evil/
+   /the-odyssey (1): https://superfilmizle.org/the-odyssey/
+   /oak-caddesinin-sonu (1): https://superfilmizle.org/oak-caddesinin-sonu/
 
-GET https://superfilmgeldi.net/ -> 200 son=https://superfilmgeldi.net/ | başlık=Website superfilmgeldi.net is ready. The content is to be added | uzunluk=12325 | server=cloudflare
-   [div.movie-preview-content] = 0
-   [span.movie-title a] = 0
-   [div.movie-preview] = 0
-   [article] = 0
-   [div.poster img] = 0
-   [div#vast iframe] = 0
-   [iframe] = 0
-   [div.title h1] = 0
-   [h1] = 0
-   kategori bağlantıları (0): 
-   metin: Greetings! Приветствуем! Website superfilmgeldi.net is ready. The content is to be added. Сайт superfilmgeldi.net только что создан. Содержимое появится позже. ISPsystem © 1997 - 2021
+--- film sayfası: https://superfilmizle.org/platform/amazon-prime/
+   başlık=Amazon Prime Dizileri - Superfilmizle h1=Amazon Prime
+   og:image=null desc=Amazon Prime dizilerini Superfilmizle’de izle. Platforma özel yabancı yapımlar, Full HD kalite ve Türkçe altyazı seçenekleri.
+   iframe: []
+   «source» …  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') flush(); }); })(); </script> <script type="speculationrules"> { "prefetch": [{ "source": "document", "where": { "and": [ { "href_matches": "/*" }, { "not": { "href_matches": "/*/izle*" } }, { "not": { "href_matches": "/admin*" } }, { "not": { "href_matches": "/livewire*" } }, { "not": { "href_matches": "/hesabim*" } }, { "not": { "href_matches": "/profil*" } }, { "not": { "href_matches": "/logout*" } }, { "not": { "href_matches": "/locale
+   ld+json: [{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Superfilmizle","url":"https://superfilmizle.org","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://superfilmizle.org/ara?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"Organization","name":"Superfilmizle","url":"https://superfilmizle.org","logo":"https://superfilmizle.org/storage/settings/superfilmizle-logo.png?v=1791083241","image":"https://superfilmizle.org/storage/settings/superfilmizle-logo.png?v=1791083241"}]}, {"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"Amazon Prime İçerikleri","url":"https://superfilmizle.org/platform/amazon-prime/","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://superfilmizle.org/ask-hipotezi/","name":"Aşk Hipotezi","image":"https://superfilmizle.org/storage/tmdb/posters/w780/oQTT50Kl65WdOatg5Zz2aXoXAPd.webp?v=1791084422"},{"@type":"ListItem","position":2,"url":"https://superfilmizle.org/dunyalar-savasi/","name":"Dünyalar Savaşı","image":"https://superfilmizle.org/storage/tmdb/posters/w780/iFWDt2eS91aK1TLxZT1rEZq3QB3.webp?v=1791121779"},{"@type":"ListItem","position":3,"url":"https://superfilmizle.org/project-hail-mary/","name":"Project Hail Mary","image":"https://superfilmizle.org/storage/tmdb/posters/w780/suFNqtGOi0BsBI3uJPKkDXCwgVI.webp?v=1791083761"},{"@type":"ListItem","position":4,"url":"https://superfilmizle.org/dayanilmaz-cekim/","name":"Dayanılmaz Çekim","image":"https://superfilmizle.org/storage/tmdb/posters/w780/qQQ7MPymZeyIRAMF32e0QFgcV0f.webp?v=1791102689"},{"@type":"ListItem","position":5,"url":"https://superfilmizle.org/yildizlararasi/","name":"Yıldızlararası","image":"https://superfilmizle.org/storage/tmdb/posters/w780/xbiycuc84TrieEWwkkuH2hoEa9S.webp?v=1791088823"},{"@type":"ListItem","position":6,"url":"https://superfilmizle.org/kosucu/","name":"Koşucu","image":"https://superfilmizle.org/storage/tmdb/posters/w780/bUVds6K00WjSvqKujwl8pv6NZ5s.webp?v=1791118902"},{]
+GET https://superfilmizle.org/dizi-izle/ -> 200 son=https://superfilmizle.org/dizi-izle/ | başlık=Dizi izle | Superfilmizle - HD Kalite Film izle | uzunluk=278232
 
-GET https://superfilmgeldi.com/ -> 200 son=http://ww547.superfilmgeldi.com/?tkn=19vnMT3S | başlık=superfilmgeldi.com | uzunluk=43245 | server=null
-   [div.movie-preview-content] = 0
-   [span.movie-title a] = 0
-   [div.movie-preview] = 0
-   [article] = 0
-   [div.poster img] = 0
-   [div#vast iframe] = 0
-   [iframe] = 0
-   [div.title h1] = 0
-   [h1] = 0
-   kategori bağlantıları (0): 
-   metin: superfilmgeldi.com Researches : buy camera equipment best video editing software camera lens deals audio recording gear lighting equipment for video Privacy policyTerms of Service
+--- dizi sayfası: https://superfilmizle.org/platform/amazon-prime/
+   başlık=Amazon Prime Dizileri - Superfilmizle
+   /category (32): https://superfilmizle.org/category/aile-filmleri/ https://superfilmizle.org/category/aksiyon-filmleri/ https://superfilmizle.org/category/animasyon-filmleri/ https://superfilmizle.org/category/belgesel-filmleri/
+   /platform (26): https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/apple-tv/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/
+   /dizi (24): https://superfilmizle.org/dizi/reacher/ https://superfilmizle.org/dizi/the-mentalist/ https://superfilmizle.org/dizi/mobland/ https://superfilmizle.org/dizi/criminal-minds/
+   /dizi-kategori (18): https://superfilmizle.org/dizi-kategori/aksiyon-dizileri/ https://superfilmizle.org/dizi-kategori/animasyon-dizileri/ https://superfilmizle.org/dizi-kategori/bilim-kurgu-dizileri/ https://superfilmizle.org/dizi-kategori/cizgi-ve-dizi/
+   /locale (9): https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr
+   /film-izle (2): https://superfilmizle.org/film-izle/ https://superfilmizle.org/film-izle/?platform=amazon-prime
+   /dizi-izle (2): https://superfilmizle.org/dizi-izle/ https://superfilmizle.org/dizi-izle/?platform=amazon-prime
+   / (1): https://superfilmizle.org
+   /animes (1): https://superfilmizle.org/animes/
+   /kesfet (1): https://superfilmizle.org/kesfet/
+   /takvim (1): https://superfilmizle.org/takvim/
+   /forum (1): https://superfilmizle.org/forum
+   /uye-girisi (1): https://superfilmizle.org/uye-girisi/
+   /ask-hipotezi (1): https://superfilmizle.org/ask-hipotezi/
+   /dunyalar-savasi (1): https://superfilmizle.org/dunyalar-savasi/
 
-Exception in NiceHttp: java.io.InterruptedIOException timeout
-GET https://superfilmgeldi.pro/ -> HATA java.io.InterruptedIOException: timeout
+--- bölüm sayfası: null
 
-GET https://www.superfilmgeldi.biz/ -> 200 son=http://ww19.superfilmgeldi.biz/ | başlık= | uzunluk=27344 | server=nginx/1.28.0
-   [div.movie-preview-content] = 0
-   [span.movie-title a] = 0
-   [div.movie-preview] = 0
-   [article] = 0
-   [div.poster img] = 0
-   [div#vast iframe] = 0
-   [iframe] = 0
-   [div.title h1] = 0
-   [h1] = 0
-   kategori bağlantıları (0): 
-   metin: Do Not Sell or Share My Personal Information
-
-
-######## AYRINTI: https://superfilmizle.org/
-İLK KART HTML: yok
-film bağlantıları: https://superfilmizle.org/locale/tr https://superfilmizle.org/locale/en https://superfilmizle.org/locale/de https://superfilmizle.org/locale/fr https://superfilmizle.org/locale/it https://superfilmizle.org/locale/es https://superfilmizle.org/locale/ar https://superfilmizle.org/locale/ru https://superfilmizle.org/locale/zh https://superfilmizle.org
-GET https://superfilmizle.org/locale/tr -> 200 son=https://superfilmizle.org/ | başlık=Superfilmizle - HD Kalite Film izle | uzunluk=450936 | server=cloudflare
-   [div.title h1] 0 -> 
-   [div.poster img] 0 -> 
-   [div.release a] 0 -> 
-   [div.excerpt p] 0 -> 
-   [div.categories a] 0 -> 
-   [span.imdb-rating] 0 -> 
-   [div.actor a] 0 -> 
-   [div#vast iframe] 0 -> 
-   [iframe] 0 -> 
-   [div.film-content div.existing_item] 0 -> 
-   iframe adresleri: []
-   oynatıcı HTML: yok
-   alternatif kaynak bağlantıları: []
-GET https://superfilmizle.org/?s=matrix -> 200 son=https://superfilmizle.org/ara?q=matrix | başlık="matrix" arama sonuçları - Superfilmizle | uzunluk=199462 | server=cloudflare
-   arama [div.movie-preview-content]=0 [article]=0
-GET https://superfilmizle.org/page/2/ -> 200 son=https://superfilmizle.org/film-izle/page/2/ | başlık=Film izle | Superfilmizle - HD Kalite Film izle | uzunluk=279063 | server=cloudflare
-   sayfa2 [div.movie-preview-content]=0
+--- arama
+GET https://superfilmizle.org/ara?q=matrix -> 200 son=https://superfilmizle.org/ara?q=matrix | başlık="matrix" arama sonuçları - Superfilmizle | uzunluk=199462
+   görselli bağlantı: https://superfilmizle.org/platform/amazon-prime/ https://superfilmizle.org/platform/atv/ https://superfilmizle.org/platform/blutv/ https://superfilmizle.org/platform/crunchyroll/ https://superfilmizle.org/platform/disney/ https://superfilmizle.org/platform/exxen/ https://superfilmizle.org/platform/hbo-max/ https://superfilmizle.org/platform/hulu/
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 20s
+BUILD SUCCESSFUL in 2m 2s
 2 actionable tasks: 2 executed
