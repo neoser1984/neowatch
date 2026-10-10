@@ -7,7 +7,7 @@ import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 
 class SuperFilmGeldi : MainAPI() {
-    override var mainUrl              = "https://www.superfilmgeldi.me"
+    override var mainUrl              = "http://live.sportsvot.com/filter?q=online+movies%2Cwatch+film+online&i=IYKd0QWO8og_0&ci=8675878845829162980&t=1530884141&h=4"
     override var name                 = "SuperFilmGeldi"
     override val hasMainPage          = true
     override var lang                 = "tr"
