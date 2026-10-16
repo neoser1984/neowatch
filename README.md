@@ -40,10 +40,10 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | DiziBal | dizibal.org | Dizi, Film, Anime |
 | DiziBox | dizibox.live | Dizi |
 | DiziKorea | dizikorea3.com | Asya Dizisi, Film |
-| DiziMom | dizimom.cafe | Dizi |
+| DiziMom | dizidad.com _(site adı artık Dizidad)_ | Dizi |
 | DiziPal | dizipal2138.com | Dizi, Film _(DNS over HTTPS gerekebilir)_ |
 | DiziPalGuncel | dizipal1588.com | Dizi, Film, Anime |
-| DiziPalOrjinal | dizipalorjinal14.com | Dizi, Film |
+| DiziPalOrjinal | dizipalorjinal15.com | Dizi, Film |
 | Dizilla | dizilla.now | Dizi, Anime, Asya Dizisi |
 | DiziYou | diziyou3.com | Dizi |
 | FilmMakinesi | filmmakinesi.to | Film, Dizi |
@@ -59,7 +59,7 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | SetFilmIzle | setfilmizle.ltd | Film, Dizi |
 | SezonlukDizi | sezonlukdizi.cc | Dizi |
 | SinemaCX | sinema.cx | Film |
-| SuperFilmGeldi | superfilmgeldi.me | Film |
+| SuperFilmGeldi | superfilmizle.org _(DNS over HTTPS gerekebilir)_ | Film, Dizi, Anime |
 | UgurFilm | ugurfilm8.com | Film |
 | WebDramaTurkey | webdramaturkey2.com | Asya Dizisi, Film |
 | WebteIzle | webteizle.click | Film |
