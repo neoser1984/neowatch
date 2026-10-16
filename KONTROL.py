@@ -1,7 +1,5 @@
 from cloudscraper import CloudScraper
 from datetime   import datetime
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
 import os, re, base64, json
 from urllib.parse import urlparse
 
@@ -88,13 +86,6 @@ class MainUrlUpdater:
         )
         return istek.json().get("entries", {}).get("api_url", "").replace("/api/", "")
 
-    def _golgetv_ver(self):
-        istek = self.oturum.get("https://raw.githubusercontent.com/sevdaliyim/sevdaliyim/refs/heads/main/ssl2.key").text
-        cipher = AES.new(b"trskmrskslmzbzcnfstkcshpfstkcshp", AES.MODE_CBC, b"trskmrskslmzbzcn")
-        encrypted_data = base64.b64decode(istek)
-        decrypted_data = unpad(cipher.decrypt(encrypted_data), AES.block_size).decode("utf-8")
-        return json.loads(decrypted_data, strict=False)["apiUrl"]
-
     PARK_IZLERI = (
         "domain is for sale", "buy this domain", "this domain may be for sale", "parked free",
         "domain parking", "sedoparking", "parkingcrew", "bodis.com", "researches :", "related searches",
@@ -154,15 +145,6 @@ class MainUrlUpdater:
                     konsol.log(f"[!] Kontrol Edilemedi : {mainurl}")
                     konsol.log(f"[!] {type(hata).__name__} : {hata}")
                     continue
-            elif eklenti_adi == "GolgeTV":
-                try:
-                    final_url = self._golgetv_ver()
-                    konsol.log(f"[+] Kontrol Edildi   : {mainurl}")
-                except Exception as hata:
-                    konsol.log(f"[!] Kontrol Edilemedi : {mainurl}")
-                    konsol.log(f"[!] Kontrol Edilemedi : {mainurl}")
-                    konsol.log(f"[!] {type(hata).__name__} : {hata}")
-                    continue
             else:
                 try:
                     istek = self.oturum.get(mainurl, allow_redirects=True)
@@ -177,7 +159,7 @@ class MainUrlUpdater:
             if mainurl == final_url:
                 continue
 
-            gecerli, neden = self._gecerli_mi(eklenti_adi, mainurl, final_url, None if eklenti_adi in {"RecTV", "GolgeTV"} else istek)
+            gecerli, neden = self._gecerli_mi(eklenti_adi, mainurl, final_url, None if eklenti_adi == "RecTV" else istek)
             if not gecerli:
                 konsol.log(f"[!] Atlandı ({neden}) : {mainurl} -> {final_url}")
                 continue

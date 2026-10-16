@@ -79,7 +79,6 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | Eklenti | İçerik |
 |---|---|
 | CanliTV | Canlı TV ([iptv-org](https://github.com/iptv-org/iptv) Türkiye listesi) |
-| GolgeTV | Canlı TV _(beta)_ |
 | InatBox | Film, Dizi, Canlı TV _(beta; sunucu adresleri uygulamanın kendi ayarından otomatik alınır)_ |
 | RecTV | Film, Dizi, Canlı TV _(API adresi otomatik alınır)_ |
 | BelgeselX | Belgesel |
