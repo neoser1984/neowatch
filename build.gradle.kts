@@ -12,7 +12,9 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:8.7.3")
         // Cloudstream gradle plugin which makes everything work and builds plugins
-        classpath("com.github.recloudstream:gradle:master-SNAPSHOT")
+        // master-SNAPSHOT yerine sabit sürüm: JitPack/Cloudflare, GitHub sunucularına "master-SNAPSHOT/gradle-master-32895aedb6-1.pom"
+        // için önbelleğe alınmış 404 döndürüyor (Ekim 2026). Aynı kod (commit 32895aedb6), sabit sürüm adıyla sorunsuz iniyor.
+        classpath("com.github.recloudstream.gradle:gradle:master-32895aedb6-1")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.0")  // pre-release APK Kotlin 2.4 metadata kullanıyor; 2.1 derleyicisi okuyamaz
     }
 }
