@@ -47,8 +47,21 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/src
           chmod +x gradlew
-          # JitPack bazen geçici hata veriyor; bir kez daha dene
-          ./gradlew make makePluginsJson || (sleep 30 && ./gradlew make makePluginsJson --refresh-dependencies)
+          set -o pipefail
+          # JitPack (com.github.recloudstream:gradle) GitHub sunucularına zaman zaman yanıt vermiyor.
+          # Yalnızca bağımlılık/bağlantı hatalarında, artan beklemeyle en fazla 5 kez dene; gerçek derleme hatasında hemen dur.
+          for deneme in 1 2 3 4 5; do
+            ek=""; [ "$deneme" -gt 1 ] && ek="--refresh-dependencies"
+            if ./gradlew make makePluginsJson $ek 2>&1 | tee /tmp/derleme.log; then break; fi
+            if ! grep -qE "Could not (find|resolve|GET|HEAD|download)|jitpack\.io|Read timed out|Connect timed out|Connection reset|Received status code 5" /tmp/derleme.log; then
+              echo "::error::Derleme hatası (bağımlılık sorunu değil), yeniden denenmiyor."
+              exit 1
+            fi
+            if [ "$deneme" -eq 5 ]; then echo "::error::JitPack 5 denemede de yanıt vermedi."; exit 1; fi
+            bekle=$((deneme * 60))
+            echo "::warning::Bağımlılık indirilemedi (deneme $deneme/5). $bekle sn sonra yeniden denenecek..."
+            sleep "$bekle"
+          done
           cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
           cp build/plugins.json $GITHUB_WORKSPACE/builds
 
