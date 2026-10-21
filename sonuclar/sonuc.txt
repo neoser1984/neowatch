@@ -77,13 +77,13 @@ See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
 > Task :run
 === DiziPal doğrulama betiği ===
 ANA cookies=[PHPSESSID, _ct]
-kod=200 başlık=Doğrulama · DiziPAL bn=af6a4347256705352826fd46a6b49738 bk=3 br=/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum bcLen=288 cerez=[PHPSESSID, _ct]
------ JS [cerezli] kod=null uzunluk=null cookies=null -----
+kod=200 başlık=Doğrulama · DiziPAL bn=d0751321e297c9dbe528e7e4a3e8cc95 bk=3 br=/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum bcLen=288 cerez=[PHPSESSID, _ct]
+----- JS [cerezli] kod=null uzunluk=null cookies=null hata=java.lang.IllegalArgumentException: Expected URL scheme 'http' or 'https' but no scheme was found for  -----
 null
------ JS [cerezli+secfetch] kod=null uzunluk=null cookies=null -----
+----- JS [cerezli+secfetch] kod=null uzunluk=null cookies=null hata=java.lang.IllegalArgumentException: Expected URL scheme 'http' or 'https' but no scheme was found for  -----
 null
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 1m 46s
+BUILD SUCCESSFUL in 1m 58s
 2 actionable tasks: 2 executed
