@@ -12,10 +12,10 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:8.7.3")
         // Cloudstream gradle plugin which makes everything work and builds plugins
-        // Kök paket (com.github.recloudstream:gradle:master-SNAPSHOT) yerine doğrudan alt modül: JitPack/Cloudflare,
-        // GitHub sunucularına kök paketin "gradle-master-<sürüm>.pom" dosyası için önbelleğe alınmış 404 döndürüyor (Ekim 2026).
-        // Kök paket zaten yalnızca bu alt modülü içeren boş bir sarmalayıcı; kod aynı.
-        classpath("com.github.recloudstream.gradle:gradle:master-SNAPSHOT")
+        // Sabit sürüm: JitPack'in master-SNAPSHOT kaydı bozuk (22 Ekim 2026: maven-metadata "master-master-32895aedb6-1"
+        // diyor, Gradle "inconsistent module metadata" ile reddediyor; 32895aedb6 derlemesinde dosya yok).
+        // 81b1d424d2 JitPack'te eksiksiz (pom + module + jar) ve CSX deposunda da kullanılıyor.
+        classpath("com.github.recloudstream:gradle:81b1d424d2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.0")  // pre-release APK Kotlin 2.4 metadata kullanıyor; 2.1 derleyicisi okuyamaz
     }
 }
