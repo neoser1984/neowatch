@@ -18,73 +18,154 @@ Daemon will be stopped at the end of the build
 > Task :processResources NO-SOURCE
 
 > Task :compileKotlin
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/Test.kt:92:36 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:63:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:74:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:251:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:252:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:253:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:257:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:258:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:259:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:263:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:264:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:265:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:266:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:232:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:236:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:237:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:241:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:242:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:243:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:244:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:245:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:246:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/KoreanTurk.kt:73:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/KoreanTurk.kt:99:82 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:19:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:20:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:21:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
 
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== InatBox ===
-   HAM [0] https://dizilabmedia.click/CDN/001/002/dizilab/v2/ct.php -> 403 x-st=null server=cloudflare uzunluk=4920  |  Attention Required! | Cloudflare body{margin:0;padding:0} if (!navigator.cookieEnabled) { window.addEventListener('DOMContentLoaded', function () { var cookieEl = document.getElementById('cookie-aler
-   çözüm: YOK
-   HAM [0] https://diziboxen.help/CDN/001/002/dizibox/v2/tv/ulusal.php -> 403 x-st=null server=cloudflare uzunluk=4916  |  Attention Required! | Cloudflare body{margin:0;padding:0} if (!navigator.cookieEnabled) { window.addEventListener('DOMContentLoaded', function () { var cookieEl = document.getElementById('cookie-aler
-   çözüm: YOK
-    [W/InatBox] istek 403 » https://dizilabmedia.click/CDN/001/002/dizilab/v2/ct.php
-kategori haritası: 0 | 
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/tv/ulusal.php
-KAT Ulusal -> 0  | 
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/yabanci-dizi/index.php
-KAT Yabancı Diziler -> 0  | 
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/tv/sinema.php
-KAT Sinema -> 0  | 
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/nf/index.php
-KAT Netflix -> 0  | 
+=== DiziPal / DiziPalGuncel / KoreanTurk testi ===
+[refsiz] https://dizipal2142.com/ -> 200 son=https://dizipal2142.com/ başlık=Dizipal | yabancı dizi izle, film izle uzunluk=111565 m3u=false
+[refsiz] https://dizipal1591.com/ -> 403 son=https://dizipal1591.com/ başlık=Attention Required! | Cloudflare uzunluk=4552 m3u=false
+[refsiz] https://dizipal1822.com/ -> 403 son=https://dizipal1822.com/ başlık=Attention Required! | Cloudflare uzunluk=4919 m3u=false
+[refsiz] https://koreanturk.tv/ -> 403 son=https://koreanturk.tv/ başlık=Just a moment... uzunluk=5520 m3u=false
+[refsiz] https://player.hintdizi.com/storage/media/Perfect-Crown-1.-Sezon-1.-Bolum-Izle/Perfect-Crown-1.-Sezon-1.-Bolum-Izle.m3u8 -> 403 son=https://player.hintdizi.com/storage/media/Perfect-Crown-1.-Sezon-1.-Bolum-Izle/Perfect-Crown-1.-Sezon-1.-Bolum-Izle.m3u8 başlık=403 Forbidden uzunluk=915 m3u=false
+[player ref] https://player.hintdizi.com/storage/media/Perfect-Crown-1.-Sezon-1.-Bolum-Izle/Perfect-Crown-1.-Sezon-1.-Bolum-Izle.m3u8 -> 200 son=https://player.hintdizi.com/storage/media/Perfect-Crown-1.-Sezon-1.-Bolum-Izle/Perfect-Crown-1.-Sezon-1.-Bolum-Izle.m3u8 başlık= uzunluk=44740 m3u=true
 
-=== DiziPal alan adları ===
-https://dizipal2138.com/ -> 403 son=https://dizipal2138.com/ başlık=Attention Required! | Cloudflare uzunluk=4917 
-https://dizipal2139.com/ -> 403 son=https://dizipal2140.com/ başlık=Attention Required! | Cloudflare uzunluk=4917 
-https://dizipal2140.com/ -> 403 son=https://dizipal2140.com/ başlık=Attention Required! | Cloudflare uzunluk=4917 
-https://dizipal2141.com/ -> 403 son=https://dizipal2141.com/ başlık=Attention Required! | Cloudflare uzunluk=4917 
-https://dizipal2142.com/ -> 200 son=https://dizipal2142.com/ başlık=Dizipal | yabancı dizi izle, film izle uzunluk=111565 
-Exception in NiceHttp: java.net.UnknownHostException dizipal2143.com: Temporary failure in name resolution
-https://dizipal2143.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
-Exception in NiceHttp: java.net.UnknownHostException dizipal2144.com: Temporary failure in name resolution
-https://dizipal2144.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
-Exception in NiceHttp: java.net.UnknownHostException dizipal2145.com: Temporary failure in name resolution
-https://dizipal2145.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
-Exception in NiceHttp: java.net.UnknownHostException dizipal2146.com: Temporary failure in name resolution
-https://dizipal2146.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
-https://dizipal1588.com/ -> 403 son=https://dizipal1591.com/ başlık=Attention Required! | Cloudflare uzunluk=4550 
-https://dizipal1589.com/ -> 403 son=https://dizipal1822.com/ başlık=Attention Required! | Cloudflare uzunluk=4917 
-https://dizipal1590.com/ -> 403 son=https://dizipal1591.com/ başlık=Attention Required! | Cloudflare uzunluk=4550 
-https://dizipal1591.com/ -> 403 son=https://dizipal1591.com/ başlık=Attention Required! | Cloudflare uzunluk=4550 
-Exception in NiceHttp: java.net.UnknownHostException dizipal1592.com: No address associated with hostname
-https://dizipal1592.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
-Exception in NiceHttp: java.net.UnknownHostException dizipal1593.com: No address associated with hostname
-https://dizipal1593.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
-Exception in NiceHttp: java.net.UnknownHostException dizipal1594.com: No address associated with hostname
-https://dizipal1594.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
-Exception in NiceHttp: java.net.UnknownHostException dizipal1595.com: No address associated with hostname
-https://dizipal1595.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
-Exception in NiceHttp: java.net.UnknownHostException dizipal1596.com: No address associated with hostname
-https://dizipal1596.com/ -> null son=null başlık= uzunluk=0 UnknownHostException
+==================== DiziPal (https://dizipal2142.com) — kategori 14 ====================
+KAT Son Bölümler -> 24 hasNext=true  | The New Stanford Prison Experiment 1x6 https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum, The New Stanford Prison Experiment 1x5 https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-5-bolum
+KAT Yeni Diziler -> 24 hasNext=true  | The New Stanford Prison Experiment https://dizipal2142.com/dizi/the-new-stanford-prison-experiment, Can You Keep a Secret? https://dizipal2142.com/dizi/can-you-keep-a-secret
+KAT Yeni Filmler -> 24 hasNext=true  | Moana https://dizipal2142.com/film/moana-2026, Kötü Elmalar https://dizipal2142.com/film/kotu-elmalar
+KAT Netflix -> 20 hasNext=false  | Jeffrey Epstein: Korkunç Zengin https://dizipal2142.com/dizi/jeffrey-epstein-korkunc-zengin, Weeds https://dizipal2142.com/dizi/weeds
+ARAMA dexter -> 4  | Dexter: Resurrection https://dizipal2142.com/dizi/dexter-resurrection, Dexter: New Blood https://dizipal2142.com/dizi/dexter-new-blood, Dexter: Original Sin https://dizipal2142.com/dizi/dexter-original-sin
+LOAD https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum -> null null yıl=null poster=null 
 
-=== KoreanTurk (koreanturk.tv) ===
-bölüm iframe: []
-bölüm player alanı: 
-film başlık= iframe=[]
-https://koreanturk.tv/dizi-arsivi/ -> series-box=0 movie-box=0 ep-box=0 ilk=null sayfa=[]
-https://koreanturk.tv/dizi-arsivi/page/2/ -> series-box=0 movie-box=0 ep-box=0 ilk=null sayfa=[]
-https://koreanturk.tv/film-arsivi/ -> series-box=0 movie-box=0 ep-box=0 ilk=null sayfa=[]
-https://koreanturk.tv/dizi-kategori/aile-dizileri-izle/ -> series-box=0 movie-box=0 ep-box=0 ilk=null sayfa=[]
-https://koreanturk.tv/dizi-kategori/aile-dizileri-izle/page/2/ -> series-box=0 movie-box=0 ep-box=0 ilk=null sayfa=[]
-https://koreanturk.tv/page/2/ -> series-box=0 movie-box=0 ep-box=0 ilk=null sayfa=[]
-https://koreanturk.tv/?s=perfect -> series-box=0 movie-box=0 ep-box=0 ilk=null sayfa=[]
-https://koreanturk.tv/category/aksiyon-kore-filmleri-izle/ -> series-box=0 movie-box=0 ep-box=0 ilk=null sayfa=[]
-dizi sayfası bölüm kutusu: yok
-dizi bilgi: h1= poster=null yıl= tür=[] açıklama=null
+==================== DiziPalGuncel (https://dizipal1591.com) — kategori 13 ====================
+KAT Son Bölümler -> 0 hasNext=false  | 
+KAT Yeni Diziler -> 0 hasNext=false  | 
+KAT Yeni Filmler -> 0 hasNext=false  | 
+ARAMA dexter -> 0  | 
+
+==================== KoreanTurk (https://koreanturk.tv) — kategori 25 ====================
+KAT Son Eklenen Bölümler -> 0 hasNext=false  | 
+KAT Diziler -> 0 hasNext=false  | 
+KAT Filmler -> 0 hasNext=false  | 
+ARAMA perfect -> 0  | 
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 15s
+BUILD SUCCESSFUL in 2m 19s
 2 actionable tasks: 2 executed
