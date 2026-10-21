@@ -41,8 +41,8 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | DiziBox | dizibox.live | Dizi |
 | DiziKorea | dizikorea3.com | Asya Dizisi, Film |
 | DiziMom | dizidad.com _(site adı artık Dizidad)_ | Dizi |
-| DiziPal | dizipal2138.com | Dizi, Film _(DNS over HTTPS gerekebilir)_ |
-| DiziPalGuncel | dizipal1588.com | Dizi, Film, Anime |
+| DiziPal | dizipal2142.com | Dizi, Film _(DNS over HTTPS gerekebilir)_ |
+| DiziPalGuncel | dizipal1591.com | Dizi, Film, Anime |
 | DiziPalOrjinal | dizipalorjinal15.com | Dizi, Film |
 | Dizilla | dizilla.now | Dizi, Anime, Asya Dizisi |
 | DiziYou | diziyou3.com | Dizi |
@@ -52,7 +52,7 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | FullHDFilmizlesene | fullhdfilmizlesene.now | Film |
 | HDFilmCehennemi | hdfilmcehennemi.nl | Film, Dizi |
 | JetFilmizle | jetfilmizle.io | Film |
-| KoreanTurk | koreanturk.com | Asya Dizisi |
+| KoreanTurk | koreanturk.tv | Asya Dizisi, Film |
 | KultFilmler | kultfilmler.net | Film, Dizi |
 | RareFilmm | rarefilmm.com | Film |
 | SelcukFlix | selcukflix.app | Dizi, Film |

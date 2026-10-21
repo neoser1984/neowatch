@@ -5,7 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.extractors.Vidmoly
+import com.lagradost.cloudstream3.network.WebViewResolver
 import com.lagradost.cloudstream3.utils.*
+import com.lagradost.nicehttp.NiceResponse
+import android.webkit.CookieManager
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import javax.crypto.Cipher
@@ -13,7 +18,7 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
 class DiziPal : MainAPI() {
-    override var mainUrl              = "https://dizipal2138.com"
+    override var mainUrl              = "https://dizipal2142.com"
     override var name                 = "DiziPal"
     override val hasMainPage          = true
     override var lang                 = "tr"
@@ -39,6 +44,56 @@ class DiziPal : MainAPI() {
         "${mainUrl}/kategori/komedi"          to "Komedi",
         "${mainUrl}/kategori/belgesel"        to "Belgesel",
     )
+
+    // Ekim 2026: bölüm (/bolum/) ve film (/film/) sayfaları önce sitenin kendi "Doğrulama · DiziPAL" ara sayfasını
+    // gösteriyor (JS ile çalışan bir tarayıcı kontrolü). Bu kontrolü uygulamanın gömülü tarayıcısı (WebView) sayfayı
+    // normal bir tarayıcı gibi açarak geçer; oluşan oturum çerezleri sonraki isteklerde kullanılır.
+    private var dogrulamaCerezleri: Map<String, String> = emptyMap()
+    private var sonDogrulama       = 0L
+    private var dogrulamaBasarili  = false
+    private val dogrulamaKilidi    = Mutex()
+
+    private fun Document.dogrulamaSayfasi(): Boolean =
+        this.selectFirst("meta[name=_bc]") != null || this.title().startsWith("Doğrulama")
+
+    private fun tarayiciCerezleri(): Map<String, String> = runCatching {
+        CookieManager.getInstance().getCookie(mainUrl).orEmpty().split(";").mapNotNull {
+            val parca = it.trim().split("=", limit = 2)
+            if (parca.size == 2 && parca[0].isNotBlank()) parca[0] to parca[1] else null
+        }.toMap()
+    }.getOrDefault(emptyMap())
+
+    private suspend fun dogrula(url: String): Boolean = dogrulamaKilidi.withLock {
+        // Son bir dakikada denendiyse WebView yeniden açılmaz (başarısızsa her tıklamada beklenmesin)
+        if (System.currentTimeMillis() - sonDogrulama < 60_000L) return@withLock dogrulamaBasarili
+        runCatching {
+            WebViewResolver(
+                interceptUrl = Regex("""/public/assets/js/main\.js"""),  // yalnızca asıl sayfa yükler
+                userAgent    = USER_AGENT,
+                useOkhttp    = false,
+                timeout      = 30_000L
+            ).resolveUsingWebView(url, referer = "${mainUrl}/")
+        }.onFailure { Log.w("DZP", "doğrulama » ${it.message}") }
+        val cerezler = tarayiciCerezleri()
+        if (cerezler.isNotEmpty()) dogrulamaCerezleri = cerezler
+        sonDogrulama      = System.currentTimeMillis()
+        dogrulamaBasarili = cerezler.isNotEmpty()
+        dogrulamaBasarili
+    }
+
+    private suspend fun sayfaGetir(url: String, referer: String = "${mainUrl}/"): NiceResponse {
+        if (dogrulamaCerezleri.isEmpty()) dogrulamaCerezleri = tarayiciCerezleri()
+        val basliklar = mapOf("User-Agent" to USER_AGENT)
+        var yanit = app.get(url, referer = referer, headers = basliklar, cookies = dogrulamaCerezleri)
+        if (yanit.document.dogrulamaSayfasi()) {
+            Log.d("DZP", "doğrulama sayfası » $url")
+            if (dogrula(url)) {
+                yanit = app.get(url, referer = referer, headers = basliklar, cookies = dogrulamaCerezleri)
+                dogrulamaBasarili = !yanit.document.dogrulamaSayfasi()
+            }
+        }
+        return yanit
+    }
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
         val sayfali  = request.data.endsWith("/bolumler") || request.data.endsWith("/diziler") || request.data.endsWith("/filmler")
@@ -99,18 +154,26 @@ class DiziPal : MainAPI() {
     override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)
 
     override suspend fun load(url: String): LoadResponse? {
-        var adres    = url
-        var document = app.get(url, referer = "${mainUrl}/").document
+        if (url.contains("/film/")) {
+            val document = sayfaGetir(url).document
+            if (document.dogrulamaSayfasi()) return null
+            return loadMovie(url, document)
+        }
+        if (!url.contains("/bolum/")) return loadSeries(url, app.get(url, referer = "${mainUrl}/").document)
 
-        if (url.contains("/bolum/")) {
-            val dizi = fixUrlNull(
-                document.selectFirst("a.ep-nav-all[href*='/dizi/'], a.btn-watch-first[href*='/dizi/'], a[href*='/dizi/']:containsOwn(Tüm Bölümler)")?.attr("href")
-            ) ?: return null
-            adres    = dizi
-            document = app.get(dizi, referer = url).document
+        // Son Bölümler kartı bölüme gider: önce adresten türetilen dizi sayfası denenir (bölüm sayfası doğrulama ister),
+        // olmazsa bölüm sayfasındaki "Tüm Bölümler" bağlantısı kullanılır
+        val tahmin = Regex("""/bolum/(.+?)-\d+-sezon-\d+-bolum""").find(url)?.groupValues?.get(1)?.let { "${mainUrl}/dizi/$it" }
+        if (tahmin != null) {
+            val yanit = app.get(tahmin, referer = "${mainUrl}/")
+            if (yanit.isSuccessful) loadSeries(tahmin, yanit.document)?.let { return it }
         }
 
-        return if (adres.contains("/film/")) loadMovie(adres, document) else loadSeries(adres, document)
+        val bolumSayfasi = sayfaGetir(url).document
+        val dizi = fixUrlNull(
+            bolumSayfasi.selectFirst("a.ep-nav-all[href*='/dizi/'], a.btn-watch-first[href*='/dizi/'], a[href*='/dizi/']:containsOwn(Tüm Bölümler)")?.attr("href")
+        ) ?: return null
+        return loadSeries(dizi, app.get(dizi, referer = url).document)
     }
 
     private fun Document.bilgi(label: String): Element? {
@@ -184,7 +247,7 @@ class DiziPal : MainAPI() {
 
     override suspend fun loadLinks(data: String, isCasting: Boolean, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         Log.d("DZP", "data » $data")
-        val sayfa    = app.get(data, referer = "${mainUrl}/")
+        val sayfa    = sayfaGetir(data)
         val document = sayfa.document
         val cfg      = document.selectFirst("#videoContainer")?.attr("data-cfg")?.takeIf { it.isNotBlank() } ?: return false
 
@@ -193,8 +256,8 @@ class DiziPal : MainAPI() {
             "${mainUrl}/ajax-player-config",
             data    = mapOf("cfg" to cfg),
             referer = data,
-            cookies = sayfa.cookies,
-            headers = mapOf("X-Requested-With" to "XMLHttpRequest", "Origin" to mainUrl)
+            cookies = dogrulamaCerezleri + sayfa.cookies,
+            headers = mapOf("X-Requested-With" to "XMLHttpRequest", "Origin" to mainUrl, "User-Agent" to USER_AGENT)
         ).parsedSafe<PlayerConfig>() ?: return false
         if (config.success == false) Log.d("DZP", "ajax-player-config başarısız » cfg=$cfg")
 

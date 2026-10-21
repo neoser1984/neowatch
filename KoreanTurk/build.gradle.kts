@@ -1,4 +1,4 @@
-version = 5
+version = 6
 
 cloudstream {
     authors     = listOf("NeO")
@@ -13,6 +13,6 @@ cloudstream {
      * 3: Beta only
     **/
     status  = 1 // will be 3 if unspecified
-    tvTypes = listOf("AsianDrama")
-    iconUrl = "https://www.google.com/s2/favicons?domain=www.koreanturk.com&sz=%size%"
+    tvTypes = listOf("AsianDrama", "Movie")
+    iconUrl = "https://www.google.com/s2/favicons?domain=koreanturk.tv&sz=%size%"
 }
