@@ -70,95 +70,20 @@ w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neow
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/KoreanTurk.kt:74:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/KoreanTurk.kt:105:82 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
 
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== DiziPal doğrulama sayfası ===
-kod=200 url=https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum
-H date: Wed, 21 Oct 2026 21:05:39 GMT
-H content-type: text/html; charset=UTF-8
-H server: cloudflare
-H vary: Accept-Encoding
-H set-cookie: PHPSESSID=3ppsc33jqhm2n95v2mg9a87u51; path=/; secure; HttpOnly; SameSite=Lax
-H expires: Thu, 19 Nov 1981 08:52:00 GMT
-H x-robots-tag: noindex, nofollow
-H x-xss-protection: 0
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H referrer-policy: unsafe-url
-H permissions-policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
-H x-download-options: noopen
-H x-permitted-cross-domain-policies: none
-H strict-transport-security: max-age=31536000; includeSubDomains; preload
-H content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.tailwindcss.com https://code.jqu
-H report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=yDAMXoglLh31WM9V5jScqoGPgpbT2IgBL%2F6mRJHePmH2FXc9tAgd2%2FMhKNPsEkcrU6eyOVJUwBMoRm6pcaNhqcW6l7zoCIRWagh
-H cf-cache-status: DYNAMIC
-H nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
-H server-timing: cfCacheStatus;desc="DYNAMIC"
-H server-timing: cfEdge;dur=45,cfOrigin;dur=467
-H cf-ray: a4e338bc4ef1979e-LAX
-H alt-svc: h3=":443"; ma=86400
-H Cache-Control: max-stale=2147483647, only-if-cached
-COOKIES {PHPSESSID=3ppsc33jqhm2n95v2mg9a87u51}
------ HTML (3101) -----
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<meta name="_bc" content="UtAJSRhJzvUvMcqTZnIbGkQ759eWysgB4yhuCgX2fsjsbaG7zW4MihMeKrefOFqpk4AYWxYLXDI3hVv7LJ-C_w-bDSSx1K5Mm9PbfGDx6Ju7Y09VgDT4hN3ZnXaSnbFHP6tfhpUOQdcVqVdCk_a3Nv-89Gy6lUtQYdTFtyeXHFLcF3TL6a6wMy0iARHHvOcBXM-WfuJTKAUCeuAX--49mP918olUJGh-dFyggUSE7QO-uPufkEjWteZgcu-KCc3RNvunaVqcFS6K5Goa3ibGW7HwiBLsLV2A">
-<meta name="_bn" content="414abeeff60a74cd12e763fb805c179b">
-<meta name="_bk" content="3">
-<meta name="_br" content="/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum">
-<title>Doğrulama · DiziPAL</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:#0a0a0d;color:#e5e7eb;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-body{display:flex;align-items:center;justify-content:center;padding:24px;min-height:100vh;
-background:radial-gradient(1200px 800px at 20% 10%,rgba(60,10,10,.5) 0%,rgba(0,0,0,0) 60%),
-          radial-gradient(1000px 700px at 80% 90%,rgba(100,20,20,.35) 0%,rgba(0,0,0,0) 60%),
-          linear-gradient(135deg,#060004 0%,#140608 40%,#1a0608 100%)}
-.wrap{max-width:420px;width:100%;padding:36px 28px;border-radius:18px;
-background:rgba(10,8,10,.74);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-border:1px solid rgba(220,38,38,.18);text-align:center;box-shadow:0 25px 70px rgba(0,0,0,.55)}
-.lg{font-size:22px;font-weight:800;letter-spacing:.3px;color:#fff;text-shadow:0 0 20px rgba(220,38,38,.4);margin-bottom:14px}
-h1{font-size:17px;margin:4px 0 12px;font-weight:600;color:#f3f4f6}
-p{color:#d1d5db;font-size:13px;line-height:1.55;margin:0 0 22px;opacity:.85}
-.spin{width:44px;height:44px;border:3px solid rgba(255,255,255,.08);border-top-color:#ef4444;border-radius:50%;margin:14px auto 10px;animation:sp 1s linear infinite}
-@keyframes sp{to{transform:rotate(360deg)}}
-.msg{font-size:12.5px;color:#9ca3af;min-height:16px;margin-top:12px}
-.ft{margin-top:22px;font-size:11px;color:#6b7280;opacity:.7}
-</style>
-</head>
-<body>
-<div class="wrap">
-<div class="lg">DiziPAL</div>
-<h1>Erişim doğrulanıyor</h1>
-<p>Birkaç saniye içinde otomatik yönlendirileceksiniz.</p>
-<div class="spin"></div>
-<div id="bcMsg" class="msg">Başlatılıyor</div>
-<div class="ft">İnsan olduğunuzu doğruluyoruz</div>
-</div>
-<script src="/_bcs?t=UtAJSRhJzvUvMcqTZnIbGkQ759eWysgB4yhuCgX2fsjsbaG7zW4MihMeKrefOFqpk4AYWxYLXDI3hVv7LJ-C_w-bDSSx1K5Mm9PbfGDx6Ju7Y09VgDT4hN3ZnXaSnbFHP6tfhpUOQdcVqVdCk_a3Nv-89Gy6lUtQYdTFtyeXHFLcF3TL6a6wMy0iARHHvOcBXM-WfuJTKAUCeuAX--49mP918olUJGh-dFyggUSE7QO-uPufkEjWteZgcu-KCc3RNvunaVqcFS6K5Goa3ibGW7HwiBLsLV2A"></script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"ba39064b5840469b84f8170588544da6","r":1,"spa":2}' crossorigin="anonymous"></script>
-</body>
-</html>
-
------ HTML SONU -----
------ JS https://dizipal2142.com/_bcs?t=UtAJSRhJzvUvMcqTZnIbGkQ759eWysgB4yhuCgX2fsjsbaG7zW4MihMeKrefOFqpk4AYWxYLXDI3hVv7LJ-C_w-bDSSx1K5Mm9PbfGDx6Ju7Y09VgDT4hN3ZnXaSnbFHP6tfhpUOQdcVqVdCk_a3Nv-89Gy6lUtQYdTFtyeXHFLcF3TL6a6wMy0iARHHvOcBXM-WfuJTKAUCeuAX--49mP918olUJGh-dFyggUSE7QO-uPufkEjWteZgcu-KCc3RNvunaVqcFS6K5Goa3ibGW7HwiBLsLV2A (17) -----
-(function(){})();
------ JS https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092 (31853) -----
-(()=>{"use strict";function t(){return"undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:void 0}var e,n,i,o,r;function a(t,n,i,o=!1,r=null){let a=r||`/cdn-cgi/rum?${t}`,s=!0;if(navigator&&"string"==typeof navigator.userAgent)try{const t=navigator.userAgent.match(/Chrome\/([0-9]+)/);t&&t[0].toLowerCase().indexOf("chrome")>-1&&parseInt(t[1])<81&&(s=!1)}catch(t){}if(navigator&&"function"==typeof navigator.sendBeacon&&s&&o){n.st=e.SendBeacon;const t=JSON.stringify(n),i={type:"application/json"},o=navigator.sendBeacon&&navigator.sendBeacon.bind(navigator);null==o||o(a,new Blob([t],i))}else{n.st=e.XHR;const t=JSON.stringify(n),o=new XMLHttpRequest;i&&(o.onreadystatechange=function(){4==this.readyState&&204==this.status&&i()}),o.open("POST",a,!0),o.setRequestHeader("content-type","application/json"),o.send(t)}}"function"!=typeof Array.prototype.findLast&&Object.defineProperty(Array.prototype,"findLast",{value:function(t,e){for(let n=this.length-1;n>=0;n--)if(t.call(e,this[n],n,this))return this[n]},writable:!0,configurable:!0,enumerable:!1}),"function"!=typeof Array.prototype.at&&Object.defineProperty(Array.prototype,"at",{value:function(t){const e=Math.trunc(t)||0,n=e>=0?e:this.length+e;if(!(n<0||n>=this.length))return this[n]},writable:!0,configurable:!0,enumerable:!1}),"function"!=typeof Array.prototype.includes&&Object.defineProperty(Array.prototype,"includes",{value:function(t,e=0){let n=Math.trunc(e)||0;for(n<0&&(n=Math.max(this.length+n,0));n<this.length;n++){const e=this[n];if(e===t||e!=e&&t!=t)return!0}return!1},writable:!0,configurable:!0,enumerable:!1}),function(){const e=t();e&&void 0===e.globalThis&&Object.defineProperty(e,"globalThis",{value:e,writable:!0,configurable:!0})}(),function(){const e=t();e&&"function"!=typeof e.queueMicrotask&&Object.defineProperty(e,"queueMicrotask",{value:function(t){Promise.resolve().then(t).catch(t=>{setTimeout(()=>{throw t},0)})},writable:!0,configurable:!0})}(),function(t){t[t.SendBeacon=1]="SendBeacon",t[t.XHR=2]="XHR"}(e||(e={})),function(t){t[t.Load=1]="Load",t[t.Additional=2]="Additional",t[t.WebVitalsV2=3]="WebVitalsV2"}(n||(n={})),function(t){t.High="high",t.Low="low",t.Auto="auto"}(i||(i={})),function(t){t[t.None=0]="None",t[t.HistoryAndNavigationAPI=1]="HistoryAndNavigationAPI",t[t.SoftNavigationHeuristics=2]="SoftNavigationHeuristics"}(o||(o={})),function(t){t.Navigate="navigate",t.Reload="reload",t.BackForward="back-forward",t.BackForwardCache="back-forward-cache",t.Prerender="prerender",t.Restore="restore",t.SoftNavigation="soft-navigation",t.RoutingApis="routing-apis"}(r||(r={}));class s{constructor(){this.o=0,this.i=[]}l(t){var e;if(t.hadRecentInput)return;const n=this.i[0],i=this.i.at(-1);this.o&&n&&i&&t.startTime-i.startTime<1e3&&t.startTime-n.startTime<5e3?(this.o+=t.value,this.i.push(t)):(this.o=t.value,this.i=[t]),null===(e=this.t)||void 0===e||e.call(this,t)}}const c=()=>{const t=performance.getEntriesByType("navigation")[0];if(t&&t.responseStart>0&&t.responseStart<performance.now())return t},l=t=>{if("loading"===document.readyState)return"loading";const e=c();if(e){if(t<e.domInteractive)return"loading";if(0===e.domContentLoadedEventStart||t<e.domContentLoadedEventStart)return"dom-interactive";if(0===e.domComplete||t<e.domComplete)return"dom-content-loaded"}return"complete"},d=t=>{const e=t.nodeName;return 1===t.nodeType?e.toLowerCase():e.toUpperCase().replace(/^#/,"")},u=t=>{var e;let n="";try{for(;9!==(null==t?void 0:t.nodeType);){const i=t,o=i.id?"#"+i.id:[d(i),...Array.from(null!==(e=i.classList)&&void 0!==e?e:[]).sort()].join(".");if(n.length+o.length>99)return n||o;if(n=n?o+">"+n:o,i.id)break;t=i.parentNode}}catch(t){}return n},f=new WeakMap;function v(t,e){let n=f.get(e);return n||(n=new WeakMap,f.set(e,n)),n.get(t)||n.set(t,new e),n.get(t)}let g=-1;const p=()=>g,m=t=>{addEventListener("pageshow",e=>{e.persisted&&(g=e.timeStamp,t(e))},!0)},h=(t,e,n,i)=>{let o,r;return a=>{e.value>=0&&(a||i)&&(r=e.value-(null!=o?o:0),(r||void 0===o)&&(o=e.value,e.delta=r,e.rating=((t,e)=>t>e[1]?"poor":t>e[0]?"needs-improvement":"good")(e.value,n),t(e)))}},y=t=>{requestAnimationFrame(()=>requestAnimationFrame(()=>t()))},w=()=>{var t,e;return null!==(e=null===(t=c())||void 0===t?void 0:t.activationStart)&&void 0!==e?e:0};let T=-1;const b=new Set,S=()=>"hidden"!==document.visibilityState||document.prerendering?1/0:0,E=t=>{if("hidden"===document.visibilityState){if("visibilitychange"===t.type)for(const t of b)t();isFinite(T)||(T="visibilitychange"===t.type?t.timeStamp:0,removeEventListener("prerenderingchange",E,!0))}},x=(t=!1)=>{var e;if(t&&(T=1/0),T<0){const t=w(),n=document.prerendering||null===(e=globalThis.performance.getEntriesByType("visibility-state").find(e=>"hidden"===e.name&&e.startTime>=t))||void 0===e?void 0:e.startTime;T=null!=n?n:S(),addEventListener("visibilitychange",E,!0),addEventListener("prerenderingchange",E,!0),m(()=>{setTimeout(()=>{T=S()})})}return{get firstHiddenTime(){return T},onHidden(t){b.add(t)}}},_=(t,e=-1,n,i=0,o,r,a)=>{const s=c(),l=(null==s?void 0:s.navigationId)||0;let d="navigate";return n?d=n:p()>=0?d="back-forward-cache":s&&(document.prerendering||w()>0?d="prerender":document.wasDiscarded?d="restore":s.type&&(d=s.type.replace(/_/g,"-"))),{name:t,value:e,rating:"good",delta:0,entries:[],id:`v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,navigationType:d,navigationId:i||l,navigationInteractionId:o,navigationURL:r||(null==s?void 0:s.name),navigationStartTime:a||0}},I=(t,e,n={})=>{try{const i=t.filter(t=>PerformanceObserver.supportedEntryTypes.includes(t));if(i.length>0){const t=new PerformanceObserver(t=>{queueMicrotask(()=>{const n=t.getEntries();i.length>1&&n.sort((t,e)=>t.startTime+t.duration-(e.startTime+e.duration)),e(n)})});for(const e of i)t.observe(Object.assign({type:e,buffered:!0},n));return t}}catch(t){}},A=t=>{var e,n,i,o;return(null===(n=null===(e=globalThis.PerformanceObserver)||void 0===e?void 0:e.supportedEntryTypes)||void 0===n?void 0:n.includes("soft-n
+=== DiziPal doğrulama betiği ===
 ANA cookies=[PHPSESSID, _ct]
-DIZI cookies=[]
-CEREZLI bolum -> 200 başlık=Doğrulama · DiziPAL cfg=null
+kod=200 başlık=Doğrulama · DiziPAL bn=af6a4347256705352826fd46a6b49738 bk=3 br=/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum bcLen=288 cerez=[PHPSESSID, _ct]
+----- JS [cerezli] kod=null uzunluk=null cookies=null -----
+null
+----- JS [cerezli+secfetch] kod=null uzunluk=null cookies=null -----
+null
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 5s
+BUILD SUCCESSFUL in 1m 46s
 2 actionable tasks: 2 executed
