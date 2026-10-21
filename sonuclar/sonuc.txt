@@ -16,62 +16,316 @@ To honour the JVM settings for this build a single-use Daemon process will be fo
 Daemon will be stopped at the end of the build 
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources NO-SOURCE
+
 > Task :compileKotlin
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:310:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:311:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:314:25 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:317:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:318:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:319:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:320:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:321:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:324:29 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:326:27 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:329:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:330:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:331:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:332:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:333:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:334:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:337:25 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:338:26 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:339:26 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:341:27 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:342:30 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:345:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:346:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:347:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:350:27 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:353:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:354:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:355:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:356:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:357:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:358:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:359:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:360:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:361:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:362:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:366:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:367:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:368:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:369:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:370:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:373:26 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:375:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:376:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:377:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:380:30 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:381:25 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:383:27 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:385:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:386:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:389:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:390:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:391:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:392:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:393:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:394:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/SelcukFlix.kt:395:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== JitPack erişim testi (runner) ===
-[1] 200 uzunluk=388 cf=EXPIRED age=null server=cloudflare | /com/github/recloudstream/gradle/master-SNAPSHOT/maven-metadata.xml 
-[2] 200 uzunluk=388 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/master-SNAPSHOT/maven-metadata.xml 
-[1] 404 uzunluk=0 cf=REVALIDATED age=null server=cloudflare | /com/github/recloudstream/gradle/master-SNAPSHOT/gradle-master-32895aedb6-1.pom 
-[2] 404 uzunluk=0 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/master-SNAPSHOT/gradle-master-32895aedb6-1.pom 
-[1] 200 uzunluk=619 cf=MISS age=null server=cloudflare | /com/github/recloudstream/gradle/master-SNAPSHOT/gradle-master-SNAPSHOT.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> <dependencies> <dependency> <groupId>com.github.recloudstream.gradle</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> </dependency> </dependencies> </project> 
-[2] 200 uzunluk=619 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/master-SNAPSHOT/gradle-master-SNAPSHOT.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> <dependencies> <dependency> <groupId>com.github.recloudstream.gradle</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> </dependency> </dependencies> </project> 
-[1] 200 uzunluk=619 cf=HIT age=3 server=cloudflare | /com/github/recloudstream/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> <dependencies> <dependency> <groupId>com.github.recloudstream.gradle</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> </dependency> </dependencies> </project> 
-[2] 200 uzunluk=619 cf=HIT age=4 server=cloudflare | /com/github/recloudstream/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> <dependencies> <dependency> <groupId>com.github.recloudstream.gradle</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> </dependency> </dependencies> </project> 
-[1] 200 uzunluk=286 cf=MISS age=null server=cloudflare | /com/github/recloudstream/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.jar 
-[2] 200 uzunluk=286 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.jar 
-[1] 200 uzunluk=395 cf=EXPIRED age=null server=cloudflare | /com/github/recloudstream/gradle/gradle/master-SNAPSHOT/maven-metadata.xml 
-[2] 200 uzunluk=395 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/gradle/master-SNAPSHOT/maven-metadata.xml 
-[1] 200 uzunluk=1212 cf=HIT age=92220 server=cloudflare | /com/github/recloudstream/gradle/gradle/master-SNAPSHOT/gradle-master-32895aedb6-1.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- do_not_remove: published-with-gradle-metadata --> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream.gradle</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> <dependencies> <dependency> <groupId>org.jetbrains.kotlin</groupId> <artifactId>kotlin-stdlib</artifactId> <version>2.4.0</version> <scope>runtime</
-[2] 200 uzunluk=1212 cf=HIT age=92222 server=cloudflare | /com/github/recloudstream/gradle/gradle/master-SNAPSHOT/gradle-master-32895aedb6-1.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- do_not_remove: published-with-gradle-metadata --> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream.gradle</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> <dependencies> <dependency> <groupId>org.jetbrains.kotlin</groupId> <artifactId>kotlin-stdlib</artifactId> <version>2.4.0</version> <scope>runtime</
-[1] 200 uzunluk=90693 cf=HIT age=92214 server=cloudflare | /com/github/recloudstream/gradle/gradle/master-SNAPSHOT/gradle-master-32895aedb6-1.jar 
-[2] 200 uzunluk=90693 cf=HIT age=92215 server=cloudflare | /com/github/recloudstream/gradle/gradle/master-SNAPSHOT/gradle-master-32895aedb6-1.jar 
-[1] 200 uzunluk=1212 cf=MISS age=null server=cloudflare | /com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- do_not_remove: published-with-gradle-metadata --> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream.gradle</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> <dependencies> <dependency> <groupId>org.jetbrains.kotlin</groupId> <artifactId>kotlin-stdlib</artifactId> <version>2.4.0</version> <scope>runtime</
-[2] 200 uzunluk=1212 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- do_not_remove: published-with-gradle-metadata --> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream.gradle</groupId> <artifactId>gradle</artifactId> <version>master-SNAPSHOT</version> <dependencies> <dependency> <groupId>org.jetbrains.kotlin</groupId> <artifactId>kotlin-stdlib</artifactId> <version>2.4.0</version> <scope>runtime</
-[1] 200 uzunluk=90693 cf=MISS age=null server=cloudflare | /com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.jar 
-[2] 200 uzunluk=90693 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.jar 
-[1] 404 uzunluk=0 cf=REVALIDATED age=null server=cloudflare | /com/github/recloudstream/gradle/32895aedb6/gradle-32895aedb6.pom 
-[2] 404 uzunluk=0 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/32895aedb6/gradle-32895aedb6.pom 
-[1] 404 uzunluk=0 cf=MISS age=null server=cloudflare | /com/github/recloudstream/gradle/gradle/32895aedb6/gradle-32895aedb6.pom 
-[2] 404 uzunluk=0 cf=HIT age=1 server=cloudflare | /com/github/recloudstream/gradle/gradle/32895aedb6/gradle-32895aedb6.pom 
-[1] 200 uzunluk=75093 cf=BYPASS age=null server=cloudflare | /com/github/recloudstream/gradle/master-32895aedb6-1/build.log 
-      SON: dle.gradle.plugin:local-SNAPSHOT Found artifact: com.lagradost.cloudstream3:gradle:local-SNAPSHOT 2026-10-06T06:44:18.967915751Z Exit code: 0 Creating -sources.jar ✅ Build artifacts: com.github.recloudstream.gradle:com.lagradost.cloudstream3.gradle.gradle.plugin:master-32895aedb6-1 com.github.recloudstream.gradle:gradle:master-32895aedb6-1 Files: com/github/recloudstream/gradle/com.lagradost.cloudstream3.gradle.gradle.plugin/master-32895aedb6-1 com/github/recloudstream/gradle/com.lagradost.cloudstream3.gradle.gradle.plugin/master-32895aedb6-1/com.lagradost.cloudstream3.gradle.gradle.plugin-master-32895aedb6-1.pom com/github/recloudstream/gradle/com.lagradost.cloudstream3.gradle.gradle.plugin/master-32895aedb6-1/com.lagradost.cloudstream3.gradle.gradle.plugin-master-32895aedb6-1.pom.md5 com/github/recloudstream/gradle/com.lagradost.cloudstream3.gradle.gradle.plugin/master-32895aedb6-1/com.lagradost.cloudstream3.gradle.gradle.plugin-master-32895aedb6-1.pom.sha1 com/github/recloudstream/gradle/gradle/master-32895aedb6-1 com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.jar com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.module com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom.md5 com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom.sha1 
-[2] 200 uzunluk=75093 cf=BYPASS age=null server=cloudflare | /com/github/recloudstream/gradle/master-32895aedb6-1/build.log 
-      SON: dle.gradle.plugin:local-SNAPSHOT Found artifact: com.lagradost.cloudstream3:gradle:local-SNAPSHOT 2026-10-06T06:44:18.967915751Z Exit code: 0 Creating -sources.jar ✅ Build artifacts: com.github.recloudstream.gradle:com.lagradost.cloudstream3.gradle.gradle.plugin:master-32895aedb6-1 com.github.recloudstream.gradle:gradle:master-32895aedb6-1 Files: com/github/recloudstream/gradle/com.lagradost.cloudstream3.gradle.gradle.plugin/master-32895aedb6-1 com/github/recloudstream/gradle/com.lagradost.cloudstream3.gradle.gradle.plugin/master-32895aedb6-1/com.lagradost.cloudstream3.gradle.gradle.plugin-master-32895aedb6-1.pom com/github/recloudstream/gradle/com.lagradost.cloudstream3.gradle.gradle.plugin/master-32895aedb6-1/com.lagradost.cloudstream3.gradle.gradle.plugin-master-32895aedb6-1.pom.md5 com/github/recloudstream/gradle/com.lagradost.cloudstream3.gradle.gradle.plugin/master-32895aedb6-1/com.lagradost.cloudstream3.gradle.gradle.plugin-master-32895aedb6-1.pom.sha1 com/github/recloudstream/gradle/gradle/master-32895aedb6-1 com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.jar com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.module com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom.md5 com/github/recloudstream/gradle/gradle/master-32895aedb6-1/gradle-master-32895aedb6-1.pom.sha1 
-[1] 200 uzunluk=3891 cf=HIT age=59 server=cloudflare | /com/github/recloudstream/cloudstream/library-jvm/4.8.0/library-jvm-4.8.0.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- do_not_remove: published-with-gradle-metadata --> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream.cloudstream</groupId> <artifactId>library-jvm</artifactId> <version>4.8.0</version> <dependencies> <dependency> <groupId>org.jetbrains.kotlin</groupId> <artifactId>kotlin-stdlib</artifactId> <version>2.3.21</version> <scope>compile<
-[2] 200 uzunluk=3891 cf=HIT age=60 server=cloudflare | /com/github/recloudstream/cloudstream/library-jvm/4.8.0/library-jvm-4.8.0.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- do_not_remove: published-with-gradle-metadata --> <modelVersion>4.0.0</modelVersion> <groupId>com.github.recloudstream.cloudstream</groupId> <artifactId>library-jvm</artifactId> <version>4.8.0</version> <dependencies> <dependency> <groupId>org.jetbrains.kotlin</groupId> <artifactId>kotlin-stdlib</artifactId> <version>2.3.21</version> <scope>compile<
-[1] 200 uzunluk=2409 cf=HIT age=1516058 server=cloudflare | /com/github/Blatzar/NiceHttp/0.4.11/NiceHttp-0.4.11.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- do_not_remove: published-with-gradle-metadata --> <modelVersion>4.0.0</modelVersion> <groupId>com.github.Blatzar</groupId> <artifactId>NiceHttp</artifactId> <version>0.4.11</version> <name>Blatzar/NiceHttp</name> <description>A small and simple OkHttp wrapper to ease scraping. Mostly for personal use.</description> <url>https://github.com/Blatzar/Ni
-[2] 200 uzunluk=2409 cf=HIT age=1516059 server=cloudflare | /com/github/Blatzar/NiceHttp/0.4.11/NiceHttp-0.4.11.pom 
-      <?xml version="1.0" encoding="UTF-8"?> <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <!-- do_not_remove: published-with-gradle-metadata --> <modelVersion>4.0.0</modelVersion> <groupId>com.github.Blatzar</groupId> <artifactId>NiceHttp</artifactId> <version>0.4.11</version> <name>Blatzar/NiceHttp</name> <description>A small and simple OkHttp wrapper to ease scraping. Mostly for personal use.</description> <url>https://github.com/Blatzar/Ni
-[1] 200 uzunluk=144 cf=DYNAMIC age=null server=cloudflare | /api/builds/com.github.recloudstream/gradle/latest 
-      {"version":"-32895aedb6-1","isSnapshot":true,"status":"ok","latestOk":"","modules":["com.lagradost.cloudstream3.gradle.gradle.plugin","gradle"]}
-[2] 200 uzunluk=144 cf=DYNAMIC age=null server=cloudflare | /api/builds/com.github.recloudstream/gradle/latest 
-      {"version":"-32895aedb6-1","isSnapshot":true,"status":"ok","latestOk":"","modules":["com.lagradost.cloudstream3.gradle.gradle.plugin","gradle"]}
+=== SelcukFlix erişim testi ===
+[varsayilan UA] GET https://selcukflix.app/ -> 403 server=cloudflare cf-mitigated=null uzunluk=17 baslik=null nextData=false 
+      gövde: error code: 1005 
+[varsayilan UA] GET https://selcukflix.app/kesfet -> 403 server=cloudflare cf-mitigated=null uzunluk=17 baslik=null nextData=false 
+      gövde: error code: 1005 
+[varsayilan UA] GET https://selcukflix.app/dizi/reacher -> 403 server=cloudflare cf-mitigated=null uzunluk=17 baslik=null nextData=false 
+      gövde: error code: 1005 
+[varsayilan UA] POST findSeries -> 403 server=cloudflare cf-mitigated=null | {"type":"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1005/" 
+[masaustu UA] GET https://selcukflix.app/ -> 403 server=cloudflare cf-mitigated=null uzunluk=17 baslik=null nextData=false 
+      gövde: error code: 1005 
+[masaustu UA] GET https://selcukflix.app/kesfet -> 403 server=cloudflare cf-mitigated=null uzunluk=17 baslik=null nextData=false 
+      gövde: error code: 1005 
+[masaustu UA] GET https://selcukflix.app/dizi/reacher -> 403 server=cloudflare cf-mitigated=null uzunluk=17 baslik=null nextData=false 
+      gövde: error code: 1005 
+[masaustu UA] POST findSeries -> 403 server=cloudflare cf-mitigated=null | {"type":"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1005/" 
+EKLENTI Son Bölümler -> 0  | 
+EKLENTI Yeni Filmler -> 0  | 
+EKLENTI Yeni Diziler -> 0  | 
+EKLENTI Trend Diziler -> 0  | 
+EKLENTI Kore Dizileri -> 0  | 
+EKLENTI Aksiyon Dizileri -> 0  | 
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 1m 46s
+BUILD SUCCESSFUL in 2m 17s
 2 actionable tasks: 2 executed
