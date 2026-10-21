@@ -70,102 +70,29 @@ w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neow
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:232:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:236:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:237:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:241:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:242:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:243:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:244:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:245:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:246:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/KoreanTurk.kt:73:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/KoreanTurk.kt:99:82 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:19:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:20:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:21:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
 
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== DiziPal / DiziPalGuncel / KoreanTurk testi ===
-[refsiz] https://dizipal2142.com/ -> 200 son=https://dizipal2142.com/ başlık=Dizipal | yabancı dizi izle, film izle uzunluk=111565 m3u=false
-[refsiz] https://dizipal1591.com/ -> 403 son=https://dizipal1591.com/ başlık=Attention Required! | Cloudflare uzunluk=4552 m3u=false
-[refsiz] https://dizipal1822.com/ -> 403 son=https://dizipal1822.com/ başlık=Attention Required! | Cloudflare uzunluk=4919 m3u=false
-[refsiz] https://koreanturk.tv/ -> 403 son=https://koreanturk.tv/ başlık=Just a moment... uzunluk=5520 m3u=false
-[refsiz] https://player.hintdizi.com/storage/media/Perfect-Crown-1.-Sezon-1.-Bolum-Izle/Perfect-Crown-1.-Sezon-1.-Bolum-Izle.m3u8 -> 403 son=https://player.hintdizi.com/storage/media/Perfect-Crown-1.-Sezon-1.-Bolum-Izle/Perfect-Crown-1.-Sezon-1.-Bolum-Izle.m3u8 başlık=403 Forbidden uzunluk=915 m3u=false
-[player ref] https://player.hintdizi.com/storage/media/Perfect-Crown-1.-Sezon-1.-Bolum-Izle/Perfect-Crown-1.-Sezon-1.-Bolum-Izle.m3u8 -> 200 son=https://player.hintdizi.com/storage/media/Perfect-Crown-1.-Sezon-1.-Bolum-Izle/Perfect-Crown-1.-Sezon-1.-Bolum-Izle.m3u8 başlık= uzunluk=44740 m3u=true
-
-==================== DiziPal (https://dizipal2142.com) — kategori 14 ====================
-KAT Son Bölümler -> 24 hasNext=true  | The New Stanford Prison Experiment 1x6 https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum, The New Stanford Prison Experiment 1x5 https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-5-bolum
-KAT Yeni Diziler -> 24 hasNext=true  | The New Stanford Prison Experiment https://dizipal2142.com/dizi/the-new-stanford-prison-experiment, Can You Keep a Secret? https://dizipal2142.com/dizi/can-you-keep-a-secret
-KAT Yeni Filmler -> 24 hasNext=true  | Moana https://dizipal2142.com/film/moana-2026, Kötü Elmalar https://dizipal2142.com/film/kotu-elmalar
-KAT Netflix -> 20 hasNext=false  | Jeffrey Epstein: Korkunç Zengin https://dizipal2142.com/dizi/jeffrey-epstein-korkunc-zengin, Weeds https://dizipal2142.com/dizi/weeds
-ARAMA dexter -> 4  | Dexter: Resurrection https://dizipal2142.com/dizi/dexter-resurrection, Dexter: New Blood https://dizipal2142.com/dizi/dexter-new-blood, Dexter: Original Sin https://dizipal2142.com/dizi/dexter-original-sin
-LOAD https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum -> null null yıl=null poster=null 
-
-==================== DiziPalGuncel (https://dizipal1591.com) — kategori 13 ====================
-KAT Son Bölümler -> 0 hasNext=false  | 
-KAT Yeni Diziler -> 0 hasNext=false  | 
-KAT Yeni Filmler -> 0 hasNext=false  | 
-ARAMA dexter -> 0  | 
-
-==================== KoreanTurk (https://koreanturk.tv) — kategori 25 ====================
-KAT Son Eklenen Bölümler -> 0 hasNext=false  | 
-KAT Diziler -> 0 hasNext=false  | 
-KAT Filmler -> 0 hasNext=false  | 
-ARAMA perfect -> 0  | 
+=== DiziPal derin test ===
+[varsayilan] https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum -> 200  başlık=Doğrulama · DiziPAL btn=0 nav=0 h1= ep=0 cfg=null
+[varsayilan] https://dizipal2142.com/dizi/the-new-stanford-prison-experiment -> 200  başlık=The New Stanford Prison Experiment izle | Dizipal btn=1 nav=0 h1=series-title ep=6 cfg=null
+[UA] https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum -> 200  başlık=Doğrulama · DiziPAL btn=0 nav=0 h1= ep=0 cfg=null
+[UA] https://dizipal2142.com/dizi/the-new-stanford-prison-experiment -> 200  başlık=The New Stanford Prison Experiment izle | Dizipal btn=1 nav=0 h1=series-title ep=6 cfg=null
+main.js uzunluk=85064
+---- ajax-player-config @36661 ----
+[^\/?#]+)/i);if(n){var i;e.preventDefault(),e.stopPropagation();try{i=decodeURIComponent(n[1])}catch(e){i=n[1]}openUserCard(i,t)}}}),document.addEventListener("DOMContentLoaded",function(){initMobileMenu(),initLazyLoading(),initSeasonTabs(),initDetailTabs(),initSearchEnhancement(),initMobileSearch(),initActionButtons(),initTrendingSlider(),initUserDropdown(),InfiniteScroll.init(),initCsrfForms();const e=document.querySelector(".main-content");e&&(e.style.transition="opacity 0.15s ease, transform 0.15s ease");var t=document.getElementById("pageConfig");if(t){var n=t.getAttribute("data-view-type"),i=t.getAttribute("data-view-id");n&&i&&trackView(n,parseInt(i))}}),window.switchSource=switchSource,window.copyToClipboard=copyToClipboard,window.shareContent=shareContent,window.closeFooterAd=closeFooterAd,function(){var e=null,t=null;function n(){function n(e){var t,n=[],i=!1;this.then=function(e){return i?(e(t),this):(n.push(e),this)},e(function(e){t=e,i=!0;for(var a=0;a<n.length;a++)n[a](e);n=[]})}if(e)return new n(function(t){t(e)});if(t)return t;var i=document.getElementById("videoContainer");return i&&i.dataset.cfg?t=new n(function(t){var n=new XMLHttpRequest;n.open("POST",BASE_URL+"ajax-player-config",!0),n.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),n.onreadystatechange=function(){if(4===n.readyState){try{var i=JSON.parse(n.responseText);i.success&&i.config&&(e=i.config)}catch(e){}t(e||null)}},n.send("cfg="+encodeURIComponent(i.dataset.cfg))}):new n(function(e){e(null)})}var i={state:0,adIndex:0,ads:[],skipTime:5,onComplete:null,_countdownTimer:null,_safetyTimer:null,_adblockerTimer:null,start:function(e,t,n){if(this.ads=e||[],this.skipTime=t||5,this.onComplete=n,this.adIndex=0,this.state=0,0===this.ads.length)return this._finish();this._loadCurrentAd()},_clearTimers:function(){this._countdownTimer&&(clearInterval(this._countdownTimer),this._countdownTimer=null),this._safetyTimer&&(clearTimeout(this._safetyTimer),this._safetyTimer=null),this._adblockerTimer&&(clearInterval(this._adblockerTimer),this._adblockerTimer=null)},_resetVideo:function(){this._clearTimers();var e=document.getElementById("prerollVideo");e&&(e.onerror=null,e.onstalled=null,e.onended=null,e.onwaiting=null,e.pause(),e.removeAttribute("src"));var t=document.getElementById("skipBtn"),n=document.getElementById("prerollClickable");t&&(t.onclick=null),n&&(n.onclick=null);var i=document.getElementById("prerollResume");i&&(i.style.display="none")},_loadCurrentAd:function(){var e=this,t=this.ads[this.adIndex],n=document.getElementById("prerollAd"),i=document.getElementById("prerollVideo");if(!(n&&i&&t&&t.video))return this._skipCurrentAd();this.state=1,this._resetVi
+---- ajax-token @299 ----
+var BASE_URL=function(){var e=document.querySelector('meta[name="dp-base-url"]');return e&&e.content?e.content:"/"}(),_tkn=null;function _gt(){if(_tkn)return _tkn;var e=document.cookie.match(/(?:^|;\s*)_ct=([^;]*)/);if(e&&e[1])return _tkn=e[1];try{var t=new XMLHttpRequest;if(t.open("GET",BASE_URL+"ajax-token",!1),t.send(),200===t.status){var n=JSON.parse(t.responseText);if(n.t)return _tkn=n.t}}catch(e){}return""}function trackPageView(){function e(){"function"==typeof gtag&&gtag("event","page_view",{page_location:window.location.href,page_path:window.location.pathname+window.location.search,page_title:document.title})}if("function"==typeof gtag)setTimeout(e,100);else{var t=setInterval(function(){"function"==typeof gtag&&(clearInterval(t),e())},100);setTimeout(function(){clearInterval(t)},5e3)}}function initMobileMenu(){const e=document.getElementById("mobileToggle"),t=document.getElementById("mobileMenu");e&&t&&(e.addEventListener("click",function(){t.classList.toggle("active");const e=this.querySelector("i");e&&(e.classList.toggle("fa-bars"),e.classList.toggle("fa-times"))}),document.addEventListener("click",function(n){if(t.classList.contains("active")&&!t.contains(n.target)&&!e.contains(n.target)){t.classList.remove("active");const n=e.querySelector("i");n&&(n.classList.add("fa-bars"),n.classList.remove("fa-times"))}})),document.querySelectorAll(".mobile-dropdown > .dropdown-toggle").forEach(function(e){e.addEventListener("click",function(e){e.preventDefault(),this.parentElement.classList.toggle("active")})})}function initUserDropdown(){const e=document.querySelector(".user-dropdown");if(!e)return;const t=e.querySelector(".user-avatar"),n=e.querySelector(".user-dropdown-menu");t&&n&&(t.addEventListener("click",function(t){t.preventDefault(),t.stopPropagation(),e.cla
+LOAD https://dizipal2142.com/dizi/the-new-stanford-prison-experiment -> The New Stanford Prison Experiment TvSeries yıl=2026 
+   bölüm=6 son=https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum
+    [D/DZP] data » https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum
+   LINKS ok=false  altyazı=0
+LOAD https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum -> null null yıl=null 
+LOAD https://dizipal2142.com/film/moana-2026 -> null null yıl=null 
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 19s
+BUILD SUCCESSFUL in 2m 8s
 2 actionable tasks: 2 executed
