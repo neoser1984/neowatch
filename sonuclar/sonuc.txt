@@ -17,22 +17,214 @@ Daemon will be stopped at the end of the build
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources NO-SOURCE
 
-> Task :compileKotlin FAILED
-e: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/MixPlayHDExtractor.kt:21:38 This API is only available on prerelease builds. Using it will cause CloudStream stable to crash.
+> Task :compileKotlin
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/KoreanTurk.kt:74:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/KoreanTurk.kt:105:82 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
 
-FAILURE: Build failed with an exception.
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
 
-* What went wrong:
-Execution failed for task ':compileKotlin'.
-> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
-   > Compilation error. See log for more details
+> Task :run
+=== JitPack yoklaması ===
+---- https://jitpack.io/com/github/recloudstream/gradle/gradle/master-SNAPSHOT/maven-metadata.xml -> 200  (409)
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata modelVersion="1.0.0">
+    <groupId>com.github.recloudstream.gradle</groupId>
+    <artifactId>gradle</artifactId>
+    <version>master-master-32895aedb6-1</version>
+    <versioning>
+        <snapshot>
+            <timestamp>master-32895aedb6</timestamp>
+            <buildNumber>1</buildNumber>
+        </snapshot>
+    </versioning>
+</metadata>
 
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
+---- https://jitpack.io/com/github/recloudstream/gradle/master-SNAPSHOT/maven-metadata.xml -> 200  (402)
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata modelVersion="1.0.0">
+    <groupId>com.github.recloudstream</groupId>
+    <artifactId>gradle</artifactId>
+    <version>master-master-32895aedb6-1</version>
+    <versioning>
+        <snapshot>
+            <timestamp>master-32895aedb6</timestamp>
+            <buildNumber>1</buildNumber>
+        </snapshot>
+    </versioning>
+</metadata>
 
-BUILD FAILED in 55s
-1 actionable task: 1 executed
-GRADLE HATASI: 1
+---- https://jitpack.io/com/github/recloudstream/gradle/gradle/maven-metadata.xml -> 404  (0)
+
+---- https://jitpack.io/com/github/recloudstream/gradle/maven-metadata.xml -> 404  (0)
+
+---- https://jitpack.io/com/github/recloudstream/gradle/32895aedb6/gradle-32895aedb6.pom -> 404  (9)
+Not found
+---- https://jitpack.io/com/github/recloudstream/gradle/gradle/32895aedb6/gradle-32895aedb6.pom -> 404  (24)
+File not found. Build ok
+---- https://jitpack.io/com/github/recloudstream/gradle/81b1d424d2/gradle-81b1d424d2.pom -> 200  (609)
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.recloudstream</groupId>
+  <artifactId>gradle</artifactId>
+  <version>81b1d424d2</version>
+  <dependencies>
+    <dependency>
+      <groupId>com.github.recloudstream.gradle</groupId>
+      <artifactId>gradle</artifactId>
+      <version>81b1d424d2</version>
+    </dependency>
+  </dependencies>
+</project>
+
+---- https://jitpack.io/com/github/recloudstream/gradle/gradle/81b1d424d2/gradle-81b1d424d2.pom -> 200  (1919)
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- do_not_remove: published-with-gradle-metadata -->
+<modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.recloudstream.gradle</groupId>
+  <artifactId>gradle</artifactId>
+  <version>81b1d424d2</version>
+  <name>recloudstream/gradle</name>
+  <url>https://github.com/recloudstream/gradle</url>
+  <inceptionYear>2022</inceptionYear>
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License v3.0</name>
+      <url>https://api.github.com/licenses/lgpl-3.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>recloudstream</id>
+      <name></name>
+      <email></email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git://github.com/recloudstream/gradle.git</connection>
+    <developerConnection>scm:git://github.com/recloudstream/gradle.git</developerConnection>
+    <url>git://github.com/recloudstream/gradle.git</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>2.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm</artifactId>
+      <version>9.4</version>
+    
+---- https://jitpack.io/com/github/recloudstream/gradle/gradle/81b1d424d2/gradle-81b1d424d2.module -> 200  (2554)
+{
+  "formatVersion" : "1.1",
+  "component" : {
+    "group" : "com.github.recloudstream",
+    "module" : "gradle",
+    "version" : "81b1d424d2",
+    "attributes" : {
+      "org.gradle.status" : "release"
+    }
+  },
+  "createdBy" : {
+    "gradle" : {
+      "version" : "8.9"
+    }
+  },
+  "variants" : [ {
+    "name" : "apiElements",
+    "attributes" : {
+      "org.gradle.category" : "library",
+      "org.gradle.dependency.bundling" : "external",
+      "org.gradle.jvm.environment" : "standard-jvm",
+      "org.gradle.jvm.version" : "11",
+      "org.gradle.libraryelements" : "jar",
+      "org.gradle.usage" : "java-api",
+      "org.jetbrains.kotlin.platform.type" : "jvm"
+    },
+    "files" : [ {
+      "name" : "gradle-81b1d424d2.jar",
+      "url" : "gradle-81b1d424d2.jar",
+      "size" : 63734,
+      "sha512" : "d6bacc4af68108ddd82378f52fff7a0598c692bf0b2ef7de230bb3b2b3b4dea19b81d8830778565a35affd5dd5f6b6a75ae23a4358700e180840f6acc295c8e8",
+      "sha256" : "9bcd93a34448898645fef86a5eca92b4f6de668c70be3cc636f92081a13778ee",
+      "sha1" : "461de3a422edde30d21f2a08bc3ee690dd155090",
+      "md5" : "95341afe88870fd7d1b1a330d811e134"
+    } ]
+  }, {
+    "name" : "runtimeElements",
+    "attributes" : {
+      "org.gradle.category" : "library",
+      "org.gradle.dependency.bundling" : "external",
+      "org.gradle.jvm.environment" : "standard-jvm",
+      "org.gradle.jvm.version" : "11",
+      "org.gradle.libraryelements" : "jar",
+      "org.gradle.usage" : "java-runtime",
+      "org.jetbrain
+---- https://jitpack.io/com/github/recloudstream/gradle/gradle/32895aedb6/gradle-32895aedb6.module -> 404  (24)
+File not found. Build ok
+---- https://jitpack.io/api/builds/com.github.recloudstream/gradle -> 200  (6009)
+{
+  "com.github.recloudstream" : {
+    "gradle" : {
+      "master" : "ok",
+      "68db721" : "ok",
+      "68db7215ecbb4c2bdd0ea3d4378cbb7771c0a076" : "ok",
+      "fff81526c6996e6eca655c1b5459af82c8a6b284" : "gitError",
+      "68db7215ec" : "ok",
+      "ca2ec09aff" : "ok",
+      "cce1b8d84dc796b8da4a92a64cedfb046d1937b3" : "ok",
+      "cce1b8d8" : "ok",
+      "b13e35a442" : "Error",
+      "cce1b8d84" : "ok",
+      "cce1b8d84d" : "ok",
+      "e9e202f75d" : "ok",
+      "11886af8528dd4304b740250ecbdd44059f013b6" : "Error",
+      "bd75acd59e29a8ba6a7edd5cfc9fa5e7ab17c704" : "Error",
+      "bd75acd59e" : "Error",
+      "7cc64f92d8" : "ok",
+      "81b1d424d2" : "ok",
+      "ca2ec09aff73" : "ok",
+      "e9e202f75d85" : "ok",
+      "68db7215ecbb" : "ok",
+      "cce1b8d84dc7" : "ok",
+      "81b1d424d236a447d9f2e95a229faef79002f761" : "ok",
+      "81b1d424d" : "ok",
+      "81b1d42" : "ok",
+      "d28ec3098bfb7ff2dd5239cf9e6d975c9b26cff9" : "Error",
+      "7cc64f92d88350ecbf775d6332de14dcaa71dcda" : "ok",
+      "e9e202f" : "Error",
+      "7cc64f9" : "ok",
+      "62940f2" : "Error",
+      "22be73619eb679c2df2c685fa3ba48ce923e68cb" : "gitError",
+      "68db7215ecbb1dc58ad735247ed3daa862fcc1e4" : "Error",
+      "5d21ca00d5c6" : "Error",
+      "2aeef2170708" : "Error",
+      "983d3fe069b8" : "Error",
+      "81b1d424d236" : "ok",
+      "81b1d428518925562725832a8451f28b7e04f05e" : "gitError",
+      "62940f2013" : "Error",
+      "69fdb8fc" : "ok",
+      "69fdb8fc4b" : "ok",
+      "d84a241026fbd
+---- https://api.github.com/repos/recloudstream/gradle/commits?per_page=8 -> 200  (41529)
+   32895aedb6 2026-07-02T21:23:21Z Update dependencies and enable build and configuration cache (#15)
+   9a916501ce 2026-06-17T18:43:04Z Make makePluginsJson run after ensureJarCompatibility (#16)\n\nBy using `mustRunAfter` ins
+   939b41b906 2026-04-20T20:04:30Z Add full configuration cache support (#13)
+   1d21f505c6 2026-04-13T19:14:30Z Use v1.2.1 for jadb (#14)\n\nJitpack is very flaky causing builds for extensions to seem t
+   1cd2acea40 2026-04-10T23:39:58Z Remove ApkConfigurationProvider (#7)\n\nWe've been using CloudstreamConfigurationProvider 
+   a4a1724744 2026-04-10T23:39:00Z add build hashes (#11)
+   55a0db5da2 2026-04-10T20:03:56Z Add support for AGP 9 (#10)
+   e7a0bcbf01 2026-04-10T18:15:14Z Add most support for configuration cache (#9)\n\n* Add support for config cache for the Co
+
+=== BİTTİ ===
+
+BUILD SUCCESSFUL in 2m 12s
+2 actionable tasks: 2 executed
