@@ -18,47 +18,94 @@ Daemon will be stopped at the end of the build
 > Task :processResources NO-SOURCE
 
 > Task :compileKotlin
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:232:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:131:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:142:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:331:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:236:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:332:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:237:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:333:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:241:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:337:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:242:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:338:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:243:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:339:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:244:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:343:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:245:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:344:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
 See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:246:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:345:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:346:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:266:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:267:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:271:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:272:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:273:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:274:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:275:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
+- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:276:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
 - To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
 - To keep applying to the value parameter only, use the '@param:' annotation target.
 
@@ -83,26 +130,40 @@ See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== InatBox / ContentX / DiziPalGuncel testi ===
-[iframe] 403 uzunluk=5488 openPlayer=false başlık=Attention Required! | Cloudflare
-[ContentX] link=0 altyazı=0 
-[dizipal1592] https://dizipal1592.com/yabanci-dizi-izle -> 403 başlık=Attention Required! | Cloudflare uzunluk=4551
-[dizipal1592] https://dizipal1592.com/bolum/the-walking-dead-1x1-c31 -> 403 başlık=Attention Required! | Cloudflare uzunluk=4551
-    [W/InatBox] istek 403 » https://dizilabmedia.click/CDN/001/002/dizilab/v2/ct.php
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/film/yerli-filmler.php
+=== Derleme + PowerShell betik testi ===
+pwsh bitti=true kod=0
+[33;1mWARNING: (73,50): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014)
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+                                                 ^
+[0m
+[33;1mWARNING: (98,50): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014)
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+                                                 ^
+[0m
+[33;1mWARNING: (116,50): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014)
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+                                                 ^
+[0m
+=== InatBox baglanti testi  2026-10-24 17:55:23 ===
+Genel IP: 134.33.101.81
+  istek kategori dizini -> HTTP 403 | json=YOK (<!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <!...)
+Kategori dizini alinamadi; test bitti.
+[31;1mRead-Host: [0m/home/runner/work/neowatch/neowatch/h/harness/inat_link_test.ps1:329[0m
+[31;1m[0m[36;1mLine |[0m
+[31;1m[0m[36;1m[36;1m 329 | [0m … i.'; Kaydet; [36;1mRead-Host 'Bitti. Pencereyi kapatmak icin Enter'[0m; exit }[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mPowerShell is in NonInteractive mode. Read and Prompt functionality is[0m
+[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m[31;1m[36;1m     | [31;1mnot available.[0m
 
-##### InatBox KAT Yerli Filmler -> 0 
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/nf/index.php
-
-##### InatBox KAT Netflix -> 0 
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/tv/sinema.php
-
-##### InatBox KAT Sinema -> 0 
-    [W/InatBox] istek 403 » https://diziboxen.help/CDN/001/002/dizibox/v2/yabanci-dizi/index.php
-
-##### InatBox KAT Yabancı Diziler -> 0 
+DiziPal LOAD -> The New Stanford Prison Experiment 
+    [D/DZP] data » https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum
+    [D/DZP] doğrulama sayfası » https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum
+    [W/DZP] doğrulama » An operation is not implemented: Not yet implemented
+TOAST » DiziPal: sitenin doğrulama sayfası açılamadı. Telefonda Ayarlar → Özel DNS → dns.google yapıp tekrar deneyin.
+   LINKS ok=false  adet=0 altyazı=0
+DiziPalGuncel KAT Diziler -> 0  (runner Cloudflare engeli beklenir)
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 2s
+BUILD SUCCESSFUL in 2m 22s
 2 actionable tasks: 2 executed
