@@ -29,6 +29,8 @@ Bazı siteler (ör. **DiziPal**) Türkiye'deki internet sağlayıcılarında DNS
 
 Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun diğer uygulamalarına dokunmaz.
 
+**DiziPal'de bölüm/film açılmıyorsa:** site, oynatmadan önce bir doğrulama sayfası gösteriyor ve eklenti bu sayfayı uygulamanın gömülü tarayıcısıyla açıyor. Gömülü tarayıcı yukarıdaki ayarı kullanmaz; bu yüzden telefonda **Ayarlar → Ağ ve internet → Özel DNS → `dns.google`** (veya `1dot1dot1dot1.cloudflare-dns.com`) yapın.
+
 ---
 
 ## 📱 Repo İçeriği
@@ -42,7 +44,7 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | DiziKorea | dizikorea3.com | Asya Dizisi, Film |
 | DiziMom | dizidad.com _(site adı artık Dizidad)_ | Dizi |
 | DiziPal | dizipal2142.com | Dizi, Film _(DNS over HTTPS gerekebilir)_ |
-| DiziPalGuncel | dizipal1591.com | Dizi, Film, Anime |
+| DiziPalGuncel | dizipal1592.com | Dizi, Film, Anime |
 | DiziPalOrjinal | dizipalorjinal15.com | Dizi, Film |
 | Dizilla | dizilla.now | Dizi, Anime, Asya Dizisi |
 | DiziYou | diziyou3.com | Dizi |

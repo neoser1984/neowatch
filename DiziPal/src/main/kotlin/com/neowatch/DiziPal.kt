@@ -71,7 +71,7 @@ class DiziPal : MainAPI() {
                 interceptUrl = Regex("""/public/assets/js/main\.js"""),  // yalnızca asıl sayfa yükler
                 userAgent    = USER_AGENT,
                 useOkhttp    = false,
-                timeout      = 30_000L
+                timeout      = 25_000L
             ).resolveUsingWebView(url, referer = "${mainUrl}/")
         }.onFailure { Log.w("DZP", "doğrulama » ${it.message}") }
         val cerezler = tarayiciCerezleri()
@@ -79,6 +79,19 @@ class DiziPal : MainAPI() {
         sonDogrulama      = System.currentTimeMillis()
         dogrulamaBasarili = cerezler.isNotEmpty()
         dogrulamaBasarili
+    }
+
+    // Gömülü tarayıcı CloudStream'in DNS over HTTPS ayarını kullanmaz; site DNS ile engelliyse doğrulama sayfası açılamaz
+    private var uyarildi = false
+    private fun dogrulamaUyarisi() {
+        if (uyarildi) return
+        uyarildi = true
+        runCatching {
+            CommonActivity.showToast(
+                "DiziPal: sitenin doğrulama sayfası açılamadı. Telefonda Ayarlar → Özel DNS → dns.google yapıp tekrar deneyin.",
+                1
+            )
+        }
     }
 
     private suspend fun sayfaGetir(url: String, referer: String = "${mainUrl}/"): NiceResponse {
@@ -156,7 +169,7 @@ class DiziPal : MainAPI() {
     override suspend fun load(url: String): LoadResponse? {
         if (url.contains("/film/")) {
             val document = sayfaGetir(url).document
-            if (document.dogrulamaSayfasi()) return null
+            if (document.dogrulamaSayfasi()) { dogrulamaUyarisi(); return null }
             return loadMovie(url, document)
         }
         if (!url.contains("/bolum/")) return loadSeries(url, app.get(url, referer = "${mainUrl}/").document)
@@ -249,6 +262,10 @@ class DiziPal : MainAPI() {
         Log.d("DZP", "data » $data")
         val sayfa    = sayfaGetir(data)
         val document = sayfa.document
+        if (document.dogrulamaSayfasi()) {
+            dogrulamaUyarisi()
+            return false
+        }
         val cfg      = document.selectFirst("#videoContainer")?.attr("data-cfg")?.takeIf { it.isNotBlank() } ?: return false
 
         // data-cfg anahtarı oturuma bağlı: sayfanın verdiği çerezler (PHPSESSID) olmadan "Invalid token" döner
