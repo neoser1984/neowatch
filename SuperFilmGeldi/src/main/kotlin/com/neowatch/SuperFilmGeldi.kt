@@ -13,7 +13,7 @@ import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
 // Eski superfilmgeldi.* alan adlarının hepsi park/kapalı (Ekim 2026). Site superfilmizle.org olarak
 // yeni bir altyapıyla (film + dizi + anime) devam ediyor; eklenti adı aynı kaldı.
 class SuperFilmGeldi : MainAPI() {
-    override var mainUrl              = "https://superfilmizle.org"
+    override var mainUrl              = "https://superfilmizle.icu"
     override var name                 = "SuperFilmGeldi"
     override val hasMainPage          = true
     override var lang                 = "tr"
