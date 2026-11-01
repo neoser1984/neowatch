@@ -1,9 +1,9 @@
-version = 6
+version = 7
 
 cloudstream {
     authors     = listOf("NeO")
     language    = "tr"
-    description = "SuperFilmGeldi (artık superfilmizle.org) — film, dizi ve anime izle. Türkçe dublaj ve altyazı seçenekleriyle."
+    description = "SuperFilmGeldi (artık superfilmizle.icu) — film, dizi ve anime izle. Türkçe dublaj ve altyazı seçenekleriyle."
 
     /**
      * Status int as the following:
@@ -14,5 +14,5 @@ cloudstream {
     **/
     status  = 1 // will be 3 if unspecified
     tvTypes = listOf("Movie", "TvSeries", "Anime")
-    iconUrl = "https://www.google.com/s2/favicons?domain=superfilmizle.org&sz=%size%"
+    iconUrl = "https://www.google.com/s2/favicons?domain=superfilmizle.icu&sz=%size%"
 }

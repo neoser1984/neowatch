@@ -35,7 +35,7 @@ import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.Score
 
 class WebteIzle : MainAPI() {
-    override var mainUrl              = "https://webteizle.click"
+    override var mainUrl              = "https://webteizle.info"
     override var name                 = "WebteIzle"
     override val hasMainPage          = true
     override var lang                 = "tr"
