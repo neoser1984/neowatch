@@ -1,9 +1,9 @@
-version = 6
+version = 7
 
 cloudstream {
     authors     = listOf("NeO")
     language    = "tr"
-    description = "ÇizgiMax ile Çizgi Film izlemek artık daha kolay, donmadan full hd ve reklamsız bir sitedir, içerisinde 700 den fazla çizgi film olan, Bu site bu işi profesyonelce yapıyor."
+    description = "ÇizgiMax ile çizgi film ve anime izlemek artık daha kolay; donmadan, full HD ve Türkçe."
 
     /**
      * Status int as the following:
@@ -13,6 +13,6 @@ cloudstream {
      * 3: Beta only
     **/
     status  = 1 // will be 3 if unspecified
-    tvTypes = listOf("Cartoon")
+    tvTypes = listOf("Cartoon", "Anime")
     iconUrl = "https://www.google.com/s2/favicons?domain=cizgimax.online&sz=%size%"
 }

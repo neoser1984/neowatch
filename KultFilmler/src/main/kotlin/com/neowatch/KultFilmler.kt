@@ -1,12 +1,15 @@
 package com.neowatch
 
 import android.util.Log
+import java.net.URLEncoder
+import org.jsoup.Jsoup
+import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
+import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import android.util.Base64
-import org.jsoup.Jsoup
 
 class KultFilmler : MainAPI() {
     override var mainUrl              = "https://kultfilmler.net"
@@ -16,101 +19,111 @@ class KultFilmler : MainAPI() {
     override val hasQuickSearch       = false
     override val supportedTypes       = setOf(TvType.Movie, TvType.TvSeries)
 
+    // ! Site yavaş; ana sayfa kategorilerini sırayla yükle
+    override var sequentialMainPage            = true
+    override var sequentialMainPageDelay       = 150L
+    override var sequentialMainPageScrollDelay = 150L
+
     override val mainPage = mainPageOf(
-        "${mainUrl}/page/"                                      to "Son Filmler",
-        "${mainUrl}/category/aile-filmleri-izle/page/"		    to "Aile",
-        "${mainUrl}/category/aksiyon-filmleri-izle/page/"	    to "Aksiyon",
-        "${mainUrl}/category/animasyon-filmleri-izle/page/"	    to "Animasyon",
-        "${mainUrl}/category/belgesel-izle/page/"			    to "Belgesel",
-        "${mainUrl}/category/bilim-kurgu-filmleri-izle/page/"   to "Bilim Kurgu",
-        "${mainUrl}/category/biyografi-filmleri-izle/page/"	    to "Biyografi",
-        "${mainUrl}/category/dram-filmleri-izle/page/"		    to "Dram",
-        "${mainUrl}/category/fantastik-filmleri-izle/page/"	    to "Fantastik",
-        "${mainUrl}/category/gerilim-filmleri-izle/page/"	    to "Gerilim",
-        "${mainUrl}/category/gizem-filmleri-izle/page/"		    to "Gizem",
-        "${mainUrl}/category/kara-filmleri-izle/page/"		    to "Kara",
-        "${mainUrl}/category/kisa-film-izle/page/"			    to "Kısa Metrajlı",
-        "${mainUrl}/category/komedi-filmleri-izle/page/"		to "Komedi",
-        "${mainUrl}/category/korku-filmleri-izle/page/"		    to "Korku",
-        "${mainUrl}/category/macera-filmleri-izle/page/"		to "Macera",
-        "${mainUrl}/category/muzik-filmleri-izle/page/"		    to "Müzik",
-        "${mainUrl}/category/polisiye-filmleri-izle/page/"	    to "Polisiye",
-        "${mainUrl}/category/politik-filmleri-izle/page/"	    to "Politik",
-        "${mainUrl}/category/romantik-filmleri-izle/page/"	    to "Romantik",
-        "${mainUrl}/category/savas-filmleri-izle/page/"		    to "Savaş",
-        "${mainUrl}/category/spor-filmleri-izle/page/"		    to "Spor",
-        "${mainUrl}/category/suc-filmleri-izle/page/"		    to "Suç",
-        "${mainUrl}/category/tarih-filmleri-izle/page/"		    to "Tarih",
-        "${mainUrl}/category/yerli-filmleri-izle/page/"		    to "Yerli"
+        "${mainUrl}/film-arsivi/?"                              to "Son Filmler",
+        "${mainUrl}/dizi-arsivi/?"                              to "Diziler",
+        "${mainUrl}/film-arsivi/?tur=aksiyon-filmleri-izle&"     to "Aksiyon",
+        "${mainUrl}/film-arsivi/?tur=bilim-kurgu-filmleri-izle&" to "Bilim Kurgu",
+        "${mainUrl}/film-arsivi/?tur=dram-filmleri-izle&"        to "Dram",
+        "${mainUrl}/film-arsivi/?tur=gerilim-filmleri-izle&"     to "Gerilim",
+        "${mainUrl}/film-arsivi/?tur=gizem-filmleri-izle&"       to "Gizem",
+        "${mainUrl}/film-arsivi/?tur=kara-filmleri-izle&"        to "Kara Film",
+        "${mainUrl}/film-arsivi/?tur=komedi-filmleri-izle&"      to "Komedi",
+        "${mainUrl}/film-arsivi/?tur=korku-filmleri-izle&"       to "Korku",
+        "${mainUrl}/film-arsivi/?tur=macera-filmleri-izle&"      to "Macera",
+        "${mainUrl}/film-arsivi/?tur=romantik-filmleri-izle&"    to "Romantik",
+        "${mainUrl}/film-arsivi/?tur=savas-filmleri-izle&"       to "Savaş",
+        "${mainUrl}/film-arsivi/?tur=suc-filmleri-izle&"         to "Suç",
+        "${mainUrl}/film-arsivi/?tur=yerli-filmleri-izle&"       to "Yerli",
+        "${mainUrl}/film-arsivi/?tur=kisa-film-izle&"            to "Kısa Metrajlı",
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
-        val document = app.get("${request.data}${page}").document
-        val home     = document.select("div.movie-box").mapNotNull { it.toSearchResult() }
+        val document = app.get("${request.data}sayfa=${page}", referer = "${mainUrl}/").document
+        val home     = document.select("a.mcard, div.movie-box").mapNotNull { it.toSearchResult() }.distinctBy { it.url }
 
-        return newHomePageResponse(request.name, home)
+        return newHomePageResponse(request.name, home, home.isNotEmpty())
     }
 
     private fun Element.toSearchResult(): SearchResponse? {
-        val title     = this.selectFirst("div.name a")?.text() ?: return null
-        val href      = fixUrlNull(this.selectFirst("div.name a")?.attr("href")) ?: return null
-        val posterUrl = fixUrlNull(this.selectFirst("div.img img")?.attr("src"))
+        // Yeni tema: <a class="mcard" href> … <h3>Başlık</h3> ; eski tema: div.movie-box
+        val a         = if (this.tagName() == "a") this else this.selectFirst("div.name a, a[href]") ?: return null
+        val title     = (this.selectFirst("h3")?.text() ?: this.selectFirst("div.name a")?.text())?.trim()?.takeIf { it.isNotBlank() } ?: return null
+        val href      = fixUrlNull(a.attr("href")) ?: return null
+        val posterUrl = fixUrlNull(this.selectFirst("img")?.let { it.attr("data-src").ifBlank { it.attr("src") } })
+        val year      = this.selectFirst("span.pyear")?.text()?.trim()?.toIntOrNull()
 
         return if (href.contains("/dizi/")) {
-            newTvSeriesSearchResponse(title, href, TvType.TvSeries) { this.posterUrl = posterUrl }
+            newTvSeriesSearchResponse(title, href, TvType.TvSeries) { this.posterUrl = posterUrl; this.year = year }
         } else {
-            newMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
+            newMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl; this.year = year }
         }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
-        val document = app.get("${mainUrl}?s=${query}").document
+        val sorgu    = URLEncoder.encode(query, "UTF-8")
+        val document = app.get("${mainUrl}/?s=${sorgu}", referer = "${mainUrl}/").document
 
-        return document.select("div.movie-box").mapNotNull { it.toSearchResult() }
+        return document.select("a.mcard, div.movie-box").mapNotNull { it.toSearchResult() }.distinctBy { it.url }
     }
 
     override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)
 
+    private fun Document.ldNesne(vararg tipler: String): String? =
+        this.select("script[type=application/ld+json]").map { it.data() }
+            .firstOrNull { d -> tipler.any { Regex(""""@type"\s*:\s*"$it"""").containsMatchIn(d) } }
+
+    private fun ldAlan(ld: String?, alan: String): String? =
+        ld?.let { Regex(""""$alan"\s*:\s*"((?:[^"\\]|\\.)*)"""").find(it)?.groupValues?.get(1)?.replace("\\/", "/")?.replace("\\\"", "\"") }
+
     override suspend fun load(url: String): LoadResponse? {
-        val document = app.get(url).document
+        val document = app.get(url, referer = "${mainUrl}/").document
+        val diziMi   = url.contains("/dizi/")
+        val ld       = document.ldNesne(if (diziMi) "TVSeries" else "Movie")
 
-        val title           = document.selectFirst("div.film h1")?.text()?.trim() ?: document.selectFirst("h1.film")?.text()?.trim() ?: return null
-        val poster          = fixUrlNull(document.selectFirst("[property='og:image']")?.attr("content"))
-        val description     = document.selectFirst("div.description")?.text()?.trim()
-        var tags            = document.select("ul.post-categories a").map { it.text() }
-        val rating          = document.selectFirst("div.imdb-count")?.text()?.trim()?.split(" ")?.first()
-        val year            = Regex("""(\d+)""").find(document.selectFirst("li.release")?.text()?.trim() ?: "")?.groupValues?.get(1)?.toIntOrNull()
-        val duration        = Regex("""(\d+)""").find(document.selectFirst("li.time")?.text()?.trim() ?: "")?.groupValues?.get(1)?.toIntOrNull()
-        val recommendations = document.select("div.movie-box").mapNotNull { it.toSearchResult() }
-        val actors          = document.select("[href*='oyuncular']").map {
-            Actor(it.text())
-        }
+        val title       = document.selectFirst("h1.vtitle, h1")?.text()?.trim()?.takeIf { it.isNotBlank() } ?: ldAlan(ld, "name") ?: return null
+        val poster      = fixUrlNull(document.selectFirst("[property='og:image']")?.attr("content")) ?: fixUrlNull(ldAlan(ld, "image"))
+        val description = ldAlan(ld, "description") ?: document.selectFirst("div.description")?.text()?.trim()
+        val year        = ldAlan(ld, "datePublished")?.take(4)?.toIntOrNull()
+            ?: document.selectFirst("a[href*='/yapim/']")?.text()?.trim()?.toIntOrNull()
+        val rating      = ld?.let { Regex(""""ratingValue"\s*:\s*"?([\d.]+)""").find(it)?.groupValues?.get(1) }
+        val tags        = ld?.let { l ->
+            Regex(""""genre"\s*:\s*\[([^\]]*)]""").find(l)?.groupValues?.get(1)?.let { g -> Regex(""""([^"]+)"""").findAll(g).map { it.groupValues[1] }.toList() }
+                ?: ldAlan(l, "genre")?.let { listOf(it) }
+        } ?: document.select("a[href*='/dizi-kategori/'], a[href*='/category/']").map { it.text().trim() }.distinct()
+        val actors      = document.select("a[href*='/oyuncular/']").map { it.text().trim() }
+            .filter { it.isNotBlank() && it.length < 40 }.distinct().map { Actor(it) }
+        val recommendations = document.select("a.mcard").mapNotNull { it.toSearchResult() }.filter { it.url != url }.distinctBy { it.url }
 
-        if (url.contains("/dizi/")) {
-            tags  = document.select("div.category a").map { it.text() }
-
-            val episodes = document.select("div.episode-box").mapNotNull {
-                val epHref    = fixUrlNull(it.selectFirst("div.name a")?.attr("href")) ?: return@mapNotNull null
-                val ssnDetail = it.selectFirst("span.episodetitle")?.ownText()?.trim() ?: return@mapNotNull null
-                val epDetail  = it.selectFirst("span.episodetitle b")?.ownText()?.trim() ?: return@mapNotNull null
-                val epName    = "$ssnDetail - $epDetail"
-                val epSeason  = ssnDetail.substringBefore(". ").toIntOrNull()
-                val epEpisode = epDetail.substringBefore(". ").toIntOrNull()
+        if (diziMi) {
+            val episodes = document.select("div.eps a.ep, a.ep[href*='/bolum/']").mapNotNull { a ->
+                val epHref = fixUrlNull(a.attr("href")) ?: return@mapNotNull null
+                val baslik = a.selectFirst("h4")?.text()?.trim() ?: a.text().trim()
+                val m      = Regex("""(\d+)-sezon-(\d+)-bolum""").find(epHref)
+                val sezon  = a.closest("[data-season]")?.attr("data-season")?.toIntOrNull()
+                    ?: m?.groupValues?.get(1)?.toIntOrNull()
+                    ?: Regex("""(\d+)\.\s*Sezon""").find(baslik)?.groupValues?.get(1)?.toIntOrNull()
+                val bolum  = m?.groupValues?.get(2)?.toIntOrNull()
+                    ?: Regex("""(\d+)\.\s*Bölüm""").find(baslik)?.groupValues?.get(1)?.toIntOrNull()
 
                 newEpisode(epHref) {
-                    this.name    = epName
-                    this.season  = epSeason
-                    this.episode = epEpisode
+                    this.name    = baslik
+                    this.season  = sezon
+                    this.episode = bolum
                 }
-            }
+            }.distinctBy { it.data }
 
             return newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
                 this.posterUrl       = poster
                 this.year            = year
                 this.plot            = description
                 this.tags            = tags
-                this.score          = Score.from10(rating)
-                this.duration        = duration
+                this.score           = Score.from10(rating)
                 this.recommendations = recommendations
                 addActors(actors)
             }
@@ -121,72 +134,75 @@ class KultFilmler : MainAPI() {
             this.year            = year
             this.plot            = description
             this.tags            = tags
-            this.score          = Score.from10(rating)
-            this.duration        = duration
+            this.score           = Score.from10(rating)
             this.recommendations = recommendations
             addActors(actors)
         }
     }
 
-    private fun getIframe(sourceCode: String): String {
-        // val atobKey = Regex("""atob\("(.*)"\)""").find(sourceCode)?.groupValues?.get(1) ?: return ""
-
-        // return Jsoup.parse(String(Base64.decode(atobKey))).selectFirst("iframe")?.attr("src") ?: ""
-
-        val atob = Regex("""PHA\+[0-9a-zA-Z+/=]*""").find(sourceCode)?.value ?: return ""
-
+    // Eski tema: iframe base64 ("PHA+...") içinde saklanıyordu
+    private fun eskiIframe(sourceCode: String): String? {
+        val atob       = Regex("""PHA\+[0-9a-zA-Z+/=]*""").find(sourceCode)?.value ?: return null
         val padding    = 4 - atob.length % 4
         val atobPadded = if (padding < 4) atob.padEnd(atob.length + padding, '=') else atob
 
-        val iframe = Jsoup.parse(String(Base64.decode(atobPadded, Base64.DEFAULT), Charsets.UTF_8))
-
-        return fixUrlNull(iframe.selectFirst("iframe")?.attr("src")) ?: ""
+        return runCatching { Jsoup.parse(String(Base64.decode(atobPadded, Base64.DEFAULT), Charsets.UTF_8)).selectFirst("iframe")?.attr("src") }.getOrNull()
     }
 
     override suspend fun loadLinks(data: String, isCasting: Boolean, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         Log.d("KLT", "data » $data")
-        val document = app.get(data).document
-        val iframes  = mutableSetOf<String>()
+        val document = app.get(data, referer = "${mainUrl}/").document
+        val iframes  = linkedMapOf<String, String>()
 
-        val mainFrame = getIframe(document.html())
-        iframes.add(mainFrame)
-
-        document.select("div.parts-middle").forEach {
-            val alternatif = it.selectFirst("a")?.attr("href")
-            if (alternatif != null) {
-                val alternatifDocument = app.get(alternatif).document
-                val alternatifFrame    = getIframe(alternatifDocument.html())
-                iframes.add(alternatifFrame)
+        // ? Yeni tema: <script id="kf-srcdata" type="application/json">[{"name":"KULT","langLabel":"Altyazılı","html":"<iframe src=…>"}]
+        document.selectFirst("script#kf-srcdata")?.data()?.let { json ->
+            jsonOku<List<KaynakVeri>>(json)?.forEach { k ->
+                val src = Jsoup.parse(k.html ?: "").selectFirst("iframe")?.attr("src")?.takeIf { it.isNotBlank() } ?: return@forEach
+                iframes[fixUrl(src)] = listOfNotNull(k.name, k.langLabel).joinToString(" ")
             }
         }
 
-        for (iframe in iframes) {
-            Log.d("KLT", "iframe » $iframe")
-            if (iframe.contains("vidmoly")) {
-                val headers  = mapOf(
-                    "User-Agent"     to "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36",
-                    "Sec-Fetch-Dest" to "iframe"
-                )
-                val iSource = app.get(iframe, headers=headers, referer="${mainUrl}/").text
-                val m3uLink = Regex("""file:"([^"]+)""").find(iSource)?.groupValues?.get(1) ?: throw ErrorLoadingException("m3u link not found")
+        document.select("iframe[src]").forEach { f ->
+            val src = f.attr("src")
+            if (src.isNotBlank() && !src.startsWith("about:") && !src.contains("ads") && !iframes.containsKey(fixUrl(src))) iframes[fixUrl(src)] = ""
+        }
+        eskiIframe(document.html())?.let { if (it.isNotBlank()) iframes.putIfAbsent(fixUrl(it), "") }
 
-                Log.d("NeO_VidMoly", "m3uLink » $m3uLink")
-
-                callback.invoke(
-                    newExtractorLink(
-                        source = "VidMoly",
-                        name   = "VidMoly",
-                        url    = m3uLink
-                    ) {
-                        this.referer = "https://vidmoly.to/"
-                        this.quality = Qualities.Unknown.value
-                    }
-                )
-            } else {
-                loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
+        var bulundu = false
+        for ((iframe, etiket) in iframes) {
+            Log.d("KLT", "$etiket » $iframe")
+            bulundu = true
+            runCatching {
+                when {
+                    FirePlayer.isFirePlayer(iframe) -> FirePlayer().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
+                    iframe.contains("vidmoly")      -> vidmoly(iframe, callback)
+                    else                            -> loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
+                }
             }
         }
 
-        return true
+        return bulundu
     }
+
+    private suspend fun vidmoly(iframe: String, callback: (ExtractorLink) -> Unit) {
+        val headers  = mapOf(
+            "User-Agent"     to "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36",
+            "Sec-Fetch-Dest" to "iframe"
+        )
+        val iSource = app.get(iframe, headers = headers, referer = "${mainUrl}/").text
+        val m3uLink = Regex("""file:"([^"]+)""").find(iSource)?.groupValues?.get(1) ?: return
+
+        callback.invoke(
+            newExtractorLink(source = "VidMoly", name = "VidMoly", url = m3uLink) {
+                this.referer = "https://vidmoly.to/"
+                this.quality = Qualities.Unknown.value
+            }
+        )
+    }
+
+    data class KaynakVeri(
+        @JsonProperty("name")      val name: String?      = null,
+        @JsonProperty("langLabel") val langLabel: String? = null,
+        @JsonProperty("html")      val html: String?      = null
+    )
 }

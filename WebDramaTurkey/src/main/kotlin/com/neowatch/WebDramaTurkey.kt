@@ -89,7 +89,8 @@ class WebDramaTurkey : MainAPI() {
             }
         }.distinctBy { it.data }
 
-        if (episodes.isEmpty() || url.contains("/film/")) {
+        // ? "/dizi/" sayfaları henüz bölümü olmasa da (yakında) dizi olarak kalmalı
+        if (url.contains("/film/") || (episodes.isEmpty() && !url.contains("/dizi/"))) {
             return newMovieLoadResponse(title, url, TvType.Movie, url) {
                 this.posterUrl       = poster
                 this.year            = year

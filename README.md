@@ -42,7 +42,7 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | DiziBal | dizibal.org | Dizi, Film, Anime |
 | DiziBox | dizibox.live | Dizi |
 | DiziKorea | dizikorea3.com | Asya Dizisi, Film |
-| DiziMom | dizidad.com _(site adı artık Dizidad)_ | Dizi |
+| DiziMom | ddizimom.net | Dizi, Film, Anime |
 | DiziPal | dizipal2145.com | Dizi, Film _(DNS over HTTPS gerekebilir)_ |
 | DiziPalGuncel | dizipal1592.com | Dizi, Film, Anime |
 | DiziPalOrjinal | dizipalorjinal18.com | Dizi, Film |
@@ -53,14 +53,14 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | FullHDFilm | fullhdfilm.site | Film, Dizi |
 | FullHDFilmizlesene | fullhdfilmizlesene.now | Film |
 | HDFilmCehennemi | hdfilmcehennemi.nl | Film, Dizi |
-| JetFilmizle | jetfilmizle.io | Film |
+| JetFilmizle | jetfilmizle.app | Film, Dizi |
 | KoreanTurk | koreanturk.tv | Asya Dizisi, Film |
 | KultFilmler | kultfilmler.net | Film, Dizi |
 | RareFilmm | rarefilmm.com | Film |
 | SelcukFlix | selcukflix.app | Dizi, Film |
 | SetFilmIzle | setfilmizle.ltd | Film, Dizi |
 | SezonlukDizi | sezonlukdizi.cc | Dizi |
-| SinemaCX | sinema.cx | Film |
+| SinemaCX | sinemacc.com | Film |
 | SuperFilmGeldi | superfilmizle.icu _(DNS over HTTPS gerekebilir)_ | Film, Dizi, Anime |
 | UgurFilm | ugurfilm8.com | Film |
 | WebDramaTurkey | webdramaturkey2.com | Asya Dizisi, Film |
@@ -73,8 +73,8 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | Eklenti | İçerik |
 |---|---|
 | AnimeciX | Anime |
-| TurkAnime | Anime |
-| CizgiMax | Çizgi Film |
+| TurkAnime | Anime _(turkanime.live)_ |
+| CizgiMax | Çizgi Film, Anime |
 
 ### 📡 Canlı Yayın & Diğer
 
@@ -84,7 +84,7 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | InatBox | Film, Dizi, Canlı TV _(beta; sunucu adresleri uygulamanın kendi ayarından otomatik alınır)_ |
 | RecTV | Film, Dizi, Canlı TV _(API adresi otomatik alınır)_ |
 | BelgeselX | Belgesel |
-| YouTube | Video |
+| YouTube | Video _(youtube.com üzerinden; oynatma CloudStream'in YouTube çıkarıcısıyla)_ |
 
 > Sitelerin alan adları sık değiştiği için bir eklenti çalışmazsa ilgili eklentinin `mainUrl` değerini güncelleyip yeniden derlemeniz yeterlidir. Depodaki **Domain Değişiklik Kontrolü** iş akışı adres değişikliklerini 9 saatte bir otomatik kontrol eder.
 

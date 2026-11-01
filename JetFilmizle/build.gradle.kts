@@ -1,9 +1,9 @@
-version = 20
+version = 21
 
 cloudstream {
     authors     = listOf("NeO")
     language    = "tr"
-    description = "Binlerce Film İzleme Seçeneğiyle En İyi Film İzleme Sitesi"
+    description = "Binlerce film ve dizi; Türkçe dublaj, altyazılı ve yerli seçenekleriyle JetFilmizle."
 
     /**
      * Status int as the following:
@@ -13,6 +13,6 @@ cloudstream {
      * 3: Beta only
     **/
     status  = 1 // will be 3 if unspecified
-    tvTypes = listOf("Movie")
-    iconUrl = "https://www.google.com/s2/favicons?domain=https://jetfilmizle.de&sz=%size%"
+    tvTypes = listOf("Movie", "TvSeries")
+    iconUrl = "https://www.google.com/s2/favicons?domain=jetfilmizle.app&sz=%size%"
 }

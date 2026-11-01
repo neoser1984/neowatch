@@ -1,9 +1,9 @@
-version = 14
+version = 15
 
 cloudstream {
     authors     = listOf("NeO")
     language    = "tr"
-    description = "Binlerce yerli yabancı dizi arşivi, tüm sezonlar, kesintisiz bölümler. Sadece dizi izle, Dizimom heryerde seninle!"
+    description = "Binlerce yerli yabancı dizi, film ve anime arşivi, tüm sezonlar, kesintisiz bölümler. DiziMom heryerde seninle!"
 
     /**
      * Status int as the following:
@@ -13,6 +13,6 @@ cloudstream {
      * 3: Beta only
     **/
     status  = 1 // will be 3 if unspecified
-    tvTypes = listOf("TvSeries")
-    iconUrl = "https://www.google.com/s2/favicons?domain=https://www.dizidad.com&sz=%size%"
+    tvTypes = listOf("TvSeries", "Movie", "Anime")
+    iconUrl = "https://www.google.com/s2/favicons?domain=ddizimom.net&sz=%size%"
 }

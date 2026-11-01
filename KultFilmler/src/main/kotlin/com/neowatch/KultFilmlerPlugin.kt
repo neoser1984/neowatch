@@ -8,6 +8,7 @@ import android.content.Context
 class KultFilmlerPlugin: Plugin() {
     override fun load(context: Context) {
         registerMainAPI(KultFilmler())
+        registerExtractorAPI(FirePlayer())
         registerExtractorAPI(YildizKisaFilm())
     }
 }

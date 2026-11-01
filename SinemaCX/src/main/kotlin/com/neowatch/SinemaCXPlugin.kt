@@ -8,5 +8,6 @@ import android.content.Context
 class SinemaCXPlugin: Plugin() {
     override fun load(context: Context) {
         registerMainAPI(SinemaCX())
+        registerExtractorAPI(FirePlayer())
     }
 }
