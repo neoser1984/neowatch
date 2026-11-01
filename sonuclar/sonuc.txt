@@ -16,154 +16,304 @@ To honour the JVM settings for this build a single-use Daemon process will be fo
 Daemon will be stopped at the end of the build 
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources NO-SOURCE
-
 > Task :compileKotlin
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:131:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:142:65 Type annotation class 'Nullable' of the inferred type is inaccessible. Check the module classpath for missing or conflicting dependencies. This will become an error in language version 2.4. See https://youtrack.jetbrains.com/issue/KT-80247.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:331:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:332:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:333:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:337:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:338:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:339:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:343:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:344:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:345:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPal.kt:346:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:266:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:267:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:271:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:272:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:273:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:274:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:275:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/DiziPalGuncel.kt:276:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:19:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:20:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-w: file:///home/runner/work/neowatch/neowatch/h/harness/src/main/kotlin/com/neowatch/RmkCoz.kt:21:9 This annotation is currently applied to the value parameter only, but in the future it will also be applied to field.
-- To opt in to applying to both value parameter and field, add '-Xannotation-default-target=param-property' to your compiler arguments.
-- To keep applying to the value parameter only, use the '@param:' annotation target.
-
-See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
-
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
 
 > Task :run
-=== Derleme + PowerShell betik testi ===
-pwsh bitti=true kod=0
-[33;1mWARNING: (73,50): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014)
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-                                                 ^
-[0m
-[33;1mWARNING: (98,50): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014)
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-                                                 ^
-[0m
-[33;1mWARNING: (116,50): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014)
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-                                                 ^
-[0m
-=== InatBox baglanti testi  2026-10-24 17:55:23 ===
-Genel IP: 134.33.101.81
-  istek kategori dizini -> HTTP 403 | json=YOK (<!DOCTYPE html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <!...)
-Kategori dizini alinamadi; test bitti.
-[31;1mRead-Host: [0m/home/runner/work/neowatch/neowatch/h/harness/inat_link_test.ps1:329[0m
-[31;1m[0m[36;1mLine |[0m
-[31;1m[0m[36;1m[36;1m 329 | [0m … i.'; Kaydet; [36;1mRead-Host 'Bitti. Pencereyi kapatmak icin Enter'[0m; exit }[0m
-[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m     | [31;1m                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
-[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m     | [31;1mPowerShell is in NonInteractive mode. Read and Prompt functionality is[0m
-[31;1m[0m[36;1m[36;1m[0m[36;1m[0m[36;1m[31;1m[31;1m[36;1m[31;1m[36;1m     | [31;1mnot available.[0m
-
-DiziPal LOAD -> The New Stanford Prison Experiment 
-    [D/DZP] data » https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum
-    [D/DZP] doğrulama sayfası » https://dizipal2142.com/bolum/the-new-stanford-prison-experiment-1-sezon-6-bolum
-    [W/DZP] doğrulama » An operation is not implemented: Not yet implemented
+=== Tüm eklentiler kontrolü ===
+Exception in NiceHttp: java.net.UnknownHostException www.diziyou3.com: Name or service not known
+Exception in NiceHttp: java.net.UnknownHostException www.diziyou3.com
+Exception in NiceHttp: java.net.UnknownHostException www.diziyou3.com
+Exception in NiceHttp: java.net.UnknownHostException fullhdfilm.site: Name or service not known
+Exception in NiceHttp: java.net.UnknownHostException fullhdfilm.site
+Exception in NiceHttp: java.net.UnknownHostException fullhdfilm.site
+Exception in NiceHttp: javax.net.ssl.SSLHandshakeException (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+Exception in NiceHttp: javax.net.ssl.SSLHandshakeException (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+DEBUG ApiError: -------------------------------------------------------------------
+DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://prx-1357-ant-v.vmget......
+kotlinx.serialization.json.JsonDecodingException: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://prx-1357-ant-v.vmget......
+JSON input: [{ "file": 'https://prx-1357-ant-v.vmget......
+	at kotlinx.serialization.json.internal.JsonExceptionsKt.decodingExceptionOf(JsonExceptions.kt:48)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail(AbstractJsonLexer.kt:583)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail$default(AbstractJsonLexer.kt:582)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.unexpectedToken(AbstractJsonLexer.kt:785)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeNextToken(StringJsonLexer.kt:81)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeKeyString(StringJsonLexer.kt:93)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.consumeString(AbstractJsonLexer.kt:372)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeString(StreamingJsonDecoder.kt:340)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeStringElement(AbstractDecoder.kt:58)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+DEBUG ApiError: -------------------------------------------------------------------
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$lambda$0(JWPlayerHelper.kt:201)
+	at kotlin.sequences.FlatteningSequence$iterator$1.ensureItemIterator(Sequences.kt:363)
+	at kotlin.sequences.FlatteningSequence$iterator$1.hasNext(Sequences.kt:351)
+	at kotlin.sequences.SequencesKt___SequencesKt.toList(_Sequences.kt:828)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks(JWPlayerHelper.kt:53)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$default(JWPlayerHelper.kt:42)
+	at com.lagradost.cloudstream3.extractors.Vidmoly.getUrl$suspendImpl(Vidmoly.kt:48)
+	at com.lagradost.cloudstream3.extractors.Vidmoly$getUrl$1.invokeSuspend(Vidmoly.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:798)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+Nov 01, 2026 11:44:51 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://dizilabmedia.click/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+Nov 01, 2026 11:44:51 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://sprboxs.bar/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+Nov 01, 2026 11:44:51 AM okhttp3.internal.platform.Platform log
+WARNING: A connection to https://sprboxs.bar/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+Exception in NiceHttp: javax.net.ssl.SSLHandshakeException (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+Exception in NiceHttp: java.net.UnknownHostException iosmirror.cc: Name or service not known
+Exception in NiceHttp: java.net.UnknownHostException iosmirror.cc
+Exception in NiceHttp: java.net.UnknownHostException www.sinema.cx: Name or service not known
+Exception in NiceHttp: java.net.UnknownHostException www.sinema.cx
+Exception in NiceHttp: java.net.UnknownHostException www.sinema.cx
+Exception in NiceHttp: javax.net.ssl.SSLHandshakeException (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+Exception in NiceHttp: javax.net.ssl.SSLHandshakeException (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+Exception in NiceHttp: javax.net.ssl.SSLHandshakeException (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 TOAST » DiziPal: sitenin doğrulama sayfası açılamadı. Telefonda Ayarlar → Özel DNS → dns.google yapıp tekrar deneyin.
-   LINKS ok=false  adet=0 altyazı=0
-DiziPalGuncel KAT Diziler -> 0  (runner Cloudflare engeli beklenir)
+Exception in NiceHttp: java.net.UnknownHostException webteizle.click: Name or service not known
+Exception in NiceHttp: java.net.UnknownHostException webteizle.click
+Exception in NiceHttp: java.net.UnknownHostException webteizle.click
+com.lagradost.cloudstream3.ErrorLoadingException: Video not found
+DEBUG ApiError: -------------------------------------------------------------------
+DEBUG ApiError: safeApiCall: Video not found
+	at com.lagradost.cloudstream3.extractors.Odnoklassniki.getUrl$suspendImpl(OdnoklassnikiExtractor.kt:37)
+DEBUG ApiError: safeApiCall: Video not found
+	at com.lagradost.cloudstream3.extractors.Odnoklassniki$getUrl$1.invokeSuspend(OdnoklassnikiExtractor.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+DEBUG ApiError: -------------------------------------------------------------------
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:798)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+### AnimeciX (https://animecix.tv) kategori=2
+  ham=403 loc=- | başlık='Attention Required! | Cloudflare' uzunluk=4546 canonical=-
+  KAT Seriler -> 0  | 
+  KAT Filmler -> 0  | 
+
+### BelgeselX (https://belgeselx.com) kategori=19
+  ham=200 loc=- | başlık='BelgeselX | Türkçe Dublaj ve Altyazılı HD Belgesel İzle' uzunluk=119646 canonical=https://belgeselx.com/
+  KAT Türk Tarihi -> 0  | 
+  KAT Tarih -> 0  | 
+
+### CanliTV (https://iptv-org.github.io/iptv/countries/tr.m3u) kategori=1
+  ham=200 loc=- | başlık='' uzunluk=36346 canonical=-
+  KAT  -> 173  | 4U TV (720p), Edessa TV (1080p)
+  LOAD 4U TV (720p) -> 4U TV (720p) Live bölüm=-1 
+  LINKS ok=true adet=1  | CanliTV hls.4utv.live
+
+### CizgiMax (https://cizgimax.online) kategori=7
+  ham=403 loc=- | başlık='Just a moment...' uzunluk=5522 canonical=-
+  KAT Son Eklenenler -> 0  | 
+  KAT Aile -> 0  | 
+
+### DiziBal (https://dizibal.org) kategori=19
+  ham=200 loc=- | başlık='dizibaL: Online Dizi Arşivi - Altyazılı Yabancı Diziler' uzunluk=465664 canonical=https://dizibal.org
+  KAT Son Diziler -> 24  | The Scandal, FROM
+  KAT Son Filmler -> 24  | Örümcek-Adam: Yepyeni Bir Gün, Saplantı
+  LOAD The Scandal -> The Scandal TvSeries bölüm=8 
+  LINKS ok=true adet=1  | Pilavyer play2.pilavyerplay.top
+
+### DiziBox (https://www.dizibox.live) kategori=25
+  ham=403 loc=- | başlık='DiziBOX - Yabancı Dizi izle, Yabancı Diziler' uzunluk=7158 canonical=-
+  KAT Yerli -> 0  | 
+  KAT Aile -> 0  | 
+
+### DiziKorea (https://dizikorea3.com) kategori=7
+  ham=200 loc=- | başlık='DiziKorea - En Güncel Asya ve Kore Dizileri izleme Sitesi' uzunluk=345018 canonical=https://dizikorea3.com/
+  KAT Kore Dizileri -> 34  | Love in Disguise, Doctor X
+  KAT Kore Filmleri -> 24  | Guimoon: The Lightless Door, Hana Korea
+  LOAD Love in Disguise -> Love in Disguise AsianDrama bölüm=12 
+  LINKS ok=true adet=1  | playerdkorea.xyz playerdkorea.xyz
+
+### DiziMom (https://www.dizidad.com) kategori=4
+  ham=YOK HATA SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPat
+  KAT Son Bölümler -> 0 HATA SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPat | 
+  KAT Yerli Diziler -> 0 HATA SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPat | 
+
+### DiziPal (https://dizipal2142.com) kategori=14
+  ham=301 loc=https://dizipal2143.com/ | son=https://dizipal2145.com/ 200  | başlık='Dizipal | yabancı dizi izle, film izle' uzunluk=111371 canonical=https://dizipal2145.com/
+  KAT Son Bölümler -> 24  | MobLand 2x7, Helluva Boss 3x7
+  KAT Yeni Diziler -> 24  | Umut Taciri, Matthew Perry'nin Son Yılları
+  LOAD MobLand 2x7 -> MobLand TvSeries bölüm=17 
+  LINKS ok=false adet=0  | 
+
+### DiziPalGuncel (https://dizipal1592.com) kategori=22
+  ham=403 loc=- | başlık='Attention Required! | Cloudflare' uzunluk=4550 canonical=-
+  KAT Son Bölümler -> 0  | 
+  KAT Diziler -> 0  | 
+
+### DiziPalOrjinal (https://dizipalorjinal15.com) kategori=4
+  ham=301 loc=https://dizipalorjinal18.com/ | son=https://dizipalorjinal18.com/ 200  | başlık='Dizipal - Yabancı Dizi İzle | Film İzle' uzunluk=461413 canonical=https://dizipalorjinal18.com
+  KAT Son Bölümler -> 24  | The Mentalist 7x13, The Mentalist 7x12
+  KAT Yabancı Diziler -> 18  | The Mentalist, Dead End Job
+  LOAD The Mentalist 7x13 -> The Mentalist TvSeries bölüm=151 
+  LINKS ok=true adet=1  | VideoPlays storage3.storagedomain.cfd
+
+### DiziYou (https://www.diziyou3.com) kategori=15
+  ham=YOK HATA UnknownHostException: www.diziyou3.com: Name or service not known
+  KAT Aile -> 0 HATA UnknownHostException: www.diziyou3.com | 
+  KAT Aksiyon -> 0 HATA UnknownHostException: www.diziyou3.com | 
+
+### Dizilla (https://dizilla.now) kategori=9
+  ham=403 loc=- | başlık='' uzunluk=17 canonical=-
+  KAT Son Bölümler -> 0  | 
+  KAT Yabancı Diziler -> 0  | 
+
+### FilmMakinesi (https://filmmakinesi.to) kategori=13
+  ham=451 loc=- | başlık='Content unavailable in your region' uzunluk=2693 canonical=-
+  KAT Son Filmler -> 0  | 
+  KAT Diziler -> 0  | 
+
+### FilmModu (https://filmmodu.news) kategori=25
+  ham=200 loc=- | başlık='Filmmodu - Film ve Dizi İzleme Platformu' uzunluk=441309 canonical=https://filmmodu.news
+  KAT Son Filmler -> 24  | Örümcek-Adam: Yepyeni Bir Gün, Supergirl
+  KAT Son Diziler -> 24  | The Scandal, The Mentalist
+  LOAD Örümcek-Adam: Yepyeni Bir Gün -> Örümcek-Adam: Yepyeni Bir Gün Movie bölüm=-1 
+  LINKS ok=false adet=0  | 
+
+### FullHDFilm (https://fullhdfilm.site) kategori=21
+  ham=YOK HATA UnknownHostException: fullhdfilm.site: Name or service not known
+  KAT Yabancı Dizi -> 0 HATA UnknownHostException: fullhdfilm.site | 
+  KAT Yabancı Filmler -> 0 HATA UnknownHostException: fullhdfilm.site | 
+
+### FullHDFilmizlesene (https://www.fullhdfilmizlesene.now) kategori=27
+  ham=403 loc=- | başlık='Attention Required! | Cloudflare' uzunluk=5671 canonical=-
+  KAT Yeni Filmler -> 0  | 
+  KAT En Çok izlenen Filmler -> 0  | 
+
+### HDFilmCehennemi (https://www.hdfilmcehennemi.nl) kategori=14
+  ham=451 loc=- | başlık='451 - Yasal Nedenlerle Erisime Kapali' uzunluk=2523 canonical=-
+  KAT Yeni Eklenen Filmler -> 0  | 
+  KAT Yeni Eklenen Diziler -> 0  | 
+
+### InatBox (NONE) kategori=23
+  KAT Spor -> 0  | 
+  KAT Derbiler -> 0  | 
+
+### JetFilmizle (https://jetfilmizle.io) kategori=6
+  ham=301 loc=https://jetfilmizle.com/ | son=https://jetfilmizle.app/ 404  | başlık='404 Not Found' uzunluk=513 canonical=-
+  KAT Son Filmler -> 0  | 
+  KAT Netflix -> 0  | 
+
+### KoreanTurk (https://koreanturk.tv) kategori=25
+  ham=403 loc=- | başlık='Just a moment...' uzunluk=5520 canonical=-
+  KAT Son Eklenen Bölümler -> 0  | 
+  KAT Diziler -> 0  | 
+
+### KultFilmler (https://kultfilmler.net) kategori=25
+  ham=403 loc=- | başlık='Attention Required! | Cloudflare' uzunluk=6031 canonical=-
+  KAT Son Filmler -> 0  | 
+  KAT Aile -> 0  | 
+
+### NetflixMirror (https://iosmirror.cc) kategori=1
+  ham=YOK HATA UnknownHostException: iosmirror.cc: Name or service not known
+  KAT  -> 0 HATA UnknownHostException: iosmirror.cc | 
+
+### RareFilmm (https://rarefilmm.com) kategori=12
+  ham=200 loc=- | başlık='rarefilmm | The Cave of Forgotten Films – The Cave of Forgot' uzunluk=56410 canonical=-
+  KAT LATESTS -> 12  | MURDER IN REVERSE (1945) AKA QUERY, HUSH-A-BYE BABY (1990)
+  KAT ACTION -> 8  | THE DION BROTHERS (1974) ORIGINALLY RELE, KULDESAK (1998)
+  LOAD MURDER IN REVERSE (1945) AKA QUERY -> Murder in Reverse (1945) AKA Query Movie bölüm=-1 
+  LINKS ok=true adet=0  | 
+
+### RecTV (https://a.psrectv80.xyz) kategori=14
+  ham=403 loc=- | başlık='Just a moment...' uzunluk=5437 canonical=-
+  KAT Canlı -> 30  | Bein Sports Haber, Bein Sports 1
+  KAT Son Filmler -> 30  | Çarpışma Anı, Doğum Günü Hediyesi
+  LOAD Bein Sports Haber -> Bein Sports Haber Live bölüm=-1 
+  LINKS ok=true adet=1  | RecTV - m3u8 one.mariuannastluisborg.autos
+
+### SelcukFlix (https://selcukflix.app) kategori=35
+  ham=403 loc=- | başlık='' uzunluk=17 canonical=-
+  KAT Son Bölümler -> 0  | 
+  KAT Yeni Filmler -> 0  | 
+
+### SetFilmIzle (https://www.setfilmizle.ltd) kategori=23
+  ham=200 loc=- | başlık='Set Film izle | HD Film | Yabancı Dizi' uzunluk=108595 canonical=https://www.setfilmizle.ltd/
+  KAT Filmler -> 24  | Kneecap, Çarpışma Anı
+  KAT Diziler -> 24  | The Falcon and the Winter Soldier, Normal People
+  LOAD Kneecap -> Kneecap Movie bölüm=-1 
+  LINKS ok=true adet=1  | SetPlay setplay.sbs
+
+### SezonlukDizi (https://sezonlukdizi.cc) kategori=8
+  ham=200 loc=- | başlık='Sezonluk Dizi izle - 1080p yabancı dizi izle' uzunluk=39981 canonical=https://sezonlukdizi.cc/
+  KAT Son Eklenenler -> 25  | Dead-End Job, A Couple of Lies
+  KAT Mini Diziler -> 25  | The Final Problem, East of Eden
+  LOAD Dead-End Job -> Dead-End Job TvSeries bölüm=8 
+  LINKS ok=false adet=0  | 
+
+### SinemaCX (https://www.sinema.cx) kategori=12
+  ham=YOK HATA UnknownHostException: www.sinema.cx: Name or service not known
+  KAT Aile Filmleri -> 0 HATA UnknownHostException: www.sinema.cx | 
+  KAT Aksiyon Filmleri -> 0 HATA UnknownHostException: www.sinema.cx | 
+
+### SuperFilmGeldi (https://superfilmizle.org) kategori=45
+  ham=301 loc=https://superfilmizle.icu/ | son=https://superfilmizle.icu/ 200  | başlık='Superfilmizle - HD Kalite Film izle' uzunluk=454268 canonical=https://superfilmizle.icu/
+  KAT Yeni Eklenen Filmler -> 0  | 
+  KAT Yeni Eklenen Diziler -> 0  | 
+
+### TurkAnime (https://www.turkanime.co) kategori=42
+  ham=YOK HATA SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPat
+  KAT Aksiyon -> 0 HATA SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPat | 
+  KAT Arabalar -> 0 HATA SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPat | 
+
+### UgurFilm (https://ugurfilm8.com) kategori=9
+  ham=200 loc=- | başlık='' uzunluk=6989 canonical=-
+  KAT Türkçe Altyazılı Filmler -> 0  | 
+  KAT Yerli Filmler -> 0  | 
+
+### WebDramaTurkey (https://webdramaturkey2.com) kategori=4
+  ham=200 loc=- | başlık='Web Drama Turkey - Kore, Çin, Japon Dizileri İzle' uzunluk=221612 canonical=https://webdramaturkey2.com
+  KAT Diziler -> 20  | Executor across Worlds, I Live in Your Time
+  KAT Filmler -> 20  | Hope, Per Aspera Ad Astra
+  LOAD Executor across Worlds -> Executor across Worlds Movie bölüm=-1 
+  LINKS ok=false adet=0  | 
+
+### WebteIzle (https://webteizle.click) kategori=20
+  ham=YOK HATA UnknownHostException: webteizle.click: Name or service not known
+  KAT Güncel -> 0 HATA UnknownHostException: webteizle.click | 
+  KAT Yeni -> 0 HATA UnknownHostException: webteizle.click | 
+
+### YouTube (https://inv.nadeko.net) kategori=1
+  ham=302 loc=/feed/popular | son=https://inv.nadeko.net/feed/popular 200  | başlık='Invidious' uzunluk=112831 canonical=-
+  KAT  -> 0  | 
+
+Exception in NiceHttp: java.net.UnknownHostException watch2movies.net: Name or service not known
+### HAM https://watch2movies.net
+  ham=YOK HATA UnknownHostException: watch2movies.net: Name or service not known
+### HAM https://dizipal2145.com
+  ham=200 loc=- | başlık='Dizipal | yabancı dizi izle, film izle' uzunluk=111371 canonical=https://dizipal2145.com/
+### HAM https://dizipalorjinal18.com
+  ham=200 loc=- | başlık='Dizipal - Yabancı Dizi İzle | Film İzle' uzunluk=461413 canonical=https://dizipalorjinal18.com
+### HAM https://superfilmizle.click
+  ham=301 loc=https://superfilmizle.icu/ | son=https://superfilmizle.icu/ 200  | başlık='Superfilmizle - HD Kalite Film izle' uzunluk=454268 canonical=https://superfilmizle.icu/
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 22s
+BUILD SUCCESSFUL in 2m 21s
 2 actionable tasks: 2 executed
