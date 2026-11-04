@@ -22,17 +22,128 @@ Daemon will be stopped at the end of the build
 
 > Task :run
 === Eklenti testleri ===
-### TurkAnime (https://turkanime.live) kategori=10
-  ham=200 loc=- | başlık='Türk Anime TV | Türkçe Altyazılı Anime izle' uzunluk=254307 canonical=https://turkanime.live/
-  KAT Tüm Animeler -> 30  | Cyberpunk: Edgerunners, The Vermilion Mask
-  KAT En Yüksek Puanlılar -> 30  | Even Though I'm a Super Timid Noble Girl, The Vermilion Mask
-  LOAD Cyberpunk: Edgerunners -> Cyberpunk: Edgerunners Anime bölüm=20 
-  LINKS ok=false adet=0  | 
+### Dizilla (https://dizilla.now) kategori=9
+  ham=403 loc=- | başlık='' uzunluk=17 canonical=-
+  KAT Son Bölümler -> 0  | 
+  KAT Yabancı Diziler -> 0  | 
 
-TA solo -> true  1
-   TurkAnime https://streamcorecdn.com/play.m3u8?id=1393&m=master&token=9Ju4jSwPtpd0BAy7dPdxig&expires=1793563200 -> 200 application/vnd.apple.mpegurl #EXTM3U | #EXT-X-VERSION:6 | #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="JPN",LANGUAGE="jpn",DEFAULT=YES,AUTOSELECT=YES,URI="/play.m3u8?id=1393&p=tracks%2Faudio_0%2Fplaylist.m3u8&token=9Ju4jSwPtpd0BAy7dPdxig&expires=1793563200" | #EXT-X-STREAM-INF:BANDWIDTH=2048000,AVERAGE-BANDWIDTH=1843200,RESOLUTION=
+  ARAMA Dizilla 'the' -> 0  | 
+### DiziBox (https://www.dizibox.live) kategori=25
+  ham=403 loc=- | başlık='DiziBOX - Yabancı Dizi izle, Yabancı Diziler' uzunluk=7158 canonical=-
+  KAT Yerli -> 0  | 
+  KAT Aile -> 0  | 
+
+  ARAMA DiziBox 'the' -> 0  | 
+    [D/DZK] data » https://dizikorea3.com/dizi/the-remarried-empress-izle-dq/sezon-1/bolum-1
+    [D/DZK] iframe » https://vidmoly.org/embed-jt0ce5fslgxc.html
+DEBUG ApiError: -------------------------------------------------------------------
+kotlinx.serialization.json.JsonDecodingException: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://prx-am-s-1.vmpx.onlin.....
+	at kotlinx.serialization.json.internal.JsonExceptionsKt.decodingExceptionOf(JsonExceptions.kt:48)
+DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://prx-am-s-1.vmpx.onlin.....
+DEBUG ApiError: safeApiCall: Unexpected JSON token at offset 11: Expected quotation mark '"', but had ''' instead at path: $[0].file
+JSON input: [{ "file": 'https://prx-am-s-1.vmpx.onlin.....
+DEBUG ApiError: -------------------------------------------------------------------
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail(AbstractJsonLexer.kt:583)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.fail$default(AbstractJsonLexer.kt:582)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.unexpectedToken(AbstractJsonLexer.kt:785)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeNextToken(StringJsonLexer.kt:81)
+	at kotlinx.serialization.json.internal.StringJsonLexer.consumeKeyString(StringJsonLexer.kt:93)
+	at kotlinx.serialization.json.internal.AbstractJsonLexer.consumeString(AbstractJsonLexer.kt:372)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeString(StreamingJsonDecoder.kt:340)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeStringElement(AbstractDecoder.kt:58)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper$Source$$serializer.deserialize(JWPlayerHelper.kt:152)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableValue(AbstractDecoder.kt:43)
+	at kotlinx.serialization.encoding.AbstractDecoder.decodeSerializableElement(AbstractDecoder.kt:70)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableElement(StreamingJsonDecoder.kt:168)
+	at kotlinx.serialization.encoding.CompositeDecoder.decodeSerializableElement$default(Decoding.kt:539)
+	at kotlinx.serialization.internal.CollectionLikeSerializer.readElement(CollectionSerializers.kt:80)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.readElement$default(CollectionSerializers.kt:51)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.merge(CollectionSerializers.kt:36)
+	at kotlinx.serialization.internal.AbstractCollectionSerializer.deserialize(CollectionSerializers.kt:43)
+	at kotlinx.serialization.json.internal.StreamingJsonDecoder.decodeSerializableValue(StreamingJsonDecoder.kt:69)
+	at kotlinx.serialization.json.Json.decodeFromString(Json.kt:149)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$lambda$0(JWPlayerHelper.kt:201)
+	at kotlin.sequences.FlatteningSequence$iterator$1.ensureItemIterator(Sequences.kt:363)
+	at kotlin.sequences.FlatteningSequence$iterator$1.hasNext(Sequences.kt:351)
+	at kotlin.sequences.SequencesKt___SequencesKt.toList(_Sequences.kt:828)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks(JWPlayerHelper.kt:53)
+	at com.lagradost.cloudstream3.extractors.helper.JwPlayerHelper.extractStreamLinks$default(JWPlayerHelper.kt:42)
+	at com.lagradost.cloudstream3.extractors.Vidmoly.getUrl$suspendImpl(Vidmoly.kt:48)
+	at com.lagradost.cloudstream3.extractors.Vidmoly$getUrl$1.invokeSuspend(Vidmoly.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:54)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlockingImpl(Builders.kt:30)
+	at kotlinx.coroutines.BuildersKt.runBlockingImpl(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__Builders_concurrentKt.runBlockingK(Builders.concurrent.kt:172)
+	at kotlinx.coroutines.BuildersKt.runBlockingK(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:22)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:20)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+	at TestKt.main(Test.kt:121)
+    [D/DZK] iframe » https://bysedikamoum.com/e/eziieyqu2uyy
+### DiziKorea (https://dizikorea3.com) kategori=7
+  ham=200 loc=- | başlık='DiziKorea - En Güncel Asya ve Kore Dizileri izleme Sitesi' uzunluk=335581 canonical=https://dizikorea3.com/
+  KAT Kore Dizileri -> 34  | The Remarried Empress, 100 Days of Deception
+  KAT Kore Filmleri -> 24  | Guimoon: The Lightless Door, Hana Korea
+  LOAD The Remarried Empress -> The Remarried Empress AsianDrama bölüm=10 
+  LINKS ok=true adet=0  | 
+
+  ARAMA DiziKorea 'the' -> 12  | The Early Spring dizikorea3.com/dizi/the-early-spring-izle, The Husband dizikorea3.com/dizi/the-husband-izle, The Remarried Empress dizikorea3.com/dizi/the-remarried-empress-izle-dq
+### DiziPalGuncel (https://dizipal1592.com) kategori=22
+  ham=301 loc=https://dizipal1593.com/ | son=https://dizipal1593.com/ 403  | başlık='Attention Required! | Cloudflare' uzunluk=4550 canonical=-
+  KAT Son Bölümler -> 0  | 
+  KAT Diziler -> 0  | 
+
+  ARAMA DiziPalGuncel 'the' -> 0  | 
+### FilmMakinesi (https://filmmakinesi.to) kategori=13
+  ham=451 loc=- | başlık='Content unavailable in your region' uzunluk=2693 canonical=-
+  KAT Son Filmler -> 0  | 
+  KAT Diziler -> 0  | 
+
+  ARAMA FilmMakinesi 'the' -> 0  | 
+Exception in NiceHttp: java.net.UnknownHostException fullhdfilm.site: Name or service not known
+Exception in NiceHttp: java.net.UnknownHostException fullhdfilm.site
+Exception in NiceHttp: java.net.UnknownHostException fullhdfilm.site
+### FullHDFilm (https://fullhdfilm.site) kategori=21
+  ham=YOK HATA UnknownHostException: fullhdfilm.site: Name or service not known
+  KAT Yabancı Dizi -> 0 HATA UnknownHostException: fullhdfilm.site | 
+  KAT Yabancı Filmler -> 0 HATA UnknownHostException: fullhdfilm.site | 
+
+Exception in NiceHttp: java.net.UnknownHostException fullhdfilm.site
+  ARAMA FullHDFilm 'the' -> 0 HATA UnknownHostException: fullhdfilm.site | 
+=== Ham ===
+HAM https://dizilla.now :: ham=403 loc=- | başlık='' uzunluk=17 canonical=-
+Exception in NiceHttp: javax.net.ssl.SSLHandshakeException (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+HAM https://dizilla.com :: ham=YOK HATA SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPat
+HAM https://www.dizibox.live :: ham=403 loc=- | başlık='DiziBOX - Yabancı Dizi izle, Yabancı Diziler' uzunluk=7158 canonical=-
+HAM https://www.dizibox.com :: ham=301 loc=https://www.dizibox.live/ | son=https://www.dizibox.live/ 403  | başlık='DiziBOX - Yabancı Dizi izle, Yabancı Diziler' uzunluk=7158 canonical=-
+HAM https://dizikorea3.com :: ham=200 loc=- | başlık='DiziKorea - En Güncel Asya ve Kore Dizileri izleme Sitesi' uzunluk=335581 canonical=https://dizikorea3.com/
+HAM https://dizikorea4.com :: ham=302 loc=https://dizikorea4-com.l.ink/ | son=https://dizikorea4-com.l.ink/ 200  | başlık='A Brand New Domain!' uzunluk=6921 canonical=-
+HAM https://dizipal1592.com :: ham=301 loc=https://dizipal1593.com/ | son=https://dizipal1593.com/ 403  | başlık='Attention Required! | Cloudflare' uzunluk=4550 canonical=-
+HAM https://dizipal1593.com :: ham=403 loc=- | başlık='Attention Required! | Cloudflare' uzunluk=4550 canonical=-
+HAM https://filmmakinesi.to :: ham=451 loc=- | başlık='Content unavailable in your region' uzunluk=2693 canonical=-
+Exception in NiceHttp: java.net.UnknownHostException fullhdfilm.site
+HAM https://fullhdfilm.site :: ham=YOK HATA UnknownHostException: fullhdfilm.site
+HAM https://fullhdfilm.pro :: ham=302 loc=http://ww547.fullhdfilm.pro/?tkn=19vnMT3S | son=https://fullhdfilm.pro/ 200  | başlık='Loading...' uzunluk=476 canonical=-
+HAM https://fullhdfilm.us :: ham=302 loc=http://ww19.fullhdfilm.us | son=https://fullhdfilm.us/ 200  | başlık='Loading...' uzunluk=475 canonical=-
+
+######## https://dizilla.now/ -> 403  son=https://dizilla.now/
+TITLE: 
+BODY(16): error code: 1005
+
+######## https://www.dizibox.live/ -> 403  son=https://www.dizibox.live/
+TITLE: DiziBOX - Yabancı Dizi izle, Yabancı Diziler
+SCRIPT: (function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a552f4935b01af1b',t:'MTc5Mzc4ODM1Mg=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a552f4935b01af1b',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+BODY(1033): <h1 class="center logo">DiziBOX - 500 ERROR</h1><div class="browser"><div class="controls"></div><div class="eye"></div><div class="eye"></div><div class="mouth"><div class="lips"></div><div class="lips"></div><div class="lips"></div><div class="lips"></div><div class="lips"></div><div class="lips"></div><div class="lips"></div><div class="lips"></div></div></div><h1 class="center">Ooppss, bir hata ile karşılaşıldı.</h1><h1 class="center">VPN veya Server ip adresi ile giriş yapmayınız</h1><p>Yanlışlıkla engellenmiş olabilirsiniz. Aşağıda iletmiş olduğumuz web sitesindeki bize mail göndererek inceleme başlatabilirsiniz. <br> İletmenizi istediğimiz bilgiler: <a href="https://ipflu.com/ip/asn/" rel="nofollow" target="_blank">https://ipflu.com/ip/asn/</a><br> Mail adresimiz: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1e6d73676c707f5e7a7764777c7166307d7173">[email&nbsp;protected]</a></p><p>Not: Siteye erişmek için, lütfen VPN kullanmayınız.</p><p><span>::CLOUDFLARE_ERROR_1000S_BOX::</span></p>
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 35s
+BUILD SUCCESSFUL in 2m 39s
 2 actionable tasks: 2 executed
