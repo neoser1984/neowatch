@@ -12,7 +12,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 // Ekim 2026: site Next.js tabanlı yeni bir arayüze geçti (dizipal1592). Kartlar a.tc (dizi/film) ve a.ecl (bölüm);
 // dizi/film bilgileri, sezon-bölüm listesi ve şifreli oynatıcı adresi sayfadaki RSC verisinde (self.__next_f.push) geliyor.
 class DiziPalGuncel : MainAPI() {
-    override var mainUrl              = "https://dizipal1592.com"
+    override var mainUrl              = "https://dizipal1593.com"
     override var name                 = "DiziPalGuncel"
     override val hasMainPage          = true
     override var lang                 = "tr"

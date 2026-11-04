@@ -44,13 +44,13 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | DiziKorea | dizikorea3.com | Asya Dizisi, Film |
 | DiziMom | ddizimom.net | Dizi, Film, Anime |
 | DiziPal | dizipal2145.com | Dizi, Film _(DNS over HTTPS gerekebilir)_ |
-| DiziPalGuncel | dizipal1592.com | Dizi, Film, Anime |
+| DiziPalGuncel | dizipal1593.com | Dizi, Film, Anime |
 | DiziPalOrjinal | dizipalorjinal18.com | Dizi, Film |
 | Dizilla | dizilla.now | Dizi, Anime, Asya Dizisi |
 | DiziYou | diziyou.one | Dizi |
 | FilmMakinesi | filmmakinesi.to | Film, Dizi |
 | FilmModu | filmmodu.news | Film, Dizi |
-| FullHDFilm | fullhdfilm.site | Film, Dizi |
+| FullHDFilm | hdfilm.us | Film |
 | FullHDFilmizlesene | fullhdfilmizlesene.now | Film |
 | HDFilmCehennemi | hdfilmcehennemi.nl | Film, Dizi |
 | JetFilmizle | jetfilmizle.app | Film, Dizi |

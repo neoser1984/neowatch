@@ -266,7 +266,8 @@ class WebteIzle : MainAPI() {
                 if (iframe != null) {
                     Log.d("WBTI", "iframe » $iframe")
                     val bulunanlar = mutableListOf<ExtractorLink>()
-                    loadExtractor(iframe, "${mainUrl}/", subtitleCallback) { link -> bulunanlar.add(link) }
+                    if (VidMolyNeo.uygunMu(iframe)) VidMolyNeo().getUrl(iframe, "${mainUrl}/", subtitleCallback) { link -> bulunanlar.add(link) }
+                    else loadExtractor(iframe, "${mainUrl}/", subtitleCallback) { link -> bulunanlar.add(link) }
                     bulunanlar.forEach { link ->
                         callback.invoke(
                             newExtractorLink(

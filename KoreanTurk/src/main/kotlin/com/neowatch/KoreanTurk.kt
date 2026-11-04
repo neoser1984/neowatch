@@ -5,7 +5,7 @@ import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
-import com.lagradost.cloudstream3.extractors.Vidmoly
+
 
 // Eski koreanturk.com / .net kapandı (Cloudflare 522/523, Ekim 2026). Site koreanturk.tv'de WordPress
 // tabanlı yeni bir temayla devam ediyor: diziler /dizi/<ad>/, bölümler /bolum/<ad>-<n>-bolum/, filmler /<ad>/.
@@ -200,7 +200,7 @@ class KoreanTurk : MainAPI() {
                         }
                     )
                 } else if (iframe.contains("vidmoly")) {
-                    Vidmoly().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
+                    VidMolyNeo().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
                 } else {
                     loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
                 }

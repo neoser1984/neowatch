@@ -141,24 +141,50 @@ class FilmMakinesi : MainAPI() {
         Log.d("FLMM", "data » $data")
         val document = app.get(data, referer = "${mainUrl}/").document
 
-        val kaynaklar = (document.select("div.video-parts a[data-video_url]").map { it.attr("data-video_url") } +
-            document.select("div.player--area iframe, div.player-div iframe").map { it.attr("data-src").ifBlank { it.attr("src") } })
-            .filter { it.isNotBlank() && !it.contains("youtube") }
-            .map { if (it.startsWith("//")) "https:$it" else it }
-            .distinct()
+        // ? Alternatifler div.video-parts a[data-video_url] içinde; tek kaynaklı sayfalarda oynatıcı div.after-player iframe'inde
+        val kaynaklar = linkedMapOf<String, String>()   // adres → etiket
+        document.select("[data-video_url]").forEach { a ->
+            val adres = a.attr("data-video_url").trim()
+            if (adres.isBlank() || adres.contains("youtube") || a.text().contains("Fragman", true)) return@forEach
+            kaynaklar.putIfAbsent(if (adres.startsWith("//")) "https:$adres" else adres, a.text().trim())
+        }
+        document.select("iframe[data-src], iframe[src]").forEach { f ->
+            if (f.closest("[class*=fragman], [class*=trailer]") != null) return@forEach
+            val adres = f.attr("data-src").ifBlank { f.attr("src") }.trim()
+            if (adres.isBlank() || adres.startsWith("about:") || adres.contains("youtube") || adres.contains("googletagmanager")) return@forEach
+            kaynaklar.putIfAbsent(if (adres.startsWith("//")) "https:$adres" else adres, "")
+        }
 
-        kaynaklar.forEach { iframe ->
-            Log.d("FLMM", "iframe » $iframe")
+        var bulundu = false
+        for ((iframe, etiket) in kaynaklar) {
+            Log.d("FLMM", "iframe » $etiket » $iframe")
+            val toplanan = mutableListOf<ExtractorLink>()
             runCatching {
                 val host = iframe.substringAfter("://").substringBefore("/")
                 if (host.startsWith("closeload") || host.startsWith("rapid")) {
-                    GizliJsOynatici().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
+                    GizliJsOynatici().getUrl(iframe, "${mainUrl}/", subtitleCallback) { toplanan.add(it) }
                 } else {
-                    loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
+                    loadExtractor(iframe, "${mainUrl}/", subtitleCallback) { toplanan.add(it) }
                 }
+            }
+            val dil = when {
+                etiket.contains("Dublaj", true)  -> "Dublaj"
+                etiket.contains("Altyaz", true)  -> "Altyazılı"
+                else                             -> ""
+            }
+            for (link in toplanan) {
+                bulundu = true
+                if (dil.isBlank()) { callback.invoke(link); continue }
+                callback.invoke(
+                    newExtractorLink(link.source, "${link.name} - $dil", link.url, link.type) {
+                        this.referer = link.referer
+                        this.quality = link.quality
+                        this.headers = link.headers
+                    }
+                )
             }
         }
 
-        return kaynaklar.isNotEmpty()
+        return bulundu
     }
 }

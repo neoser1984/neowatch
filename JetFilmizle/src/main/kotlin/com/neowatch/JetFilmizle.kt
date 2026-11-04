@@ -155,6 +155,8 @@ class JetFilmizle : MainAPI() {
             runCatching {
                 if (iframe.contains("videopark.")) {
                     if (VideoPark.coz(iframe, etiket, veri.sayfa, callback)) bulundu = true
+                } else if (VidMolyNeo.uygunMu(iframe)) {
+                    VidMolyNeo().getUrl(iframe, "${mainUrl}/", subtitleCallback) { callback.invoke(it); bulundu = true }
                 } else if (iframe.contains("playerx.")) {
                     if (PlayerX.coz(iframe, etiket, veri.sayfa, subtitleCallback, callback)) bulundu = true
                 } else {

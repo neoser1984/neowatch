@@ -6,7 +6,7 @@ import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
 import com.lagradost.cloudstream3.extractors.ByseSX
-import com.lagradost.cloudstream3.extractors.Vidmoly
+
 import com.lagradost.cloudstream3.utils.*
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
@@ -191,7 +191,7 @@ class DiziKorea : MainAPI() {
 
         when {
             FirePlayer.isFirePlayer(url) -> FirePlayer().getUrl(url, "${mainUrl}/", subtitleCallback, callback)
-            host.contains("vidmoly")     -> Vidmoly().getUrl(url, "${mainUrl}/", subtitleCallback, callback)
+            host.contains("vidmoly")     -> VidMolyNeo().getUrl(url, "${mainUrl}/", subtitleCallback, callback)
             host.startsWith("byse")      -> ByseSX().getUrl(url, "${mainUrl}/", subtitleCallback, callback)
             else                         -> loadExtractor(url, "${mainUrl}/", subtitleCallback, callback)
         }

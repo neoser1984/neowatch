@@ -1,186 +1,168 @@
 package com.neowatch
 
 import android.util.Log
+import android.util.Base64
+import java.net.URLEncoder
+import org.jsoup.Jsoup
+import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
-import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
 
+// ! fullhdfilm.site kapandı; site "HDFilm.us / Fullhdfilm" adıyla hdfilm.us'ta (WordPress keremiya teması) devam ediyor.
 class FullHDFilm : MainAPI() {
-    override var mainUrl              = "https://fullhdfilm.site"
+    override var mainUrl              = "https://hdfilm.us"
     override var name                 = "FullHDFilm"
     override val hasMainPage          = true
     override var lang                 = "tr"
     override val hasQuickSearch       = false
-    override val supportedTypes       = setOf(TvType.Movie, TvType.TvSeries)
+    override val supportedTypes       = setOf(TvType.Movie)
 
     override val mainPage = mainPageOf(
-        "${mainUrl}/yabanci-dizi-izle/page"			    to "Yabancı Dizi",
-        "${mainUrl}/yabanci-film-izle/page"			    to "Yabancı Filmler",
-        "${mainUrl}/yerli-film-izle/page"				to "Yerli Film",
-        "${mainUrl}/netflix-filmleri-izle/page"		    to "Netflix",
-        "${mainUrl}/aile-filmleri/page"				    to "Aile",
-        "${mainUrl}/aksiyon-filmleri-izle-hd1/page"	    to "Aksiyon",
-        "${mainUrl}/animasyon-filmleri-izlesene/page"	to "Animasyon",
-        "${mainUrl}/anime-izle/page"					to "Anime",
-        "${mainUrl}/belgesel/page"					    to "Belgesel",
-        "${mainUrl}/bilim-kurgu-filmleri/page"		    to "Bilim-Kurgu",
-        "${mainUrl}/biyografi-filmleri/page"			to "Biyografi",
-        "${mainUrl}/dram-filmleri/page"				    to "Dram",
-        "${mainUrl}/fantastik-filmler-izle/page"		to "Fantastik",
-        "${mainUrl}/gerilim-filmleri-izle-hd/page"		to "Gerilim",
-        "${mainUrl}/gizem-filmleri/page"				to "Gizem",
-        "${mainUrl}/komedi-filmleri/page"				to "Komedi",
-        "${mainUrl}/korku-filmleri-izle/page"			to "Korku",
-        "${mainUrl}/macera-filmleri-izle-hd/page"		to "Macera",
-        "${mainUrl}/romantik-filmler/page"			    to "Romantik",
-        "${mainUrl}/savas-filmleri-izle-hd/page"		to "Savaş",
-        "${mainUrl}/suc-filmleri-izle/page"			    to "Suç"
+        "${mainUrl}/"                                       to "Son Eklenenler",
+        "${mainUrl}/tur/turkce-dublaj-film-izle/"           to "Türkçe Dublaj",
+        "${mainUrl}/tur/turkce-altyazili-film-izle/"        to "Türkçe Altyazılı",
+        "${mainUrl}/tur/yerli-film-izle/"                   to "Yerli Filmler",
+        "${mainUrl}/tur/netflix-filmleri-izle/"             to "Netflix",
+        "${mainUrl}/category/aile-filmleri-izle/"           to "Aile",
+        "${mainUrl}/category/aksiyon-filmleri-izle/"        to "Aksiyon",
+        "${mainUrl}/category/animasyon-filmleri-izle/"      to "Animasyon",
+        "${mainUrl}/category/belgesel-filmleri-izle/"       to "Belgesel",
+        "${mainUrl}/category/bilim-kurgu-filmleri-izle/"    to "Bilim Kurgu",
+        "${mainUrl}/category/biyografi-filmleri-izle/"      to "Biyografi",
+        "${mainUrl}/category/dram-filmleri-izle/"           to "Dram",
+        "${mainUrl}/category/fantastik-filmler-izle/"       to "Fantastik",
+        "${mainUrl}/category/gerilim-filmleri-izle/"        to "Gerilim",
+        "${mainUrl}/category/gizem-filmleri-izle/"          to "Gizem",
+        "${mainUrl}/category/komedi-filmleri-izle/"         to "Komedi",
+        "${mainUrl}/category/korku-filmleri-izle/"          to "Korku",
+        "${mainUrl}/category/macera-filmleri-izle/"         to "Macera",
+        "${mainUrl}/category/romantik-filmler-izle/"        to "Romantik",
+        "${mainUrl}/category/savas-filmleri-izle/"          to "Savaş",
+        "${mainUrl}/category/suc-filmleri-izle/"            to "Suç",
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
-        val document = app.get("${request.data}/${page}/").document
-        val home     = document.select("div.movie_box").mapNotNull { it.toMainPageResult() }
+        val adres    = if (page <= 1) request.data else "${request.data.trimEnd('/')}/page/${page}/"
+        val document = app.get(adres, referer = "${mainUrl}/").document
+        // Ana sayfadaki "Editörün Önerileri" kaydırıcısı atlanır
+        val kartlar  = document.select("div.movie-preview").filter { it.closest("div.slider-content, div.owl-carousel") == null }
+            .ifEmpty { document.select("div.movie-preview") }
+        val home     = kartlar.mapNotNull { it.toSearchResult() }.distinctBy { it.url }
 
-        return newHomePageResponse(request.name, home)
+        return newHomePageResponse(request.name, home, home.isNotEmpty())
     }
 
-    private fun Element.toMainPageResult(): SearchResponse? {
-        val title     = this.selectFirst("h2")?.text() ?: return null
-        val href      = fixUrlNull(this.selectFirst("a")?.attr("href")) ?: return null
-        val posterUrl = fixUrlNull(this.selectFirst("img")?.attr("data-src"))
+    private fun Element.toSearchResult(): SearchResponse? {
+        val a         = this.selectFirst("div.movie-poster a[href], a[href]") ?: return null
+        val href      = fixUrlNull(a.attr("href")) ?: return null
+        val img       = this.selectFirst("img")
+        val title     = (this.selectFirst(".movie-title a, .movie-title, h2, h3")?.text()?.takeIf { it.isNotBlank() } ?: img?.attr("alt"))
+            ?.substringBefore(" izle")?.trim()?.takeIf { it.isNotBlank() } ?: return null
+        val posterUrl = fixUrlNull(img?.let { it.attr("data-src").ifBlank { it.attr("src") } })
+            ?.replace(Regex("""-\d+x\d+(\.\w+)$"""), "$1")
 
         return newMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
-        val document = app.get("${mainUrl}/arama/?s=${query}").document
+        val document = app.get("${mainUrl}/?s=${URLEncoder.encode(query, "UTF-8")}", referer = "${mainUrl}/").document
 
-        return document.select("div.movie_box").mapNotNull { it.toMainPageResult() }
+        return document.select("div.movie-preview").mapNotNull { it.toSearchResult() }.distinctBy { it.url }
     }
 
     override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)
 
+    private fun Document.meta(ad: String): String? =
+        (this.selectFirst("meta[property=$ad]") ?: this.selectFirst("meta[name=$ad]"))?.attr("content")?.trim()?.takeIf { it.isNotBlank() }
+
     override suspend fun load(url: String): LoadResponse? {
-        val document = app.get(url).document
+        val document = app.get(url, referer = "${mainUrl}/").document
 
-        val title       = document.selectFirst("h1 span")?.text()?.trim() ?: return null
-        val poster      = fixUrlNull(document.selectFirst("[property='og:image']")?.attr("content"))
-        val description = document.selectFirst("div[itemprop='description']")?.text()?.substringAfter("⭐")?.substringAfter("izleyin.")?.substringAfter("konusu:")?.trim()
-        val year        = document.selectFirst("span[itemprop='dateCreated'] a")?.text()?.trim()?.toIntOrNull()
-        val tags        = document.select("div.detail ul.bottom li:nth-child(5) span a").map { it.text() }
-        val rating      = document.selectFirst("ul.right li:nth-child(2) span")?.text()?.trim()
-        val duration    = document.selectFirst("span[itemprop='duration']")?.text()?.split(" ")?.first()?.trim()?.toIntOrNull()
-        val actors      = document.select("sc[itemprop='actor'] span").map { Actor(it.text()) }
-        val trailer     = fixUrlNull(document.selectFirst("[property='og:video']")?.attr("content"))
+        val title       = document.selectFirst("h1")?.text()?.trim()?.takeIf { it.isNotBlank() }
+            ?: document.meta("og:title")?.substringBefore(" İzle")?.substringBefore(" izle") ?: return null
+        val poster      = fixUrlNull(document.meta("og:image"))
+            ?: fixUrlNull(document.selectFirst("div.movie-poster img, div.poster img")?.attr("src"))
+        val description = document.selectFirst("div.excerpt, div.description, div[itemprop=description], div.post-content p")?.text()?.trim()?.takeIf { it.isNotBlank() }
+            ?: document.meta("og:description") ?: document.meta("description")
+        val year        = document.selectFirst("small.release a, a[href*='/yapim/']")?.text()?.trim()?.toIntOrNull()
+        val tags        = document.select("header a[href*='/category/'], div.movie a[href*='/category/'], a[rel='tag'][href*='/category/']")
+            .map { it.text().trim() }.filter { it.isNotBlank() }.distinct()
+        val rating      = document.selectFirst("div.imdb, .imdb")?.text()?.let { Regex("""(\d+(?:[.,]\d+)?)""").find(it)?.groupValues?.get(1)?.replace(",", ".") }
+            ?: document.selectFirst("span.average")?.text()?.trim()
+        val actors      = document.select("a[href*='/oyuncu/'], a[href*='/oyuncular/']").map { it.text().trim() }
+            .filter { it.isNotBlank() && it.length < 40 }.distinct().map { Actor(it) }
+        val recommendations = document.select("div.movie-preview").mapNotNull { it.toSearchResult() }.filter { it.url != url }.distinctBy { it.url }
 
-        if (url.contains("-dizi") || tags.any { it.lowercase().contains("dizi") }) {
-            val episodes = mutableListOf<Episode>()
+        return newMovieLoadResponse(title, url, TvType.Movie, url) {
+            this.posterUrl       = poster
+            this.year            = year
+            this.plot            = description
+            this.tags            = tags
+            this.score           = Score.from10(rating)
+            this.recommendations = recommendations
+            addActors(actors)
+        }
+    }
 
-            val iframeSkici = IframeKodlayici()
-
-            val partNumbers  = document.select("li.psec").map { it.attr("id") }
-            val partNames    = document.select("li.psec a").map { it.text().trim() }
-            val pdataMatches = Regex("""pdata\['(.*?)'] = '(.*?)';""").findAll(document.html())
-            val pdataList    = pdataMatches.map { it.destructured }.toList()
-
-            partNumbers.forEachIndexed { index, partNumber ->
-                val partName = partNames.getOrNull(index)
-                val pdata    = pdataList.getOrNull(index)
-                
-                val value = pdata?.component2()
-
-                if (partName!!.lowercase().contains("fragman") || partNumber.lowercase().contains("fragman")) return@forEachIndexed
-
-                val iframeData = iframeSkici.iframeCoz(value!!)
-                val iframeLink = app.get(iframeData, referer="${mainUrl}/").url
-
-                val szNum = partNumber.takeIf { it.contains("sezon") }?.substringBefore("sezon")?.toIntOrNull() ?: 1
-                val epNum = partName.substringBefore(".").trim().toIntOrNull() ?: 1
-
-                episodes.add(newEpisode(iframeLink) {
-                    this.name = "${szNum}. Sezon ${epNum}. Bölüm"
-                    this.season = szNum
-                    this.episode = epNum
-                })
-            }
-
-
-            return newTvSeriesLoadResponse(title, url, TvType.TvSeries, episodes) {
-                this.posterUrl = poster
-                this.plot      = description
-                this.year      = year
-                this.tags      = tags
-                this.score    = Score.from10(rating)
-                this.duration  = duration
-                addActors(actors)
-                addTrailer(trailer)
-            }
-        } else {
-            return newMovieLoadResponse(title, url, TvType.Movie, url) {
-                this.posterUrl = poster
-                this.plot      = description
-                this.year      = year
-                this.tags      = tags
-                this.score    = Score.from10(rating)
-                this.duration  = duration
-                addActors(actors)
-                addTrailer(trailer)
+    // ? Oynatıcı, kaynağı base64 olan bir <script src="data:text/javascript;base64,…"> ile
+    //   ...innerHTML = window.atob("…<iframe src=…>") şeklinde sayfaya yerleştiriliyor.
+    private fun iframeler(html: String): List<String> {
+        val sonuc = mutableListOf<String>()
+        val betikler = mutableListOf(html)
+        Regex("""data:text/javascript;base64,([A-Za-z0-9+/=]+)""").findAll(html).forEach { m ->
+            runCatching { betikler.add(String(Base64.decode(m.groupValues[1], Base64.DEFAULT), Charsets.UTF_8)) }
+        }
+        for (b in betikler) {
+            Regex("""atob\(\s*["']([A-Za-z0-9+/=]+)["']\s*\)""").findAll(b).forEach { m ->
+                val ic = runCatching { String(Base64.decode(m.groupValues[1], Base64.DEFAULT), Charsets.UTF_8) }.getOrNull() ?: return@forEach
+                Jsoup.parse(ic).select("iframe[src]").forEach { sonuc.add(it.attr("src")) }
             }
         }
+        Jsoup.parse(html).select("div.video-content iframe[src], div.video-container iframe[src]").forEach { sonuc.add(it.attr("src")) }
+        return sonuc.map { if (it.startsWith("//")) "https:$it" else it }.filter { it.startsWith("http") }.distinct()
     }
 
     override suspend fun loadLinks(data: String, isCasting: Boolean, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         Log.d("FHDF", "data » $data")
+        val ilk      = app.get(data, referer = "${mainUrl}/").text
+        val document = Jsoup.parse(ilk, data)
 
-        if (!data.contains(mainUrl)) {
-            loadExtractor(data, "${mainUrl}/", subtitleCallback, callback)
-
-            return true
+        // Alternatif kaynaklar: #action-parts a[href="?page=N"]
+        val sayfalar = linkedMapOf(data to "")
+        document.select("#action-parts a[href]").forEach { a ->
+            val adres = a.attr("abs:href").ifBlank { return@forEach }
+            if (a.text().contains("Fragman", true)) return@forEach
+            sayfalar.putIfAbsent(adres, a.text().trim())
         }
 
-        val document = app.get(data).document
-
-        val iframeSkici = IframeKodlayici()
-
-        val partNumbers  = document.select("li.psec").map { it.attr("id") }
-        val partNames    = document.select("li.psec a").map { it.text().trim() }
-        val pdataMatches = Regex("""pdata\['(.*?)'] = '(.*?)';""").findAll(document.html())
-        val pdataList    = pdataMatches.map { it.destructured }.toList()
-
-        partNumbers.forEachIndexed { index, partNumber ->
-            val partName = partNames.getOrNull(index)
-            val pdata    = pdataList.getOrNull(index)
-            
-            val key   = pdata?.component1()
-            val value = pdata?.component2()
-
-            if (partName!!.lowercase().contains("fragman") || partNumber.lowercase().contains("fragman")) return@forEachIndexed
-
-            Log.d("FHDF", "partNumber » $partNumber") // ! fragman0
-            Log.d("FHDF", "partName   » $partName")   // ! Fragman
-            Log.d("FHDF", "key        » $key")        // ! prt_fragman0
-            // Log.d("FHDF", "value      » ${value}")      // ! Şifreli veri
-
-            val iframeData = iframeSkici.iframeCoz(value!!)
-            val iframeLink = app.get(iframeData, referer="${mainUrl}/").url
-            Log.d("FHDF", "iframeLink » $iframeLink")
-
-            loadExtractor(iframeLink, "${mainUrl}/", subtitleCallback) { extractor ->
-                callback.invoke (
-                    ExtractorLink (
-                        source  = "$partName - ${extractor.source}",
-                        name    = "$partName - ${extractor.name}",
-                        url     = extractor.url,
-                        referer = extractor.referer,
-                        quality = extractor.quality,
-                        type    = extractor.type
+        var bulundu = false
+        val gorulen = mutableSetOf<String>()
+        for ((sayfa, etiket) in sayfalar) {
+            val html = if (sayfa == data) ilk else runCatching { app.get(sayfa, referer = data).text }.getOrNull() ?: continue
+            for (iframe in iframeler(html)) {
+                if (!gorulen.add(iframe)) continue
+                Log.d("FHDF", "$etiket » $iframe")
+                val toplanan = mutableListOf<ExtractorLink>()
+                runCatching {
+                    if (FirePlayer.isFirePlayer(iframe)) FirePlayer().getUrl(iframe, "${mainUrl}/", subtitleCallback) { toplanan.add(it) }
+                    else loadExtractor(iframe, "${mainUrl}/", subtitleCallback) { toplanan.add(it) }
+                }
+                for (link in toplanan) {
+                    bulundu = true
+                    if (etiket.isBlank()) { callback.invoke(link); continue }
+                    callback.invoke(
+                        newExtractorLink(link.source, "${link.name} - $etiket", link.url, link.type) {
+                            this.referer = link.referer
+                            this.quality = link.quality
+                            this.headers = link.headers
+                        }
                     )
-                )
+                }
             }
         }
 
-        return true
+        return bulundu
     }
 }

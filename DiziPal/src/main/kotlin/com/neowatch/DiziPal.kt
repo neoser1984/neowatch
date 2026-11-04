@@ -4,7 +4,7 @@ import android.util.Log
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
-import com.lagradost.cloudstream3.extractors.Vidmoly
+
 import com.lagradost.cloudstream3.network.WebViewResolver
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.nicehttp.NiceResponse
@@ -298,7 +298,7 @@ class DiziPal : MainAPI() {
                 )
             }
             iframe.contains("vidmoly") -> {
-                Vidmoly().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
+                VidMolyNeo().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
             }
             Regex("""/embed-[a-z0-9]{12}\.html""").containsMatchIn(iframe) -> {
                 // formationfeed.net vb. XFileSharing oynatıcıları

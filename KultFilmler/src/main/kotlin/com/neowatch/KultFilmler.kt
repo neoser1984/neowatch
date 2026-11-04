@@ -190,7 +190,7 @@ class KultFilmler : MainAPI() {
             "Sec-Fetch-Dest" to "iframe"
         )
         val iSource = app.get(iframe, headers = headers, referer = "${mainUrl}/").text
-        val m3uLink = Regex("""file:"([^"]+)""").find(iSource)?.groupValues?.get(1) ?: return
+        val m3uLink = Regex("""file\s*:\s*['"]([^'"]+)['"]""").find(iSource)?.groupValues?.get(1) ?: return
 
         callback.invoke(
             newExtractorLink(source = "VidMoly", name = "VidMoly", url = m3uLink) {
