@@ -17,8 +17,8 @@ class FilmMakinesi : MainAPI() {
 
     // ! CloudFlare bypass
     override var sequentialMainPage            = true
-    override var sequentialMainPageDelay       = 50L
-    override var sequentialMainPageScrollDelay = 50L
+    override var sequentialMainPageDelay       = 350L
+    override var sequentialMainPageScrollDelay = 350L
 
     override val mainPage = mainPageOf(
         "${mainUrl}/filmler-1/"                                to "Son Filmler",
@@ -36,9 +36,21 @@ class FilmMakinesi : MainAPI() {
         "${mainUrl}/ulke/turkiye-fm4/"                         to "Yerli Filmler",
     )
 
+    // Site kısa sürede çok istek gelince "Biraz yavaşlayalım" sayfası döndürüyor; bekleyip bir kez daha denenir
+    private suspend fun sayfa(url: String): org.jsoup.nodes.Document {
+        var document = app.get(url, referer = "${mainUrl}/").document
+        for (bekle in listOf(2_500L, 5_000L)) {
+            if (!document.title().contains("yavaşlayalım", ignoreCase = true)) break
+            Log.d("FLMM", "hız sınırı, ${bekle} ms bekleniyor » $url")
+            kotlinx.coroutines.delay(bekle)
+            document = app.get(url, referer = "${mainUrl}/").document
+        }
+        return document
+    }
+
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
         val url      = if (page <= 1) request.data else "${request.data}sayfa/${page}/"
-        val document = app.get(url, referer = "${mainUrl}/").document
+        val document = sayfa(url)
         val home     = document.select("div.item-relative > a.item").mapNotNull { it.toSearchResult() }
         val hasNext  = document.selectFirst("a[href*='/sayfa/${page + 1}/']") != null
 
@@ -69,7 +81,7 @@ class FilmMakinesi : MainAPI() {
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
-        val document = app.get("${mainUrl}/arama/", params = mapOf("s" to query), referer = "${mainUrl}/").document
+        val document = sayfa("${mainUrl}/arama/?s=${java.net.URLEncoder.encode(query, "UTF-8")}")
 
         return document.select("div.item-relative > a.item").mapNotNull { it.toSearchResult() }
     }
@@ -77,7 +89,7 @@ class FilmMakinesi : MainAPI() {
     override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)
 
     override suspend fun load(url: String): LoadResponse? {
-        val document = app.get(url, referer = "${mainUrl}/").document
+        val document = sayfa(url)
 
         val title           = document.selectFirst("h1.title")?.ownText()?.removeSuffix(" izle")?.trim()
             ?: document.selectFirst("h1")?.text()?.substringBefore(" izle")?.trim() ?: return null
@@ -139,7 +151,7 @@ class FilmMakinesi : MainAPI() {
 
     override suspend fun loadLinks(data: String, isCasting: Boolean, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         Log.d("FLMM", "data » $data")
-        val document = app.get(data, referer = "${mainUrl}/").document
+        val document = sayfa(data)
 
         // ? Alternatifler div.video-parts a[data-video_url] içinde; tek kaynaklı sayfalarda oynatıcı div.after-player iframe'inde
         val kaynaklar = linkedMapOf<String, String>()   // adres → etiket

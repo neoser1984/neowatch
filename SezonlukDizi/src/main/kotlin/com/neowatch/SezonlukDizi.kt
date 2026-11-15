@@ -5,7 +5,7 @@ import org.jsoup.nodes.Element
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
-import com.lagradost.cloudstream3.extractors.ByseSX
+
 
 class SezonlukDizi : MainAPI() {
     override var mainUrl              = "https://sezonlukdizi.cc"
@@ -141,7 +141,7 @@ class SezonlukDizi : MainAPI() {
                 runCatching {
                     val host = iframe.substringAfter("://").substringBefore("/")
                     if (host.startsWith("byse")) {
-                        ByseSX().getUrl(iframe, "${mainUrl}/", subtitleCallback) { bulunanlar.add(it) }
+                        ByseNeo().getUrl(iframe, "${mainUrl}/", subtitleCallback) { bulunanlar.add(it) }
                     } else {
                         loadExtractor(iframe, "${mainUrl}/", subtitleCallback) { bulunanlar.add(it) }
                     }

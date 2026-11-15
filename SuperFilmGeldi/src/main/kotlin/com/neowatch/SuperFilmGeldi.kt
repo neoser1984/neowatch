@@ -233,14 +233,69 @@ class SuperFilmGeldi : MainAPI() {
         Log.d("SFG", "data » $data")
         val html = app.get(data, headers = tarayici).text
 
-        // Oynatıcı (Pilavyer): <div data-pv="SLUG"> + <script src="https://SUNUCU/assets/js/core.js">
+        // Kasım 2026: oynatıcı <template data-tbx-defer><iframe data-player-frame src="https://<sunucu>/embed/<id>"> içinde
+        val cerceveler = org.jsoup.Jsoup.parse(html, data).select("iframe[data-player-frame], template iframe[src]")
+            .map { it.attr("abs:src") }.filter { it.startsWith("http") && !it.contains("youtube") }.distinct()
+        var bulundu = false
+        for (cerceve in cerceveler) {
+            Log.d("SFG", "iframe » $cerceve")
+            if (runCatching { gomuluOynatici(cerceve, subtitleCallback, callback) }.getOrDefault(false)) bulundu = true
+        }
+        if (bulundu) return true
+
+        // Eski oynatıcı (Pilavyer): <div data-pv="SLUG"> + <script src="https://SUNUCU/assets/js/core.js">
         // core.js iframe'i SUNUCU/assets/js/s.php?s=SLUG olarak kurar; sunucu Referer'ı (site kökeni) denetler.
         val slug = Regex("""data-pv="([^"]+)"""").find(html)?.groupValues?.get(1) ?: return false
         val base = Regex("""src="(https://[^"]+?)/(?:assets/js/core|e/c)\.js""").find(html)?.groupValues?.get(1) ?: return false
         val embed = "$base/assets/js/s.php?s=$slug"
+        return pilavyer(embed, base, subtitleCallback, callback)
+    }
+
+    /**
+     * Gömülü oynatıcı (ör. luciferplays.com/embed/<id>): önce CloudStream çıkarıcıları denenir,
+     * olmazsa sayfadaki __PLAYER__ / jwplayer "sources" / m3u8 adresleri okunur.
+     */
+    private suspend fun gomuluOynatici(iframe: String, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
+        var bulundu = false
+        runCatching { loadExtractor(iframe, "${mainUrl}/", subtitleCallback) { bulundu = true; callback.invoke(it) } }
+        if (bulundu) return true
+
+        val base  = Regex("""^(https?://[^/]+)""").find(iframe)?.groupValues?.get(1) ?: return false
+        var sayfa = app.get(iframe, headers = tarayici + mapOf("Referer" to "${mainUrl}/", "Sec-Fetch-Dest" to "iframe")).text
+        if (sayfa.contains("window.__PLAYER__")) return pilavyerMetin(sayfa, iframe, base, subtitleCallback, callback)
+        if (sayfa.contains("eval(function(p,a,c,k,e,d)")) sayfa += "\n" + (runCatching { getAndUnpack(sayfa) }.getOrNull() ?: "")
+
+        val adres = Regex("""sources\s*:\s*\[\s*\{\s*"?file"?\s*:\s*["']([^"']+)["']""").find(sayfa)?.groupValues?.get(1)
+            ?: Regex("""["'](https?:\\?/\\?/[^"'\s]+?\.m3u8[^"'\s]*)["']""").find(sayfa)?.groupValues?.get(1)
+            ?: Regex("""file\s*:\s*["']([^"']+\.(?:m3u8|mp4)[^"']*)["']""").find(sayfa)?.groupValues?.get(1)
+            ?: return false
+        val akis = adres.replace("\\/", "/").let { if (it.startsWith("http")) it else "$base/${it.trimStart('/')}" }
+        Log.d("SFG", "gömülü akış » $akis")
+
+        Regex("""\{\s*"?file"?\s*:\s*["']([^"']+\.(?:vtt|srt)[^"']*)["']\s*,\s*"?label"?\s*:\s*["']([^"']*)["']""").findAll(sayfa).forEach { m ->
+            val alt = m.groupValues[1].replace("\\/", "/").let { if (it.startsWith("http")) it else "$base/${it.trimStart('/')}" }
+            subtitleCallback.invoke(newSubtitleFile(m.groupValues[2].ifBlank { "Türkçe" }, alt))
+        }
+
+        val isim = base.substringAfter("://").substringBefore(".").replaceFirstChar { it.uppercase() }
+        callback.invoke(
+            newExtractorLink(isim, isim, akis, if (akis.contains(".mp4")) ExtractorLinkType.VIDEO else ExtractorLinkType.M3U8) {
+                this.referer = iframe
+                this.quality = Qualities.Unknown.value
+                this.headers = mapOf("Origin" to base)
+            }
+        )
+        return true
+    }
+
+    private suspend fun pilavyer(embed: String, base: String, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         Log.d("SFG", "embed » $embed")
 
         val oynatici = app.get(embed, headers = tarayici + mapOf("Referer" to "${mainUrl}/")).text
+        return pilavyerMetin(oynatici, embed, base, subtitleCallback, callback)
+    }
+
+    private suspend fun pilavyerMetin(oynatici: String, embed: String, base: String, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         val json     = Regex("""window\.__PLAYER__\s*=\s*(\{.*?\});\s*</script>""", RegexOption.DOT_MATCHES_ALL).find(oynatici)?.groupValues?.get(1) ?: return false
         val ayar     = JSONObject(json)
         val akis     = ayar.optString("stream").ifBlank { return false }

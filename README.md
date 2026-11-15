@@ -44,7 +44,7 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | DiziKorea | dizikorea3.com | Asya Dizisi, Film |
 | DiziMom | ddizimom.net | Dizi, Film, Anime |
 | DiziPal | dizipal2145.com | Dizi, Film _(DNS over HTTPS gerekebilir)_ |
-| DiziPalGuncel | dizipal1593.com | Dizi, Film, Anime |
+| DiziPalGuncel | dizipal1595.com | Dizi, Film, Anime |
 | DiziPalOrjinal | dizipalorjinal18.com | Dizi, Film |
 | Dizilla | dizilla.now | Dizi, Anime, Asya Dizisi |
 | DiziYou | diziyou.one | Dizi |

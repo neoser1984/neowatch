@@ -5,189 +5,126 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.LoadResponse.Companion.addActors
 import com.lagradost.cloudstream3.utils.*
-import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
-import java.security.MessageDigest
-import javax.crypto.Cipher
-import javax.crypto.spec.IvParameterSpec
-import javax.crypto.spec.SecretKeySpec
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
 
+// Kasım 2026: site DiziPalGuncel ile aynı Next.js altyapısına geçti. __NEXT_DATA__/secureData ve /api/bg/* uçları kalktı.
+// Kartlar a.tc (dizi/film) ve div.ec > a.ecl (bölüm); bilgiler, sezon-bölüm listesi ve şifreli oynatıcı adresi RSC verisinde.
 class SelcukFlix : MainAPI() {
     override var mainUrl              = "https://selcukflix.app"
     override var name                 = "SelcukFlix"
     override val hasMainPage          = true
     override var lang                 = "tr"
     override val hasQuickSearch       = true
-    override val supportedTypes       = setOf(TvType.TvSeries, TvType.Movie)
+    override val supportedTypes       = setOf(TvType.TvSeries, TvType.Movie, TvType.Anime)
 
     // ! CloudFlare bypass
     override var sequentialMainPage = true
 
-    // ! "api|<uç>|<parametre>=<değer>" biçimindeki kategoriler sitenin Keşfet sayfasının kullandığı
-    // ! /api/bg/findSeries ve /api/bg/findMovies uçlarından sayfalı olarak çekilir.
     override val mainPage = mainPageOf(
         "${mainUrl}/tum-bolumler"                to "Son Bölümler",
-        "${mainUrl}/film-izle"                   to "Yeni Filmler",
-        "${mainUrl}/kesfet"                      to "Yeni Diziler",
-        "${mainUrl}/trend"                       to "Trend Diziler",
-        "api|findSeries|countryIdsComma=21,26"   to "Kore Dizileri",
-        "api|findSeries|categoryIdsComma=9"      to "Aksiyon Dizileri",
-        "api|findSeries|categoryIdsComma=5"      to "Bilim Kurgu Dizileri",
-        "api|findSeries|categoryIdsComma=4"      to "Komedi Dizileri",
-        "api|findSeries|categoryIdsComma=2"      to "Dram Dizileri",
-        "api|findSeries|categoryIdsComma=12"     to "Fantastik Diziler",
-        "api|findSeries|categoryIdsComma=18"     to "Gerilim Dizileri",
-        "api|findSeries|categoryIdsComma=8"      to "Korku Dizileri",
-        "api|findSeries|categoryIdsComma=3"      to "Gizem Dizileri",
-        "api|findSeries|categoryIdsComma=24"     to "Macera Dizileri",
-        "api|findSeries|categoryIdsComma=7"      to "Romantik Diziler",
-        "api|findSeries|categoryIdsComma=1"      to "Suç Dizileri",
-        "api|findSeries|categoryIdsComma=15"     to "Aile Dizileri",
-        "api|findSeries|categoryIdsComma=17"     to "Animasyon Dizileri",
-        "api|findSeries|categoryIdsComma=26"     to "Savaş Dizileri",
-        "api|findSeries|categoryIdsComma=11"     to "Western Diziler",
-        "api|findMovies|categoryIdsComma=59"     to "Aksiyon Filmleri",
-        "api|findMovies|categoryIdsComma=66"     to "Bilim Kurgu Filmleri",
-        "api|findMovies|categoryIdsComma=45"     to "Komedi Filmleri",
-        "api|findMovies|categoryIdsComma=48"     to "Dram Filmleri",
-        "api|findMovies|categoryIdsComma=61"     to "Fantastik Filmler",
-        "api|findMovies|categoryIdsComma=68"     to "Gerilim Filmleri",
-        "api|findMovies|categoryIdsComma=63"     to "Korku Filmleri",
-        "api|findMovies|categoryIdsComma=51"     to "Gizem Filmleri",
-        "api|findMovies|categoryIdsComma=60"     to "Macera Filmleri",
-        "api|findMovies|categoryIdsComma=65"     to "Romantik Filmler",
-        "api|findMovies|categoryIdsComma=46"     to "Suç Filmleri",
-        "api|findMovies|categoryIdsComma=49"     to "Aile Filmleri",
-        "api|findMovies|categoryIdsComma=44"     to "Animasyon Filmleri",
-        "api|findMovies|categoryIdsComma=69"     to "Savaş Filmleri",
-        "api|findMovies|categoryIdsComma=78"     to "Western Filmler",
+        "${mainUrl}/dizi-izle"                   to "Diziler",
+        "${mainUrl}/film-izle"                   to "Filmler",
+        "${mainUrl}/yabanci-film-izle"           to "Yabancı Filmler",
+        "${mainUrl}/turkce-dublaj-dizi-izle"     to "Türkçe Dublaj Diziler",
+        "${mainUrl}/turkce-altyazili-dizi-izle"  to "Türkçe Altyazılı Diziler",
+        "${mainUrl}/kdrama-izle"                 to "Kore Dizileri",
+        "${mainUrl}/anime-izle"                  to "Anime",
+        "${mainUrl}/imdb-top-250-film"           to "IMDb Top 250",
+        "${mainUrl}/kesfet"                      to "Keşfet",
+        "${mainUrl}/kanal/netflix"               to "Netflix",
+        "${mainUrl}/kanal/disney"                to "Disney+",
+        "${mainUrl}/kanal/amazon"                to "Amazon Prime",
+        "${mainUrl}/kanal/hbo-max"               to "HBO Max",
+        "${mainUrl}/kanal/apple-tv"              to "Apple TV+",
     )
 
+    // Kanal sayfaları sayfalı değil; diğer listeler ?page=N
+    private fun sayfali(adres: String) = !adres.contains("/kanal/")
+
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
-        if (request.data.startsWith("api|")) return apiKategori(page, request)
+        val sayfaVar = sayfali(request.data)
+        if (!sayfaVar && page > 1) return newHomePageResponse(request.name, emptyList(), hasNext = false)
 
-        // Site listeleri JavaScript ile sayfaladığı için yalnızca ilk sayfa alınır
-        if (page > 1) return newHomePageResponse(request.name, emptyList(), hasNext = false)
+        val adres    = if (sayfaVar && page > 1) "${request.data}?page=$page" else request.data
+        val document = app.get(adres, referer = "${mainUrl}/").document
+        val anime    = request.data.contains("/anime")
 
-        val document = app.get(request.data, referer = "${mainUrl}/").document
-        val home     = if (request.data.endsWith("/tum-bolumler")) {
-            document.select("a[href*='/bolum-']").filter { it.selectFirst("h3") != null }.mapNotNull { it.sonBolumler() }
-        } else {
-            document.select("a[href^='/dizi/'], a[href^='dizi/'], a[href^='/film/'], a[href^='film/']")
-                .filter { it.selectFirst("img") != null && !it.attr("href").contains("/sezon-") }
-                .mapNotNull { it.toSearchResult() }
-        }.distinctBy { it.url }
+        val home = (document.select("div.ec > a.ecl, a.ecl").mapNotNull { it.bolumKarti() } +
+                    document.select("a.tc").mapNotNull { it.icerikKarti(anime) }).distinctBy { it.url }
 
-        return newHomePageResponse(request.name, home, hasNext = false)
+        return newHomePageResponse(request.name, home, hasNext = sayfaVar && home.isNotEmpty())
     }
 
-    // ? Keşfet API'si: tür / ülke filtresiyle sayfalı liste
-    private suspend fun apiKategori(page: Int, request: MainPageRequest): HomePageResponse {
-        val parcalar  = request.data.split("|")
-        val uc        = parcalar.getOrNull(1) ?: return newHomePageResponse(request.name, emptyList(), hasNext = false)
-        val filtreler = parcalar.drop(2).mapNotNull { p -> p.split("=", limit = 2).takeIf { it.size == 2 }?.let { it[0] to it[1] } }.toMap()
-
-        val parametreler = mapOf(
-            "releaseYearStart"   to "1900",
-            "releaseYearEnd"     to "2100",
-            "imdbPointMin"       to "0",
-            "imdbPointMax"       to "10",
-            "categoryIdsComma"   to "",
-            "countryIdsComma"    to "",
-            "orderType"          to "1",
-            "languageId"         to "-1",
-            "currentPage"        to "$page",
-            "currentPageCount"   to "24",
-            "queryStr"           to "",
-            "categorySlugsComma" to "",
-            "countryCodesComma"  to ""
-        ) + filtreler
-
-        val yanit = runCatching {
-            app.post(
-                "${mainUrl}/api/bg/$uc",
-                params  = parametreler,
-                referer = "${mainUrl}/kesfet",
-                headers = mapOf("Accept" to "application/json, text/plain, */*")
-            ).parsedSafe<SifreliYanit>()
-        }.getOrNull()
-
-        val liste = yanit?.response?.let { coz(it) }?.let { jsonOku<ApiListe>(it) }
-        val icerik = liste?.result.orEmpty().mapNotNull { item ->
-            val slug  = item.slug?.trimStart('/') ?: return@mapNotNull null
-            val title = item.title?.takeIf { it.isNotBlank() } ?: return@mapNotNull null
-            val href  = fixUrl("/$slug")
-
-            if (slug.startsWith("film/")) {
-                newMovieSearchResponse(title, href, TvType.Movie) {
-                    this.posterUrl = resim(item.poster)
-                    this.year      = item.year
-                    this.score     = Score.from10(item.imdb)
-                }
-            } else {
-                newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
-                    this.posterUrl = resim(item.poster)
-                    this.year      = item.year
-                    this.score     = Score.from10(item.imdb)
-                }
-            }
-        }.distinctBy { it.url }
-
-        return newHomePageResponse(request.name, icerik, hasNext = liste?.pagination?.hasMore == true && icerik.isNotEmpty())
+    private fun Element.posterAl(): String? {
+        val img = this.selectFirst("img") ?: return null
+        val src = img.attr("data-src").ifBlank { img.attr("data-srcset").substringBefore(" ") }
+            .ifBlank { img.attr("srcset").substringBefore(" ") }.ifBlank { img.attr("src") }
+        return if (src.isBlank() || src.startsWith("data:")) null else fixUrlNull(src)
     }
 
-    private fun Element.toSearchResult(): SearchResponse? {
-        val title = this.attr("title").removeSuffix(" izle").trim().ifBlank {
-            this.selectFirst("h3, h2")?.text()?.trim()
-                ?: this.selectFirst("img")?.attr("alt")?.removeSuffix(" izle")?.replace(Regex("""\s\d{4}$"""), "")?.trim()
-                ?: ""
+    // Bölüm kartı: div.ec > a.ecl + span (resim) + div > span.tn (dizi adı) + span (sezon/bölüm)
+    private fun Element.bolumKarti(): SearchResponse? {
+        val href  = fixUrlNull(this.attr("href")) ?: return null
+        val kutu  = this.parent() ?: this
+        val dizi  = kutu.selectFirst("span.tn")?.text()?.trim()?.ifBlank { null }
+            ?: this.attr("aria-label").substringBefore(",").trim().ifBlank { null } ?: return null
+        val bilgi = kutu.selectFirst("span.tn + span")?.text()?.trim()
+            ?.replace(". Sezon ", "x")?.replace(". Bölüm", "")?.ifBlank { null }
+
+        return newTvSeriesSearchResponse(if (bilgi == null) dizi else "$dizi $bilgi", href, TvType.TvSeries) {
+            this.posterUrl = kutu.posterAl() ?: this@bolumKarti.posterAl()
         }
-        if (title.isBlank()) return null
+    }
 
-        val href      = fixUrlNull(this.attr("href")) ?: return null
-        val posterUrl = fixUrlNull(this.selectFirst("img")?.attr("src"))
+    // Dizi/film kartı: a.tc > span.fr (resim) + span.tt|span.ft1 (ad) + span (yıl / türler · yıl)
+    private fun Element.icerikKarti(anime: Boolean = false): SearchResponse? {
+        val href  = fixUrlNull(this.attr("href")) ?: return null
+        val title = this.selectFirst("span.tt, span.ft1")?.text()?.trim()?.ifBlank { null }
+            ?: this.attr("aria-label").substringBefore(",").trim().ifBlank { null } ?: return null
+        val year  = Regex("""\b(19|20)\d{2}\b""").find(this.selectFirst("span.tt + span, span.ft1 + span")?.text().orEmpty())?.value?.toIntOrNull()
 
         return if (href.contains("/film/")) {
-            newMovieSearchResponse(title, href, TvType.Movie) { this.posterUrl = posterUrl }
+            newMovieSearchResponse(title, href, TvType.Movie) {
+                this.posterUrl = this@icerikKarti.posterAl()
+                this.year      = year
+            }
         } else {
-            newTvSeriesSearchResponse(title, href, TvType.TvSeries) { this.posterUrl = posterUrl }
-        }
-    }
-
-    private fun Element.sonBolumler(): SearchResponse? {
-        val name   = this.selectFirst("h3")?.text()?.trim() ?: return null
-        val epName = this.selectFirst("h3 + div")?.text()?.trim()?.replace(". Sezon ", "x")?.replace(". Bölüm", "")
-        val href   = fixUrlNull(this.attr("href")) ?: return null
-
-        return newTvSeriesSearchResponse(if (epName.isNullOrBlank()) name else "$name - $epName", href, TvType.TvSeries) {
-            this.posterUrl = fixUrlNull(this@sonBolumler.selectFirst("img")?.attr("src"))
+            newTvSeriesSearchResponse(title, href, if (anime) TvType.Anime else TvType.TvSeries) {
+                this.posterUrl = this@icerikKarti.posterAl()
+                this.year      = year
+            }
         }
     }
 
     override suspend fun search(query: String): List<SearchResponse> {
+        val govde = """{"action":"searchContent","params":[${mapper.writeValueAsString(query)}]}"""
         val yanit = app.post(
-            "${mainUrl}/api/bg/searchContent",
-            params  = mapOf("searchterm" to query),
-            referer = "${mainUrl}/",
-            headers = mapOf("Accept" to "application/json, text/plain, */*")
-        ).parsedSafe<SifreliYanit>() ?: return emptyList()
+            "${mainUrl}/api/mj",
+            requestBody = govde.toRequestBody("application/json".toMediaType()),
+            referer     = "${mainUrl}/",
+            headers     = mapOf("Origin" to mainUrl, "Accept" to "application/json")
+        ).text
 
-        val veri = jsonOku<AramaSonuc>(coz(yanit.response ?: return emptyList()) ?: return emptyList()) ?: return emptyList()
-
-        return veri.result.orEmpty().mapNotNull { item ->
+        return jsonOku<AramaYanit>(yanit)?.result.orEmpty().mapNotNull { item ->
             val title = item.name ?: return@mapNotNull null
-            val slug  = item.slug ?: return@mapNotNull null
-            val href  = fixUrl("/${slug.trimStart('/')}")
+            val slug  = item.slug?.trim()?.trimStart('/') ?: return@mapNotNull null
+            val film  = item.type.equals("Movies", true) || item.type.equals("Movie", true) || slug.startsWith("film")
 
-            if (item.type.equals("Movies", true) || slug.startsWith("film/")) {
+            // Film bağlantıları izleme sayfasına (/film/<slug>/izle) gider
+            val yol   = if (film && !slug.endsWith("/izle")) "/${slug.trimEnd('/')}/izle" else "/$slug"
+            val href  = fixUrl(yol)
+
+            if (film) {
                 newMovieSearchResponse(title, href, TvType.Movie) {
-                    this.posterUrl = resim(item.poster)
+                    this.posterUrl = item.poster
                     this.year      = item.year
                     this.score     = Score.from10(item.imdb)
                 }
             } else {
                 newTvSeriesSearchResponse(title, href, TvType.TvSeries) {
-                    this.posterUrl = resim(item.poster)
+                    this.posterUrl = item.poster
                     this.year      = item.year
                     this.score     = Score.from10(item.imdb)
                 }
@@ -198,132 +135,133 @@ class SelcukFlix : MainAPI() {
     override suspend fun quickSearch(query: String): List<SearchResponse> = search(query)
 
     override suspend fun load(url: String): LoadResponse? {
-        var veri = sayfaVerisi(app.get(url, referer = "${mainUrl}/").document)?.sonuc ?: return null
+        var adres = url.substringBefore("?")
+        // Eski sürümden kalan film bağlantıları (/film/<slug>) izleme sayfasına çevrilir
+        if (Regex("""/film/[^/]+/?$""").containsMatchIn(adres)) adres = adres.trimEnd('/') + "/izle"
+
+        var html = app.get(adres, referer = "${mainUrl}/").text
+        var rsc  = Rsc.metin(html)
 
         // Son bölümler listesinden gelen bölüm bağlantısını dizi sayfasına çevir
-        if (veri.findedType == "Episodes") {
-            val diziSlug = veri.related?.seriesDetail?.result?.slug ?: return null
-            veri = sayfaVerisi(app.get(fixUrl("/${diziSlug.trimStart('/')}"), referer = "${mainUrl}/").document)?.sonuc ?: return null
+        if (adres.contains("/sezon-") && adres.contains("/bolum-")) {
+            val dizi = rsc.jsonDeger("seriesHref")?.let { fixUrl(it) }
+                ?: Regex("""(/dizi/[^/]+)/sezon-""").find(adres)?.groupValues?.get(1)?.let { fixUrl(it) }
+                ?: return null
+            adres = dizi
+            html  = app.get(dizi, referer = "${mainUrl}/").text
+            rsc   = Rsc.metin(html)
         }
 
-        val detay = veri.findedResult?.result ?: return null
-        val title = detay.cultureTitle?.takeIf { it.isNotBlank() && it != detay.title }?.let { "${detay.title} - $it" } ?: detay.title ?: return null
-        val href  = fixUrl("/${(detay.slug ?: url.substringAfter(mainUrl)).trimStart('/')}")
+        val baslik = rsc.jsonDeger("mjTitle")?.trim()?.ifBlank { null }
+            ?: Regex("""<h1[^>]*>(.*?)</h1>""").find(html)?.groupValues?.get(1)?.replace(Regex("<[^>]+>"), "")?.trim()?.ifBlank { null }
+            ?: return null
+        val poster  = rsc.jsonDeger("mjPoster")?.ifBlank { null }
+        val yil     = rsc.jsonDeger("mjYear")?.let { Regex("""\d{4}""").find(it)?.value?.toIntOrNull() }
+        val konu    = rsc.jsonDeger("mjOverview")?.trim()?.ifBlank { null }
+        val puan    = rsc.jsonDeger("mjImdb")?.trim()?.ifBlank { null }
+        val sure    = rsc.jsonDeger("mjRuntime")?.let { Regex("""(\d+)""").find(it)?.groupValues?.get(1)?.toIntOrNull() }
+        val turler  = rsc.etiketler("mjGenres")
+        val oyuncu  = rsc.etiketler("mjCast").map { Actor(it) }
 
-        val castlar = (veri.related?.casts?.result ?: veri.related?.movieCasts?.result).orEmpty().mapNotNull { cast ->
-            Actor(cast.name ?: return@mapNotNull null, resim(cast.image)) to cast.role
-        }
-        val tags = veri.related?.categories?.result?.mapNotNull { it.name }
-            ?: detay.categories?.split(",")?.map { it.trim() }?.filter { it.isNotBlank() }
-
-        if (veri.findedType == "Movies") {
-            return newMovieLoadResponse(title, href, TvType.Movie, href) {
-                this.posterUrl           = resim(detay.poster)
-                this.backgroundPosterUrl = resim(detay.back)
-                this.year                = detay.year
-                this.plot                = detay.description
-                this.tags                = tags
-                this.duration            = detay.minutes?.takeIf { it > 0 }
-                this.score               = Score.from10(detay.imdb)
-                addActors(castlar)
+        if (adres.contains("/film/")) {
+            return newMovieLoadResponse(baslik, adres, TvType.Movie, adres) {
+                this.posterUrl = poster
+                this.year      = yil
+                this.plot      = konu
+                this.tags      = turler
+                this.duration  = sure
+                this.score     = Score.from10(puan)
+                addActors(oyuncu)
             }
         }
 
-        val episodes = veri.related?.seasons?.result.orEmpty().flatMap { sezon ->
-            sezon.episodes.orEmpty().mapNotNull { bolum ->
-                val slug = bolum.slug ?: return@mapNotNull null
-                newEpisode(fixUrl("/${slug.trimStart('/')}")) {
-                    this.name        = bolum.subtitle?.takeIf { it != bolum.text } ?: bolum.text
-                    this.season      = bolum.season ?: sezon.season
-                    this.episode     = bolum.episode
-                    this.description = bolum.description
-                    this.addDate(bolum.releaseDate?.substringBefore("T"))
-                }
+        val episodes = Rsc.bolumler(rsc).map { b ->
+            newEpisode(fixUrl(b.href)) {
+                this.name    = b.baslik?.ifBlank { null } ?: b.no?.let { "$it. Bölüm" }
+                this.season  = b.sezon
+                this.episode = b.no
             }
         }.distinctBy { it.data }
 
-        return newTvSeriesLoadResponse(title, href, TvType.TvSeries, episodes) {
-            this.posterUrl           = resim(detay.poster)
-            this.backgroundPosterUrl = resim(detay.back)
-            this.year                = detay.year
-            this.plot                = detay.description
-            this.tags                = tags
-            this.duration            = detay.minutes?.takeIf { it > 0 }
-            this.score               = Score.from10(detay.imdb)
-            addActors(castlar)
+        val tvType = if (turler.any { it.contains("Anime", true) }) TvType.Anime else TvType.TvSeries
+
+        return newTvSeriesLoadResponse(baslik, adres, tvType, episodes) {
+            this.posterUrl = poster
+            this.year      = yil
+            this.plot      = konu
+            this.tags      = turler
+            this.duration  = sure
+            this.score     = Score.from10(puan)
+            addActors(oyuncu)
         }
     }
 
     override suspend fun loadLinks(data: String, isCasting: Boolean, subtitleCallback: (SubtitleFile) -> Unit, callback: (ExtractorLink) -> Unit): Boolean {
         Log.d("SCF", "data » $data")
-        val ham = sayfaVerisi(app.get(data, referer = "${mainUrl}/").document)?.ham ?: return false
+        val html = app.get(data, referer = "${mainUrl}/").text
+        val rsc  = Rsc.metin(html)
 
-        // ? Bölüm (getEpisodeSources) ve film (getMoviePartSourcesById_*) kaynaklarının tamamı
-        val iframes = Regex("""source_content"\s*:\s*"<iframe[^>]*?src=\\"([^"\\]+)\\"""").findAll(ham)
-            .map { it.groupValues[1] }
-            .map { if (it.startsWith("//")) "https:$it" else it }
-            .distinct()
-            .toList()
+        // Her kaynak (PUB+, Uptobox, dublaj…) kendi sayfasında kendi şifreli oynatıcı adresini taşır
+        val kaynaklar = mutableListOf<Pair<String?, String>>()   // etiket → oynatıcı adresi
+        oynaticiCoz(rsc)?.let { kaynaklar.add(Rsc.etiket(rsc, Rsc.yol(data)) to it) }
 
-        iframes.forEach { iframe ->
-            Log.d("SCF", "iframe » $iframe")
+        Rsc.kaynaklar(rsc).filter { Rsc.yol(fixUrl(it.second)) != Rsc.yol(data) }.forEach { (etiket, href) ->
+            runCatching {
+                val diger = app.get(fixUrl(href), referer = data).text
+                oynaticiCoz(Rsc.metin(diger))?.let { kaynaklar.add(etiket to it) }
+            }
+        }
+
+        var bulundu = false
+        for ((etiket, adres) in kaynaklar.distinctBy { it.second }) {
+            val iframe = if (adres.startsWith("//")) "https:$adres" else adres
+            if (!iframe.startsWith("http")) continue
+            Log.d("SCF", "iframe » $etiket » $iframe")
+            val ek = etiket?.trim()?.ifBlank { null }
+
+            val toplanan = mutableListOf<ExtractorLink>()
             runCatching {
                 if (ContentXGenel.uygunMu(iframe)) {
-                    ContentXGenel().getUrl(iframe, "${mainUrl}/", subtitleCallback, callback)
+                    ContentXGenel().getUrl(iframe, "${mainUrl}/", subtitleCallback) { toplanan.add(it) }
                 } else {
-                    loadExtractor(iframe, "${mainUrl}/", subtitleCallback, callback)
+                    loadExtractor(iframe, "${mainUrl}/", subtitleCallback) { toplanan.add(it) }
+                }
+            }.onFailure { Log.w("SCF", "oynatıcı hatası » ${it.message}") }
+
+            for (link in toplanan) {
+                bulundu = true
+                if (ek == null) {
+                    callback.invoke(link)
+                } else {
+                    callback.invoke(
+                        newExtractorLink(link.source, "${link.name} · $ek", link.url, link.type) {
+                            this.referer = link.referer
+                            this.quality = link.quality
+                            this.headers = link.headers
+                        }
+                    )
                 }
             }
         }
 
-        return iframes.isNotEmpty()
+        return bulundu
     }
 
-    private data class SayfaVeri(val ham: String, val sonuc: SayfaSonuc?)
-
-    // ! __NEXT_DATA__ içindeki "secureData" alanı AES-256-CBC ile şifrelenmiştir
-    private fun sayfaVerisi(document: Document): SayfaVeri? {
-        val nextData = document.selectFirst("script#__NEXT_DATA__")?.data() ?: return null
-        val secure   = jsonOku<NextData>(nextData)?.props?.pageProps?.secureData ?: return null
-        val cozulmus = coz(secure) ?: return null
-
-        return SayfaVeri(cozulmus, jsonOku<SecureData>(cozulmus)?.content?.result)
+    /** RSC'deki player.enc {ciphertext, iv, salt} + "k" parolasıyla iframe adresini çözer. */
+    private fun oynaticiCoz(rsc: String): String? {
+        val oyuncu = rsc.indexOf("\"player\":{").takeIf { it >= 0 } ?: return null
+        val enc    = Rsc.nesne(rsc, "\"enc\":", oyuncu) ?: return null
+        val parola = rsc.jsonDeger("k", rsc.indexOf("\"enc\":", oyuncu)) ?: RmkCoz.PAROLA
+        return (RmkCoz.coz(enc, parola) ?: RmkCoz.coz(enc))?.trim()?.ifBlank { null }
     }
 
-    private fun coz(sifreli: String): String? {
-        return runCatching {
-            val hash    = MessageDigest.getInstance("SHA-256").digest("!!22xx!!90!!".toByteArray(Charsets.UTF_8))
-            val anahtar = base64Encode(hash).substring(0, 32).toByteArray(Charsets.UTF_8)
-            val cipher  = Cipher.getInstance("AES/CBC/PKCS5Padding")
-            cipher.init(Cipher.DECRYPT_MODE, SecretKeySpec(anahtar, "AES"), IvParameterSpec(ByteArray(16)))
-            String(cipher.doFinal(base64DecodeArray(sifreli)), Charsets.UTF_8)
-        }.getOrNull()
-    }
+    private fun String.jsonDeger(anahtar: String, baslangic: Int = 0): String? = Rsc.deger(this, anahtar, baslangic)
+    private fun String.etiketler(anahtar: String): List<String> = Rsc.etiketListesi(this, anahtar)
 
-    private fun resim(url: String?): String? {
-        if (url.isNullOrBlank()) return null
-        return url.replace("images-macellan-online.cdn.ampproject.org/i/s/", "")
-    }
-
-    // ? JSON modelleri
-    data class ApiListe(
-        @JsonProperty("result")     val result: List<ApiItem>?  = null,
-        @JsonProperty("pagination") val pagination: ApiSayfa? = null
+    data class AramaYanit(
+        @JsonProperty("ok")     val ok: Boolean?             = null,
+        @JsonProperty("result") val result: List<AramaItem>? = null
     )
-
-    data class ApiSayfa(@JsonProperty("hasMore") val hasMore: Boolean? = null)
-
-    data class ApiItem(
-        @JsonProperty("used_slug")      val slug: String?   = null,
-        @JsonProperty("original_title") val title: String?  = null,
-        @JsonProperty("poster_url")     val poster: String? = null,
-        @JsonProperty("release_year")   val year: Int?      = null,
-        @JsonProperty("imdb_point")     val imdb: Double?   = null
-    )
-
-    data class SifreliYanit(@JsonProperty("response") val response: String? = null)
-
-    data class AramaSonuc(@JsonProperty("result") val result: List<AramaItem>? = null)
 
     data class AramaItem(
         @JsonProperty("object_name")               val name: String?   = null,
@@ -333,65 +271,115 @@ class SelcukFlix : MainAPI() {
         @JsonProperty("object_related_imdb_point") val imdb: Double?   = null,
         @JsonProperty("object_poster_url")         val poster: String? = null
     )
+}
 
-    data class NextData(@JsonProperty("props") val props: NextProps? = null)
-    data class NextProps(@JsonProperty("pageProps") val pageProps: PageProps? = null)
-    data class PageProps(@JsonProperty("secureData") val secureData: String? = null)
+/** Next.js RSC verisini (self.__next_f.push([1,"..."])) birleştirip içinden alan okuyan yardımcılar. */
+internal object Rsc {
+    data class Bolum(val href: String, val no: Int?, val sezon: Int?, val baslik: String?)
 
-    data class SecureData(@JsonProperty("content") val content: SecureContent? = null)
-    data class SecureContent(@JsonProperty("result") val result: SayfaSonuc? = null)
+    private const val ISARET = "self.__next_f.push([1,\""
 
-    data class SayfaSonuc(
-        @JsonProperty("FindedType")     val findedType: String?        = null,
-        @JsonProperty("FindedResult")   val findedResult: DetaySonuc?  = null,
-        @JsonProperty("RelatedResults") val related: Related?          = null
-    )
+    fun metin(html: String): String {
+        val sb = StringBuilder()
+        var i  = html.indexOf(ISARET)
+        while (i >= 0) {
+            val (parca, son) = dizeOku(html, i + ISARET.length)
+            sb.append(parca)
+            i = html.indexOf(ISARET, son)
+        }
+        return sb.toString()
+    }
 
-    data class DetaySonuc(@JsonProperty("result") val result: Detay? = null)
+    /** [bas] konumundan kapanış tırnağına kadar JSON dizesini okur; (metin, bitiş konumu) döndürür. */
+    fun dizeOku(s: String, bas: Int): Pair<String, Int> {
+        val sb = StringBuilder()
+        var j  = bas
+        while (j < s.length) {
+            val c = s[j]
+            if (c == '\\' && j + 1 < s.length) {
+                when (val n = s[j + 1]) {
+                    'n'  -> sb.append('\n')
+                    't'  -> sb.append('\t')
+                    'r'  -> sb.append('\r')
+                    'b'  -> sb.append('\u0008')
+                    'f'  -> sb.append('\u000c')
+                    'u'  -> {
+                        val kod = if (j + 6 <= s.length) s.substring(j + 2, j + 6).toIntOrNull(16) else null
+                        if (kod != null) { sb.append(kod.toChar()); j += 4 } else sb.append('u')
+                    }
+                    else -> sb.append(n)
+                }
+                j += 2
+            } else if (c == '"') {
+                return sb.toString() to j + 1
+            } else {
+                sb.append(c); j++
+            }
+        }
+        return sb.toString() to j
+    }
 
-    data class Detay(
-        @JsonProperty("original_title") val title: String?        = null,
-        @JsonProperty("culture_title")  val cultureTitle: String? = null,
-        @JsonProperty("description")    val description: String?  = null,
-        @JsonProperty("release_year")   val year: Int?            = null,
-        @JsonProperty("imdb_point")     val imdb: Double?         = null,
-        @JsonProperty("total_minutes")  val minutes: Int?         = null,
-        @JsonProperty("poster_url")     val poster: String?       = null,
-        @JsonProperty("back_url")       val back: String?         = null,
-        @JsonProperty("categories")     val categories: String?   = null,
-        @JsonProperty("used_slug")      val slug: String?         = null
-    )
+    fun deger(s: String, anahtar: String, baslangic: Int = 0): String? {
+        val desen = "\"$anahtar\":\""
+        val i = s.indexOf(desen, maxOf(0, baslangic)).takeIf { it >= 0 } ?: return null
+        return dizeOku(s, i + desen.length).first
+    }
 
-    data class Related(
-        @JsonProperty("getSerieCastsById")         val casts: CastListe?          = null,
-        @JsonProperty("getMovieCastsById")         val movieCasts: CastListe?     = null,
-        @JsonProperty("getSerieCategoriesById")    val categories: KategoriListe? = null,
-        @JsonProperty("getSerieSeasonAndEpisodes") val seasons: SezonListe?       = null,
-        @JsonProperty("getSeriesDetail")           val seriesDetail: DetaySonuc?  = null
-    )
+    /** "anahtar":{ ... } ya da "anahtar":[ ... ] bölümünü (dizelerin içini sayarak) döndürür. */
+    fun nesne(s: String, anahtar: String, baslangic: Int = 0): String? {
+        val i = s.indexOf(anahtar, maxOf(0, baslangic)).takeIf { it >= 0 } ?: return null
+        var j = i + anahtar.length
+        while (j < s.length && s[j] != '{' && s[j] != '[') { if (!s[j].isWhitespace()) return null; j++ }
+        if (j >= s.length) return null
+        val bas = j
+        var derinlik = 0
+        while (j < s.length) {
+            when (s[j]) {
+                '"'      -> { j = dizeOku(s, j + 1).second; continue }
+                '{', '[' -> derinlik++
+                '}', ']' -> { derinlik--; if (derinlik == 0) return s.substring(bas, j + 1) }
+            }
+            j++
+        }
+        return null
+    }
 
-    data class CastListe(@JsonProperty("result") val result: List<Cast>? = null)
-    data class Cast(
-        @JsonProperty("name")       val name: String?  = null,
-        @JsonProperty("cast_image") val image: String? = null,
-        @JsonProperty("role_name")  val role: String?  = null
-    )
+    fun etiketListesi(s: String, anahtar: String): List<String> {
+        val dizi = nesne(s, "\"$anahtar\":") ?: return emptyList()
+        return Regex(""""label":"((?:[^"\\]|\\.)*)"""").findAll(dizi).map { dizeOku(it.groupValues[1] + "\"", 0).first.trim() }
+            .filter { it.isNotBlank() }.distinct().toList()
+    }
 
-    data class KategoriListe(@JsonProperty("result") val result: List<Kategori>? = null)
-    data class Kategori(@JsonProperty("name") val name: String? = null)
+    /** "seasons":[{"no":1,"label":…,"episodes":[{"n":1,"title":…,"href":"/dizi/<slug>/sezon-1/bolum-1"}]}] */
+    fun bolumler(s: String): List<Bolum> {
+        val sezonlar = nesne(s, "\"seasons\":") ?: return emptyList()
+        val sezonKonum = Regex(""""no":(\d+),"label":""").findAll(sezonlar).map { it.range.first to it.groupValues[1].toInt() }.toList()
+        return Regex(""""n":(\d+),"title":"((?:[^"\\]|\\.)*)"[^{}]*?"href":"([^"]+)"""").findAll(sezonlar).map { m ->
+            val href  = m.groupValues[3]
+            val sxe   = Regex("""/sezon-(\d+)/bolum-(\d+)""").find(href)
+            val sezon = sxe?.groupValues?.get(1)?.toIntOrNull() ?: sezonKonum.lastOrNull { it.first < m.range.first }?.second
+            Bolum(
+                href   = href,
+                no     = m.groupValues[1].toIntOrNull() ?: sxe?.groupValues?.get(2)?.toIntOrNull(),
+                sezon  = sezon,
+                baslik = dizeOku(m.groupValues[2] + "\"", 0).first
+            )
+        }.toList()
+    }
 
-    data class SezonListe(@JsonProperty("result") val result: List<Sezon>? = null)
-    data class Sezon(
-        @JsonProperty("season_no") val season: Int?           = null,
-        @JsonProperty("episodes")  val episodes: List<Bolum>? = null
-    )
-    data class Bolum(
-        @JsonProperty("season_no")           val season: Int?         = null,
-        @JsonProperty("episode_no")          val episode: Int?        = null,
-        @JsonProperty("episode_text")        val text: String?        = null,
-        @JsonProperty("episode_subtitle")    val subtitle: String?    = null,
-        @JsonProperty("episode_description") val description: String? = null,
-        @JsonProperty("release_date")        val releaseDate: String? = null,
-        @JsonProperty("used_slug")           val slug: String?        = null
-    )
+    /** player.sources → (etiket, href) */
+    fun kaynaklar(s: String): List<Pair<String?, String>> {
+        val oyuncu = s.indexOf("\"player\":{").takeIf { it >= 0 } ?: return emptyList()
+        val dizi   = nesne(s, "\"sources\":", oyuncu) ?: return emptyList()
+        return Regex("""\{[^{}]*\}""").findAll(dizi).mapNotNull { m ->
+            val nesne = m.value
+            val href  = deger(nesne, "href") ?: return@mapNotNull null
+            deger(nesne, "label") to href
+        }.toList()
+    }
+
+    /** Geçerli sayfanın kaynak etiketi (ör. "PUB+ · Türkçe Altyazı") */
+    fun etiket(s: String, yol: String): String? = kaynaklar(s).firstOrNull { yol(it.second) == yol }?.first
+
+    fun yol(adres: String): String = adres.substringAfter("://", adres).let { if (adres.contains("://")) "/" + it.substringAfter("/") else it }
 }

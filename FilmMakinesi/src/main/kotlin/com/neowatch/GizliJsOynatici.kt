@@ -2,7 +2,9 @@ package com.neowatch
 
 import android.util.Log
 import com.lagradost.cloudstream3.*
+import com.lagradost.cloudstream3.network.WebViewResolver
 import com.lagradost.cloudstream3.utils.*
+import org.json.JSONArray
 import org.jsoup.Jsoup
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.ContextFactory
@@ -42,13 +44,23 @@ open class GizliJsOynatici : ExtractorApi() {
             subtitleCallback.invoke(newSubtitleFile(GizliJs.unicodeCoz(etiket), subUrl))
         }
 
+        // "file: atob(file_link)" gibi çağrılar değişken sayılmaz (Rapidrame / rplayer)
         val degisken = Regex("""sources\s*:\s*\[\s*\{\s*file\s*:\s*([A-Za-z_$][\w$]*)\s*[,}]""").find(html)?.groupValues?.get(1)
+            ?.takeIf { it != "atob" }
         var link     = if (degisken != null) GizliJs.degiskenCoz(html, degisken) else null
+        if (link != null && !link.startsWith("http")) link = null
 
         // Eski tip: file_link="base64"
         if (link.isNullOrBlank()) {
             val fileLink = Regex("""file_link\s*=\s*"([^"]+)"""").find(getAndUnpack(html))?.groupValues?.get(1)
             link = fileLink?.let { runCatching { base64Decode(it) }.getOrNull() }
+        }
+
+        // Kasım 2026: betikler location.hostname, sayfadaki data-* değeri ve tarayıcı ortamı denetimleriyle
+        // anahtar üretiyor; Rhino'da çalışmıyor. Bu durumda sayfa uygulamanın gerçek WebView'ında açılıp değer okunur.
+        if ((link.isNullOrBlank() || !link.startsWith("http")) && degisken != null) {
+            link = runCatching { tarayiciIle(url, extRef) }
+                .onFailure { Log.d("NeO_$isim", "WebView » ${it.message}") }.getOrNull()
         }
 
         if (link.isNullOrBlank() || !link.startsWith("http")) {
@@ -63,6 +75,39 @@ open class GizliJsOynatici : ExtractorApi() {
                 this.quality = Qualities.Unknown.value
             }
         )
+    }
+
+    /**
+     * Oynatıcı sayfasını gömülü WebView'da açar; sayfa kendi betiklerini çalıştırdıktan sonra
+     * `sources: [{file: X}]` değişkeninin değerini okur. Değişken adı her yüklemede değiştiği için
+     * ad sayfanın içinden bulunur. Değer okununca geçersiz bir adrese istek atılarak WebView erken kapatılır.
+     * useOkhttp = true: sayfa istekleri uygulamanın (DNS over HTTPS ayarlı) istemcisiyle yapılır.
+     */
+    private suspend fun tarayiciIle(url: String, referer: String): String? {
+        var okunan: String? = null
+        val betik = """(function(){try{var h=document.documentElement.innerHTML;""" +
+            """var m=h.match(/sources\s*:\s*\[\s*\{\s*file\s*:\s*([A-Za-z_${'$'}][\w${'$'}]*)/);if(!m)return "";""" +
+            """var v=window[m[1]];if(typeof v==="string"&&v.indexOf("http")===0){""" +
+            """if(!window.__neo){window.__neo=1;var i=new Image();i.src="https://neowatch.invalid/sonuc?u="+encodeURIComponent(v);}""" +
+            """return v;}}catch(e){}return "";})()"""
+
+        val (istek, _) = WebViewResolver(
+            interceptUrl   = Regex("""neowatch\.invalid/sonuc|\.m3u8(?:\?|$)"""),
+            useOkhttp      = true,
+            script         = betik,
+            scriptCallback = { sonuc ->
+                val deger = runCatching { JSONArray("[$sonuc]").optString(0) }.getOrNull()
+                if (!deger.isNullOrBlank() && deger.startsWith("http")) okunan = deger
+            },
+            timeout        = 20_000L
+        ).resolveUsingWebView(url, referer = referer)
+
+        val adres = istek?.url
+        if (adres != null) {
+            if (adres.host == "neowatch.invalid") adres.queryParameter("u")?.takeIf { it.startsWith("http") }?.let { return it }
+            else return adres.toString()
+        }
+        return okunan
     }
 }
 

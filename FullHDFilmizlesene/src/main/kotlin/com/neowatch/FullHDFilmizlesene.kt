@@ -186,6 +186,8 @@ class FullHDFilmizlesene : MainAPI() {
                 runCatching {
                     if (videoUrl.contains("turbo.imgz.me")) {
                         TurboImgz().getUrl("${key}||${videoUrl}", "${mainUrl}/", subtitleCallback, callback)
+                    } else if (RapidVidNeo.uygunMu(videoUrl)) {
+                        RapidVidNeo().getUrl(videoUrl, "${mainUrl}/", subtitleCallback, callback)
                     } else {
                         loadExtractor(videoUrl, "${mainUrl}/", subtitleCallback, callback)
                     }
