@@ -22,50 +22,96 @@ Daemon will be stopped at the end of the build
 
 > Task :run
 === Eklenti testleri ===
-    [D/FHDF] data » https://hdfilm.us/the-ice-storm-buz-firtinasi/
-    [D/FHDF]  » https://vidpapi.xyz/video/1a3f91fead97497b1a96d6104ad339f6
-    [D/NeO_FirePlayer] vidpapi.xyz » https://vidpapi.xyz/cdn/hls/f33eda182fb6f95763d6b8b5b853e3bf/master.m3u8?md5=39kybiCE28pp0sElXQUdzA&expires=1793797835
-    [D/FHDF] Türkçe Dublaj » https://ok.ru/videoembed/2779956185681?nochat=1
-DEBUG ApiError: -------------------------------------------------------------------
-com.lagradost.cloudstream3.ErrorLoadingException: Video not found
-DEBUG ApiError: safeApiCall: Video not found
-DEBUG ApiError: safeApiCall: Video not found
-DEBUG ApiError: -------------------------------------------------------------------
-	at com.lagradost.cloudstream3.extractors.Odnoklassniki.getUrl$suspendImpl(OdnoklassnikiExtractor.kt:37)
-	at com.lagradost.cloudstream3.extractors.Odnoklassniki$getUrl$1.invokeSuspend(OdnoklassnikiExtractor.kt)
-	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
-	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
-	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:256)
-	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:54)
-	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlockingImpl(Builders.kt:30)
-	at kotlinx.coroutines.BuildersKt.runBlockingImpl(Unknown Source)
-	at kotlinx.coroutines.BuildersKt__Builders_concurrentKt.runBlockingK(Builders.concurrent.kt:172)
-	at kotlinx.coroutines.BuildersKt.runBlockingK(Unknown Source)
-	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:22)
-	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
-	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:20)
-	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
-	at TestKt.main(Test.kt:133)
-### FullHDFilm (https://hdfilm.us) kategori=21
-  ham=200 loc=- | başlık='Film İzle - Full HD Film İzle 1080P | Fullhdfilm' uzunluk=113910 canonical=https://hdfilm.us/
-  KAT Son Eklenenler -> 24  | The Ice Storm – Buz Fırtınası, 2046
-  KAT Türkçe Dublaj -> 35  | The Ice Storm – Buz Fırtınası, 2046
-  LOAD The Ice Storm – Buz Fırtınası -> The Ice Storm – Buz Fırtınası Movie bölüm=-1 
-  LINKS ok=true adet=1  | vidpapi.xyz vidpapi.xyz
+NPKAPI ozel p=5mg dogru=true
+NPKAPI yedek p=23 dogru=false
+### SelcukFlix (https://selcukflix.app) kategori=15
+  ham=403 loc=- | başlık='' uzunluk=17 canonical=-
+  KAT Son Bölümler -> 0  | 
+  KAT Diziler -> 0  | 
 
-  ARAMA FullHDFilm 'batman' -> 4  | Batman Begins – Batman Başlıyo hdfilm.us/batman-begins-batman-basliyor/, Batman ve Robin hdfilm.us/batman-ve-robin/, The Dark Knight Rises – Kara Ş hdfilm.us/the-dark-knight-rises-kara-sovalye-yukseliyor/
-    [D/FHDF] data » https://hdfilm.us/utopia-utopya/
-    [D/FHDF]  » https://vidpapi.xyz/video/92bbd31f8e0e43a7da8a6295b251725f
-    [D/NeO_FirePlayer] vidpapi.xyz » https://vidpapi.xyz/cdn/hls/766e18f6b87fd3f951690a1ff8be79ce/master.m3u8?md5=cIZfhiQqR6z8ENAEQOg1ZA&expires=1793797839
-FHD https://hdfilm.us/utopia-utopya/ -> true  1 :: vidpapi.xyz https://vidpapi.xyz/cdn/hls/766e18f6b87fd3f951690a1ff8be79ce/master.m3
-    [D/FHDF] data » https://hdfilm.us/avengers-endgame/
-    [D/FHDF]  » https://vidpapi.xyz/video/dc5d637ed5e62c36ecb73b654b05ba2a
-    [D/NeO_FirePlayer] vidpapi.xyz » https://vidpapi.xyz/cdn/hls/51d03bbf44c380543460f0862753fd3d/master.m3u8?md5=9DTFt6IHgMBWeVjUull6yA&expires=1793797841
-    [D/FHDF] Türkçe Dublaj » https://vidpapi.xyz/video/44a2e0804995faf8d2e3b084a1e2db1d
-    [D/NeO_FirePlayer] vidpapi.xyz » https://vidpapi.xyz/cdn/hls/e25f6aa062a0b7da8dfdedf5f4e90442/master.m3u8?md5=Thu-xwBPdPn275dAwDw5vQ&expires=1793797842
-FHD https://hdfilm.us/avengers-endgame/ -> true  2 :: vidpapi.xyz https://vidpapi.xyz/cdn/hls/51d03bbf44c380543460f0862753fd3d/master.m3, vidpapi.xyz - Türkçe Dublaj https://vidpapi.xyz/cdn/hls/e25f6aa062a0b7da8dfdedf5f4e90442/master.m3
+### FullHDFilmizlesene (https://www.fullhdfilmizlesene.now) kategori=27
+  ham=403 loc=- | başlık='Attention Required! | Cloudflare' uzunluk=5672 canonical=-
+  KAT Yeni Filmler -> 0  | 
+  KAT En Çok izlenen Filmler -> 0  | 
+
+    [D/SFG] data » https://superfilmizle.icu/2m2/
+    [D/SFG] embed » https://play2.pilavyerplay.top/assets/js/s.php?s=b9-z3WIsRCAmKEA98lRZag
+### SuperFilmGeldi (https://superfilmizle.icu) kategori=45
+  ham=200 loc=- | başlık='Superfilmizle - HD Kalite Film izle' uzunluk=457614 canonical=https://superfilmizle.icu/
+  KAT Yeni Eklenen Filmler -> 24  | 2m², Amansız
+  KAT Yeni Eklenen Diziler -> 24  | 12 12 12, Galiçya'da Cinayet
+  LOAD 2m² -> 2m² Movie bölüm=-1 
+  LINKS ok=true adet=2  | Pilavyer (Turkish) play2.pilavyerplay.top, Pilavyer Yedek (Turkish) play2.pilavyerplay.top
+
+    [D/STF] data » https://www.setfilmizle.ltd/film/asla-teslim-olma-2026-izle/
+    [D/STF] SetPlay » {"success":true,"data":{"stream":{"type":"bridge","url":"https:\/\/setplay.sbs\/player\/stfplay.php?t=Jjc0jjuV1CLfK6MbFox9xx9Emz2islojB_UWUNVdrm7IVgKLHHMoWKu-JmcIOjXZaKGrHTMz2ZONh9JSh4H4cyPtznyayZEBQIGqbfJ7qvM.loJW0dCfWSMBU-tcBlmmNCoO55rioedOQBoQTdXarJQ&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubHR
+    [D/NeO_StfKopru] manifest » https://setplay.sbs/player/manifest.php?t=pCTMiutZhFDqtM_3Bw-8eKhvc5FCOInIcNMzSIDaBlBeuF7ByH3Zf8i12fIM0I_v9fMIjugEAU1d59xe5y6QEP60CnZ0qimouLokw8JKsSH-uJPz5AhEVQD92mqI7b52.KG7lqfbZX-iRmom2ENCKOJjYgRytm-vY7IqlPxJw7EQ
+### SetFilmIzle (https://www.setfilmizle.ltd) kategori=23
+  ham=200 loc=- | başlık='Set Film izle | HD Film | Yabancı Dizi' uzunluk=109188 canonical=https://www.setfilmizle.ltd/
+  KAT Filmler -> 24  | Asla Teslim Olma, Allen
+  KAT Diziler -> 24  | The Walking Dead, 12 12 12
+  LOAD Asla Teslim Olma -> Asla Teslim Olma Movie bölüm=-1 
+  LINKS ok=true adet=1  | SetPlay setplay.sbs
+
+    [D/SZD] data » https://sezonlukdizi.cc/12-12-12/1-sezon-1-bolum.html
+    [D/SZD] bid » 99432
+    [D/SZD] dil»1 | veri.baslik » Streamruby
+    [D/SZD] dil»1 | veri.baslik » Okru
+    [D/SZD] dil»1 | veri.baslik » VidMoly
+    [D/SZD] dil»1 | veri.baslik » Filemoon
+    [D/SZD] dil»1 | iframe » https://bysejikuar.com/e/6kml1ss6864e
+    [D/NeO_Byse] WebView » An operation is not implemented: Not yet implemented
+    [D/SZD] dil»1 | veri.baslik » ABStream
+    [D/SZD] dil»0 | veri.baslik » Streamruby
+    [D/SZD] dil»0 | veri.baslik » Okru
+    [D/SZD] dil»0 | veri.baslik » VidMoly
+    [D/SZD] dil»0 | veri.baslik » Filemoon
+    [D/SZD] dil»0 | veri.baslik » ABStream
+### SezonlukDizi (https://sezonlukdizi.cc) kategori=8
+  ham=200 loc=- | başlık='Sezonluk Dizi izle - 1080p yabancı dizi izle' uzunluk=35612 canonical=https://sezonlukdizi.cc/
+  KAT Son Eklenenler -> 25  | 12 12 12, Under Siege
+  KAT Mini Diziler -> 25  | VisionQuest, The Final Problem
+  LOAD 12 12 12 -> 12 12 12 TvSeries bölüm=8 
+  LINKS ok=false adet=0  | 
+
+### HDFilmCehennemi (https://www.hdfilmcehennemi.nl) kategori=14
+  ham=451 loc=- | başlık='451 - Yasal Nedenlerle Erisime Kapali' uzunluk=2523 canonical=-
+  KAT Yeni Eklenen Filmler -> 0  | 
+  KAT Yeni Eklenen Diziler -> 0  | 
+
+### DiziPalGuncel (https://dizipal1595.com) kategori=22
+  ham=403 loc=- | başlık='Attention Required! | Cloudflare' uzunluk=4912 canonical=-
+  KAT Son Bölümler -> 0  | 
+  KAT Diziler -> 0  | 
+
+  ARAMA SelcukFlix 'south park' -> 0  | 
+  ARAMA DiziPalGuncel 'yeralti' -> 0  | 
+SCF LOAD https://selcukflix.app/film/avatar/izle -> null null bölüm=null ilk=null 
+    [D/SCF] data » https://selcukflix.app/film/avatar/izle
+SCF LINKS https://selcukflix.app/film/avatar/izle -> false  0 :: 
+SCF LOAD https://selcukflix.app/dizi/south-park/sezon-1/bolum-1 -> null null bölüm=null ilk=null 
+    [D/SCF] data » https://selcukflix.app/dizi/south-park/sezon-1/bolum-1
+SCF LINKS https://selcukflix.app/dizi/south-park/sezon-1/bolum-1 -> false  0 :: 
+SCF LOAD https://selcukflix.app/dizi/south-park -> null null bölüm=null ilk=null 
+    [D/NeO_RapidVid] _p8 yok, eski çözücü » https://rapidvid.org/vx/v1x43addc62
+EXT RapidVidNeo -> HATA ErrorLoadingException: File not found links=0 subs=[]
+    [D/NeO_Byse] WebView » An operation is not implemented: Not yet implemented
+EXT ByseNeo ->  links=0 subs=[]
+Exception in NiceHttp: java.io.InterruptedIOException timeout
+
+######## SCRIPT https://luciferplays.com/embed/8vsm73gdqh0a (ref=https://superfilmizle.icu/) -> null HATA InterruptedIOException: timeout son=null
+STF ajax » {"success":true,"data":{"stream":{"type":"bridge","url":"https:\/\/setplay.sbs\/player\/stfplay.php?t=Dneha_yp9ptXvCnKmiMaeLB4RJuzWgh1I--6lYzzOnKH9aNDv7e16dU817hXv0qCiRfzBr1EsRzhnCc-grTQaAfdk9NYdxEeGXcf5p91lc0.zByUioLuwLnF5Gv3R14jrFwpqvwg8BDHt8CYzeuBNMI&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhp
+
+######## HAM https://setplay.sbs/player/stfplay.php?t=Dneha_yp9ptXvCnKmiMaeLB4RJuzWgh1I--6lYzzOnKH9aNDv7e16dU817hXv0qCiRfzBr1EsRzhnCc-grTQaAfdk9NYdxEeGXcf5p91lc0.zByUioLuwLnF5Gv3R14jrFwpqvwg8BDHt8CYzeuBNMI&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubHRkL3dwLWNvbnRlbnQvdGhlbWVzL3NldGZpbG0vYXNzZXRzLw&av=9a8878ec&nb2=1 (ref=https://www.setfilmizle.ltd/) -> 200  son=https://setplay.sbs/player/stfplay.php?t=Dneha_yp9ptXvCnKmiMaeLB4RJuzWgh1I--6lYzzOnKH9aNDv7e16dU817hXv0qCiRfzBr1EsRzhnCc-grTQaAfdk9NYdxEeGXcf5p91lc0.zByUioLuwLnF5Gv3R14jrFwpqvwg8BDHt8CYzeuBNMI&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubHRkL3dwLWNvbnRlbnQvdGhlbWVzL3NldGZpbG0vYXNzZXRzLw&av=9a8878ec&nb2=1
+UZUNLUK 12345
+<!DOCTYPE html> <html lang="tr"> <head> <meta charset="utf-8"> <script>window.SPG_A={"acik":true,"hedef":"engel.html","sp":"61ae3bf90c41f1edab8de3643deadb69","spT":1794772223};</script> <script>!function(e,t){"use strict";var n=e.SPG_A||{};function r(t,n){for(var r=e.atob(t),o=e.atob(n),i="",c=0;c<r.length;c++)i+=String.fromCharCode(r.charCodeAt(c)^o.charCodeAt(c%o.length));return i.split("|")}var o=n.sp||"",i=n.spT||0,c=e.performance&&e.performance.now?e.performance.now():0;function a(){var t=e.performance&&e.performance.now?e.performance.now():0,n=i+Math.floor((t-c)/1e3),r=Math.floor(2176782336*Math.random()).toString(36);return n+"."+r+"."+function(e){for(var t=2166136261,n=0;n<e.length;n++)t^=e.charCodeAt(n),t=Math.imul(t,16777619)>>>0;return t.toString(16)}(o+"|"+n+"|"+r)}function l(t){return"//"!==(t=String(t||"")).slice(0,2)&&(-1===t.indexOf("://")||0===t.indexOf(e.location.origin+"/"))}function u(e,n,r){var o=t.createElement("link");o.rel=e,r&&(o.as=r),o.crossOrigin="",o.href=n,t.head.appendChild(o)}function f(e,n,o){if(e&&n&&o){var i=t.getElementById(e);if(i){var c;try{c=r(n,o)[0]}catch(e){return}/^https?:\/\/[a-z0-9.-]+(:\d+)?(\/|$)/i.test(c)&&(i.src=c)}}}function s(e,t){if(e&&t){var n;try{n=r(e,t)}catch(e){return}for(var o=0;o<n.length;o++)/^[a-z0-9.-]+$/i.test(n[o])&&u("preconnect","https://"+n[o])}}if(function(){if(o&&i){try{var t=e.XMLHttpRequest.prototype.open,n=e.XMLHttpRequest.prototype.send;e.XMLHttpRequest.prototype.open=function(e,n){return this.__spAdres=n,t.apply(this,arguments)},e.XMLHttpRequest.prototype.send=function(){if(e.SPG&&"function"==typeof e.SPG.kontrol&&!e.SPG.kontrol())throw new Error("engellendi");try{l(this.__spAdres)&&this.setRequestHeader("X-Sp",a())}catch(e){}return n.apply(this,arguments)}}catch(e){}try{if("function"!=typeof e.fetch)return;var r=e.fetch;e.fetch=function(t,n){if(e.SPG&&"function"==typeof e.SPG.kontrol&&!e.SPG.kontrol())return Promise.reject(new Error("engellendi"));try{if(l("string"==typeof t?t:t&&t.url))if((n=n||{}).headers instanceof e.Headers)n.headers.set("X-Sp",a());else{var o={};for(var i in n.headers||{})Object.prototype.hasOwnProperty.call(n.headers,i)&&(o[i]=n.headers[i]);o["X-Sp"]=a(),n.headers=o}}catch(e){}return r.apply(this,[t,n])}}catch(e){}}}(),n.acik){var h=n.hedef||"engel.html",p=/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone|Tizen|Web0S|WebOS|NetCast|SMART-TV|SmartTV|HbbTV|CE-HTML|VIDAA|Vestel|Philips|NETTV|Viera|AQUOS|BRAVIA|InettvBrowser|Opera TV|Espial|Roku|CrKey|Chromecast|GoogleTV|Google TV|AndroidTV|Android TV|AFT[A-Z]|SHIELD|Xbox|PlayStation|Nintendo|Kodi|ExoPlayer|stagefright|DLNA|HiSense|ARRIS|Zeasn|MiBOX|MiTV|DTVPlayer|LG Browser|Maple|NetRangeMMH|SonyBDP|SonyCEBrowser|AppleTV|Apple TV/i.test(navigator.userAgent),d=!1,y=[],g=[],v=null,S=null,m=!1,w=0,P=Date.now(),A=0,k=function(){try{return e.top!==e.self}catch(e){return!0}}(),b=null,M=!1,T=t.createElement("div");try{Object.defineProperty(T,"id",{get:function(){return M=!0,""},configurable:!0})}catch(e){}var V=!0;if(p||(H()>150||R())&&(V=!1),e.SPG={ok:V,hazir:function(t){d||(e.SPG.ok?t():g.push(t))},kontrol:function(){return!d&&(!!p||(!(H()>150||R())||(L(),!1)))},kayit:function(e){e&&(y.push(e),d&&O(e))},isin:function(t,n){e.SPG.ok&&!d&&s(t,n)},cerceve:function(t,n,r){e.SPG.ok&&!d&&f(t,n,r)}},V){for(;g.length;)g.shift()();if(void 0!==e.Worker&&void 0!==e.Blob&&!p)try{var E=e.URL.createObjectURL(new e.Blob(["onmessage=function(){debugger;postMessage(1);};"],{type:"text/javascript"}));(S=new e.Worker(E)).onmessage=function(){m=!0,w=0},S.onerror=function(){S=null}}catch(e){S=null}t.addEventListener("visibilitychange",function(){w=0,P=Date.now()}),v=setInterval(function(){if(!d){var n=Date.now(),r=n-P;if(P=n,R())L();else if(++A%4==0&&function(){if(!e.console||"function"!=typeof e.console.log)return!1;M=!1;try{e.console.log(T),"function"==typeof e.console.clear&&e.console.clear()}catch(e){return!1}return M}())L();else if(S){try{S.postMessage(1)}catch(e){return void(S=null)}r>1200||t.hidden?w=0:m&&++w>=2&&L()}}},500)}else L()}else e.SPG={ok:!0,hazir:function(e){e()},kayit:function(){},kontrol:function(){return!0},isin:s,cerceve:f};function G(){return e.performance&&e.performance.now?e.performance.now():Date.now()}function H(){var e=G();try{(function(){}).constructor("debugger")()}catch(e){return 0}return G()-e}function R(){var n=p||k||1!==(e.devicePixelRatio||1)?null:e.outerWidth&&e.outerHeight?e.outerWidth<100||e.outerHeight<100||t.fullscreenElement||t.webkitFullscreenElement?null:{w:e.outerWidth-e.innerWidth,h:e.outerHeight-e.innerHeight}:null;return!!n&&(null===b?(b=n,!1):n.w-b.w>160||n.h-b.h>160)}function O(e){try{e.hls&&(e.hls.destroy(),e.hls=null)}catch(e){}try{e.video&&(e.video.pause(),e.video.removeAttribute("src"),e.video.load())}catch(e){}}function L(){if(!d){d=!0,e.SPG.ok=!1;for(var n=0;n<y.length;n++)O(y[n]);if(v&&(clearInterval(v),v=null),S){try{S.terminate()}catch(e){}S=null}try{t.documentElement.innerHTML="<title>404</title>"}catch(e){}try{e.location.replace(h)}catch(t){try{e.location.href=h}catch(e){}}}}}(window,document);</script> <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> <meta name="referrer" content="origin"> <title>The.End.Of.Oak.Street.2026.1080p</title> <link rel="preload" as="script" href="https://www.setfilmizle.ltd/wp-content/themes/setfilm/assets/vendor/hls.min.js?v=9a8878ec"> <link rel="stylesheet" href="https://www.setfilmizle.ltd/wp-content/themes/setfilm/assets/css/player.css?v=9a8878ec"> <script>SPG.isin("pBGhPx321eVc9HZOUYv0","1yOPXnGCvIszghdgMu2QyA==");</script> <style> html,body{margin:0;padding:0;width:100%;height:100%;background:#000;overflow:hidden} #stfKap{position:absolute;inset:0} </style> </head> <body> <div id="stfKap"></div> <script> window.STF_PLAYER = { hls: "https://www.setfilmizle.ltd/wp-content/themes/setfilm/assets/vendor/hls.min.js?v=9a8878ec", hlsYedek: "assets/vendor/hls.min.js?v=1788433687", ayar: {"otomatik":true,"devam":true,"koruma":false,"hiz":[0.5,0.75,1,1.25,1.5,2],"kalite":[]}}; window.STF_KOPRU = { src: "manifest.php?t=ZZLcx7E9I1E_cHw8-YShg_cFyfdg1Cj1h396Ex3-DA3JqDWsv2OGT1z2VtmDzggiyuORbPVcxePEKEN7p4lUURQYUbPnM-oypT0Vpte2oOvPCoRnolUz9OQT7oTqSF3QNGkSuZ0MqoVB1LSFBrvU6A.sCGr1ncp6nCu_Vir4Z-cY3WZ1bPpywlEXl3I7Mj42lY", id: "setplay:The.End.Of.Oak.Street.2026.1080p", subtitles: [{"file":"https://s2.altinova.cfd/cdn/down/The.End.Of.Oak.Street.2026.1080p/subtitle/tur.vtt","label":"Türkçe","lang":"tur","forced":false,"kind":"captions"},{"file":"https://s2.altinova.cfd/cdn/down/The.End.Of.Oak.Street.2026.1080p/subtitle/eng.vtt","label":"İngilizce","lang":"eng","forced":false,"kind":"captions"},{"file":"https://s2.altinova.cfd/cdn/down/The.End.Of.Oak.Street.2026.1080p/subtitle/tur-forced.vtt","label":"Türkçe","lang":"tur","forced":true,"kind":"captions"},{"file":"https://s2.altinova.cfd/cdn/down/The.End.Of.Oak.Street.2026.1080p/preview/thumbnails.vtt","kind":"thumbnails"}], sayac: "count.php", jeton: "Dneha_yp9ptXvCnKmi
+STF ajax » {"success":true,"data":{"stream":{"type":"bridge","url":"https:\/\/setplay.sbs\/player\/stfplay.php?t=Dneha_yp9ptXvCnKmiMaeLB4RJuzWgh1I--6lYzzOnKH9aNDv7e16dU817hXv0qCiRfzBr1EsRzhnCc-grTQaAfdk9NYdxEeGXcf5p91lc0.zByUioLuwLnF5Gv3R14jrFwpqvwg8BDHt8CYzeuBNMI&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhp
+
+######## HAM https://setplay.sbs/player/stfplay.php?t=Dneha_yp9ptXvCnKmiMaeLB4RJuzWgh1I--6lYzzOnKH9aNDv7e16dU817hXv0qCiRfzBr1EsRzhnCc-grTQaAfdk9NYdxEeGXcf5p91lc0.zByUioLuwLnF5Gv3R14jrFwpqvwg8BDHt8CYzeuBNMI&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubHRkL3dwLWNvbnRlbnQvdGhlbWVzL3NldGZpbG0vYXNzZXRzLw&av=9a8878ec (ref=https://www.setfilmizle.ltd/) -> 200  son=https://setplay.sbs/player/stfplay.php?t=Dneha_yp9ptXvCnKmiMaeLB4RJuzWgh1I--6lYzzOnKH9aNDv7e16dU817hXv0qCiRfzBr1EsRzhnCc-grTQaAfdk9NYdxEeGXcf5p91lc0.zByUioLuwLnF5Gv3R14jrFwpqvwg8BDHt8CYzeuBNMI&p=eyJvdG9tYXRpayI6dHJ1ZSwiZGV2YW0iOnRydWUsImhpeiI6WzAuNSwwLjc1LDEsMS4yNSwxLjUsMl0sImthbGl0ZSI6W119&a=aHR0cHM6Ly93d3cuc2V0ZmlsbWl6bGUubHRkL3dwLWNvbnRlbnQvdGhlbWVzL3NldGZpbG0vYXNzZXRzLw&av=9a8878ec
+UZUNLUK 11727
+<!DOCTYPE html> <html lang="tr"> <head> <meta charset="utf-8"> <script>window.SPG_A={"acik":true,"hedef":"engel.html","sp":"","spT":0};</script> <script>!function(e,t){"use strict";var n=e.SPG_A||{};function r(t,n){for(var r=e.atob(t),o=e.atob(n),i="",c=0;c<r.length;c++)i+=String.fromCharCode(r.charCodeAt(c)^o.charCodeAt(c%o.length));return i.split("|")}var o=n.sp||"",i=n.spT||0,c=e.performance&&e.performance.now?e.performance.now():0;function a(){var t=e.performance&&e.performance.now?e.performance.now():0,n=i+Math.floor((t-c)/1e3),r=Math.floor(2176782336*Math.random()).toString(36);return n+"."+r+"."+function(e){for(var t=2166136261,n=0;n<e.length;n++)t^=e.charCodeAt(n),t=Math.imul(t,16777619)>>>0;return t.toString(16)}(o+"|"+n+"|"+r)}function l(t){return"//"!==(t=String(t||"")).slice(0,2)&&(-1===t.indexOf("://")||0===t.indexOf(e.location.origin+"/"))}function u(e,n,r){var o=t.createElement("link");o.rel=e,r&&(o.as=r),o.crossOrigin="",o.href=n,t.head.appendChild(o)}function f(e,n,o){if(e&&n&&o){var i=t.getElementById(e);if(i){var c;try{c=r(n,o)[0]}catch(e){return}/^https?:\/\/[a-z0-9.-]+(:\d+)?(\/|$)/i.test(c)&&(i.src=c)}}}function s(e,t){if(e&&t){var n;try{n=r(e,t)}catch(e){return}for(var o=0;o<n.length;o++)/^[a-z0-9.-]+$/i.test(n[o])&&u("preconnect","https://"+n[o])}}if(function(){if(o&&i){try{var t=e.XMLHttpRequest.prototype.open,n=e.XMLHttpRequest.prototype.send;e.XMLHttpRequest.prototype.open=function(e,n){return this.__spAdres=n,t.apply(this,arguments)},e.XMLHttpRequest.prototype.send=function(){if(e.SPG&&"function"==typeof e.SPG.kontrol&&!e.SPG.kontrol())throw new Error("engellendi");try{l(this.__spAdres)&&this.setRequestHeader("X-Sp",a())}catch(e){}return n.apply(this,arguments)}}catch(e){}try{if("function"!=typeof e.fetch)return;var r=e.fetch;e.fetch=function(t,n){if(e.SPG&&"function"==typeof e.SPG.kontrol&&!e.SPG.kontrol())return Promise.reject(new Error("engellendi"));try{if(l("string"==typeof t?t:t&&t.url))if((n=n||{}).headers instanceof e.Headers)n.headers.set("X-Sp",a());else{var o={};for(var i in n.headers||{})Object.prototype.hasOwnProperty.call(n.headers,i)&&(o[i]=n.headers[i]);o["X-Sp"]=a(),n.headers=o}}catch(e){}return r.apply(this,[t,n])}}catch(e){}}}(),n.acik){var h=n.hedef||"engel.html",p=/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone|Tizen|Web0S|WebOS|NetCast|SMART-TV|SmartTV|HbbTV|CE-HTML|VIDAA|Vestel|Philips|NETTV|Viera|AQUOS|BRAVIA|InettvBrowser|Opera TV|Espial|Roku|CrKey|Chromecast|GoogleTV|Google TV|AndroidTV|Android TV|AFT[A-Z]|SHIELD|Xbox|PlayStation|Nintendo|Kodi|ExoPlayer|stagefright|DLNA|HiSense|ARRIS|Zeasn|MiBOX|MiTV|DTVPlayer|LG Browser|Maple|NetRangeMMH|SonyBDP|SonyCEBrowser|AppleTV|Apple TV/i.test(navigator.userAgent),d=!1,y=[],g=[],v=null,S=null,m=!1,w=0,P=Date.now(),A=0,k=function(){try{return e.top!==e.self}catch(e){return!0}}(),b=null,M=!1,T=t.createElement("div");try{Object.defineProperty(T,"id",{get:function(){return M=!0,""},configurable:!0})}catch(e){}var V=!0;if(p||(H()>150||R())&&(V=!1),e.SPG={ok:V,hazir:function(t){d||(e.SPG.ok?t():g.push(t))},kontrol:function(){return!d&&(!!p||(!(H()>150||R())||(L(),!1)))},kayit:function(e){e&&(y.push(e),d&&O(e))},isin:function(t,n){e.SPG.ok&&!d&&s(t,n)},cerceve:function(t,n,r){e.SPG.ok&&!d&&f(t,n,r)}},V){for(;g.length;)g.shift()();if(void 0!==e.Worker&&void 0!==e.Blob&&!p)try{var E=e.URL.createObjectURL(new e.Blob(["onmessage=function(){debugger;postMessage(1);};"],{type:"text/javascript"}));(S=new e.Worker(E)).onmessage=function(){m=!0,w=0},S.onerror=function(){S=null}}catch(e){S=null}t.addEventListener("visibilitychange",function(){w=0,P=Date.now()}),v=setInterval(function(){if(!d){var n=Date.now(),r=n-P;if(P=n,R())L();else if(++A%4==0&&function(){if(!e.console||"function"!=typeof e.console.log)return!1;M=!1;try{e.console.log(T),"function"==typeof e.console.clear&&e.console.clear()}catch(e){return!1}return M}())L();else if(S){try{S.postMessage(1)}catch(e){return void(S=null)}r>1200||t.hidden?w=0:m&&++w>=2&&L()}}},500)}else L()}else e.SPG={ok:!0,hazir:function(e){e()},kayit:function(){},kontrol:function(){return!0},isin:s,cerceve:f};function G(){return e.performance&&e.performance.now?e.performance.now():Date.now()}function H(){var e=G();try{(function(){}).constructor("debugger")()}catch(e){return 0}return G()-e}function R(){var n=p||k||1!==(e.devicePixelRatio||1)?null:e.outerWidth&&e.outerHeight?e.outerWidth<100||e.outerHeight<100||t.fullscreenElement||t.webkitFullscreenElement?null:{w:e.outerWidth-e.innerWidth,h:e.outerHeight-e.innerHeight}:null;return!!n&&(null===b?(b=n,!1):n.w-b.w>160||n.h-b.h>160)}function O(e){try{e.hls&&(e.hls.destroy(),e.hls=null)}catch(e){}try{e.video&&(e.video.pause(),e.video.removeAttribute("src"),e.video.load())}catch(e){}}function L(){if(!d){d=!0,e.SPG.ok=!1;for(var n=0;n<y.length;n++)O(y[n]);if(v&&(clearInterval(v),v=null),S){try{S.terminate()}catch(e){}S=null}try{t.documentElement.innerHTML="<title>404</title>"}catch(e){}try{e.location.replace(h)}catch(t){try{e.location.href=h}catch(e){}}}}}(window,document);</script> <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> <title>The.End.Of.Oak.Street.2026.1080p</title> <style> html, body { margin: 0; padding: 0; height: 100%; background: #000; overflow: hidden; } iframe { display: block; width: 100%; height: 100%; border: 0; } #b2yuk { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; background: #000; z-index: 2; } #b2yuk.acik { display: flex; } #b2yuk i { width: 46px; height: 46px; border: 3px solid rgba(255,255,255,.22); border-top-color: #fff; border-radius: 50%; animation: b2spin .8s linear infinite; } @keyframes b2spin { to { transform: rotate(360deg); } } </style> </head> <body> <iframe id="b2" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe> <div id="b2yuk"><i></i></div> <script>SPG.cerceve("b2","F5D\/S10BhbI5N+kTpwvnXlGJ5FYBSN77Lzr7HvkX7ldAkrZ8eEL+2BQf0y6aI9EBHtnqc3wLydUSYNYe7lTiFByR6Al4C\/DwMyX4MLtR5GAqkelzfFDmrjsh1jCZEeRJLYjpVX9Nzto3OvgwgR3KFDGI73x0S8jabyDDP5kd3H8tnsdMCEuX+CYc7AOQXvJ+J7b7WldynPkXHKs9hBDvfTiyuWJ5C8PSMQTjA4Ay9W4SjPteR3KcyiUX7ymEEPFrFYe6d2p+2dAMYuMphBD+axWx+HZCC9nUMiLyBZALtn0srb1sHwqTuz4gp162X74QR4Ho","f+SLOy47qp1fVppn12eGJw==");</script> <script> (function () { 'use strict'; var KOKEN = "https://fastplay.mom"; var jeton = "Dneha_yp9ptXvCnKmiMaeLB4RJuzWgh1I--6lYzzOnKH9aNDv7e16dU817hXv0qCiRfzBr1EsRzhnCc-grTQaAfdk9NYdxEeGXcf5p91lc0.zByUioLuwLnF5Gv3R14jrFwpqvwg8BDHt8CYzeuBNMI"; var temaSkin = true; var cerceve = document.getElementById('b2'); var haber = false; var sayildi = false; var durakli = true; var dustu = false; /** * DÜĞÜMDEN OYNATMAYA DÖN. * * İki yerden çağrılıyor: FastPlay "bu kimlik yok" dediğinde (anında) ve * hiç haber gelmediğinde (12 saniye sonra). Tek yerde toplanmasının sebebi * `replace` çağrısının iki kez tetiklenebilmesi — ikinci çağrı, ilkinin * başlattığı gezinmeyi yarıda kesip döngü kurabiliyordu. */ function ge
 
 === BİTTİ ===
 
-BUILD SUCCESSFUL in 2m 22s
+BUILD SUCCESSFUL in 2m 44s
 2 actionable tasks: 2 executed
