@@ -23,7 +23,10 @@ open class ContentXGenel : ExtractorApi() {
         val host    = base.substringAfter("://").substringAfter("four.").substringAfter("sn.").substringBefore(".")
             .replaceFirstChar { it.uppercase() }
         val extRef  = referer ?: "$base/"
-        val iSource = app.get(tamUrl, referer = extRef).text
+        val yanit   = app.get(tamUrl, referer = extRef)
+        val iSource = yanit.text
+        Log.d("NeO_ContentX", "iframe ${yanit.code} uzunluk=${iSource.length} np=${iSource.contains("NP_CONFIG")} gate=${iSource.contains("NP_GATE")} " +
+            "openPlayer=${iSource.contains("openPlayer")} başlık='${Regex("<title[^>]*>([^<]{0,60})").find(iSource)?.groupValues?.get(1)?.trim()}' » $tamUrl")
 
         // ? Yeni oynatıcı (np.js): window.NP_CONFIG = {"sources":[{"title","master":".../nm.php?v=…"}],"subtitles":[{"label","url"}]}
         nesneAl(iSource, "NP_CONFIG")?.let { np ->
@@ -46,7 +49,8 @@ open class ContentXGenel : ExtractorApi() {
         val iExtract = Regex("""window\.openPlayer\('([^']+)'""").find(iSource)?.groupValues?.get(1)
         if (iExtract == null) {
             // Eski tip oynatıcı: doğrudan file:"..." içerir
-            val dosya = Regex("""file\s*:\s*"([^"]+)""").find(iSource)?.groupValues?.get(1) ?: return
+            val dosya = Regex("""file\s*:\s*"([^"]+)""").find(iSource)?.groupValues?.get(1)
+            if (dosya == null) { Log.d("NeO_ContentX", "kaynak bulunamadı (NP_CONFIG/openPlayer/file yok) » $tamUrl"); return }
             callback.invoke(
                 newExtractorLink(host, host, dosya, if (dosya.contains(".m3u8")) ExtractorLinkType.M3U8 else null) {
                     this.referer = "$base/"
@@ -93,6 +97,7 @@ open class ContentXGenel : ExtractorApi() {
         val kapi = Regex(""""gate"\s*:\s*\{\s*"n"\s*:\s*"([^"]+)"(?:\s*,\s*"b"\s*:\s*(\d+))?""").find(np)?.let { g ->
             NpKapi.coz(sayfa, g.groupValues[1], g.groupValues[2].toIntOrNull())
         }
+        Log.d("NeO_ContentX", "gate=${np.contains("\"gate\"")} p=${kapi ?: "yok"}")
         fun ekle(adres: String) = if (kapi == null) adres else adres + (if (adres.contains("?")) "&" else "?") + "p=$kapi"
 
         val altyazilar = Regex(""""subtitles"\s*:\s*\[(.*?)]""", RegexOption.DOT_MATCHES_ALL).find(np)?.groupValues?.get(1) ?: ""

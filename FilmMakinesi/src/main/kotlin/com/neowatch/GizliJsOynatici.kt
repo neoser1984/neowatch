@@ -49,6 +49,7 @@ open class GizliJsOynatici : ExtractorApi() {
             ?.takeIf { it != "atob" }
         var link     = if (degisken != null) GizliJs.degiskenCoz(html, degisken) else null
         if (link != null && !link.startsWith("http")) link = null
+        Log.d("NeO_$isim", "sayfa uzunluk=${html.length} değişken=$degisken rhino=${link?.take(50) ?: "yok"} başlık='${Regex("<title[^>]*>([^<]{0,60})").find(html)?.groupValues?.get(1)?.trim()}'")
 
         // Eski tip: file_link="base64"
         if (link.isNullOrBlank()) {
@@ -103,6 +104,7 @@ open class GizliJsOynatici : ExtractorApi() {
         ).resolveUsingWebView(url, referer = referer)
 
         val adres = istek?.url
+        Log.d("NeO_GizliJs", "WebView sonucu: istek=${adres?.host ?: "yok"} okunan=${okunan?.take(50) ?: "yok"}")
         if (adres != null) {
             if (adres.host == "neowatch.invalid") adres.queryParameter("u")?.takeIf { it.startsWith("http") }?.let { return it }
             else return adres.toString()

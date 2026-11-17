@@ -212,6 +212,7 @@ class SelcukFlix : MainAPI() {
             }
         }
 
+        Log.d("SCF", "sayfa uzunluk=${html.length} rsc=${rsc.length} player=${rsc.contains("\"player\":{")} kaynak=${kaynaklar.size}")
         var bulundu = false
         for ((etiket, adres) in kaynaklar.distinctBy { it.second }) {
             val iframe = if (adres.startsWith("//")) "https:$adres" else adres
