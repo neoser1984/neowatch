@@ -6,6 +6,7 @@ import android.preference.PreferenceManager
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
 import kotlinx.coroutines.withTimeout
+import kotlinx.coroutines.withTimeoutOrNull
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.InetAddress
@@ -29,7 +30,9 @@ class NeoTeshis : MainAPI() {
     override var lang                 = "tr"
     override val hasQuickSearch       = false
     override val supportedTypes       = setOf(TvType.Movie)
-    override var sequentialMainPage   = true
+    // Kategoriler aynı anda çalışır; uygulamanın ana sayfa zaman aşımı (varsayılan 120 sn) uzatılır
+    override var sequentialMainPage   = false
+    override val getMainPageTimeoutMs: Long = 300_000L
 
     companion object {
         var baglam: Context? = null
@@ -49,6 +52,22 @@ class NeoTeshis : MainAPI() {
             "https://hdfilm.us/", "https://superfilmizle.icu/", "https://sezonlukdizi.cc/", "https://www.dizibox.live/"
         )
 
+        // Sistem testinde engellenen adresler (Cloudflare denemesi kullanır)
+        private val engelliler = java.util.concurrent.ConcurrentLinkedQueue<String>()
+
+        // Kategoriler aynı anda çalıştığı için kayıt satırları eklentinin kendi etiketlerine göre ayrılır
+        private val ETIKET_HARITASI = mapOf(
+            "SetFilmIzle"        to listOf("/STF", "NeO_StfKopru"),
+            "RecTV"              to listOf("/RCTV", "RecTV"),
+            "FullHDFilm"         to listOf("/FHDF", "NeO_FirePlayer"),
+            "DiziKorea"          to listOf("/DZK", "NeO_VidMoly"),
+            "SelcukFlix"         to listOf("/SCF", "NeO_ContentX", "pichive"),
+            "DiziPalGuncel"      to listOf("/DZPG", "NeO_ContentX", "dplayer"),
+            "HDFilmCehennemi"    to listOf("/HDCH", "NeO_CloseLoad", "NeO_Rapidrame", "NeO_Rapid", "NeO_GizliJs", "WebViewResolver", "hdfilmcehennemi"),
+            "FilmMakinesi"       to listOf("/FLMM", "NeO_CloseLoad", "NeO_Rapid", "NeO_GizliJs", "filmmakinesi"),
+            "FullHDFilmizlesene" to listOf("/FHD", "NeO_RapidVid", "rapidvid")
+        )
+
         private val ETIKETLER = Regex(
             """NeO_|/(?:STF|SCF|DZPG|HDCH|FLMM|FHD|FHDF|SFG|SZD|RTV|RecTV|DKR)\b|Exception|Error|Throwable|FATAL|CloudStream|APIRepository|loadLinks""",
             RegexOption.IGNORE_CASE
@@ -57,15 +76,26 @@ class NeoTeshis : MainAPI() {
 
     override val mainPage = mainPageOf(
         "sistem" to "Sistem ve ağ",
-        *EKLENTILER.map { it to "Eklenti: $it" }.toTypedArray()
+        *EKLENTILER.map { it to "Eklenti: $it" }.toTypedArray(),
+        "cloudflare" to "Cloudflare denemesi"
     )
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
         if (page > 1) return newHomePageResponse(request.name, emptyList(), hasNext = false)
 
-        val satirlar = runCatching {
-            if (request.data == "sistem") sistemTesti() else eklentiTesti(request.data)
-        }.getOrElse { listOf("✖ test çöktü" to "Teşhis testinin kendisi hata verdi:\n${hataMetni(it)}") }
+        val satirlar = mutableListOf<Pair<String, String>>()
+        val sinir = when (request.data) { "sistem" -> 70_000L; "cloudflare" -> 150_000L; else -> 160_000L }
+        val bitti = runCatching {
+            withTimeoutOrNull(sinir) {
+                when (request.data) {
+                    "sistem"     -> sistemTesti(satirlar)
+                    "cloudflare" -> cloudflareTesti(satirlar)
+                    else         -> eklentiTesti(request.data, satirlar)
+                }
+                true
+            }
+        }.getOrElse { satirlar.add("✖ test çöktü" to "Teşhis testinin kendisi hata verdi:\n${hataMetni(it)}"); true }
+        if (bitti == null) satirlar.add("⏱ zaman aşımı" to "Bu test ${sinir / 1000} saniyede bitmedi; buraya kadarki sonuçlar yukarıda.")
 
         val ogeler = satirlar.mapIndexed { i, (baslik, ayrinti) ->
             val anahtar = "${request.data}-$i"
@@ -87,8 +117,7 @@ class NeoTeshis : MainAPI() {
 
     // ------------------------------------------------------------------------------------------------------------------
 
-    private suspend fun sistemTesti(): List<Pair<String, String>> {
-        val sonuc = mutableListOf<Pair<String, String>>()
+    private suspend fun sistemTesti(sonuc: MutableList<Pair<String, String>>) {
         val ctx   = baglam
 
         val surum = runCatching { ctx?.let { it.packageManager.getPackageInfo(it.packageName, 0).versionName } }.getOrNull() ?: "?"
@@ -114,53 +143,58 @@ class NeoTeshis : MainAPI() {
             val sunucu    = adres.substringAfter("://").substringBefore("/")
             val sistemDns = runCatching { InetAddress.getAllByName(sunucu).joinToString { it.hostAddress ?: "?" } }
                 .getOrElse { "HATA ${it.javaClass.simpleName}: ${it.message}" }
-
             val (ilk, engel) = istek(adres, emptyMap(), null)
-            val ayrinti = StringBuilder("Adres: $adres\nSistem DNS: $sistemDns\nUygulama isteği: $ilk")
-
-            // Cloudflare engelinde farklı istek biçimleri denenir: hangisinin geçtiği çözümü belirler
-            var gecen: String? = null
-            if (engel) {
-                val webviewUa = runCatching { baglam?.let { android.webkit.WebSettings.getDefaultUserAgent(it) } }.getOrNull()
-                val denemeler = listOf(
-                    "Dürüst UA (okhttp)" to mapOf("User-Agent" to "okhttp/4.12.0"),
-                    "WebView UA + dil" to mapOf(
-                        "User-Agent" to (webviewUa ?: "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Mobile Safari/537.36"),
-                        "Accept" to "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                        "Accept-Language" to "tr-TR,tr;q=0.9,en;q=0.8"
-                    )
-                )
-                for ((ad, basliklar) in denemeler) {
-                    val (sonucMetni, halaEngel) = istek(adres, basliklar, null)
-                    ayrinti.append("\n$ad: $sonucMetni")
-                    if (!halaEngel && gecen == null) gecen = ad
-                }
-                // CloudStream'in yerleşik Cloudflare çözücüsü (gizli WebView)
-                val (cfMetni, cfEngel) = istek(adres, emptyMap(), com.lagradost.cloudstream3.network.CloudflareKiller())
-                ayrinti.append("\nCloudflareKiller: $cfMetni")
-                if (!cfEngel && gecen == null) gecen = "CloudflareKiller"
-                ayrinti.append("\nSonuç: ${gecen?.let { "$it ile geçiyor" } ?: "hiçbir yöntem geçmedi"}")
-            }
-
-            val isaret = when { !engel -> "✔"; gecen != null -> "◐"; else -> "✖" }
-            sonuc.add("$isaret $sunucu ${if (engel) (gecen ?: "engelli") else ilk.substringBefore(" ")}".take(60) to ayrinti.toString())
+            if (engel) engelliler.add(adres)
+            sonuc.add("${if (engel) "✖" else "✔"} $sunucu ${ilk.substringBefore(" ")}".take(60) to "Adres: $adres\nSistem DNS: $sistemDns\nUygulama isteği: $ilk")
         }
-        return sonuc
     }
 
-    private suspend fun eklentiTesti(ad: String): List<Pair<String, String>> {
+    /** Sistem testinde engellenen siteler (yoksa filmmakinesi) için farklı istek yöntemleri: hangisinin geçtiği çözümü belirler. */
+    private suspend fun cloudflareTesti(sonuc: MutableList<Pair<String, String>>) {
+        // Sistem testi aynı anda çalıştığı için kısa bir süre onun bulduğu engelleri bekle
+        repeat(20) { if (engelliler.isEmpty()) kotlinx.coroutines.delay(1_000) }
+        val hedefler = (engelliler.toList().ifEmpty { listOf("https://filmmakinesi.to/") }).distinct().take(3)
+        val webviewUa = runCatching { baglam?.let { android.webkit.WebSettings.getDefaultUserAgent(it) } }.getOrNull()
+
+        for (adres in hedefler) {
+            val sunucu  = adres.substringAfter("://").substringBefore("/")
+            val ayrinti = StringBuilder("Adres: $adres")
+            var gecen: String? = null
+            val denemeler = listOf(
+                "Varsayılan" to emptyMap<String, String>(),
+                "Dürüst UA (okhttp)" to mapOf("User-Agent" to "okhttp/4.12.0"),
+                "WebView UA + dil" to mapOf(
+                    "User-Agent" to (webviewUa ?: "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Mobile Safari/537.36"),
+                    "Accept" to "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                    "Accept-Language" to "tr-TR,tr;q=0.9,en;q=0.8"
+                )
+            )
+            for ((ad, basliklar) in denemeler) {
+                val (metin, engel) = istek(adres, basliklar, null)
+                ayrinti.append("\n$ad: $metin")
+                if (!engel && gecen == null) gecen = ad
+            }
+            // CloudStream'in yerleşik Cloudflare çözücüsü (gizli WebView); süre sınırlı
+            val cf = withTimeoutOrNull(45_000) { istek(adres, emptyMap(), com.lagradost.cloudstream3.network.CloudflareKiller()) }
+            ayrinti.append("\nCloudflareKiller: ${cf?.first ?: "45 sn'de bitmedi"}")
+            if (cf != null && !cf.second && gecen == null) gecen = "CloudflareKiller"
+            ayrinti.append("\nSonuç: ${gecen?.let { "$it ile geçiyor" } ?: "hiçbir yöntem geçmedi"}")
+            sonuc.add("${if (gecen != null) "◐" else "✖"} $sunucu: ${gecen ?: "geçilemedi"}".take(60) to ayrinti.toString())
+        }
+    }
+
+    private suspend fun eklentiTesti(ad: String, sonuc: MutableList<Pair<String, String>>) {
         val api = APIHolder.getApiFromNameNull(ad)
-            ?: return listOf("✖ $ad yüklü değil" to "Bu eklenti uygulamada bulunamadı (yüklü değil ya da devre dışı).")
+        if (api == null) { sonuc.add("✖ $ad yüklü değil" to "Bu eklenti uygulamada bulunamadı (yüklü değil ya da devre dışı)."); return }
 
         val baslangicZamani = Date()
-        val sonuc  = mutableListOf<Pair<String, String>>()
         val adimlar = StringBuilder()
 
         // 1) Ana sayfa (ilk kategori)
         val kat = api.mainPage.firstOrNull()
         var hedef: SearchResponse? = null
         if (kat != null) {
-            val r = runCatching { withTimeout(40_000) { api.getMainPage(1, MainPageRequest(kat.name, kat.data, kat.horizontalImages)) } }
+            val r = runCatching { withTimeout(30_000) { api.getMainPage(1, MainPageRequest(kat.name, kat.data, kat.horizontalImages)) } }
             val liste = r.getOrNull()?.items?.flatMap { it.list }.orEmpty()
             hedef = liste.firstOrNull { it.type == TvType.Movie } ?: liste.firstOrNull()
             adimlar.append("1) Ana sayfa '${kat.name}': ${liste.size} öğe").append(r.exceptionOrNull()?.let { "\n   ${hataMetni(it)}" } ?: "").append('\n')
@@ -170,7 +204,7 @@ class NeoTeshis : MainAPI() {
         var veri: String? = null
         val secilen = hedef
         if (secilen != null) {
-            val y  = runCatching { withTimeout(40_000) { api.load(secilen.url) } }
+            val y  = runCatching { withTimeout(30_000) { api.load(secilen.url) } }
             val yy = y.getOrNull()
             veri = when (yy) {
                 is MovieLoadResponse      -> yy.dataUrl
@@ -199,15 +233,15 @@ class NeoTeshis : MainAPI() {
         }
 
         // 4) Bağlantıların kendisi açılıyor mu?
-        for ((i, l) in linkler.take(4).withIndex()) {
+        for ((i, l) in linkler.take(3).withIndex()) {
             val dene = runCatching {
-                val y = app.get(l.url, referer = l.referer.ifBlank { null }, headers = l.headers + mapOf("Range" to "bytes=0-2000"), timeout = 20L)
+                val y = app.get(l.url, referer = l.referer.ifBlank { null }, headers = l.headers + mapOf("Range" to "bytes=0-2000"), timeout = 8L)
                 "${y.code} ${y.headers["content-type"] ?: ""} '${y.text.take(40).replace("\n", " ")}'"
             }.getOrElse { "HATA ${it.javaClass.simpleName}: ${it.message?.take(120)}" }
             adimlar.append("4.${i + 1}) ${l.name} [${l.type}] kalite=${l.quality}\n   ${l.url.take(110)}\n   ref=${l.referer.take(60)} başlık=${l.headers.keys}\n   deneme: $dene\n")
         }
 
-        val kayit = logcatSatirlari(baslangicZamani)
+        val kayit = logcatSatirlari(baslangicZamani, ETIKET_HARITASI[ad].orEmpty())
 
         val hataSabit = linkHata
         val ozet = when {
@@ -219,7 +253,6 @@ class NeoTeshis : MainAPI() {
         sonuc.add(ozet to adimlar.toString())
         sonuc.add("Kayıt ($ad, ${kayit.size} satır)" to (if (kayit.isEmpty()) "Bu test sırasında ilgili logcat satırı yok." else kayit.joinToString("\n")))
         hataSabit?.let { sonuc.add("Hata yığını ($ad)" to it.stackTraceToString().lines().take(30).joinToString("\n")) }
-        return sonuc
     }
 
     /** (özet, engelli mi) — engel: HTTP 403/503/429, Cloudflare sayfası ya da hata */
@@ -251,12 +284,15 @@ class NeoTeshis : MainAPI() {
     }
 
     /** Uygulamanın kendi logcat'inden test başladığından beri yazılmış, ilgili (eklenti etiketli ya da hata) satırlar. */
-    private fun logcatSatirlari(baslangic: Date): List<String> = runCatching {
+    private fun logcatSatirlari(baslangic: Date, etiketler: List<String>): List<String> = runCatching {
         val zaman  = SimpleDateFormat("MM-dd HH:mm:ss.SSS", Locale.US).format(baslangic)
         val surec  = Runtime.getRuntime().exec(arrayOf("logcat", "-d", "-v", "time", "-T", zaman))
         val satirlar = BufferedReader(InputStreamReader(surec.inputStream)).use { it.readLines() }
-        satirlar.filter { ETIKETLER.containsMatchIn(it) }
-            .filterNot { it.contains("DynamiteModule") || it.contains("cast.framework") }
+        satirlar.filter { satir ->
+            etiketler.any { satir.contains(it, ignoreCase = true) } ||
+                (etiketler.isEmpty() && ETIKETLER.containsMatchIn(satir)) ||
+                (satir.contains("Exception") && !satir.contains("DynamiteModule") && !satir.contains("cast.framework"))
+        }
             .map { it.substringAfter(' ').take(220) }
             .takeLast(45)
     }.getOrElse { listOf("logcat okunamadı: ${it.javaClass.simpleName}: ${it.message}") }
