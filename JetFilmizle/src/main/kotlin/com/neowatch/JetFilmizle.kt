@@ -290,14 +290,14 @@ object PlayerX {
         }
 
         Regex(""""tracks"\s*:\s*\[(.*?)]""").find(json)?.groupValues?.get(1)?.let { izler ->
-            Regex("""\{[^{}]*?"file"\s*:\s*"([^"]+)"[^{}]*?"label"\s*:\s*"([^"]*)"[^{}]*?}""").findAll(izler).forEach { m ->
+            Regex("""\{[^{}]*?"file"\s*:\s*"([^"]+)"[^{}]*?"label"\s*:\s*"([^"]*)"[^{}]*?\}""").findAll(izler).forEach { m ->
                 subtitleCallback.invoke(newSubtitleFile(m.groupValues[2].ifBlank { "Türkçe" }, tam(m.groupValues[1])))
             }
         }
 
         var bulundu = false
         Regex(""""sources"\s*:\s*\[(.*?)]""").find(json)?.groupValues?.get(1)?.let { liste ->
-            Regex("""\{[^{}]*?"file"\s*:\s*"([^"]+)"([^{}]*?)}""").findAll(liste).forEach { m ->
+            Regex("""\{[^{}]*?"file"\s*:\s*"([^"]+)"([^{}]*?)\}""").findAll(liste).forEach { m ->
                 val adres = tam(m.groupValues[1])
                 val hls   = m.groupValues[2].contains("hls") || adres.contains(".m3u8") || adres.contains("/watch/")
                 val etk   = Regex(""""label"\s*:\s*"([^"]*)"""").find(m.value)?.groupValues?.get(1)

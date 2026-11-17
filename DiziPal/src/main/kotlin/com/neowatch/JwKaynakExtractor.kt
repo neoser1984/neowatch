@@ -56,7 +56,7 @@ open class JwKaynak : ExtractorApi() {
 
         // Altyazılar
         Regex("""tracks\s*:\s*\[(.*?)]""", RegexOption.DOT_MATCHES_ALL).find(metin)?.groupValues?.get(1)?.let { izler ->
-            Regex("""\{[^}]*?file\s*:\s*["']([^"']+)["'][^}]*?}""").findAll(izler).forEach { iz ->
+            Regex("""\{[^}]*?file\s*:\s*["']([^"']+)["'][^}]*?\}""").findAll(izler).forEach { iz ->
                 val blok  = iz.value
                 if (blok.contains("thumbnails")) return@forEach
                 val dosya = iz.groupValues[1].replace("\\/", "/")

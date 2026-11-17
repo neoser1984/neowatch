@@ -101,7 +101,7 @@ open class ContentXGenel : ExtractorApi() {
         fun ekle(adres: String) = if (kapi == null) adres else adres + (if (adres.contains("?")) "&" else "?") + "p=$kapi"
 
         val altyazilar = Regex(""""subtitles"\s*:\s*\[(.*?)]""", RegexOption.DOT_MATCHES_ALL).find(np)?.groupValues?.get(1) ?: ""
-        Regex("""\{[^{}]*?"label"\s*:\s*"([^"]*)"[^{}]*?"url"\s*:\s*"([^"]+)"[^{}]*?}""").findAll(altyazilar).forEach { m ->
+        Regex("""\{[^{}]*?"label"\s*:\s*"([^"]*)"[^{}]*?"url"\s*:\s*"([^"]+)"[^{}]*?\}""").findAll(altyazilar).forEach { m ->
             val adres = duzelt(m.groupValues[2]).let { if (it.startsWith("http")) it else "$base/${it.trimStart('/')}" }
             subtitleCallback.invoke(newSubtitleFile(duzelt(m.groupValues[1]).ifBlank { "Türkçe" }, ekle(adres)))
         }
@@ -109,7 +109,7 @@ open class ContentXGenel : ExtractorApi() {
         val kaynaklar = Regex(""""sources"\s*:\s*\[(.*?)]\s*,\s*"(?:subtitles|vast|download|track)"""", RegexOption.DOT_MATCHES_ALL).find(np)?.groupValues?.get(1)
             ?: Regex(""""sources"\s*:\s*\[(.*)]""", RegexOption.DOT_MATCHES_ALL).find(np)?.groupValues?.get(1) ?: return false
         var bulundu = false
-        Regex("""\{[^{}]*?"master"\s*:\s*"([^"]+)"[^{}]*?}""").findAll(kaynaklar).forEach { m ->
+        Regex("""\{[^{}]*?"master"\s*:\s*"([^"]+)"[^{}]*?\}""").findAll(kaynaklar).forEach { m ->
             val master = ekle(duzelt(m.groupValues[1]).let { if (it.startsWith("http")) it else "$base/${it.trimStart('/')}" })
             val baslik = Regex(""""title"\s*:\s*"([^"]*)"""").find(m.value)?.groupValues?.get(1)?.let { duzelt(it) }
             val isim   = if (baslik.isNullOrBlank() || baslik.equals("Orijinal", true)) host else "$host $baslik"
