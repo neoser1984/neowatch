@@ -41,10 +41,12 @@ class NeoTeshis : MainAPI() {
         )
 
         // InatBox alanları bilerek yok (Cloudflare IP yasağı riski)
+        // Kök sayfası tarayıcıya da 403 veren oynatıcı sunucuları (setplay, dplayer82, pichive) burada yok;
+        // onlar eklenti testlerindeki gerçek bağlantı zinciriyle sınanıyor.
         private val SUNUCULAR = listOf(
-            "www.google.com", "selcukflix.app", "four.pichive.online", "dizipal1595.com", "four.dplayer82.site",
-            "www.setfilmizle.ltd", "setplay.sbs", "www.hdfilmcehennemi.nl", "hdfilmcehennemi.mobi",
-            "filmmakinesi.to", "www.fullhdfilmizlesene.now", "rapidvid.org", "hdfilm.us", "vidpapi.xyz", "vidmoly.org"
+            "https://www.google.com/", "https://selcukflix.app/", "https://dizipal1595.com/", "https://www.setfilmizle.ltd/",
+            "https://www.hdfilmcehennemi.nl/", "https://filmmakinesi.to/", "https://www.fullhdfilmizlesene.now/",
+            "https://hdfilm.us/", "https://superfilmizle.icu/", "https://sezonlukdizi.cc/", "https://www.dizibox.live/"
         )
 
         private val ETIKETLER = Regex(
@@ -108,22 +110,40 @@ class NeoTeshis : MainAPI() {
         )
         sonuc.add("DoH: $dnsAdi" to "Uygulamanın DNS over HTTPS ayarı (dns_key): $dnsAdi")
 
-        for (sunucu in SUNUCULAR) {
+        for (adres in SUNUCULAR) {
+            val sunucu    = adres.substringAfter("://").substringBefore("/")
             val sistemDns = runCatching { InetAddress.getAllByName(sunucu).joinToString { it.hostAddress ?: "?" } }
                 .getOrElse { "HATA ${it.javaClass.simpleName}: ${it.message}" }
-            val baslangic = System.currentTimeMillis()
-            val http = runCatching {
-                val y = app.get("https://$sunucu/", timeout = 15L)
-                val baslik = Regex("""<title[^>]*>([^<]{0,80})""", RegexOption.IGNORE_CASE).find(y.text)?.groupValues?.get(1)?.trim().orEmpty()
-                "${y.code} '$baslik'"
-            }.getOrElse { "HATA ${it.javaClass.simpleName}: ${it.message?.take(150)}" }
-            val sure = System.currentTimeMillis() - baslangic
 
-            val iyi = !http.startsWith("HATA") && !http.contains("Attention Required") && !http.startsWith("403")
-            sonuc.add(
-                "${if (iyi) "✔" else "✖"} $sunucu ${http.substringBefore(" ").take(12)}" to
-                    "Sunucu: $sunucu\nSistem DNS: $sistemDns\nUygulama isteği (${sure} ms): $http"
-            )
+            val (ilk, engel) = istek(adres, emptyMap(), null)
+            val ayrinti = StringBuilder("Adres: $adres\nSistem DNS: $sistemDns\nUygulama isteği: $ilk")
+
+            // Cloudflare engelinde farklı istek biçimleri denenir: hangisinin geçtiği çözümü belirler
+            var gecen: String? = null
+            if (engel) {
+                val webviewUa = runCatching { baglam?.let { android.webkit.WebSettings.getDefaultUserAgent(it) } }.getOrNull()
+                val denemeler = listOf(
+                    "Dürüst UA (okhttp)" to mapOf("User-Agent" to "okhttp/4.12.0"),
+                    "WebView UA + dil" to mapOf(
+                        "User-Agent" to (webviewUa ?: "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Mobile Safari/537.36"),
+                        "Accept" to "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                        "Accept-Language" to "tr-TR,tr;q=0.9,en;q=0.8"
+                    )
+                )
+                for ((ad, basliklar) in denemeler) {
+                    val (sonucMetni, halaEngel) = istek(adres, basliklar, null)
+                    ayrinti.append("\n$ad: $sonucMetni")
+                    if (!halaEngel && gecen == null) gecen = ad
+                }
+                // CloudStream'in yerleşik Cloudflare çözücüsü (gizli WebView)
+                val (cfMetni, cfEngel) = istek(adres, emptyMap(), com.lagradost.cloudstream3.network.CloudflareKiller())
+                ayrinti.append("\nCloudflareKiller: $cfMetni")
+                if (!cfEngel && gecen == null) gecen = "CloudflareKiller"
+                ayrinti.append("\nSonuç: ${gecen?.let { "$it ile geçiyor" } ?: "hiçbir yöntem geçmedi"}")
+            }
+
+            val isaret = when { !engel -> "✔"; gecen != null -> "◐"; else -> "✖" }
+            sonuc.add("$isaret $sunucu ${if (engel) (gecen ?: "engelli") else ilk.substringBefore(" ")}".take(60) to ayrinti.toString())
         }
         return sonuc
     }
@@ -200,6 +220,23 @@ class NeoTeshis : MainAPI() {
         sonuc.add("Kayıt ($ad, ${kayit.size} satır)" to (if (kayit.isEmpty()) "Bu test sırasında ilgili logcat satırı yok." else kayit.joinToString("\n")))
         hataSabit?.let { sonuc.add("Hata yığını ($ad)" to it.stackTraceToString().lines().take(30).joinToString("\n")) }
         return sonuc
+    }
+
+    /** (özet, engelli mi) — engel: HTTP 403/503/429, Cloudflare sayfası ya da hata */
+    private suspend fun istek(adres: String, basliklar: Map<String, String>, kesici: okhttp3.Interceptor?): Pair<String, Boolean> {
+        val bas = System.currentTimeMillis()
+        return runCatching {
+            val y = if (kesici != null) app.get(adres, headers = basliklar, interceptor = kesici, timeout = 40L)
+                    else app.get(adres, headers = basliklar, timeout = 15L)
+            val metin  = y.text
+            val baslik = Regex("""<title[^>]*>([^<]{0,70})""", RegexOption.IGNORE_CASE).find(metin)?.groupValues?.get(1)?.trim().orEmpty()
+            val cfKod  = Regex("""(?:error code:?|Error|cf-error-code">)\s*(10\d\d|20\d\d)""", RegexOption.IGNORE_CASE).find(metin)?.groupValues?.get(1)
+            val cf     = metin.contains("Attention Required") || metin.contains("Just a moment") || metin.contains("cf-error-details") ||
+                         metin.contains("you have been blocked") || y.headers["cf-mitigated"] != null
+            val engel  = y.code == 403 || y.code == 503 || y.code == 429 || cf
+            val ek     = listOfNotNull(cfKod?.let { "CF hata $it" }, y.headers["cf-mitigated"]?.let { "cf-mitigated=$it" }, y.headers["server"]?.let { "server=$it" })
+            "${y.code} '$baslik' ${ek.joinToString(" ")} (${System.currentTimeMillis() - bas} ms)" to engel
+        }.getOrElse { "HATA ${it.javaClass.simpleName}: ${it.message?.take(120)} (${System.currentTimeMillis() - bas} ms)" to true }
     }
 
     private fun hataMetni(t: Throwable): String {
