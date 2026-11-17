@@ -85,6 +85,7 @@ Bu ayar yalnızca CloudStream'in kendi bağlantılarını etkiler; telefonun di�
 | RecTV | Film, Dizi, Canlı TV _(API adresi otomatik alınır)_ |
 | BelgeselX | Belgesel |
 | YouTube | Video _(youtube.com üzerinden; oynatma CloudStream'in YouTube çıkarıcısıyla)_ |
+| NeO Teşhis | Sorun giderme: eklentilerin bu cihazdaki bağlantı/hata/ağ durumunu ana sayfada gösterir |
 
 > Sitelerin alan adları sık değiştiği için bir eklenti çalışmazsa ilgili eklentinin `mainUrl` değerini güncelleyip yeniden derlemeniz yeterlidir. Depodaki **Domain Değişiklik Kontrolü** iş akışı adres değişikliklerini 9 saatte bir otomatik kontrol eder.
 
